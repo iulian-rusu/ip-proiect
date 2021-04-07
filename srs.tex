@@ -66,6 +66,38 @@ This section describes the graphical user interface (GUI) features and constrain
 \subsubsection{Software Interfaces}
 The application must provide a way to communicate with the underlying Operating System's API to delegate the saving/loading of drawings as image files. There are no other software interface constraints as the application is self-contained.
 \subsection{Functional Requirements}
+This section exemplifies the actual functionalities of the application, with in-depth information about every client observable feature.
+\subsubsection{Color picking}
+The user must be able to select the color in which to draw or represent a preselected geometrical form. Colors from all the RGB spectrum must be present in the application.
+\subsubsection{Text over drawing}
+As every other common drawing software, the application must allow the writing of text over the drawing in any orientation, text font and text size (withing reasonable limits).
+\subsubsection{Eraser tool}
+The user must be able to use an eraser tool in order to delete previously done work in the drawing canvas. The size of the eraser should be user modifiable(within predefined bounds), improving performance when trying to remove large portions of a drawing.
+\subsubsection{Brush tool(s)}
+In order to paint properly, a brush-like took must be present in the application, that, when selected, gives the user the opportunity to draw any shape or object of the previously selected color and brush-size.
+
+The application has to contain various types of brushes, of different dimensions and drawing styles, in order to give a pleasing and versatile end-user experience.
+
+\subsubsection{Other advanced drawing tools}
+\begin{enumerate}
+
+\item \textbf{Flood filler tool}
+
+It has to allow the filling of an enclosed are with a previously selected color.
+
+\item  \textbf{Geometrical shape creator}
+
+The user should be able to select a developer-defined geometrical shape and to generate it on the canvas within wished bounds.
+
+\end{enumerate}
+
+\subsubsection{Drawing saving/loading}
+
+The application must offer the possibility of saving the current drawing to an image (of a selected extension) that will be located on the storage disk of the computer.
+
+Similarly to the previously mentioned functionality, the application must offer the possibility of loading an already existing image that the user wishes to be modified.
+
+It is to be mentioned that when loading an image, the user cannot use functionalities like \textbf{undo}.
 
 \subsection{Performance Requirements}
 This section covers the requirements that concern the performance of the application in response to user interaction. It is aimed to describe general use case scenarios, as well as time performance constraints.
