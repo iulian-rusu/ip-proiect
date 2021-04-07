@@ -58,7 +58,7 @@ This section describes the graphical user interface (GUI) features and constrain
 \item The main window of the application should have a large canvas, initially with a white background.
 \item A drop-down menu with options will be located in the top left corner (Open, Save, About, Exit etc.).
 \item To the right of this menu, a toolbar that extends across the entire top side of the window will display all the tools used for drawing. The tools menu will provide several types of tools, grouped logically (Brush Types, Colors, Brush Sizes etc.).
-\item The drawing color must offer at least 5 different colors, should ideally offer the possibility to specify any color in the RGB spectrum. Optionally, other color spaces may be selectable.
+\item Upon clicking the color menu, the user will see a submenu where they will be able to select the desired RGB color. Optionally, other color spaces may be selectable.
 \item Clicking on the Open/Save buttons will open a separate dialog window where the user will be able to open or save their drawing.
 \item Clicking on the About button will open a separate message box with a description of the application.
 \end{enumerate}
@@ -70,9 +70,9 @@ This section exemplifies the actual functionalities of the application, with in-
 \subsubsection{Color picking}
 The user must be able to select the color in which to draw or represent a preselected geometrical form. Colors from all the RGB spectrum must be present in the application.
 \subsubsection{Text over drawing}
-As every other common drawing software, the application must allow the writing of text over the drawing in any orientation, text font and text size (withing reasonable limits).
+As every other common drawing software, the application must allow the writing of text over the drawing in any orientation, text font and text size (within reasonable limits).
 \subsubsection{Eraser tool}
-The user must be able to use an eraser tool in order to delete previously done work in the drawing canvas. The size of the eraser should be user modifiable(within predefined bounds), improving performance when trying to remove large portions of a drawing.
+The user must be able to use an eraser tool in order to delete previously done work in the drawing canvas. The size of the eraser should be user modifiable (within predefined bounds), improving performance when trying to remove large portions of a drawing.
 \subsubsection{Brush tool(s)}
 In order to paint properly, a brush-like took must be present in the application, that, when selected, gives the user the opportunity to draw any shape or object of the previously selected color and brush-size.
 
@@ -83,7 +83,7 @@ The application has to contain various types of brushes, of different dimensions
 
 \item \textbf{Flood filler tool}
 
-It has to allow the filling of an enclosed are with a previously selected color.
+It has to allow the filling of an enclosed area with a previously selected color.
 
 \item  \textbf{Geometrical shape creator}
 
@@ -102,19 +102,19 @@ It is to be mentioned that when loading an image, the user cannot use functional
 \subsection{Performance Requirements}
 This section covers the requirements that concern the performance of the application in response to user interaction. It is aimed to describe general use case scenarios, as well as time performance constraints.
 \begin{enumerate}
-\item Usage of the toolbar menu.
+\item \textbf{Usage of the toolbar menu}
 \\
 The graphical interface must provide a menu that must be easily accessed at the top of the main application window in one click.
-\item Usage of drawing tools.
+\item \textbf{Usage of drawing tools}
 \\
 All drawing tools must be easily selectable from a unified menu of drawing tools. The user should have the option to change the color, size and other parameters of a selected tool easily.
-\item The drawing process.
+\item \textbf{The drawing process}
 \\
 Drawing must feel smooth and be responsive to user input. The application may provide a way to undo/redo changes from history, without noticeably slowing down performance.
-\item File system interaction.
+\item \textbf{File system interaction}
 \\
 All drawings must have the ability to be saved on the disk in a specific image format (\texttt{png, jpeg, bmp}). The application may provide a way to load images into the canvas and draw on them. The process of saving and loading should not take longer than doing so in other applications that interact with the file system.
-\item General timing constraints.
+\item \textbf{General timing constraints}
 \\
 Any user input should be processed without a noticeable delay. In the event that a more complex computation is required, the user must be notified and the graphical interface must remain responsive for the whole duration. Additionally, the interface may provide status messages to notify the user.
 \end{enumerate}
@@ -122,11 +122,11 @@ Any user input should be processed without a noticeable delay. In the event that
 \subsection{Design Constraints}
 This section describes the limitations imposed on the application by software or hardware characteristics of the environment.
 \begin{enumerate}
-\item Disk space usage.
+\item \textbf{Disk space usage}
 \\
 The whole application must not occupy more than 50 MB of disk storage.
 Ideally, the application should fit into 25 MB.
-\item Memory usage.
+\item \textbf{Memory usage}
 \\
 The application's RAM usage must not exceed 50 MB.
 Ideally, the application should not use more than 25 MB of RAM.
@@ -135,11 +135,11 @@ Ideally, the application should not use more than 25 MB of RAM.
 \subsection{Attributes}
 This section describes different software system attributes, metrics and requirements for them.
 \begin{enumerate}
-\item System reliability
+\item \textbf{ System reliability}
 \\
 Reliability refers to the system's capacity to correctly respond to user input.
 The application must correctly load, save and draw images 100\% of the time.
-\item Maintainability.
+\item \textbf{Maintainability}
 \\
 The application should be easily maintainable and extendable.
 The code should allow easy testing and should be open for future extensions and new features. 
