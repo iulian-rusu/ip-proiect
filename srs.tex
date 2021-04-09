@@ -3,7 +3,15 @@
 \usepackage{indentfirst}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 
-\title{\textbf{Software Requirements Specification}}
+\title
+{
+	\textbf
+	{
+		SeeSharper
+		\\
+		Software Requirements Specification
+	}
+}
 
 \author
 {
@@ -33,12 +41,12 @@
 
 \section{Introduction}
 \subsection{Purpose}
-The purpose of this document is to give a detailed description of the requirements for the SeeSharper application.
-It will explain the purpose and features of the program, the interfaces of the program and what the program does.
+The point of this document is to give a detailed description of the requirements for the SeeSharper application.
+It will explain the purpose and features of the program, its interfaces and its core functionalities.
 
 \subsection{Scope}
-SeeSharper is a simple program that people can use for creating drawings and minimally editing images. The application provides basic functionality for drawing and painting like different types of brushes, brush sizes and a color palette. 
-SeeSharper also provides shaped stencils and line tools, making the application useful for diagram development. After the drawing is ready, the user has the possibility to save the image in a specific format.
+SeeSharper is a simple program that people can use for creating drawings and minimally editing images. The application must provide basic functionality for drawing and painting like different types of brushes, brush sizes and a color palette. 
+SeeSharper should also provide shaped stencils and line tools, making the application useful for diagram development. After the drawing is ready, the user has the possibility to save the image in a specific format.
 
 SeeSharper develops an efficiently easy to use interface. This application wants to be a simplified version of Microsoft Paint and Paint.Net.
 
@@ -49,20 +57,20 @@ The next chapter, the Overall Description section of this document, gives an ove
 \subsection{Product Perspective}
 SeeSharper is a stand-alone drawing application with minimal image editing capabilities written in C\# for the Windows Operating System. It aims to be an open source alternative to Microsoft Paint with a similar design and basic functionality unlike other open source products available such as GIMP.
 
-SeeSharper will be implemented as a Windows Forms Application. The application will be developed with the application of the Model-View-Presenter with a supervising controller. It will use a thread for the GUI and another for the MVP components.
+SeeSharper will be implemented as a Windows Forms Application. The application will be developed with the Model-View-Presenter architecture, with a supervising controller. It will use a thread for the GUI and another one for the MVP components.
 \subsection{Product Functions}
 SeeSharper must provide the following major functions for its end users:
 \begin{enumerate}
-\item Image Loading - SeeSharper must be able to load user images so that they can be drawn upon.
+\item Image Loading - SeeSharper must be able to load user images so that they can be drawn on.
 \item Drawing Saving - SeeSharper must have the functionality of saving a user drawing.
 \item Customizable Brush - SeeSharper must provide a wide range of color selection, as well as different brush sizes and types.
 \item Drawing Shapes - SeeSharper must provide easy to draw shapes with a customizable border and fill. 
 \item Drawing Text - SeeSharper should provide a way to add text to the drawing.
 \end{enumerate}
 \subsection{User Classes and Characteristics}
-SeeSharper is to be design for ease of use, especially for users that have not used a drawing application before. It, however, does not provide as many functionalities as a professional image editor in order to keep it from being underwhelming. Buttons and options should provide commonly used icons that convey their functionality instead of or along with text whenever possible. Furthermore, menus should be easy to navigate without many layers of submenus. It is also designed for those who seek an open source application, but which is more accessible than its counterparts.
+SeeSharper is to be design for ease of use, especially for users that have not used a drawing application before. It, however, does not provide as many functionalities as a professional image editor in order to keep it from being overwhelming. Buttons and options should provide commonly used icons that convey their functionality instead of text or along with it whenever possible. Furthermore, menus should be easy to navigate without many layers of submenus. It is also designed for those who seek an open source application, but which is more accessible than its counterparts.
 \subsection{Design and Implementation Constraints}
-The main limiting constraints in this development cycle will be time that will be amplified by our inexperience with the C\# language, and inexperience in software design and documentation.
+The main limiting constraints in this development cycle will be time as well as the technology constraint of developing everything for the .NET platform, which will be amplified by our inexperience with the C\# language, and inexperience in software design and documentation.
 
 \section{Specific Requirements}
 \subsection{External Interface Requirements}
