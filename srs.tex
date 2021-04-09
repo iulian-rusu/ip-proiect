@@ -46,8 +46,20 @@ The next chapter, the Overall Description section of this document, gives an ove
 
 \section{Overall Description}
 \subsection{Product Perspective}
+SeeSharper is a stand-alone drawing application with minimal image editing capabilities written in C\# for the Windows Operating System. It aims to be an open source alternative to Microsoft Paint with a similar design and basic functionality unlike other open source products available such as GIMP.
+
+SeeSharper will be implemented as a Windows Forms Application. The application will be developed with the application of the Model-View-Presenter with a supervising controller. It will use a thread for the GUI and another for the MVP components.
 \subsection{Product Functions}
-\subsection{User Characteristics}
+SeeSharper must provide the following major functions for its end users:
+\begin{enumerate}
+\item Image Loading - SeeSharper must be able to load user images so that they can be drawn upon.
+\item Drawing Saving - SeeSharper must have the functionality of saving a user drawing.
+\item Customizable Brush - SeeSharper must provide a wide range of color selection, as well as different brush sizes and types.
+\item Drawing Shapes - SeeSharper must provide easy to draw shapes with a customizable border and fill. 
+\item Drawing Text - SeeSharper should provide a way to add text to the drawing.
+\end{enumerate}
+\subsection{User Classes and Characteristics}
+
 \subsection{General Constraints}
 
 \section{Specific Requirements}
