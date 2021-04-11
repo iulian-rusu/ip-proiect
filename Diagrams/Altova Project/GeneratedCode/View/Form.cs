@@ -1,9 +1,10 @@
 ﻿
-public class Form
+public class Form : IView
 {
 	private Image _drawing;
-	private EventDriver _view;
+	private IView _view;
 	private PaintEventHandler _currentAddedPaintHandler;
+	private IPresenter _presenter;
 	public void SetDrawingMemento(DrawingMemento drawingMemento)
 	{
 		// TODO add implementation
@@ -11,6 +12,10 @@ public class Form
 	public DrawingMemento GetDrawingMemento()
 	{
 		// TODO add implementation and return statement
+	}
+	public void ChangeCurrentHandler(Strategy strategy)
+	{
+		// TODO add implementation
 	}
 	public void AddHandler(Strategy strategy)
 	{
@@ -21,6 +26,10 @@ public class Form
 		// TODO add implementation
 	}
 	public void CaptureDrawingState()
+	{
+		// TODO add implementation
+	}
+	private void MouseMoved(EventArgs e)
 	{
 		// TODO add implementation
 	}

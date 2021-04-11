@@ -3,7 +3,7 @@ public class Model : IModel
 {
 	private Nullable<string> _saveFileName;
 	private UndoStack _undoStack;
-	private StrategyHandler _strategyHandler;
+	private Dictionary<PaintingTool,Strategy> _strategies;
 	void IModel.SaveDrawing(DrawingMemento drawingMemento)
 	{
 		// TODO add implementation
@@ -12,7 +12,7 @@ public class Model : IModel
 	{
 		// TODO add implementation and return statement
 	}
-	void IModel.ChoosePaitingTool(PaintingTools paitingTool)
+	void IModel.ChoosePaitingTool(PaintingTool paitingTool)
 	{
 		// TODO add implementation
 	}

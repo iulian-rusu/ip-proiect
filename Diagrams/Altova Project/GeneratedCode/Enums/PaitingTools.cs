@@ -1,5 +1,5 @@
 ﻿
-public enum PaintingTools
+public enum PaintingTool
 {
 	Dot,
 	Line,

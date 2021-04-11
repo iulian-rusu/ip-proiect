@@ -3,43 +3,44 @@ public class Presenter : IPresenter
 {
 	private IView _view;
 	private IModel _model;
-	void EventDriver.MouseMoved(int x, int y)
+	private Strategy _currentStrategy;
+	private void MouseMoved(int x, int y)
 	{
 		// TODO add implementation
 	}
-	void EventDriver.LoadHelp()
+	private void LoadHelp()
 	{
 		// TODO add implementation
 	}
-	void EventDriver.Exit()
+	private void Exit()
 	{
 		// TODO add implementation
 	}
-	void EventDriver.SaveDrawing()
+	private void SaveDrawing()
 	{
 		// TODO add implementation
 	}
-	void EventDriver.Redo()
+	private void Redo()
 	{
 		// TODO add implementation
 	}
-	void EventDriver.MouseClicked(int x, int y)
+	private void MouseClicked(int x, int y)
 	{
 		// TODO add implementation
 	}
-	void EventDriver.ColorChanged(Color color)
+	private void ColorChanged(Color color)
 	{
 		// TODO add implementation
 	}
-	void EventDriver.ChoosePaintingTool(PaintingTools paintingTool)
+	private void ChoosePaintingTool(PaintingTool paintingTool)
 	{
 		// TODO add implementation
 	}
-	void EventDriver.Undo()
+	private void Undo()
 	{
 		// TODO add implementation
 	}
-	void EventDriver.LoadDrawing()
+	private void LoadDrawing()
 	{
 		// TODO add implementation
 	}

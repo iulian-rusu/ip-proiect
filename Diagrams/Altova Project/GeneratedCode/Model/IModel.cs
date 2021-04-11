@@ -5,9 +5,7 @@ public interface IModel
 	DrawingMemento LoadDrawing(string filename);
 	bool HasSaveFileName();
 	void SetSaveFileName(string saveFileName);
-	void ChoosePaitingTool(PaintingTools paitingTool);
-	Strategy MouseMoved(int x, int y);
-	Strategy MouseClicked(int x, int y);
+	Strategy GetPaintingStrategy(PaintingTool paitingTool);
 	Strategy ColorChanged(Color color);
 	DrawingMemento Undo();
 	DrawingMemento Redo();

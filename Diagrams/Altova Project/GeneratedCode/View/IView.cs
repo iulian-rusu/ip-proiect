@@ -1,5 +1,5 @@
 ﻿
-public interface IView : EventDriver
+public interface IView
 {
 	void Run();
 	void SetPresenter();
