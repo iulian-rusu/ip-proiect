@@ -32,6 +32,7 @@ namespace View
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
       this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
       this.colorGroupBox = new System.Windows.Forms.GroupBox();
+      this.editColorButton = new System.Windows.Forms.Button();
       this.colorButton3 = new System.Windows.Forms.Button();
       this.colorButton2 = new System.Windows.Forms.Button();
       this.colorButton1 = new System.Windows.Forms.Button();
@@ -44,15 +45,14 @@ namespace View
       this.redoButton = new System.Windows.Forms.Button();
       this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
       this.toolsAndShapesLabel = new System.Windows.Forms.Label();
-      this.colorDialog = new System.Windows.Forms.ColorDialog();
-      this.pictureBox = new System.Windows.Forms.PictureBox();
-      this.editColorButton = new System.Windows.Forms.Button();
       this.brushButton = new System.Windows.Forms.Button();
       this.lineButton = new System.Windows.Forms.Button();
       this.squareButton = new System.Windows.Forms.Button();
       this.rectangleButton = new System.Windows.Forms.Button();
       this.circleButton = new System.Windows.Forms.Button();
       this.ellipseButton = new System.Windows.Forms.Button();
+      this.colorDialog = new System.Windows.Forms.ColorDialog();
+      this.pictureBox = new System.Windows.Forms.PictureBox();
       this.tableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
       this.tableLayoutPanel1.SuspendLayout();
@@ -92,6 +92,18 @@ namespace View
       this.colorGroupBox.TabIndex = 1;
       this.colorGroupBox.TabStop = false;
       this.colorGroupBox.Text = "Color";
+      // 
+      // editColorButton
+      // 
+      this.editColorButton.BackgroundImage = global::View.Properties.Resources.EditButtonBackground;
+      this.editColorButton.Dock = System.Windows.Forms.DockStyle.Left;
+      this.editColorButton.Location = new System.Drawing.Point(228, 16);
+      this.editColorButton.Name = "editColorButton";
+      this.editColorButton.Size = new System.Drawing.Size(75, 75);
+      this.editColorButton.TabIndex = 3;
+      this.editColorButton.Text = "Edit Color ";
+      this.editColorButton.UseVisualStyleBackColor = true;
+      this.editColorButton.Click += new System.EventHandler(this.editColorButton_Click);
       // 
       // colorButton3
       // 
@@ -231,29 +243,6 @@ namespace View
       this.toolsAndShapesLabel.TabIndex = 6;
       this.toolsAndShapesLabel.Text = "Tools and Shapes";
       // 
-      // pictureBox
-      // 
-      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.pictureBox.Location = new System.Drawing.Point(0, 100);
-      this.pictureBox.Name = "pictureBox";
-      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
-      this.pictureBox.TabIndex = 1;
-      this.pictureBox.TabStop = false;
-      this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
-      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
-      // 
-      // editColorButton
-      // 
-      this.editColorButton.BackgroundImage = global::View.Properties.Resources.EditButtonBackground;
-      this.editColorButton.Dock = System.Windows.Forms.DockStyle.Left;
-      this.editColorButton.Location = new System.Drawing.Point(228, 16);
-      this.editColorButton.Name = "editColorButton";
-      this.editColorButton.Size = new System.Drawing.Size(75, 75);
-      this.editColorButton.TabIndex = 3;
-      this.editColorButton.Text = "Edit Color ";
-      this.editColorButton.UseVisualStyleBackColor = true;
-      this.editColorButton.Click += new System.EventHandler(this.editColorButton_Click);
-      // 
       // brushButton
       // 
       this.brushButton.BackgroundImage = global::View.Properties.Resources.BrushButtonBackground;
@@ -314,6 +303,18 @@ namespace View
       this.ellipseButton.TabIndex = 5;
       this.ellipseButton.UseVisualStyleBackColor = true;
       this.ellipseButton.Click += new System.EventHandler(this.ellipseButton_Click);
+      // 
+      // pictureBox
+      // 
+      this.pictureBox.BackColor = System.Drawing.Color.White;
+      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.pictureBox.Location = new System.Drawing.Point(0, 100);
+      this.pictureBox.Name = "pictureBox";
+      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
+      this.pictureBox.TabIndex = 1;
+      this.pictureBox.TabStop = false;
+      this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
+      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
       // 
       // View
       // 
