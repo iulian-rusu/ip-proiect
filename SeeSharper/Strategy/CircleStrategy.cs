@@ -2,14 +2,9 @@
 {
     public class CircleStrategy : TwoPointStrategy
     {
-        public override void Draw()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override void IsDone()
         {
-            throw new System.NotImplementedException();
+          throw new System.NotImplementedException();
         }
 
         public override void MouseClicked(int x, int y)

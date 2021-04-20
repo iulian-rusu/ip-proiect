@@ -2,7 +2,7 @@
 
 namespace Strategy
 {
-	public abstract class SinglePointStrategy : Strategy
+	public abstract class MultiplePointStrategy : Strategy
 	{
 		private Point point;
 	}

@@ -73,6 +73,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8217B603-63A6-49C4-8C31-D36E7A377B37}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presenter\Presenter.csproj">
+      <Project>{A68B2A3F-CFAD-48BF-AE40-EAABEA7B6754}</Project>
+      <Name>Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{C11CB460-B129-41FF-9C90-2D525C32F1B2}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\View\View.csproj">
       <Project>{c77f6e32-a912-426b-aa36-5a4be56e378f}</Project>
       <Name>View</Name>

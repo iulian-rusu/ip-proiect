@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace SeeSharper
 {
+  using Model;
+  using Presenter;
+  using Shared;
   using View;
   static class Program
   {
@@ -14,7 +17,12 @@ namespace SeeSharper
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new View());
+
+      IModel model = new Model();
+      IView view = new View();
+      IPresenter presenter = new Presenter(model, view);
+      view.SetPresenter(presenter);
+      Application.Run((View)view);
     }
   }
 }

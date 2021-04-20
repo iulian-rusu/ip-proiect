@@ -4,11 +4,16 @@
     using Strategy;
     using System.Drawing;
 
-    public class Presenter : IPresenter
+	public class Presenter : IPresenter
 	{
 		private IView _view;
 		private IModel _model;
 		private Strategy _currentStrategy;
+		public Presenter(IModel model, IView view)
+    {
+			_model = model;
+			_view = view;
+    }
 
 		public void MouseMoved(int x, int y)
 		{

@@ -2,10 +2,15 @@
 
 namespace Shared
 {
-    public interface IView
-    {
-        void Run();
-        void SetPresenter();
-        DrawingMemento GetDrawingMemento();
-    }
+  using Strategy;
+  public interface IView
+  {
+    void SetPresenter(IPresenter presenter);
+    void CaptureDrawingState();
+    void SetDrawingMemento(DrawingMemento drawingMemento);
+    DrawingMemento GetDrawingMemento();
+    void ChangeCurrentHandler(Strategy strategy);
+    void AddHandler(Strategy strategy);
+    void RemoveCurrentHandler();
+  }
 }

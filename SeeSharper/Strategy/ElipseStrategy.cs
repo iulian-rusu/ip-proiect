@@ -2,11 +2,6 @@
 {
     public class ElipseStrategy : TwoPointStrategy
     {
-        public override void Draw()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override void IsDone()
         {
             throw new System.NotImplementedException();
