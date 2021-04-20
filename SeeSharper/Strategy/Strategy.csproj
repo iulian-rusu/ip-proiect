@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleStrategy.cs" />
-    <Compile Include="DotStrategy.cs" />
+    <Compile Include="BrushStrategy.cs" />
     <Compile Include="ElipseStrategy.cs" />
     <Compile Include="LineStrategy.cs" />
     <Compile Include="PaitingTools.cs" />

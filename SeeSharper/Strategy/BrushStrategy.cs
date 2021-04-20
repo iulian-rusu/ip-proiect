@@ -1,6 +1,6 @@
 ﻿namespace Strategy
 {
-    public class DotStrategy : MultiplePointStrategy
+    public class BrushStrategy : MultiplePointStrategy
     {
         public override void IsDone()
         {

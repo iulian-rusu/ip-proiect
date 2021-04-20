@@ -2,10 +2,10 @@
 {
 	public enum PaintingTool
 	{
-		Dot,
+		Brush,
 		Line,
 		Circle,
-		Elipse,
+		Ellipse,
 		Square,
 		Rectangle,
 	}

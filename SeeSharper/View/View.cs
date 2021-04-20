@@ -53,6 +53,10 @@ namespace View
 		}
 		#endregion
 		#region Private Member Functions
+		private void View_Paint(object sender, PaintEventArgs e)
+		{
+			pictureBox.Image = _drawing;
+		}
 		private void colorButton1_Click(object sender, EventArgs e)
 		{
 			colorButton1.FlatStyle = FlatStyle.Popup;
@@ -109,6 +113,35 @@ namespace View
 		{
 			_presenter.Undo();
 		}
-    #endregion
-  }
+		private void brushButton_Click(object sender, EventArgs e)
+		{
+			_presenter.ChoosePaintingTool(PaintingTool.Brush);
+		}
+
+		private void lineButton_Click(object sender, EventArgs e)
+		{
+			_presenter.ChoosePaintingTool(PaintingTool.Line);
+		}
+
+		private void squareButton_Click(object sender, EventArgs e)
+		{
+			_presenter.ChoosePaintingTool(PaintingTool.Square);
+		}
+
+		private void rectangleButton_Click(object sender, EventArgs e)
+		{
+			_presenter.ChoosePaintingTool(PaintingTool.Rectangle);
+		}
+
+		private void circleButton_Click(object sender, EventArgs e)
+		{
+			_presenter.ChoosePaintingTool(PaintingTool.Circle);
+		}
+
+		private void EllipseButton_Click(object sender, EventArgs e)
+		{
+			_presenter.ChoosePaintingTool(PaintingTool.Ellipse);
+		}
+		#endregion
+	}
 }

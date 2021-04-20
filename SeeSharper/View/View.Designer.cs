@@ -37,6 +37,9 @@ namespace View
       this.colorButton2 = new System.Windows.Forms.Button();
       this.colorButton1 = new System.Windows.Forms.Button();
       this.toolsAndShapesGroupBox = new System.Windows.Forms.GroupBox();
+      this.squareButton = new System.Windows.Forms.Button();
+      this.lineButton = new System.Windows.Forms.Button();
+      this.brushButton = new System.Windows.Forms.Button();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.undoGroupBox = new System.Windows.Forms.GroupBox();
       this.undoTextBox = new System.Windows.Forms.TextBox();
@@ -46,12 +49,19 @@ namespace View
       this.redoButton = new System.Windows.Forms.Button();
       this.pictureBox = new System.Windows.Forms.PictureBox();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
+      this.rectangleButton = new System.Windows.Forms.Button();
+      this.circleButton = new System.Windows.Forms.Button();
+      this.EllipseButton = new System.Windows.Forms.Button();
+      this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+      this.toolsAndShapesLabel = new System.Windows.Forms.Label();
+      this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
       this.tableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
       this.tableLayoutPanel1.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
       this.redoGroupBox.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+      this.flowLayoutPanel.SuspendLayout();
       this.SuspendLayout();
       // 
       // tableLayoutPanel
@@ -61,8 +71,8 @@ namespace View
       this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
       this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
       this.tableLayoutPanel.Controls.Add(this.colorGroupBox, 1, 0);
-      this.tableLayoutPanel.Controls.Add(this.toolsAndShapesGroupBox, 0, 0);
       this.tableLayoutPanel.Controls.Add(this.tableLayoutPanel1, 2, 0);
+      this.tableLayoutPanel.Controls.Add(this.flowLayoutPanel, 0, 0);
       this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
       this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
       this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -134,13 +144,39 @@ namespace View
       // 
       // toolsAndShapesGroupBox
       // 
-      this.toolsAndShapesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.toolsAndShapesGroupBox.Location = new System.Drawing.Point(3, 3);
+      this.toolsAndShapesGroupBox.Location = new System.Drawing.Point(637, 244);
       this.toolsAndShapesGroupBox.Name = "toolsAndShapesGroupBox";
       this.toolsAndShapesGroupBox.Size = new System.Drawing.Size(522, 94);
       this.toolsAndShapesGroupBox.TabIndex = 0;
       this.toolsAndShapesGroupBox.TabStop = false;
       this.toolsAndShapesGroupBox.Text = "Tools and Shapes";
+      // 
+      // squareButton
+      // 
+      this.squareButton.Location = new System.Drawing.Point(178, 3);
+      this.squareButton.Name = "squareButton";
+      this.squareButton.Size = new System.Drawing.Size(32, 32);
+      this.squareButton.TabIndex = 2;
+      this.squareButton.UseVisualStyleBackColor = true;
+      this.squareButton.Click += new System.EventHandler(this.squareButton_Click);
+      // 
+      // lineButton
+      // 
+      this.lineButton.Location = new System.Drawing.Point(140, 3);
+      this.lineButton.Name = "lineButton";
+      this.lineButton.Size = new System.Drawing.Size(32, 32);
+      this.lineButton.TabIndex = 1;
+      this.lineButton.UseVisualStyleBackColor = true;
+      this.lineButton.Click += new System.EventHandler(this.lineButton_Click);
+      // 
+      // brushButton
+      // 
+      this.brushButton.Location = new System.Drawing.Point(102, 3);
+      this.brushButton.Name = "brushButton";
+      this.brushButton.Size = new System.Drawing.Size(32, 32);
+      this.brushButton.TabIndex = 0;
+      this.brushButton.UseVisualStyleBackColor = true;
+      this.brushButton.Click += new System.EventHandler(this.brushButton_Click);
       // 
       // tableLayoutPanel1
       // 
@@ -232,16 +268,69 @@ namespace View
       this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
       this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
       // 
+      // rectangleButton
+      // 
+      this.rectangleButton.Location = new System.Drawing.Point(216, 3);
+      this.rectangleButton.Name = "rectangleButton";
+      this.rectangleButton.Size = new System.Drawing.Size(32, 32);
+      this.rectangleButton.TabIndex = 3;
+      this.rectangleButton.UseVisualStyleBackColor = true;
+      this.rectangleButton.Click += new System.EventHandler(this.rectangleButton_Click);
+      // 
+      // circleButton
+      // 
+      this.circleButton.Location = new System.Drawing.Point(254, 3);
+      this.circleButton.Name = "circleButton";
+      this.circleButton.Size = new System.Drawing.Size(32, 32);
+      this.circleButton.TabIndex = 4;
+      this.circleButton.UseVisualStyleBackColor = true;
+      this.circleButton.Click += new System.EventHandler(this.circleButton_Click);
+      // 
+      // EllipseButton
+      // 
+      this.EllipseButton.Location = new System.Drawing.Point(292, 3);
+      this.EllipseButton.Name = "EllipseButton";
+      this.EllipseButton.Size = new System.Drawing.Size(32, 32);
+      this.EllipseButton.TabIndex = 5;
+      this.EllipseButton.UseVisualStyleBackColor = true;
+      this.EllipseButton.Click += new System.EventHandler(this.EllipseButton_Click);
+      // 
+      // flowLayoutPanel
+      // 
+      this.flowLayoutPanel.Controls.Add(this.toolsAndShapesLabel);
+      this.flowLayoutPanel.Controls.Add(this.brushButton);
+      this.flowLayoutPanel.Controls.Add(this.lineButton);
+      this.flowLayoutPanel.Controls.Add(this.squareButton);
+      this.flowLayoutPanel.Controls.Add(this.rectangleButton);
+      this.flowLayoutPanel.Controls.Add(this.circleButton);
+      this.flowLayoutPanel.Controls.Add(this.EllipseButton);
+      this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.flowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+      this.flowLayoutPanel.Name = "flowLayoutPanel";
+      this.flowLayoutPanel.Size = new System.Drawing.Size(522, 94);
+      this.flowLayoutPanel.TabIndex = 0;
+      // 
+      // toolsAndShapesLabel
+      // 
+      this.toolsAndShapesLabel.AutoSize = true;
+      this.toolsAndShapesLabel.Location = new System.Drawing.Point(3, 0);
+      this.toolsAndShapesLabel.Name = "toolsAndShapesLabel";
+      this.toolsAndShapesLabel.Size = new System.Drawing.Size(93, 13);
+      this.toolsAndShapesLabel.TabIndex = 6;
+      this.toolsAndShapesLabel.Text = "Tools and Shapes";
+      // 
       // View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1584, 761);
+      this.Controls.Add(this.toolsAndShapesGroupBox);
       this.Controls.Add(this.pictureBox);
       this.Controls.Add(this.tableLayoutPanel);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "View";
       this.Text = "SeeSharper";
+      this.Paint += new System.Windows.Forms.PaintEventHandler(this.View_Paint);
       this.tableLayoutPanel.ResumeLayout(false);
       this.colorGroupBox.ResumeLayout(false);
       this.tableLayoutPanel1.ResumeLayout(false);
@@ -250,6 +339,8 @@ namespace View
       this.redoGroupBox.ResumeLayout(false);
       this.redoGroupBox.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+      this.flowLayoutPanel.ResumeLayout(false);
+      this.flowLayoutPanel.PerformLayout();
       this.ResumeLayout(false);
 
     }
@@ -272,6 +363,15 @@ namespace View
     private System.Windows.Forms.Button colorButton2;
     private System.Windows.Forms.Button colorButton1;
     private System.Windows.Forms.Button editColorButton;
+    private System.Windows.Forms.Button squareButton;
+    private System.Windows.Forms.Button lineButton;
+    private System.Windows.Forms.Button brushButton;
+    private System.Windows.Forms.Button EllipseButton;
+    private System.Windows.Forms.Button circleButton;
+    private System.Windows.Forms.Button rectangleButton;
+    private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+    private System.Windows.Forms.Label toolsAndShapesLabel;
+    private System.ComponentModel.BackgroundWorker backgroundWorker1;
   }
 }
 
