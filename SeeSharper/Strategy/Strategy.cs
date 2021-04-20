@@ -2,18 +2,22 @@
 
 namespace Strategy
 {
-
 	public abstract class Strategy
 	{
-		private Color color;
-		/*
+		private Color _color;
+
 		public abstract void Draw();
-		internal abstract void MouseMoved(int x, int y);
-		internal abstract void MouseClicked(int x, int y);
-		internal abstract void IsDone();
-		internal abstract void ColorChanged(Color color);
-		*/
-	}
+		public abstract void MouseClicked(int x, int y);
+        public abstract void IsDone();
 
+        public void ColorChanged(Color color)
+        {
+            _color = color;
+        }
 
+        public void MouseMoved(int x, int y)
+        {
+
+        }
+    }
 }

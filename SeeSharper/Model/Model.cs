@@ -1,52 +1,56 @@
 ﻿namespace Model
 {
-	public class Model : IModel
+    using Shared;
+    using System.Collections.Generic;
+    using Strategy;
+    using Memento;
+    using System.Drawing;
+
+    public class Model : IModel
 	{
-		/*
-		private Nullable<string> _saveFileName;
+		private string _saveFileName;
 		private UndoStack _undoStack;
 		private Dictionary<PaintingTool, Strategy> _strategies;
-		void IModel.SaveDrawing(DrawingMemento drawingMemento)
-		{
-			// TODO add implementation
-		}
-		bool IModel.HasSaveFileName()
-		{
-			// TODO add implementation and return statement
-		}
-		void IModel.ChoosePaitingTool(PaintingTool paitingTool)
-		{
-			// TODO add implementation
-		}
-		DrawingMemento IModel.LoadDrawing(string filename)
-		{
-			// TODO add implementation and return statement
-		}
-		void IModel.SetSaveFileName(string saveFileName)
-		{
-			// TODO add implementation
-		}
-		Strategy IModel.ColorChanged(Color color)
-		{
-			// TODO add implementation and return statement
-		}
-		DrawingMemento IModel.Undo()
-		{
-			// TODO add implementation and return statement
-		}
-		Strategy IModel.MouseMoved(int x, int y)
-		{
-			// TODO add implementation and return statement
-		}
-		Strategy IModel.MouseClicked(int x, int y)
-		{
-			// TODO add implementation and return statement
-		}
-		DrawingMemento IModel.Redo()
-		{
-			// TODO add implementation and return statement
-		}
-		*/
-	}
+
+        public Strategy ColorChanged(Color color)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Strategy GetPaintingStrategy(PaintingTool paitingTool)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool HasSaveFileName()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public DrawingMemento LoadDrawing(string filename)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public DrawingMemento Redo()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SaveDrawing(DrawingMemento drawingMemento)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetSaveFileName(string saveFileName)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public DrawingMemento Undo()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 }

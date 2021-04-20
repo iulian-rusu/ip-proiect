@@ -1,5 +1,4 @@
-﻿
-namespace Strategy
+﻿namespace Strategy
 {
 	public enum PaintingTool
 	{

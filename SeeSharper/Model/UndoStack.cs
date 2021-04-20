@@ -1,26 +1,33 @@
-﻿namespace Model
+﻿using Memento;
+using System.Collections.Generic;
+
+namespace Model
 {
 	public class UndoStack
 	{
-		/*
 		private LinkedList<DrawingMemento> _stack;
 		private LinkedListNode<DrawingMemento> _current;
-		internal void Add(DrawingMemento drawing)
+
+        public void Add(DrawingMemento drawing)
 		{
 			// TODO add implementation
 		}
-		internal void Drop()
+
+        public void Drop()
 		{
 			// TODO add implementation
 		}
-		internal DrawingMemento Undo()
+
+        public DrawingMemento Undo()
 		{
-			// TODO add implementation and return statement
-		}
-		internal DrawingMemento Redo()
+            // TODO add implementation and return statement
+            throw new System.NotImplementedException();
+        }
+
+		public DrawingMemento Redo()
 		{
-			// TODO add implementation and return statement
-		}
-		*/
+            // TODO add implementation and return statement
+            throw new System.NotImplementedException();
+        }
 	}
 }

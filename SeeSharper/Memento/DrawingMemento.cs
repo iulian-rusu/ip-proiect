@@ -9,6 +9,7 @@ namespace Memento
 		{
 			// TODO add implementation
 		}
+
 		public Image Drawing
 		{
 			get { return _drawing; }
