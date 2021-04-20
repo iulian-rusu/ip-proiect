@@ -84,5 +84,23 @@
   <ItemGroup>
     <None Include="Resources\EditButtonBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrushButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LineButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SquareButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangleButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CircleButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EllipseButtonBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

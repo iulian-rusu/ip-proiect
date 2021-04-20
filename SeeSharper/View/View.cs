@@ -12,18 +12,28 @@ namespace View
 		#region Private Members
 		private IPresenter _presenter;
 		private Image _drawing;
-		private PaintEventHandler _currentAddedPaintHandler;
+		private PaintEventHandler _currentAddedPaintHandler = null;
 		private Button _selectedColorButton;
+		private Button[] toolButtons;
 		#endregion
 		#region Public Member Functions
 		public View()
     {
       InitializeComponent();
-    }
+			_drawing = pictureBox.Image;
+			_selectedColorButton = colorButton1;
+			toolButtons = new Button[]
+			{
+				brushButton, lineButton, squareButton, rectangleButton,
+				circleButton, ellipseButton
+			};
+		}
 
 		public void SetPresenter(IPresenter presenter)
 		{
 			_presenter = presenter;
+			_presenter.ChoosePaintingTool(PaintingTool.Brush);
+			_presenter.ColorChanged(colorButton1.BackColor);
 		}
 		public void CaptureDrawingState()
 		{
@@ -113,35 +123,54 @@ namespace View
 		{
 			_presenter.Undo();
 		}
+		private void updateToolButtons(Button selected)
+    {
+			foreach (var button in toolButtons)
+      {
+				if (button == selected)
+        {
+					button.FlatStyle = FlatStyle.Popup;
+        }
+				else
+        {
+					button.FlatStyle = FlatStyle.Standard;
+        }
+      }
+		}
 		private void brushButton_Click(object sender, EventArgs e)
 		{
+			updateToolButtons(brushButton);
 			_presenter.ChoosePaintingTool(PaintingTool.Brush);
 		}
-
 		private void lineButton_Click(object sender, EventArgs e)
 		{
+			updateToolButtons(lineButton);
 			_presenter.ChoosePaintingTool(PaintingTool.Line);
 		}
 
 		private void squareButton_Click(object sender, EventArgs e)
 		{
+			updateToolButtons(squareButton);
 			_presenter.ChoosePaintingTool(PaintingTool.Square);
 		}
 
 		private void rectangleButton_Click(object sender, EventArgs e)
 		{
+			updateToolButtons(rectangleButton);
 			_presenter.ChoosePaintingTool(PaintingTool.Rectangle);
 		}
 
 		private void circleButton_Click(object sender, EventArgs e)
 		{
+			updateToolButtons(circleButton);
 			_presenter.ChoosePaintingTool(PaintingTool.Circle);
 		}
 
-		private void EllipseButton_Click(object sender, EventArgs e)
+		private void ellipseButton_Click(object sender, EventArgs e)
 		{
+			updateToolButtons(ellipseButton);
 			_presenter.ChoosePaintingTool(PaintingTool.Ellipse);
 		}
-		#endregion
-	}
+    #endregion
+  }
 }

@@ -118,7 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RectangleButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RectangleButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EditButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EditButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BrushButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BrushButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CircleButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CircleButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SquareButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SquareButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EllipseButtonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EllipseButtonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
