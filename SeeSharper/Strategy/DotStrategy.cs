@@ -1,5 +1,8 @@
 ﻿
-public class DotStrategy : SinglePointStrategy
+namespace Strategy
 {
+  public class DotStrategy : SinglePointStrategy
+  {
+  }
 }
 

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace SeeSharper
 {
+  using View;
   static class Program
   {
     /// <summary>

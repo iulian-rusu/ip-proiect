@@ -1,48 +1,52 @@
-﻿
-public class Model : IModel
+﻿namespace Model
 {
-	private Nullable<string> _saveFileName;
-	private UndoStack _undoStack;
-	private Dictionary<PaintingTool,Strategy> _strategies;
-	void IModel.SaveDrawing(DrawingMemento drawingMemento)
+	public class Model : IModel
 	{
-		// TODO add implementation
+		/*
+		private Nullable<string> _saveFileName;
+		private UndoStack _undoStack;
+		private Dictionary<PaintingTool, Strategy> _strategies;
+		void IModel.SaveDrawing(DrawingMemento drawingMemento)
+		{
+			// TODO add implementation
+		}
+		bool IModel.HasSaveFileName()
+		{
+			// TODO add implementation and return statement
+		}
+		void IModel.ChoosePaitingTool(PaintingTool paitingTool)
+		{
+			// TODO add implementation
+		}
+		DrawingMemento IModel.LoadDrawing(string filename)
+		{
+			// TODO add implementation and return statement
+		}
+		void IModel.SetSaveFileName(string saveFileName)
+		{
+			// TODO add implementation
+		}
+		Strategy IModel.ColorChanged(Color color)
+		{
+			// TODO add implementation and return statement
+		}
+		DrawingMemento IModel.Undo()
+		{
+			// TODO add implementation and return statement
+		}
+		Strategy IModel.MouseMoved(int x, int y)
+		{
+			// TODO add implementation and return statement
+		}
+		Strategy IModel.MouseClicked(int x, int y)
+		{
+			// TODO add implementation and return statement
+		}
+		DrawingMemento IModel.Redo()
+		{
+			// TODO add implementation and return statement
+		}
+		*/
 	}
-	bool IModel.HasSaveFileName()
-	{
-		// TODO add implementation and return statement
-	}
-	void IModel.ChoosePaitingTool(PaintingTool paitingTool)
-	{
-		// TODO add implementation
-	}
-	DrawingMemento IModel.LoadDrawing(string filename)
-	{
-		// TODO add implementation and return statement
-	}
-	void IModel.SetSaveFileName(string saveFileName)
-	{
-		// TODO add implementation
-	}
-	Strategy IModel.ColorChanged(Color color)
-	{
-		// TODO add implementation and return statement
-	}
-	DrawingMemento IModel.Undo()
-	{
-		// TODO add implementation and return statement
-	}
-	Strategy IModel.MouseMoved(int x, int y)
-	{
-		// TODO add implementation and return statement
-	}
-	Strategy IModel.MouseClicked(int x, int y)
-	{
-		// TODO add implementation and return statement
-	}
-	DrawingMemento IModel.Redo()
-	{
-		// TODO add implementation and return statement
-	}
-}
 
+}

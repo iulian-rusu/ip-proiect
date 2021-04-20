@@ -1,10 +1,13 @@
 ﻿
-public enum PaintingTool
+namespace Strategy
 {
-	Dot,
-	Line,
-	Circle,
-	Elipse,
-	Square,
-	Rectangle,
+	public enum PaintingTool
+	{
+		Dot,
+		Line,
+		Circle,
+		Elipse,
+		Square,
+		Rectangle,
+	}
 }

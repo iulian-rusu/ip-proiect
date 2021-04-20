@@ -1,5 +1,7 @@
 ﻿
-public class ElipseStrategy : TwoPointStrategy
+namespace Strategy
 {
+  public class ElipseStrategy : TwoPointStrategy
+  {
+  }
 }
-

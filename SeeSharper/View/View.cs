@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeeSharper
+namespace View
 {
   public partial class View : System.Windows.Forms.Form
   {
@@ -17,7 +17,7 @@ namespace SeeSharper
       InitializeComponent();
     }
 
-    private void Form1_Load(object sender, EventArgs e)
+    private void View_Load(object sender, EventArgs e)
     {
 
     }

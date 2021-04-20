@@ -1,5 +1,8 @@
 ﻿
-public class SquareStrategy : TwoPointStrategy
+namespace Strategy
 {
+  public class SquareStrategy : TwoPointStrategy
+  {
+  }
 }
 

@@ -1,6 +1,12 @@
 ﻿
-public abstract class TwoPointStrategy : Strategy
+using System;
+using System.Drawing;
+
+namespace Strategy
 {
-	private Pair<Point,Point> points;
+	public abstract class TwoPointStrategy : Strategy
+	{
+		private Tuple<Point, Point> points;
+	}
 }
 

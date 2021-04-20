@@ -1,14 +1,17 @@
-﻿
-public class DrawingMemento
+﻿using System.Drawing;
+
+namespace Memento
 {
-	private Image _drawing;
-	public DrawingMemento(Image drawing)
+	public class DrawingMemento
 	{
-		// TODO add implementation
-	}
-	public Image Drawing
-	{
-		get{}
+		private Image _drawing;
+		public DrawingMemento(Image drawing)
+		{
+			// TODO add implementation
+		}
+		public Image Drawing
+		{
+			get { return _drawing; }
+		}
 	}
 }
-

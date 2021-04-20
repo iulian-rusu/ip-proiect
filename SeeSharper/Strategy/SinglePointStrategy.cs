@@ -1,6 +1,11 @@
 ﻿
-public abstract class SinglePointStrategy : Strategy
+using System.Drawing;
+
+namespace Strategy
 {
-	private Point point;
+	public abstract class SinglePointStrategy : Strategy
+	{
+		private Point point;
+	}
 }
 

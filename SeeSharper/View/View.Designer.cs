@@ -1,5 +1,5 @@
 ﻿
-namespace SeeSharper
+namespace View
 {
   partial class View
   {
@@ -31,14 +31,14 @@ namespace SeeSharper
     {
       this.SuspendLayout();
       // 
-      // Form
+      // View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
-      this.Name = "Form";
+      this.Name = "View";
       this.Text = "SeeSharper";
-      this.Load += new System.EventHandler(this.Form1_Load);
+      this.Load += new System.EventHandler(this.View_Load);
       this.ResumeLayout(false);
 
     }

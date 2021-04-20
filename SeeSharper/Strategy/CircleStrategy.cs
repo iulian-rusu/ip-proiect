@@ -1,5 +1,7 @@
-﻿
-public class CircleStrategy : TwoPointStrategy
+﻿namespace Strategy
 {
+  public class CircleStrategy : TwoPointStrategy
+  {
+  }
 }
 
