@@ -18,8 +18,8 @@ namespace View
 		#endregion
 		#region Public Member Functions
 		public View()
-    {
-      InitializeComponent();
+        {
+            InitializeComponent();
 			_drawing = pictureBox.Image;
 			_selectedColorButton = colorButton1;
 			toolButtons = new Button[]
