@@ -3,66 +3,93 @@
     using Shared;
     using Strategy;
     using System.Drawing;
+    using System.Windows.Forms;
 
-	public class Presenter : IPresenter
+    public class Presenter : IPresenter
 	{
-		private IView _view;
+        #region Private Members
+        private IView _view;
 		private IModel _model;
 		private Strategy _currentStrategy;
-		public Presenter(IModel model, IView view)
-    {
+        private string _helpString = @"Helpful description.";
+        #endregion
+        #region Public Member Functions
+        public Presenter(IModel model, IView view)
+        {
 			_model = model;
 			_view = view;
-    }
+        }
 
 		public void MouseMoved(int x, int y)
 		{
-			// TODO add implementation
+            _currentStrategy.MouseMoved(x, y);
 		}
 
-		public void LoadHelp()
+        public void MouseClicked(int x, int y)
+        {
+            _currentStrategy.MouseClicked(x, y);
+        }
+
+        public void LoadHelp()
 		{
-			// TODO add implementation
+            MessageBox.Show(_helpString, "Help");
 		}
 
-        public void Exit()
+        public bool Exit()
 		{
-			// TODO add implementation
-		}
+            DialogResult res = MessageBox.Show("Exit application?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            return res == DialogResult.OK;
+        }
 
         public void SaveDrawing()
 		{
-			// TODO add implementation
+            var drawingMemento = _view.GetDrawingMemento();
+            _model.SaveDrawing(drawingMemento);
 		}
 
         public void Redo()
 		{
-			// TODO add implementation
+            var currentMemento = _model.Redo();
+            _view.SetDrawingMemento(currentMemento);
 		}
 
-        public void MouseClicked(int x, int y)
-		{
-			// TODO add implementation
-		}
+        public void Undo()
+        {
+            var currentMemento = _model.Undo();
+            _view.SetDrawingMemento(currentMemento);
+        }
 
         public void ColorChanged(Color color)
 		{
-			// TODO add implementation
+            _model.ColorChanged(color);
 		}
 
         public void ChoosePaintingTool(PaintingTool paintingTool)
 		{
-			// TODO add implementation
+            _currentStrategy = _model.GetPaintingStrategy(paintingTool);
 		}
 
-        public void Undo()
+        public void LoadDrawing(string filename)
 		{
-			// TODO add implementation
-		}
+            /*
+            TODO: move to view
+             
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
 
-        public void LoadDrawing()
-		{
-			// TODO add implementation
-		}
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+                    _presenter.LoadDrawing(filePath);
+                }
+            }
+            */
+            var loadedMemento = _model.LoadDrawing(filename);
+            _view.SetDrawingMemento(loadedMemento);
+        }
+        #endregion
     }
 }
