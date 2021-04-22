@@ -30,13 +30,13 @@ namespace View
     private void InitializeComponent()
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
-      this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+      this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
       this.colorGroupBox = new System.Windows.Forms.GroupBox();
       this.editColorButton = new System.Windows.Forms.Button();
       this.colorButton3 = new System.Windows.Forms.Button();
       this.colorButton2 = new System.Windows.Forms.Button();
       this.colorButton1 = new System.Windows.Forms.Button();
-      this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+      this.undoRedoTableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.undoGroupBox = new System.Windows.Forms.GroupBox();
       this.undoTextBox = new System.Windows.Forms.TextBox();
       this.undoButton = new System.Windows.Forms.Button();
@@ -53,31 +53,38 @@ namespace View
       this.ellipseButton = new System.Windows.Forms.Button();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
-      this.tableLayoutPanel.SuspendLayout();
+      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
+      this.saveButton = new System.Windows.Forms.Button();
+      this.saveAsButton = new System.Windows.Forms.Button();
+      this.loadButton = new System.Windows.Forms.Button();
+      this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
-      this.tableLayoutPanel1.SuspendLayout();
+      this.undoRedoTableLayoutPanel1.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
       this.redoGroupBox.SuspendLayout();
       this.flowLayoutPanel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+      this.saveLoadGroupBox.SuspendLayout();
       this.SuspendLayout();
       // 
-      // tableLayoutPanel
+      // mainTableLayoutPanel
       // 
-      this.tableLayoutPanel.ColumnCount = 3;
-      this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel.Controls.Add(this.colorGroupBox, 1, 0);
-      this.tableLayoutPanel.Controls.Add(this.tableLayoutPanel1, 2, 0);
-      this.tableLayoutPanel.Controls.Add(this.flowLayoutPanel, 0, 0);
-      this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
-      this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-      this.tableLayoutPanel.Name = "tableLayoutPanel";
-      this.tableLayoutPanel.RowCount = 1;
-      this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-      this.tableLayoutPanel.Size = new System.Drawing.Size(1584, 100);
-      this.tableLayoutPanel.TabIndex = 0;
+      this.mainTableLayoutPanel.ColumnCount = 4;
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33459F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.00076F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33459F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.33006F));
+      this.mainTableLayoutPanel.Controls.Add(this.colorGroupBox, 1, 0);
+      this.mainTableLayoutPanel.Controls.Add(this.undoRedoTableLayoutPanel1, 2, 0);
+      this.mainTableLayoutPanel.Controls.Add(this.flowLayoutPanel, 0, 0);
+      this.mainTableLayoutPanel.Controls.Add(this.saveLoadGroupBox, 3, 0);
+      this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+      this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+      this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
+      this.mainTableLayoutPanel.RowCount = 1;
+      this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+      this.mainTableLayoutPanel.Size = new System.Drawing.Size(1584, 100);
+      this.mainTableLayoutPanel.TabIndex = 0;
       // 
       // colorGroupBox
       // 
@@ -88,7 +95,7 @@ namespace View
       this.colorGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
       this.colorGroupBox.Location = new System.Drawing.Point(531, 3);
       this.colorGroupBox.Name = "colorGroupBox";
-      this.colorGroupBox.Size = new System.Drawing.Size(522, 94);
+      this.colorGroupBox.Size = new System.Drawing.Size(310, 94);
       this.colorGroupBox.TabIndex = 1;
       this.colorGroupBox.TabStop = false;
       this.colorGroupBox.Text = "Color";
@@ -140,20 +147,20 @@ namespace View
       this.colorButton1.UseVisualStyleBackColor = false;
       this.colorButton1.Click += new System.EventHandler(this.colorButton1_Click);
       // 
-      // tableLayoutPanel1
+      // undoRedoTableLayoutPanel1
       // 
-      this.tableLayoutPanel1.ColumnCount = 1;
-      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.tableLayoutPanel1.Controls.Add(this.undoGroupBox, 0, 0);
-      this.tableLayoutPanel1.Controls.Add(this.redoGroupBox, 0, 1);
-      this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.tableLayoutPanel1.Location = new System.Drawing.Point(1059, 3);
-      this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-      this.tableLayoutPanel1.RowCount = 2;
-      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.tableLayoutPanel1.Size = new System.Drawing.Size(522, 94);
-      this.tableLayoutPanel1.TabIndex = 2;
+      this.undoRedoTableLayoutPanel1.ColumnCount = 1;
+      this.undoRedoTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel1.Controls.Add(this.undoGroupBox, 0, 0);
+      this.undoRedoTableLayoutPanel1.Controls.Add(this.redoGroupBox, 0, 1);
+      this.undoRedoTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.undoRedoTableLayoutPanel1.Location = new System.Drawing.Point(847, 3);
+      this.undoRedoTableLayoutPanel1.Name = "undoRedoTableLayoutPanel1";
+      this.undoRedoTableLayoutPanel1.RowCount = 2;
+      this.undoRedoTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel1.Size = new System.Drawing.Size(522, 94);
+      this.undoRedoTableLayoutPanel1.TabIndex = 2;
       // 
       // undoGroupBox
       // 
@@ -316,20 +323,66 @@ namespace View
       this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
       this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
       // 
+      // saveLoadGroupBox
+      // 
+      this.saveLoadGroupBox.Controls.Add(this.loadButton);
+      this.saveLoadGroupBox.Controls.Add(this.saveAsButton);
+      this.saveLoadGroupBox.Controls.Add(this.saveButton);
+      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.saveLoadGroupBox.Location = new System.Drawing.Point(1375, 3);
+      this.saveLoadGroupBox.Name = "saveLoadGroupBox";
+      this.saveLoadGroupBox.Size = new System.Drawing.Size(206, 94);
+      this.saveLoadGroupBox.TabIndex = 3;
+      this.saveLoadGroupBox.TabStop = false;
+      this.saveLoadGroupBox.Text = "File";
+      // 
+      // saveButton
+      // 
+      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.saveButton.Location = new System.Drawing.Point(3, 16);
+      this.saveButton.Name = "saveButton";
+      this.saveButton.Size = new System.Drawing.Size(200, 23);
+      this.saveButton.TabIndex = 0;
+      this.saveButton.Text = "Save";
+      this.saveButton.UseVisualStyleBackColor = true;
+      this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+      // 
+      // saveAsButton
+      // 
+      this.saveAsButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.saveAsButton.Location = new System.Drawing.Point(3, 39);
+      this.saveAsButton.Name = "saveAsButton";
+      this.saveAsButton.Size = new System.Drawing.Size(200, 23);
+      this.saveAsButton.TabIndex = 1;
+      this.saveAsButton.Text = "Save As";
+      this.saveAsButton.UseVisualStyleBackColor = true;
+      this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
+      // 
+      // loadButton
+      // 
+      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.loadButton.Location = new System.Drawing.Point(3, 62);
+      this.loadButton.Name = "loadButton";
+      this.loadButton.Size = new System.Drawing.Size(200, 23);
+      this.loadButton.TabIndex = 2;
+      this.loadButton.Text = "Load";
+      this.loadButton.UseVisualStyleBackColor = true;
+      this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+      // 
       // View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1584, 761);
       this.Controls.Add(this.pictureBox);
-      this.Controls.Add(this.tableLayoutPanel);
+      this.Controls.Add(this.mainTableLayoutPanel);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "View";
       this.Text = "SeeSharper";
       this.Paint += new System.Windows.Forms.PaintEventHandler(this.View_Paint);
-      this.tableLayoutPanel.ResumeLayout(false);
+      this.mainTableLayoutPanel.ResumeLayout(false);
       this.colorGroupBox.ResumeLayout(false);
-      this.tableLayoutPanel1.ResumeLayout(false);
+      this.undoRedoTableLayoutPanel1.ResumeLayout(false);
       this.undoGroupBox.ResumeLayout(false);
       this.undoGroupBox.PerformLayout();
       this.redoGroupBox.ResumeLayout(false);
@@ -337,16 +390,17 @@ namespace View
       this.flowLayoutPanel.ResumeLayout(false);
       this.flowLayoutPanel.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+      this.saveLoadGroupBox.ResumeLayout(false);
       this.ResumeLayout(false);
 
     }
 
     #endregion
 
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
+    private System.Windows.Forms.TableLayoutPanel mainTableLayoutPanel;
     private System.Windows.Forms.PictureBox pictureBox;
     private System.Windows.Forms.GroupBox colorGroupBox;
-    private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+    private System.Windows.Forms.TableLayoutPanel undoRedoTableLayoutPanel1;
     private System.Windows.Forms.GroupBox undoGroupBox;
     private System.Windows.Forms.TextBox undoTextBox;
     private System.Windows.Forms.Button undoButton;
@@ -366,6 +420,10 @@ namespace View
     private System.Windows.Forms.Button rectangleButton;
     private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     private System.Windows.Forms.Label toolsAndShapesLabel;
+    private System.Windows.Forms.GroupBox saveLoadGroupBox;
+    private System.Windows.Forms.Button loadButton;
+    private System.Windows.Forms.Button saveAsButton;
+    private System.Windows.Forms.Button saveButton;
   }
 }
 

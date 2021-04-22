@@ -71,22 +71,6 @@
 
         public void LoadDrawing(string filename)
 		{
-            /*
-            TODO: move to view
-             
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string filePath = openFileDialog.FileName;
-                    _presenter.LoadDrawing(filePath);
-                }
-            }
-            */
             var loadedMemento = _model.LoadDrawing(filename);
             _view.SetDrawingMemento(loadedMemento);
         }
