@@ -11,7 +11,6 @@
         bool HasSaveFileName();
         void SetSaveFileName(string saveFileName);
         Strategy GetPaintingStrategy(PaintingTool paitingTool);
-        Strategy ColorChanged(Color color);
         DrawingMemento Undo();
         DrawingMemento Redo();
     }

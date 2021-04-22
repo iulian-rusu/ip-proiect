@@ -61,7 +61,7 @@
 
         public void ColorChanged(Color color)
 		{
-            _model.ColorChanged(color);
+            // _model.ColorChanged(color);
 		}
 
         public void ChoosePaintingTool(PaintingTool paintingTool)
