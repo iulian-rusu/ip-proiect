@@ -35,6 +35,9 @@ namespace Model
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor for the model - initializes the undo stack
+        /// </summary>
         public Model()
         {
             _undoStack = new UndoStack();

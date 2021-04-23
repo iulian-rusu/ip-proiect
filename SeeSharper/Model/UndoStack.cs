@@ -20,7 +20,10 @@ using System.Collections.Generic;
 
 namespace Model
 {
-	public class UndoStack
+    /// <summary>
+    /// Undo stack - logic for the undo/redo process
+    /// </summary>
+    public class UndoStack
 	{
         #region Private Fields
         private LinkedList<DrawingMemento> _stack;
@@ -28,6 +31,10 @@ namespace Model
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor for the undo stack - initializes the double linked list used
+        /// to store different states of the image
+        /// </summary>
         public UndoStack()
         {
             _stack = new LinkedList<DrawingMemento>();
