@@ -75,7 +75,10 @@ namespace Model
 		{
             DrawingMemento undoneMemento = _current.Value;
 
-            _current = _current.Previous;
+            if (_current.Previous != null)
+            {
+                _current = _current.Previous;
+            }
 
             return undoneMemento;
         }
@@ -87,7 +90,11 @@ namespace Model
         public DrawingMemento Redo()
 		{
             DrawingMemento redoneMemento = _current.Value;
-            _current = _current.Next;
+
+            if (_current.Next != null)
+            {
+                _current = _current.Next;
+            }
 
             return redoneMemento;
         }
