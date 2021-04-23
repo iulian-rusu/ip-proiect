@@ -105,8 +105,23 @@ namespace Model
         /// <param name="filename">Drawing path on disk</param>
         /// <returns>The drawing at the given path</returns>
         public DrawingMemento LoadDrawing(string filename)
-        { 
-            return new DrawingMemento(Image.FromFile(filename));
+        {
+            DrawingMemento loadedDrawing = null;
+
+            try
+            {
+                loadedDrawing = new DrawingMemento(Image.FromFile(filename));
+            }
+            catch(FileNotFoundException fileNotFoundException)
+            {
+                MessageBox.Show("Error: File not found to load drawing -> " + fileNotFoundException.Message);
+            }
+            catch(System.OutOfMemoryException outOfMemoryException)
+            {
+                MessageBox.Show("Error: Out of memory-> " + outOfMemoryException.Message);
+            }
+
+            return loadedDrawing;
         }
 
         /// <summary>
@@ -125,24 +140,37 @@ namespace Model
         /// <returns>void</returns>
         public void SaveDrawing(DrawingMemento drawingMemento)
         {
-            ImageFormat drawingFormat;
-            string drawingExtension = Path.GetExtension(_saveFileName);
 
-            switch (drawingExtension)
+            if(HasSaveFileName() == true)
             {
-                case ".png":
-                    drawingFormat = ImageFormat.Png;
-                    break;
-                case ".bmp":
-                    drawingFormat = ImageFormat.Bmp;
-                    break;
-                default:
-                    MessageBox.Show("Error: invalid format.");
-                    return;
-            }
+                ImageFormat drawingFormat;
+                string drawingExtension = string.Empty;
 
-            drawingMemento.Drawing.Save(_saveFileName, drawingFormat);
-            _undoStack.Drop();
+                try
+                {
+                    drawingExtension = Path.GetExtension(_saveFileName);
+                }
+                catch(System.ArgumentException argumentException)
+                {
+                    MessageBox.Show("Error! -> " + argumentException.Message);
+                }
+
+                switch (drawingExtension)
+                {
+                    case ".png":
+                        drawingFormat = ImageFormat.Png;
+                        break;
+                    case ".bmp":
+                        drawingFormat = ImageFormat.Bmp;
+                        break;
+                    default:
+                        MessageBox.Show("Error: invalid format.");
+                        return;
+                }
+
+                drawingMemento.Drawing.Save(_saveFileName, drawingFormat);
+                _undoStack.Drop();
+            }
 
         }
 

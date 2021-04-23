@@ -32,7 +32,7 @@ namespace Memento
         /// <summary>
         /// Constructor for the DrawingMemento - initializes the image
         /// </summary>
-        /// <param name="drawing">Image/drawing to be wrappedl</param>
+        /// <param name="drawing">Image/drawing to be wrapped</param>
         public DrawingMemento(Image drawing)
 		{
             _drawing = drawing;
