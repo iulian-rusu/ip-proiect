@@ -27,7 +27,13 @@ namespace Strategy
 
     public abstract class Strategy
     {
-        private Color _color;
+        protected Color _color;
+        protected bool _done = false;
+
+        public bool Done
+        {
+            get { return _done; }
+        }
 
         public void ColorChanged(Color color)
         {
