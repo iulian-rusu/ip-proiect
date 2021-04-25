@@ -135,10 +135,24 @@ namespace Presenter
         /// </summary>
         /// <param name="paintingTool"></param>
         public void ChoosePaintingTool(PaintingTool paintingTool)
-		{
-            _currentStrategy = _model.GetPaintingStrategy(paintingTool);
-      _view.ChangeCurrentHandler(_currentStrategy);
-    }
+    { 
+      if (_currentStrategy != null && _currentStrategy.Done)
+      {
+          _view.CaptureDrawingState();
+          var memento = _view.GetDrawingMemento();
+          //_model.PushMemento(memento);
+      }
+      var newStrategy = _model.GetPaintingStrategy(paintingTool);
+      if (_currentStrategy != null) 
+      { 
+        _view.ChangeCurrentHandler(newStrategy);
+      }
+      else
+      {
+        _view.AddHandler(newStrategy);
+      }
+  _currentStrategy = newStrategy;
+}
 
         /// <summary>
         /// Sets the View drawing to the one loaded in the model

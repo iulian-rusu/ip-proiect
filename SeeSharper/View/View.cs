@@ -50,7 +50,6 @@ namespace View
     public void CaptureDrawingState()
     {
       _drawing = pictureBox.Image;
-      pictureBox.Refresh();
     }
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
