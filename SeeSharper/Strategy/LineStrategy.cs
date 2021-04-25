@@ -42,8 +42,11 @@ namespace Strategy
         }
         private void Draw(object sender, PaintEventArgs e)
         {
-            var graphics = e.Graphics;
-            graphics.DrawLine(new Pen(_color), _points[0], _points[1]);
+      if (_points != null)
+      {
+        var graphics = e.Graphics;
+        graphics.DrawLine(new Pen(_color), _points[0], _points[1]);
+      }
         }
     }
 

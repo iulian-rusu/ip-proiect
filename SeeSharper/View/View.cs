@@ -50,10 +50,12 @@ namespace View
     public void CaptureDrawingState()
     {
       _drawing = pictureBox.Image;
+      pictureBox.Refresh();
     }
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
       _drawing = drawingMemento.Drawing;
+      pictureBox.Refresh();
     }
     public DrawingMemento GetDrawingMemento()
     {
@@ -67,11 +69,13 @@ namespace View
     public void AddHandler(Strategy strategy)
     {
       _currentAddedPaintHandler = strategy.GetDraw();
-      Paint += _currentAddedPaintHandler;
+      pictureBox.Paint += _currentAddedPaintHandler;
+      pictureBox.Refresh();
     }
     public void RemoveCurrentHandler()
     {
-      Paint -= _currentAddedPaintHandler;
+      pictureBox.Paint -= _currentAddedPaintHandler;
+      pictureBox.Refresh();
     }
     #endregion
     #region Private Member Functions
@@ -80,7 +84,7 @@ namespace View
     /// </summary>
     private void InitPresenter()
     {
-      _presenter.ChoosePaintingTool(PaintingTool.Brush);
+      _presenter.ChoosePaintingTool(PaintingTool.Line);
       _presenter.ColorChanged(colorButton1.BackColor);
     }
     private void View_Paint(object sender, PaintEventArgs e)
