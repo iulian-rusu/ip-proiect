@@ -51,20 +51,20 @@ namespace View
       this.rectangleButton = new System.Windows.Forms.Button();
       this.circleButton = new System.Windows.Forms.Button();
       this.ellipseButton = new System.Windows.Forms.Button();
+      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
+      this.loadButton = new System.Windows.Forms.Button();
+      this.saveAsButton = new System.Windows.Forms.Button();
+      this.saveButton = new System.Windows.Forms.Button();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
-      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
-      this.saveButton = new System.Windows.Forms.Button();
-      this.saveAsButton = new System.Windows.Forms.Button();
-      this.loadButton = new System.Windows.Forms.Button();
       this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
       this.undoRedoTableLayoutPanel1.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
       this.redoGroupBox.SuspendLayout();
       this.flowLayoutPanel.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
       this.saveLoadGroupBox.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
       this.SuspendLayout();
       // 
       // mainTableLayoutPanel
@@ -253,7 +253,6 @@ namespace View
       // brushButton
       // 
       this.brushButton.BackgroundImage = global::View.Properties.Resources.BrushButtonBackground;
-      this.brushButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.brushButton.Location = new System.Drawing.Point(102, 3);
       this.brushButton.Name = "brushButton";
       this.brushButton.Size = new System.Drawing.Size(32, 32);
@@ -264,6 +263,7 @@ namespace View
       // lineButton
       // 
       this.lineButton.BackgroundImage = global::View.Properties.Resources.LineButtonBackground;
+      this.lineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.lineButton.Location = new System.Drawing.Point(140, 3);
       this.lineButton.Name = "lineButton";
       this.lineButton.Size = new System.Drawing.Size(32, 32);
@@ -311,18 +311,6 @@ namespace View
       this.ellipseButton.UseVisualStyleBackColor = true;
       this.ellipseButton.Click += new System.EventHandler(this.ellipseButton_Click);
       // 
-      // pictureBox
-      // 
-      this.pictureBox.BackColor = System.Drawing.Color.White;
-      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.pictureBox.Location = new System.Drawing.Point(0, 100);
-      this.pictureBox.Name = "pictureBox";
-      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
-      this.pictureBox.TabIndex = 1;
-      this.pictureBox.TabStop = false;
-      this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
-      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
-      // 
       // saveLoadGroupBox
       // 
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
@@ -336,16 +324,16 @@ namespace View
       this.saveLoadGroupBox.TabStop = false;
       this.saveLoadGroupBox.Text = "File";
       // 
-      // saveButton
+      // loadButton
       // 
-      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.saveButton.Location = new System.Drawing.Point(3, 16);
-      this.saveButton.Name = "saveButton";
-      this.saveButton.Size = new System.Drawing.Size(200, 23);
-      this.saveButton.TabIndex = 0;
-      this.saveButton.Text = "Save";
-      this.saveButton.UseVisualStyleBackColor = true;
-      this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.loadButton.Location = new System.Drawing.Point(3, 62);
+      this.loadButton.Name = "loadButton";
+      this.loadButton.Size = new System.Drawing.Size(200, 23);
+      this.loadButton.TabIndex = 2;
+      this.loadButton.Text = "Load";
+      this.loadButton.UseVisualStyleBackColor = true;
+      this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
       // 
       // saveAsButton
       // 
@@ -358,16 +346,28 @@ namespace View
       this.saveAsButton.UseVisualStyleBackColor = true;
       this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
       // 
-      // loadButton
+      // saveButton
       // 
-      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.loadButton.Location = new System.Drawing.Point(3, 62);
-      this.loadButton.Name = "loadButton";
-      this.loadButton.Size = new System.Drawing.Size(200, 23);
-      this.loadButton.TabIndex = 2;
-      this.loadButton.Text = "Load";
-      this.loadButton.UseVisualStyleBackColor = true;
-      this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.saveButton.Location = new System.Drawing.Point(3, 16);
+      this.saveButton.Name = "saveButton";
+      this.saveButton.Size = new System.Drawing.Size(200, 23);
+      this.saveButton.TabIndex = 0;
+      this.saveButton.Text = "Save";
+      this.saveButton.UseVisualStyleBackColor = true;
+      this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+      // 
+      // pictureBox
+      // 
+      this.pictureBox.BackColor = System.Drawing.Color.White;
+      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.pictureBox.Location = new System.Drawing.Point(0, 100);
+      this.pictureBox.Name = "pictureBox";
+      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
+      this.pictureBox.TabIndex = 1;
+      this.pictureBox.TabStop = false;
+      this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
+      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
       // 
       // View
       // 
@@ -389,8 +389,8 @@ namespace View
       this.redoGroupBox.PerformLayout();
       this.flowLayoutPanel.ResumeLayout(false);
       this.flowLayoutPanel.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
       this.saveLoadGroupBox.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
       this.ResumeLayout(false);
 
     }

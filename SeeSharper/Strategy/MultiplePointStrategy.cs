@@ -1,10 +1,11 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 
 namespace Strategy
 {
 	public abstract class MultiplePointStrategy : Strategy
 	{
-		private Point point;
+		protected List<Point> _points;
 	}
 }
 

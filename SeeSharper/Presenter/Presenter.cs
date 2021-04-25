@@ -137,7 +137,8 @@ namespace Presenter
         public void ChoosePaintingTool(PaintingTool paintingTool)
 		{
             _currentStrategy = _model.GetPaintingStrategy(paintingTool);
-		}
+      _view.ChangeCurrentHandler(_currentStrategy);
+    }
 
         /// <summary>
         /// Sets the View drawing to the one loaded in the model
