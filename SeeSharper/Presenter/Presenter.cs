@@ -86,6 +86,7 @@ namespace Presenter
             }
             var drawingMemento = _view.GetDrawingMemento();
             _model.SaveDrawing(drawingMemento);
+            // _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -95,6 +96,7 @@ namespace Presenter
         {
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
+            // _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -104,6 +106,7 @@ namespace Presenter
         {
             var currentMemento = _model.Undo();
             _view.SetDrawingMemento(currentMemento);
+            // _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -123,23 +126,16 @@ namespace Presenter
         /// <param name="selectedColor">The color of the painting tool</param>
         public void ChoosePaintingTool(PaintingTool paintingTool, Color selectedColor)
         {
-            if (_currentStrategy != null && _currentStrategy.Done)
+            if (_currentStrategy.Done)
             {
                 _view.CaptureDrawingState();
                 var memento = _view.GetDrawingMemento();
                 _model.AddMemento(memento);
             }
-            var newStrategy = _model.GetPaintingStrategy(paintingTool);
-            if (_currentStrategy != null)
-            {
-                _view.ChangeCurrentHandler(newStrategy);
-            }
-            else
-            {
-                _view.AddHandler(newStrategy);
-            }
-            _currentStrategy = newStrategy;
 
+            var newStrategy = _model.GetPaintingStrategy(paintingTool);
+            _view.ChangeCurrentHandler(newStrategy);
+            _currentStrategy = newStrategy;
             ColorChanged(selectedColor);
         }
 
@@ -151,6 +147,7 @@ namespace Presenter
         {
             var loadedMemento = _model.LoadDrawing(filename);
             _view.SetDrawingMemento(loadedMemento);
+            // _currentStrategy.Reset();
         }
         #endregion
     }
