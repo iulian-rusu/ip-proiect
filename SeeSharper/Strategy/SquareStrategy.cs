@@ -1,33 +1,19 @@
 ﻿using System.Windows.Forms;
+using System;
+using System.Drawing;
 
 namespace Strategy
 {
     public class SquareStrategy : TwoPointStrategy
     {
-        public override PaintEventHandler GetDraw()
+        protected override void Draw(object sender, PaintEventArgs e)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override void IsDone()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void MouseClicked(int x, int y)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void MouseMoved(int x, int y)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void Draw(object sender, PaintEventArgs e)
-        {
-            throw new System.NotImplementedException();
+            if (_points != null)
+            {
+                var graphics = e.Graphics;
+                int sideLength = Math.Abs(_points[0].X - _points[1].X);
+                graphics.DrawRectangle(new Pen(_color), _points[0].X, _points[0].Y, sideLength, sideLength);
+            }
         }
     }
 }
-
