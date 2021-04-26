@@ -50,10 +50,14 @@ namespace Model
         /// <returns>void</returns>
         public void Add(DrawingMemento drawing)
 		{
-            while(_current.Next != _stack.Last)
+            if (_current != null)
             {
-                _stack.RemoveLast();
+                while (_current != _stack.Last)
+                {
+                    _stack.RemoveLast();
+                }
             }
+
             _stack.AddLast(drawing);
             _current = _stack.Last;
 		}
@@ -73,11 +77,17 @@ namespace Model
         /// <returns>The state of the drawing before the last done action</returns>
         public DrawingMemento Undo()
 		{
-            DrawingMemento undoneMemento = _current.Value;
+            DrawingMemento undoneMemento = null;
 
-            if (_current.Previous != null)
+            if (_current != null)
             {
-                _current = _current.Previous;
+                undoneMemento = _current.Value;
+
+                if (_current.Previous != null)
+                {
+                    _current = _current.Previous;
+                }
+
             }
 
             return undoneMemento;
@@ -89,14 +99,56 @@ namespace Model
         /// <returns>The state of the drawing before the last undo action</returns>
         public DrawingMemento Redo()
 		{
-            DrawingMemento redoneMemento = _current.Value;
+            DrawingMemento redoneMemento = null;
 
-            if (_current.Next != null)
+            if (_current != null)
             {
-                _current = _current.Next;
+                redoneMemento = _current.Value;
+
+                if (_current.Next != null)
+                {
+                    _current = _current.Next;
+                }
             }
 
             return redoneMemento;
+        }
+
+        /// <summary>
+        /// Used to get the description of the next undo
+        /// </summary>
+        /// <returns>The description of the next undo</returns>
+        public string GetNextUndoDescription()
+        {
+            string description = string.Empty;
+
+            if(_current != null)
+            {
+                description = _current.Value.Description;
+            }
+
+            return description;
+        }
+
+        /// <summary>
+        /// Used to get the description of the next redo
+        /// </summary>
+        /// <returns>The description of the next redo</returns>
+        public string GetNextRedoDescription()
+        {
+            string description = string.Empty;
+
+            if (_current != null)
+            {
+
+                if (_current.Next != null)
+                {
+                    description = _current.Next.Value.Description;
+                }
+
+            }
+
+            return description;
         }
         #endregion
     }

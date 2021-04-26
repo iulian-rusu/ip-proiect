@@ -14,5 +14,7 @@
         DrawingMemento Undo();
         DrawingMemento Redo();
         void AddMemento(DrawingMemento memento);
+        string GetNextUndoDescription();
+        string GetNextRedoDescription();
     }
 }

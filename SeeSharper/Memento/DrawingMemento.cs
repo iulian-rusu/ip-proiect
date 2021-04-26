@@ -26,6 +26,7 @@ namespace Memento
 	{
         #region Fields
         private Image _drawing;
+        private string _description;
         #endregion
 
         #region Constructor
@@ -33,9 +34,11 @@ namespace Memento
         /// Constructor for the DrawingMemento - initializes the image
         /// </summary>
         /// <param name="drawing">Image/drawing to be wrapped</param>
-        public DrawingMemento(Image drawing)
+        /// <param name="drawing">The description of that image</param>
+        public DrawingMemento(Image drawing, string description)
 		{
             _drawing = drawing;
+            _description = description;
 		}
         #endregion
 
@@ -47,6 +50,19 @@ namespace Memento
 		{
 			get { return _drawing; }
 		}
+
+        public string Description
+        {
+            get
+            {
+                return _description;
+            }
+
+            set
+            {
+                _description = value;
+            }
+        }
         #endregion
     }
 }

@@ -110,7 +110,7 @@ namespace Model
 
             try
             {
-                loadedDrawing = new DrawingMemento(Image.FromFile(filename));
+                loadedDrawing = new DrawingMemento(Image.FromFile(filename), "Loaded " + filename);
             }
             catch(FileNotFoundException fileNotFoundException)
             {
@@ -201,6 +201,24 @@ namespace Model
         public void AddMemento(DrawingMemento memento)
         {
             _undoStack.Add(memento);
+        }
+
+        /// <summary>
+        /// Used to get the description of the next undo that's on the stack
+        /// </summary>
+        /// <returns>The description of the next undo on the stack</returns>
+         public string GetNextUndoDescription()
+        {
+            return _undoStack.GetNextUndoDescription();
+        }
+
+        /// <summary>
+        /// Used to get the description of the next redo that's on the stack
+        /// </summary>
+        /// <returns>The description of the next redo on the stack</returns>
+        public string GetNextRedoDescription()
+        {
+            return _undoStack.GetNextRedoDescription();
         }
         #endregion
     }
