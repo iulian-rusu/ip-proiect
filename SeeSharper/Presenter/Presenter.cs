@@ -67,6 +67,8 @@ namespace Presenter
         {
             // if(_currentStrategy.Done)
             // {
+            //     _view.CaptureDrawingState();
+            //     _model.AddMemento(_view.GetDrawingMemento());
             //     _currentStrategy.Reset();
             // }
             _currentStrategy.MouseClicked(x, y);
@@ -125,7 +127,7 @@ namespace Presenter
             {
                 _view.CaptureDrawingState();
                 var memento = _view.GetDrawingMemento();
-                //_model.PushMemento(memento);
+                _model.AddMemento(memento);
             }
             var newStrategy = _model.GetPaintingStrategy(paintingTool);
             if (_currentStrategy != null)
