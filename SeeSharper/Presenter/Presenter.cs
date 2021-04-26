@@ -65,12 +65,12 @@ namespace Presenter
         /// <param name="y">The y coordinate of the mouse cursor</param>
         public void MouseClicked(int x, int y)
         {
-            // if(_currentStrategy.Done)
-            // {
-            //     _view.CaptureDrawingState();
-            //     _model.AddMemento(_view.GetDrawingMemento());
-            //     _currentStrategy.Reset();
-            // }
+            if (_currentStrategy.Done)
+            {
+                _view.CaptureDrawingState();
+                _model.AddMemento(_view.GetDrawingMemento());
+                _currentStrategy.Reset();
+            }
             _currentStrategy.MouseClicked(x, y);
             _view.ChangeCurrentHandler(_currentStrategy);
         }
@@ -87,7 +87,7 @@ namespace Presenter
             _view.CaptureDrawingState();
             var drawingMemento = _view.GetDrawingMemento();
             _model.SaveDrawing(drawingMemento);
-            // _currentStrategy.Reset();
+            _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace Presenter
         {
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
-            // _currentStrategy.Reset();
+            _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Presenter
         {
             var currentMemento = _model.Undo();
             _view.SetDrawingMemento(currentMemento);
-            // _currentStrategy.Reset();
+            _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Presenter
         {
             var loadedMemento = _model.LoadDrawing(filename);
             _view.SetDrawingMemento(loadedMemento);
-            // _currentStrategy.Reset();
+            _currentStrategy.Reset();
         }
         #endregion
     }
