@@ -82,7 +82,7 @@ namespace View
     /// <returns>Encapsulated image</returns>
     public DrawingMemento GetDrawingMemento()
     {
-      // TODO ADD DESCRITION 
+      // TODO ADD PARAMETER DESCRIPTION 
       return new DrawingMemento(pictureBox.Image, "");
     }
     public void ChangeCurrentHandler(Strategy strategy)
@@ -128,7 +128,6 @@ namespace View
     private void InitPresenter()
     {
       _presenter.ChoosePaintingTool(PaintingTool.Line, colorButton1.BackColor);
-      _presenter.ColorChanged(colorButton1.BackColor);
     }
     private void colorButton1_Click(object sender, EventArgs e)
     {
