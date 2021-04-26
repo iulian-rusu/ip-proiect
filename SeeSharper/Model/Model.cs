@@ -171,7 +171,6 @@ namespace Model
                 drawingMemento.Drawing.Save(_saveFileName, drawingFormat);
                 _undoStack.Drop();
             }
-
         }
 
         /// <summary>

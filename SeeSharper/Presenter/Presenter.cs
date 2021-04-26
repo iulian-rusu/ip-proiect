@@ -78,6 +78,11 @@ namespace Presenter
         /// </summary>
         public void SaveDrawing()
         {
+            if(!_model.HasSaveFileName())
+            {
+                // call view function to get file name
+                // _model.SetSaveFileName(...)
+            }
             var drawingMemento = _view.GetDrawingMemento();
             _model.SaveDrawing(drawingMemento);
         }
