@@ -29,6 +29,7 @@ namespace View
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
       this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
       this.colorGroupBox = new System.Windows.Forms.GroupBox();
@@ -57,6 +58,7 @@ namespace View
       this.saveButton = new System.Windows.Forms.Button();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
+      this.timer = new System.Windows.Forms.Timer(this.components);
       this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
       this.undoRedoTableLayoutPanel1.SuspendLayout();
@@ -366,8 +368,15 @@ namespace View
       this.pictureBox.Size = new System.Drawing.Size(1584, 661);
       this.pictureBox.TabIndex = 1;
       this.pictureBox.TabStop = false;
+      this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
       this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
       this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
+      // 
+      // timer
+      // 
+      this.timer.Enabled = true;
+      this.timer.Interval = 15;
+      this.timer.Tick += new System.EventHandler(this.timer_Tick);
       // 
       // View
       // 
@@ -379,7 +388,6 @@ namespace View
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "View";
       this.Text = "SeeSharper";
-      this.Paint += new System.Windows.Forms.PaintEventHandler(this.View_Paint);
       this.mainTableLayoutPanel.ResumeLayout(false);
       this.colorGroupBox.ResumeLayout(false);
       this.undoRedoTableLayoutPanel1.ResumeLayout(false);
@@ -424,6 +432,7 @@ namespace View
     private System.Windows.Forms.Button loadButton;
     private System.Windows.Forms.Button saveAsButton;
     private System.Windows.Forms.Button saveButton;
+    private System.Windows.Forms.Timer timer;
   }
 }
 

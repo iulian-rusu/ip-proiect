@@ -38,6 +38,7 @@ namespace View
         brushButton, lineButton, squareButton, rectangleButton,
         circleButton, ellipseButton
       };
+      _drawing = new Image();
     }
     public void SetPresenter(IPresenter presenter)
     {
@@ -54,7 +55,6 @@ namespace View
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
       _drawing = drawingMemento.Drawing;
-      pictureBox.Refresh();
     }
     public DrawingMemento GetDrawingMemento()
     {
@@ -69,12 +69,10 @@ namespace View
     {
       _currentAddedPaintHandler = strategy.GetDraw();
       pictureBox.Paint += _currentAddedPaintHandler;
-      pictureBox.Refresh();
     }
     public void RemoveCurrentHandler()
     {
       pictureBox.Paint -= _currentAddedPaintHandler;
-      pictureBox.Refresh();
     }
     #endregion
     #region Private Member Functions
@@ -86,10 +84,7 @@ namespace View
       _presenter.ChoosePaintingTool(PaintingTool.Line);
       _presenter.ColorChanged(colorButton1.BackColor);
     }
-    private void View_Paint(object sender, PaintEventArgs e)
-    {
-      pictureBox.Image = _drawing;
-    }
+    //pictureBox.Image = _drawing;
     private void colorButton1_Click(object sender, EventArgs e)
     {
       colorButton1.FlatStyle = FlatStyle.Popup;
@@ -225,5 +220,19 @@ namespace View
       }
     }
     #endregion
+
+    private void pictureBox_Paint(object sender, PaintEventArgs e)
+    {
+      pictureBox.Image = _drawing;
+      using (Graphics g = Graphics.FromImage(_drawing))
+      {
+        g.DrawLine(Pens.Black, new Point(100, 100), new Point(200, 200));
+      }
+    }
+
+    private void timer_Tick(object sender, EventArgs e)
+    {
+      pictureBox.Refresh();
+    }
   }
 }
