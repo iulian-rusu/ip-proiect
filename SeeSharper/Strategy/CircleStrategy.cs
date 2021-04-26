@@ -11,8 +11,11 @@ namespace Strategy
             if (_points != null)
             {
                 var graphics = e.Graphics;
-                int sideLength = Math.Abs(_points[0].X - _points[1].X);
-                graphics.DrawEllipse(new Pen(_color), _points[0].X, _points[0].Y, sideLength, sideLength);
+                int width = Math.Abs(_points[1].X - _points[0].X);
+                int startX = Math.Min(_points[1].X, _points[0].X);
+                int startY = Math.Min(_points[1].Y, _points[0].Y);
+                var rect = new Rectangle(startX, startY, width, width);
+                graphics.DrawEllipse(new Pen(_color), rect);
             }
         }
     }
