@@ -65,8 +65,8 @@ namespace View
     {
       using (Graphics g = Graphics.FromImage(pictureBox.Image))
       {
-        
-        _currentAddedPaintHandler((object) this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
+
+        _currentAddedPaintHandler((object)this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
       }
     }
     /// <summary>
@@ -102,6 +102,31 @@ namespace View
     public string GetSaveFileName()
     {
       return "img.png";
+    }
+    public void SetUndo(string description)
+    {
+      undoTextBox.Text = description;
+      if (description == "")
+      {
+        undoButton.Enabled = false;
+      }
+      else
+      {
+        undoButton.Enabled = true;
+      }
+    }
+    public void SetRedo(string description)
+    {
+      redoTextBox.Text = description;
+      if (description == "")
+      {
+        redoButton.Enabled = false;
+      }
+      else
+      {
+        redoButton.Enabled = true;
+      }
+
     }
     #endregion
     #region Private Member Functions
@@ -226,12 +251,6 @@ namespace View
     {
       _presenter.SaveDrawing();
     }
-
-    private void saveAsButton_Click(object sender, EventArgs e)
-    {
-      throw new NotImplementedException("Save as has no support yet");
-    }
-
     private void loadButton_Click(object sender, EventArgs e)
     {
       using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -250,6 +269,25 @@ namespace View
     private void timer_Tick(object sender, EventArgs e)
     {
       pictureBox.Refresh();
+    }
+    private void helpButton_Click(object sender, EventArgs e)
+    {
+      // TODO LOAD HELP.CHM
+      MessageBox.Show("Help", "Help");
+    }
+    /// <summary>
+    /// Called to show a dialog box for exit confirmation
+    /// </summary>
+    private void View_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      if (e.CloseReason == CloseReason.UserClosing)
+      {
+        DialogResult res = MessageBox.Show("Exit application?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+        if (res != DialogResult.OK)
+        {
+          e.Cancel = true;
+        }
+      }
     }
     #endregion
   }

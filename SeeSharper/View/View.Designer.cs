@@ -37,7 +37,7 @@ namespace View
       this.colorButton3 = new System.Windows.Forms.Button();
       this.colorButton2 = new System.Windows.Forms.Button();
       this.colorButton1 = new System.Windows.Forms.Button();
-      this.undoRedoTableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+      this.undoRedoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
       this.undoGroupBox = new System.Windows.Forms.GroupBox();
       this.undoTextBox = new System.Windows.Forms.TextBox();
       this.undoButton = new System.Windows.Forms.Button();
@@ -54,14 +54,14 @@ namespace View
       this.ellipseButton = new System.Windows.Forms.Button();
       this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
       this.loadButton = new System.Windows.Forms.Button();
-      this.saveAsButton = new System.Windows.Forms.Button();
       this.saveButton = new System.Windows.Forms.Button();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
       this.timer = new System.Windows.Forms.Timer(this.components);
+      this.helpButton = new System.Windows.Forms.Button();
       this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
-      this.undoRedoTableLayoutPanel1.SuspendLayout();
+      this.undoRedoTableLayoutPanel.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
       this.redoGroupBox.SuspendLayout();
       this.flowLayoutPanel.SuspendLayout();
@@ -77,7 +77,7 @@ namespace View
       this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33459F));
       this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.33006F));
       this.mainTableLayoutPanel.Controls.Add(this.colorGroupBox, 1, 0);
-      this.mainTableLayoutPanel.Controls.Add(this.undoRedoTableLayoutPanel1, 2, 0);
+      this.mainTableLayoutPanel.Controls.Add(this.undoRedoTableLayoutPanel, 2, 0);
       this.mainTableLayoutPanel.Controls.Add(this.flowLayoutPanel, 0, 0);
       this.mainTableLayoutPanel.Controls.Add(this.saveLoadGroupBox, 3, 0);
       this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -149,20 +149,20 @@ namespace View
       this.colorButton1.UseVisualStyleBackColor = false;
       this.colorButton1.Click += new System.EventHandler(this.colorButton1_Click);
       // 
-      // undoRedoTableLayoutPanel1
+      // undoRedoTableLayoutPanel
       // 
-      this.undoRedoTableLayoutPanel1.ColumnCount = 1;
-      this.undoRedoTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel1.Controls.Add(this.undoGroupBox, 0, 0);
-      this.undoRedoTableLayoutPanel1.Controls.Add(this.redoGroupBox, 0, 1);
-      this.undoRedoTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.undoRedoTableLayoutPanel1.Location = new System.Drawing.Point(847, 3);
-      this.undoRedoTableLayoutPanel1.Name = "undoRedoTableLayoutPanel1";
-      this.undoRedoTableLayoutPanel1.RowCount = 2;
-      this.undoRedoTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel1.Size = new System.Drawing.Size(522, 94);
-      this.undoRedoTableLayoutPanel1.TabIndex = 2;
+      this.undoRedoTableLayoutPanel.ColumnCount = 1;
+      this.undoRedoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel.Controls.Add(this.undoGroupBox, 0, 0);
+      this.undoRedoTableLayoutPanel.Controls.Add(this.redoGroupBox, 0, 1);
+      this.undoRedoTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.undoRedoTableLayoutPanel.Location = new System.Drawing.Point(847, 3);
+      this.undoRedoTableLayoutPanel.Name = "undoRedoTableLayoutPanel";
+      this.undoRedoTableLayoutPanel.RowCount = 2;
+      this.undoRedoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel.Size = new System.Drawing.Size(522, 94);
+      this.undoRedoTableLayoutPanel.TabIndex = 2;
       // 
       // undoGroupBox
       // 
@@ -188,6 +188,7 @@ namespace View
       // undoButton
       // 
       this.undoButton.Dock = System.Windows.Forms.DockStyle.Right;
+      this.undoButton.Enabled = false;
       this.undoButton.Location = new System.Drawing.Point(438, 16);
       this.undoButton.Name = "undoButton";
       this.undoButton.Size = new System.Drawing.Size(75, 22);
@@ -220,6 +221,7 @@ namespace View
       // redoButton
       // 
       this.redoButton.Dock = System.Windows.Forms.DockStyle.Right;
+      this.redoButton.Enabled = false;
       this.redoButton.Location = new System.Drawing.Point(438, 16);
       this.redoButton.Name = "redoButton";
       this.redoButton.Size = new System.Drawing.Size(75, 22);
@@ -255,7 +257,6 @@ namespace View
       // brushButton
       // 
       this.brushButton.BackgroundImage = global::View.Properties.Resources.BrushButtonBackground;
-      this.brushButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.brushButton.Location = new System.Drawing.Point(102, 3);
       this.brushButton.Name = "brushButton";
       this.brushButton.Size = new System.Drawing.Size(32, 32);
@@ -266,6 +267,7 @@ namespace View
       // lineButton
       // 
       this.lineButton.BackgroundImage = global::View.Properties.Resources.LineButtonBackground;
+      this.lineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.lineButton.Location = new System.Drawing.Point(140, 3);
       this.lineButton.Name = "lineButton";
       this.lineButton.Size = new System.Drawing.Size(32, 32);
@@ -315,10 +317,10 @@ namespace View
       // 
       // saveLoadGroupBox
       // 
+      this.saveLoadGroupBox.Controls.Add(this.helpButton);
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
-      this.saveLoadGroupBox.Controls.Add(this.saveAsButton);
       this.saveLoadGroupBox.Controls.Add(this.saveButton);
-      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
       this.saveLoadGroupBox.Location = new System.Drawing.Point(1375, 3);
       this.saveLoadGroupBox.Name = "saveLoadGroupBox";
       this.saveLoadGroupBox.Size = new System.Drawing.Size(206, 94);
@@ -329,24 +331,13 @@ namespace View
       // loadButton
       // 
       this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.loadButton.Location = new System.Drawing.Point(3, 62);
+      this.loadButton.Location = new System.Drawing.Point(3, 39);
       this.loadButton.Name = "loadButton";
       this.loadButton.Size = new System.Drawing.Size(200, 23);
       this.loadButton.TabIndex = 2;
       this.loadButton.Text = "Load";
       this.loadButton.UseVisualStyleBackColor = true;
       this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
-      // 
-      // saveAsButton
-      // 
-      this.saveAsButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.saveAsButton.Location = new System.Drawing.Point(3, 39);
-      this.saveAsButton.Name = "saveAsButton";
-      this.saveAsButton.Size = new System.Drawing.Size(200, 23);
-      this.saveAsButton.TabIndex = 1;
-      this.saveAsButton.Text = "Save As";
-      this.saveAsButton.UseVisualStyleBackColor = true;
-      this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
       // 
       // saveButton
       // 
@@ -378,6 +369,17 @@ namespace View
       this.timer.Interval = 10;
       this.timer.Tick += new System.EventHandler(this.timer_Tick);
       // 
+      // helpButton
+      // 
+      this.helpButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.helpButton.Location = new System.Drawing.Point(3, 62);
+      this.helpButton.Name = "helpButton";
+      this.helpButton.Size = new System.Drawing.Size(200, 23);
+      this.helpButton.TabIndex = 3;
+      this.helpButton.Text = "Help";
+      this.helpButton.UseVisualStyleBackColor = true;
+      this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+      // 
       // View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,9 +390,10 @@ namespace View
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "View";
       this.Text = "SeeSharper";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.View_FormClosing);
       this.mainTableLayoutPanel.ResumeLayout(false);
       this.colorGroupBox.ResumeLayout(false);
-      this.undoRedoTableLayoutPanel1.ResumeLayout(false);
+      this.undoRedoTableLayoutPanel.ResumeLayout(false);
       this.undoGroupBox.ResumeLayout(false);
       this.undoGroupBox.PerformLayout();
       this.redoGroupBox.ResumeLayout(false);
@@ -408,7 +411,7 @@ namespace View
     private System.Windows.Forms.TableLayoutPanel mainTableLayoutPanel;
     private System.Windows.Forms.PictureBox pictureBox;
     private System.Windows.Forms.GroupBox colorGroupBox;
-    private System.Windows.Forms.TableLayoutPanel undoRedoTableLayoutPanel1;
+    private System.Windows.Forms.TableLayoutPanel undoRedoTableLayoutPanel;
     private System.Windows.Forms.GroupBox undoGroupBox;
     private System.Windows.Forms.TextBox undoTextBox;
     private System.Windows.Forms.Button undoButton;
@@ -430,9 +433,9 @@ namespace View
     private System.Windows.Forms.Label toolsAndShapesLabel;
     private System.Windows.Forms.GroupBox saveLoadGroupBox;
     private System.Windows.Forms.Button loadButton;
-    private System.Windows.Forms.Button saveAsButton;
     private System.Windows.Forms.Button saveButton;
     private System.Windows.Forms.Timer timer;
+    private System.Windows.Forms.Button helpButton;
   }
 }
 
