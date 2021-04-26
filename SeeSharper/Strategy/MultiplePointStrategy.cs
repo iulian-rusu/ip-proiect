@@ -4,7 +4,12 @@ namespace Strategy
 {
 	public abstract class MultiplePointStrategy : Strategy
 	{
-		private Point point;
-	}
+		private Point _point;
+
+        public override void Reset()
+        {
+            
+        }
+    }
 }
 

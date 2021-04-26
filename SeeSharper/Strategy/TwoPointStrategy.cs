@@ -8,7 +8,7 @@ namespace Strategy
 	{
 		protected Point[] _points;
 
-		public void Reset()
+		public override void Reset()
         {
 			_done = false;
 			_points = null;

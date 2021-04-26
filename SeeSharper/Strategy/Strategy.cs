@@ -43,5 +43,6 @@ namespace Strategy
         public abstract void MouseClicked(int x, int y);
         public abstract void IsDone();
         public abstract void MouseMoved(int x, int y);
+        public abstract void Reset();
     }
 }
