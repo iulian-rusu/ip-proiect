@@ -99,6 +99,10 @@ namespace View
     {
       pictureBox.Paint -= _currentAddedPaintHandler;
     }
+    public string GetSaveFileName()
+    {
+      return "img.jpg";
+    }
     #endregion
     #region Private Member Functions
     /// <summary>
@@ -187,42 +191,36 @@ namespace View
     private void brushButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(brushButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Brush);
-      _presenter.ColorChanged(_selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Brush, _selectedColorButton.BackColor);
     }
     private void lineButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(lineButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Line);
-      _presenter.ColorChanged(_selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Line, _selectedColorButton.BackColor);
     }
 
     private void squareButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(squareButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Square);
-      _presenter.ColorChanged(_selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Square, _selectedColorButton.BackColor);
     }
 
     private void rectangleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(rectangleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Rectangle);
-      _presenter.ColorChanged(_selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Rectangle, _selectedColorButton.BackColor);
     }
 
     private void circleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(circleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Circle);
-      _presenter.ColorChanged(_selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Circle, _selectedColorButton.BackColor);
     }
 
     private void ellipseButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(ellipseButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Ellipse);
-      _presenter.ColorChanged(_selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Ellipse, _selectedColorButton.BackColor);
     }
     private void saveButton_Click(object sender, EventArgs e)
     {

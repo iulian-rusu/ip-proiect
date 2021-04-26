@@ -28,5 +28,6 @@ namespace Shared
     void ChangeCurrentHandler(Strategy strategy);
     void AddHandler(Strategy strategy);
     void RemoveCurrentHandler();
+    string GetSaveFileName();
   }
 }
