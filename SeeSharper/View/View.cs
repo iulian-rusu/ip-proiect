@@ -65,8 +65,8 @@ namespace View
     {
       using (Graphics g = Graphics.FromImage(pictureBox.Image))
       {
-        
-        _currentAddedPaintHandler((object) this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
+
+        _currentAddedPaintHandler((object)this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
       }
     }
     /// <summary>
@@ -251,12 +251,6 @@ namespace View
     {
       _presenter.SaveDrawing();
     }
-
-    private void saveAsButton_Click(object sender, EventArgs e)
-    {
-      throw new NotImplementedException("Save as has no support yet");
-    }
-
     private void loadButton_Click(object sender, EventArgs e)
     {
       using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -275,6 +269,29 @@ namespace View
     private void timer_Tick(object sender, EventArgs e)
     {
       pictureBox.Refresh();
+    }
+    /// <summary>
+    /// Called to show a help box for the user
+    /// </summary>
+    public void LoadHelp()
+    {
+      // TODO LOAD HELP.CHM
+      MessageBox.Show("Help", "Help");
+    }
+
+    /// <summary>
+    /// Called to show a dialog box for exit confirmation
+    /// </summary>
+    private void View_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      if (e.CloseReason == CloseReason.UserClosing)
+      {
+        DialogResult res = MessageBox.Show("Exit application?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+        if (res != DialogResult.OK)
+        {
+          e.Cancel = true;
+        }
+      }
     }
     #endregion
   }

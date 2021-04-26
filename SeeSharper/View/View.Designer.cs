@@ -37,7 +37,7 @@ namespace View
       this.colorButton3 = new System.Windows.Forms.Button();
       this.colorButton2 = new System.Windows.Forms.Button();
       this.colorButton1 = new System.Windows.Forms.Button();
-      this.undoRedoTableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+      this.undoRedoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
       this.undoGroupBox = new System.Windows.Forms.GroupBox();
       this.undoTextBox = new System.Windows.Forms.TextBox();
       this.undoButton = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@ namespace View
       this.timer = new System.Windows.Forms.Timer(this.components);
       this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
-      this.undoRedoTableLayoutPanel1.SuspendLayout();
+      this.undoRedoTableLayoutPanel.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
       this.redoGroupBox.SuspendLayout();
       this.flowLayoutPanel.SuspendLayout();
@@ -76,7 +76,7 @@ namespace View
       this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33459F));
       this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.33006F));
       this.mainTableLayoutPanel.Controls.Add(this.colorGroupBox, 1, 0);
-      this.mainTableLayoutPanel.Controls.Add(this.undoRedoTableLayoutPanel1, 2, 0);
+      this.mainTableLayoutPanel.Controls.Add(this.undoRedoTableLayoutPanel, 2, 0);
       this.mainTableLayoutPanel.Controls.Add(this.flowLayoutPanel, 0, 0);
       this.mainTableLayoutPanel.Controls.Add(this.saveLoadGroupBox, 3, 0);
       this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -148,20 +148,20 @@ namespace View
       this.colorButton1.UseVisualStyleBackColor = false;
       this.colorButton1.Click += new System.EventHandler(this.colorButton1_Click);
       // 
-      // undoRedoTableLayoutPanel1
+      // undoRedoTableLayoutPanel
       // 
-      this.undoRedoTableLayoutPanel1.ColumnCount = 1;
-      this.undoRedoTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel1.Controls.Add(this.undoGroupBox, 0, 0);
-      this.undoRedoTableLayoutPanel1.Controls.Add(this.redoGroupBox, 0, 1);
-      this.undoRedoTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.undoRedoTableLayoutPanel1.Location = new System.Drawing.Point(847, 3);
-      this.undoRedoTableLayoutPanel1.Name = "undoRedoTableLayoutPanel1";
-      this.undoRedoTableLayoutPanel1.RowCount = 2;
-      this.undoRedoTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel1.Size = new System.Drawing.Size(522, 94);
-      this.undoRedoTableLayoutPanel1.TabIndex = 2;
+      this.undoRedoTableLayoutPanel.ColumnCount = 1;
+      this.undoRedoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel.Controls.Add(this.undoGroupBox, 0, 0);
+      this.undoRedoTableLayoutPanel.Controls.Add(this.redoGroupBox, 0, 1);
+      this.undoRedoTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.undoRedoTableLayoutPanel.Location = new System.Drawing.Point(847, 3);
+      this.undoRedoTableLayoutPanel.Name = "undoRedoTableLayoutPanel";
+      this.undoRedoTableLayoutPanel.RowCount = 2;
+      this.undoRedoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+      this.undoRedoTableLayoutPanel.Size = new System.Drawing.Size(522, 94);
+      this.undoRedoTableLayoutPanel.TabIndex = 2;
       // 
       // undoGroupBox
       // 
@@ -318,7 +318,7 @@ namespace View
       // 
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
       this.saveLoadGroupBox.Controls.Add(this.saveButton);
-      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
       this.saveLoadGroupBox.Location = new System.Drawing.Point(1375, 3);
       this.saveLoadGroupBox.Name = "saveLoadGroupBox";
       this.saveLoadGroupBox.Size = new System.Drawing.Size(206, 94);
@@ -377,9 +377,10 @@ namespace View
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "View";
       this.Text = "SeeSharper";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.View_FormClosing);
       this.mainTableLayoutPanel.ResumeLayout(false);
       this.colorGroupBox.ResumeLayout(false);
-      this.undoRedoTableLayoutPanel1.ResumeLayout(false);
+      this.undoRedoTableLayoutPanel.ResumeLayout(false);
       this.undoGroupBox.ResumeLayout(false);
       this.undoGroupBox.PerformLayout();
       this.redoGroupBox.ResumeLayout(false);
@@ -397,7 +398,7 @@ namespace View
     private System.Windows.Forms.TableLayoutPanel mainTableLayoutPanel;
     private System.Windows.Forms.PictureBox pictureBox;
     private System.Windows.Forms.GroupBox colorGroupBox;
-    private System.Windows.Forms.TableLayoutPanel undoRedoTableLayoutPanel1;
+    private System.Windows.Forms.TableLayoutPanel undoRedoTableLayoutPanel;
     private System.Windows.Forms.GroupBox undoGroupBox;
     private System.Windows.Forms.TextBox undoTextBox;
     private System.Windows.Forms.Button undoButton;
