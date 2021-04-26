@@ -270,15 +270,11 @@ namespace View
     {
       pictureBox.Refresh();
     }
-    /// <summary>
-    /// Called to show a help box for the user
-    /// </summary>
-    public void LoadHelp()
+    private void helpButton_Click(object sender, EventArgs e)
     {
       // TODO LOAD HELP.CHM
       MessageBox.Show("Help", "Help");
     }
-
     /// <summary>
     /// Called to show a dialog box for exit confirmation
     /// </summary>

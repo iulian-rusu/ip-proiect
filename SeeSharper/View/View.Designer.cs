@@ -58,6 +58,7 @@ namespace View
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
       this.timer = new System.Windows.Forms.Timer(this.components);
+      this.helpButton = new System.Windows.Forms.Button();
       this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
       this.undoRedoTableLayoutPanel.SuspendLayout();
@@ -316,6 +317,7 @@ namespace View
       // 
       // saveLoadGroupBox
       // 
+      this.saveLoadGroupBox.Controls.Add(this.helpButton);
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
       this.saveLoadGroupBox.Controls.Add(this.saveButton);
       this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
@@ -366,6 +368,17 @@ namespace View
       this.timer.Enabled = true;
       this.timer.Interval = 10;
       this.timer.Tick += new System.EventHandler(this.timer_Tick);
+      // 
+      // helpButton
+      // 
+      this.helpButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.helpButton.Location = new System.Drawing.Point(3, 62);
+      this.helpButton.Name = "helpButton";
+      this.helpButton.Size = new System.Drawing.Size(200, 23);
+      this.helpButton.TabIndex = 3;
+      this.helpButton.Text = "Help";
+      this.helpButton.UseVisualStyleBackColor = true;
+      this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
       // 
       // View
       // 
@@ -422,6 +435,7 @@ namespace View
     private System.Windows.Forms.Button loadButton;
     private System.Windows.Forms.Button saveButton;
     private System.Windows.Forms.Timer timer;
+    private System.Windows.Forms.Button helpButton;
   }
 }
 
