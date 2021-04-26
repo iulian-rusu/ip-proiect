@@ -1,4 +1,19 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        TwoPointStrategy.cs                                      *
+ *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
+ *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
+ *  Description:                                                          *
+ *                                                                        *
+ *  This code and information is provided "as is" without warranty of     *
+ *  any kind, either expressed or implied, including but not limited      *
+ *  to the implied warranties of merchantability or fitness for a         *
+ *  particular purpose. You are free to use this source code in your      *
+ *  applications as long as the original copyright notice is included.    *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -36,6 +51,15 @@ namespace Strategy
         {
             _done = false;
             _points = null;
+        }
+
+        public override string GetDescription()
+        {
+            if (_done == true)
+            {
+                return $"Draw line from ({_points[0].X}, {_points[0].Y}) to ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Not finished";
         }
     }
 }
