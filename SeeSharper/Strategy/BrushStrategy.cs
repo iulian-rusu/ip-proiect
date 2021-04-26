@@ -4,24 +4,17 @@ namespace Strategy
 {
     public class BrushStrategy : MultiplePointStrategy
     {
-        public override PaintEventHandler GetDraw()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void IsDone()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override void MouseClicked(int x, int y)
         {
+            throw new System.NotImplementedException();
         }
 
         public override void MouseMoved(int x, int y)
         {
+            throw new System.NotImplementedException();
         }
-        private void Draw(object sender, PaintEventArgs e)
+
+        protected override void Draw(object sender, PaintEventArgs e)
         {
             throw new System.NotImplementedException();
         }
