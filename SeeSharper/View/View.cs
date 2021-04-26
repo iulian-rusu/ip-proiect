@@ -101,7 +101,7 @@ namespace View
     }
     public string GetSaveFileName()
     {
-      return "img.jpg";
+      return "img.png";
     }
     #endregion
     #region Private Member Functions
@@ -110,7 +110,7 @@ namespace View
     /// </summary>
     private void InitPresenter()
     {
-      _presenter.ChoosePaintingTool(PaintingTool.Line);
+      _presenter.ChoosePaintingTool(PaintingTool.Line, colorButton1.BackColor);
       _presenter.ColorChanged(colorButton1.BackColor);
     }
     private void colorButton1_Click(object sender, EventArgs e)
