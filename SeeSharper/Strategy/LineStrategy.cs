@@ -18,21 +18,35 @@ namespace Strategy
 
         public override void MouseClicked(int x, int y)
         {
+            if( _points == null)
+            {
+                _points = new Point[2];
+                _points[0].X = _points[1].X = x;
+                _points[0].Y = _points[1].Y = y;
+            }
+            else
+            {
+                _done = true;
+            }
             
         }
 
         public override void MouseMoved(int x, int y)
         {
-            
+            if (_points != null && ! _done)
+            {
+                _points[1].X = x;
+                _points[1].Y = y;
+            }
+
         }
         private void Draw(object sender, PaintEventArgs e)
         {
-            Tuple<Point, Point> points;
-            Color color;
-            points = new Tuple<Point, Point>(new Point(100, 100), new Point(300, 300));
-            color = Color.Red;
-            var graphics = e.Graphics;
-            graphics.DrawLine(new Pen(color), points.Item1, points.Item2);
+      if (_points != null)
+      {
+        var graphics = e.Graphics;
+        graphics.DrawLine(new Pen(_color), _points[0], _points[1]);
+      }
         }
     }
 

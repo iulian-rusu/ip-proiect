@@ -55,6 +55,7 @@ namespace Presenter
         public void MouseMoved(int x, int y)
 		{
             _currentStrategy.MouseMoved(x, y);
+      _view.ChangeCurrentHandler(_currentStrategy);
 		}
 
         /// <summary>
@@ -65,7 +66,8 @@ namespace Presenter
         public void MouseClicked(int x, int y)
         {
             _currentStrategy.MouseClicked(x, y);
-        }
+      _view.ChangeCurrentHandler(_currentStrategy);
+    }
 
         // TODO: move to view
 
@@ -125,7 +127,8 @@ namespace Presenter
         public void ColorChanged(Color color)
 		{
             _currentStrategy.ColorChanged(color);
-		}
+      _view.ChangeCurrentHandler(_currentStrategy);
+    }
 
         /// <summary>
         /// Updates the current strategy to match the selected tool
