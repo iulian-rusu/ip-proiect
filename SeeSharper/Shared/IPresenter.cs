@@ -6,7 +6,6 @@ namespace Shared
     public interface IPresenter
     {
         void SaveDrawing();
-
         void LoadDrawing(string filename);
         void ChoosePaintingTool(PaintingTool paintingTool, Color selecteColor);
         void MouseMoved(int x, int y);

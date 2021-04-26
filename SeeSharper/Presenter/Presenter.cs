@@ -30,7 +30,7 @@ namespace Presenter
         #region Private Members
         private IView _view;
         private IModel _model;
-        private Strategy _currentStrategy;
+        private Strategy _currentStrategy = new LineStrategy();
         #endregion
 
         #region Constructor
