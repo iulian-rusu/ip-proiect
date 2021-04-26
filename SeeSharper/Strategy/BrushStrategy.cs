@@ -44,7 +44,7 @@ namespace Strategy
       {
         var graphics = e.Graphics;
         foreach (var point in _points) {
-          var p = new Point(point.X, point.Y);
+          var p = new Point(point.X + 10, point.Y + 10);
           graphics.DrawLine(new Pen(_color), point, p);
         }
         

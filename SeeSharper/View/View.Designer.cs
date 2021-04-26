@@ -363,12 +363,12 @@ namespace View
       // 
       this.pictureBox.BackColor = System.Drawing.Color.White;
       this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.pictureBox.Image = global::View.Properties.Resources.Background;
       this.pictureBox.Location = new System.Drawing.Point(0, 100);
       this.pictureBox.Name = "pictureBox";
       this.pictureBox.Size = new System.Drawing.Size(1584, 661);
       this.pictureBox.TabIndex = 1;
       this.pictureBox.TabStop = false;
-      this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
       this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
       this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
       // 
