@@ -65,7 +65,6 @@ namespace View
     {
       using (Graphics g = Graphics.FromImage(pictureBox.Image))
       {
-
         _currentAddedPaintHandler((object)this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
       }
     }
@@ -83,21 +82,14 @@ namespace View
     /// <returns>Encapsulated image</returns>
     public DrawingMemento GetDrawingMemento()
     {
-      return new DrawingMemento(pictureBox.Image);
+      // TODO ADD DESCRITION 
+      return new DrawingMemento(pictureBox.Image, "");
     }
     public void ChangeCurrentHandler(Strategy strategy)
     {
-      RemoveCurrentHandler();
-      AddHandler(strategy);
-    }
-    public void AddHandler(Strategy strategy)
-    {
+      pictureBox.Paint -= _currentAddedPaintHandler;
       _currentAddedPaintHandler = strategy.GetDraw();
       pictureBox.Paint += _currentAddedPaintHandler;
-    }
-    public void RemoveCurrentHandler()
-    {
-      pictureBox.Paint -= _currentAddedPaintHandler;
     }
     public string GetSaveFileName()
     {

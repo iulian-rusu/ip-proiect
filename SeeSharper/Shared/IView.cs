@@ -26,8 +26,6 @@ namespace Shared
     void SetDrawingMemento(DrawingMemento drawingMemento);
     DrawingMemento GetDrawingMemento();
     void ChangeCurrentHandler(Strategy strategy);
-    void AddHandler(Strategy strategy);
-    void RemoveCurrentHandler();
     string GetSaveFileName();
     void SetUndo(string description);
     void SetRedo(string description);
