@@ -192,6 +192,17 @@ namespace Model
         {
             return _undoStack.Undo();
         }
+
+
+        /// <summary>
+        /// Function used to add a drawing memento to the event stack
+        /// </summary>
+        /// <param name="memento">The memento to be added on the stack</param>
+        /// <returns>void</returns>
+        public void AddMemento(DrawingMemento memento)
+        {
+            _undoStack.Add(memento);
+        }
         #endregion
     }
 

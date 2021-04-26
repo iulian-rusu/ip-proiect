@@ -13,5 +13,6 @@
         Strategy GetPaintingStrategy(PaintingTool paitingTool);
         DrawingMemento Undo();
         DrawingMemento Redo();
+        void AddMemento(DrawingMemento memento);
     }
 }
