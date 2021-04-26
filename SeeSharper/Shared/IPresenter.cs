@@ -8,7 +8,7 @@ namespace Shared
         void SaveDrawing();
 
         void LoadDrawing(string filename);
-        void ChoosePaintingTool(PaintingTool paintingTool);
+        void ChoosePaintingTool(PaintingTool paintingTool, Color selecteColor);
         void MouseMoved(int x, int y);
         void MouseClicked(int x, int y);
         void Undo();
