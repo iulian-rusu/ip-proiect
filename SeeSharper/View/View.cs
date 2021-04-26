@@ -69,10 +69,18 @@ namespace View
         _currentAddedPaintHandler((object) this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
       }
     }
+    /// <summary>
+    /// Changes the current image
+    /// </summary>
+    /// <param name="drawingMemento">New encapsulated image</param>
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
       pictureBox.Image = drawingMemento.Drawing;
     }
+    /// <summary>
+    /// Encapsulates and returns the current image state of the picturebox
+    /// </summary>
+    /// <returns>Encapsulated image</returns>
     public DrawingMemento GetDrawingMemento()
     {
       return new DrawingMemento(pictureBox.Image);
