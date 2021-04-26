@@ -224,7 +224,7 @@ namespace Model
         /// <summary>
         /// Wrapper for the undo stack drop(clear) function
         /// </summary>
-        /// <returns>The description of the next redo on the stack</returns>
+        /// <returns>void</returns>
         public void DropMementos()
         {
             _undoStack.Drop();
