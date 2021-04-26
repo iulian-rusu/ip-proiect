@@ -1,0 +1,133 @@
+\hypertarget{class_model_1_1_undo_stack}{}\doxysection{Model.\+Undo\+Stack Class Reference}
+\label{class_model_1_1_undo_stack}\index{Model.UndoStack@{Model.UndoStack}}
+
+
+Undo stack -\/ logic for the undo/redo process  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_1_1_undo_stack_a2334f39a64b9d747b67cb2982fc3d60f}{Undo\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the undo stack -\/ initializes the double linked list used to store different states of the image \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_undo_stack_ab18a9a48921e4ab9e6378bf47d4792d4}{Add}} (\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} drawing)
+\begin{DoxyCompactList}\small\item\em Adds a drawing to the state stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_undo_stack_a38879dee5f2cbe03527b4aaf71ca8e60}{Drop}} ()
+\begin{DoxyCompactList}\small\item\em Clears the stack of all elements \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} \mbox{\hyperlink{class_model_1_1_undo_stack_a44aff6e32bb23f4fc566010cf392f711}{Undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the last drawing action \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} \mbox{\hyperlink{class_model_1_1_undo_stack_afc4ca45bc5785a27a6fb09e5d2192366}{Redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the last undone drawing action \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_model_1_1_undo_stack_a3b6dba97f3e1f5ebc2c972d2bf7d9713}{Get\+Next\+Undo\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Used to get the description of the next undo \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_model_1_1_undo_stack_a32ee9a128a4764c4441e727cdca15a6f}{Get\+Next\+Redo\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Used to get the description of the next redo \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Undo stack -\/ logic for the undo/redo process 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_a2334f39a64b9d747b67cb2982fc3d60f}\label{class_model_1_1_undo_stack_a2334f39a64b9d747b67cb2982fc3d60f}} 
+\index{Model.UndoStack@{Model.UndoStack}!UndoStack@{UndoStack}}
+\index{UndoStack@{UndoStack}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{UndoStack()}{UndoStack()}}
+{\footnotesize\ttfamily Model.\+Undo\+Stack.\+Undo\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the undo stack -\/ initializes the double linked list used to store different states of the image 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_ab18a9a48921e4ab9e6378bf47d4792d4}\label{class_model_1_1_undo_stack_ab18a9a48921e4ab9e6378bf47d4792d4}} 
+\index{Model.UndoStack@{Model.UndoStack}!Add@{Add}}
+\index{Add@{Add}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Model.\+Undo\+Stack.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}}}]{drawing }\end{DoxyParamCaption})}
+
+
+
+Adds a drawing to the state stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawing} & The saved drawing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_a38879dee5f2cbe03527b4aaf71ca8e60}\label{class_model_1_1_undo_stack_a38879dee5f2cbe03527b4aaf71ca8e60}} 
+\index{Model.UndoStack@{Model.UndoStack}!Drop@{Drop}}
+\index{Drop@{Drop}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{Drop()}{Drop()}}
+{\footnotesize\ttfamily void Model.\+Undo\+Stack.\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the stack of all elements 
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_a32ee9a128a4764c4441e727cdca15a6f}\label{class_model_1_1_undo_stack_a32ee9a128a4764c4441e727cdca15a6f}} 
+\index{Model.UndoStack@{Model.UndoStack}!GetNextRedoDescription@{GetNextRedoDescription}}
+\index{GetNextRedoDescription@{GetNextRedoDescription}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{GetNextRedoDescription()}{GetNextRedoDescription()}}
+{\footnotesize\ttfamily string Model.\+Undo\+Stack.\+Get\+Next\+Redo\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used to get the description of the next redo 
+
+\begin{DoxyReturn}{Returns}
+The description of the next redo
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_a3b6dba97f3e1f5ebc2c972d2bf7d9713}\label{class_model_1_1_undo_stack_a3b6dba97f3e1f5ebc2c972d2bf7d9713}} 
+\index{Model.UndoStack@{Model.UndoStack}!GetNextUndoDescription@{GetNextUndoDescription}}
+\index{GetNextUndoDescription@{GetNextUndoDescription}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{GetNextUndoDescription()}{GetNextUndoDescription()}}
+{\footnotesize\ttfamily string Model.\+Undo\+Stack.\+Get\+Next\+Undo\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used to get the description of the next undo 
+
+\begin{DoxyReturn}{Returns}
+The description of the next undo
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_afc4ca45bc5785a27a6fb09e5d2192366}\label{class_model_1_1_undo_stack_afc4ca45bc5785a27a6fb09e5d2192366}} 
+\index{Model.UndoStack@{Model.UndoStack}!Redo@{Redo}}
+\index{Redo@{Redo}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{Redo()}{Redo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} Model.\+Undo\+Stack.\+Redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Redoes the last undone drawing action 
+
+\begin{DoxyReturn}{Returns}
+The state of the drawing before the last undo action
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_model_1_1_undo_stack_a44aff6e32bb23f4fc566010cf392f711}\label{class_model_1_1_undo_stack_a44aff6e32bb23f4fc566010cf392f711}} 
+\index{Model.UndoStack@{Model.UndoStack}!Undo@{Undo}}
+\index{Undo@{Undo}!Model.UndoStack@{Model.UndoStack}}
+\doxysubsubsection{\texorpdfstring{Undo()}{Undo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} Model.\+Undo\+Stack.\+Undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Undoes the last drawing action 
+
+\begin{DoxyReturn}{Returns}
+The state of the drawing before the last done action
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+See\+Sharper/\+Model/Undo\+Stack.\+cs\end{DoxyCompactItemize}

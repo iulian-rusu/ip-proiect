@@ -1,0 +1,179 @@
+\hypertarget{class_view_1_1_view}{}\doxysection{View.\+View Class Reference}
+\label{class_view_1_1_view}\index{View.View@{View.View}}
+
+
+\mbox{\hyperlink{class_view_1_1_view}{View}} component of the MVP architecture.  
+
+
+
+
+Inheritance diagram for View.\+View\+:
+% FIG 0
+
+
+Collaboration diagram for View.\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_view_1_1_view_a903ffdf54c5937e42cf25fde6c293eee}{Set\+Presenter}} (\mbox{\hyperlink{interface_shared_1_1_i_presenter}{IPresenter}} presenter)
+\begin{DoxyCompactList}\small\item\em Set presenter and send it initial tool \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_1_1_view_a18c1803e976f9c3e637d5bea6c1cfda9}{Capture\+Drawing\+State}} ()
+\begin{DoxyCompactList}\small\item\em Merges the current\+Paint\+Event modifications into the Image \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_1_1_view_a201fbfccbff6e516acd7c54bebe864fa}{Set\+Drawing\+Memento}} (\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} drawing\+Memento)
+\begin{DoxyCompactList}\small\item\em Changes the current image \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} \mbox{\hyperlink{class_view_1_1_view_a59406635f8dffb71435a1652a7665a84}{Get\+Drawing\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Encapsulates and returns the current image state of the picturebox \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_1_1_view_afdaea0e4a5b148dec3b9ed2d87bc005a}{Change\+Current\+Handler}} (\mbox{\hyperlink{class_strategy_1_1_strategy}{Strategy}} strategy)
+\begin{DoxyCompactList}\small\item\em Removes the old Added\+Paint\+Handler to the picture\+Box.\+Paint event and adds the one encapsulated in the strategy. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_view_1_1_view_abcb463356d1f9aa85574c58d6f49d57b}{Get\+Save\+File\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Display dialog box and return chosen file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_1_1_view_a2b92eceecd671bd5aa2adc080df0931b}{Set\+Undo}} (string description)
+\begin{DoxyCompactList}\small\item\em Set description in undo text box \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_1_1_view_ace37d7858ad0203672ba70f49cdda0e6}{Set\+Redo}} (string description)
+\begin{DoxyCompactList}\small\item\em Set description in redo text box \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_view_1_1_view_a8319bdce71aad819a45b32ce35d7a390}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_view_1_1_view}{View}} component of the MVP architecture. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_1_1_view_a18c1803e976f9c3e637d5bea6c1cfda9}\label{class_view_1_1_view_a18c1803e976f9c3e637d5bea6c1cfda9}} 
+\index{View.View@{View.View}!CaptureDrawingState@{CaptureDrawingState}}
+\index{CaptureDrawingState@{CaptureDrawingState}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{CaptureDrawingState()}{CaptureDrawingState()}}
+{\footnotesize\ttfamily void View.\+View.\+Capture\+Drawing\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Merges the current\+Paint\+Event modifications into the Image 
+
+\mbox{\Hypertarget{class_view_1_1_view_afdaea0e4a5b148dec3b9ed2d87bc005a}\label{class_view_1_1_view_afdaea0e4a5b148dec3b9ed2d87bc005a}} 
+\index{View.View@{View.View}!ChangeCurrentHandler@{ChangeCurrentHandler}}
+\index{ChangeCurrentHandler@{ChangeCurrentHandler}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{ChangeCurrentHandler()}{ChangeCurrentHandler()}}
+{\footnotesize\ttfamily void View.\+View.\+Change\+Current\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_strategy_1_1_strategy}{Strategy}}}]{strategy }\end{DoxyParamCaption})}
+
+
+
+Removes the old Added\+Paint\+Handler to the picture\+Box.\+Paint event and adds the one encapsulated in the strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy} & New strategy encapsulating a Paint\+Handler\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_1_1_view_a8319bdce71aad819a45b32ce35d7a390}\label{class_view_1_1_view_a8319bdce71aad819a45b32ce35d7a390}} 
+\index{View.View@{View.View}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void View.\+View.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_1_1_view_a59406635f8dffb71435a1652a7665a84}\label{class_view_1_1_view_a59406635f8dffb71435a1652a7665a84}} 
+\index{View.View@{View.View}!GetDrawingMemento@{GetDrawingMemento}}
+\index{GetDrawingMemento@{GetDrawingMemento}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{GetDrawingMemento()}{GetDrawingMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} View.\+View.\+Get\+Drawing\+Memento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Encapsulates and returns the current image state of the picturebox 
+
+\begin{DoxyReturn}{Returns}
+Encapsulated image
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_1_1_view_abcb463356d1f9aa85574c58d6f49d57b}\label{class_view_1_1_view_abcb463356d1f9aa85574c58d6f49d57b}} 
+\index{View.View@{View.View}!GetSaveFileName@{GetSaveFileName}}
+\index{GetSaveFileName@{GetSaveFileName}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{GetSaveFileName()}{GetSaveFileName()}}
+{\footnotesize\ttfamily string View.\+View.\+Get\+Save\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Display dialog box and return chosen file 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_1_1_view_a201fbfccbff6e516acd7c54bebe864fa}\label{class_view_1_1_view_a201fbfccbff6e516acd7c54bebe864fa}} 
+\index{View.View@{View.View}!SetDrawingMemento@{SetDrawingMemento}}
+\index{SetDrawingMemento@{SetDrawingMemento}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{SetDrawingMemento()}{SetDrawingMemento()}}
+{\footnotesize\ttfamily void View.\+View.\+Set\+Drawing\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}}}]{drawing\+Memento }\end{DoxyParamCaption})}
+
+
+
+Changes the current image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawing\+Memento} & New encapsulated image\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_1_1_view_a903ffdf54c5937e42cf25fde6c293eee}\label{class_view_1_1_view_a903ffdf54c5937e42cf25fde6c293eee}} 
+\index{View.View@{View.View}!SetPresenter@{SetPresenter}}
+\index{SetPresenter@{SetPresenter}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{SetPresenter()}{SetPresenter()}}
+{\footnotesize\ttfamily void View.\+View.\+Set\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_shared_1_1_i_presenter}{IPresenter}}}]{presenter }\end{DoxyParamCaption})}
+
+
+
+Set presenter and send it initial tool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em presenter} & \mbox{\hyperlink{namespace_presenter}{Presenter}} associated with this \mbox{\hyperlink{class_view_1_1_view}{View}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_1_1_view_ace37d7858ad0203672ba70f49cdda0e6}\label{class_view_1_1_view_ace37d7858ad0203672ba70f49cdda0e6}} 
+\index{View.View@{View.View}!SetRedo@{SetRedo}}
+\index{SetRedo@{SetRedo}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{SetRedo()}{SetRedo()}}
+{\footnotesize\ttfamily void View.\+View.\+Set\+Redo (\begin{DoxyParamCaption}\item[{string}]{description }\end{DoxyParamCaption})}
+
+
+
+Set description in redo text box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Next redoable action\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_1_1_view_a2b92eceecd671bd5aa2adc080df0931b}\label{class_view_1_1_view_a2b92eceecd671bd5aa2adc080df0931b}} 
+\index{View.View@{View.View}!SetUndo@{SetUndo}}
+\index{SetUndo@{SetUndo}!View.View@{View.View}}
+\doxysubsubsection{\texorpdfstring{SetUndo()}{SetUndo()}}
+{\footnotesize\ttfamily void View.\+View.\+Set\+Undo (\begin{DoxyParamCaption}\item[{string}]{description }\end{DoxyParamCaption})}
+
+
+
+Set description in undo text box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Next undoable action\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+See\+Sharper/\+View/View.\+cs\item 
+See\+Sharper/\+View/View.\+Designer.\+cs\end{DoxyCompactItemize}

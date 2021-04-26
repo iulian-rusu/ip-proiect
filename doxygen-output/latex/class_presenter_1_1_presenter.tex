@@ -1,0 +1,212 @@
+\hypertarget{class_presenter_1_1_presenter}{}\doxysection{Presenter.\+Presenter Class Reference}
+\label{class_presenter_1_1_presenter}\index{Presenter.Presenter@{Presenter.Presenter}}
+
+
+\mbox{\hyperlink{class_presenter_1_1_presenter}{Presenter}} class -\/ manages the presentation logic of the application  
+
+
+
+
+Inheritance diagram for Presenter.\+Presenter\+:
+% FIG 0
+
+
+Collaboration diagram for Presenter.\+Presenter\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_presenter_1_1_presenter_a0612780f6ed47ed5bac694dfa31c9ef4}{Presenter}} (\mbox{\hyperlink{interface_shared_1_1_i_model}{IModel}} model, \mbox{\hyperlink{interface_shared_1_1_i_view}{IView}} view)
+\begin{DoxyCompactList}\small\item\em Constructor of the \mbox{\hyperlink{class_presenter_1_1_presenter}{Presenter}} class \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}{Mouse\+Moved}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Called to notify of a mouse move event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_abd579921ff2b178b6d5aafa2a59141e5}{Mouse\+Clicked}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Called to notify of a mouse click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a31df157ae38f6788814b0d9c0f833c7e}{Save\+Drawing}} ()
+\begin{DoxyCompactList}\small\item\em Saves the current state of the \mbox{\hyperlink{namespace_view}{View}} drawing to the model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a165c8d74d797c8bab175cb86d16a6d16}{Redo}} ()
+\begin{DoxyCompactList}\small\item\em Sets the state of the \mbox{\hyperlink{namespace_view}{View}} drawing to revert the last \char`\"{}\+Undo\char`\"{} operation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a3cf711621307b1b5a927531b38cb0f09}{Undo}} ()
+\begin{DoxyCompactList}\small\item\em Sets the state of the \mbox{\hyperlink{namespace_view}{View}} drawing to revert the last recorded change \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_abf022c173ad1144f3544f4d806311d95}{Color\+Changed}} (Color color)
+\begin{DoxyCompactList}\small\item\em Applies the new color to the current drawing strategy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_af4f785ef37acf80847b41a72d993c3fc}{Choose\+Painting\+Tool}} (Painting\+Tool painting\+Tool, Color selected\+Color)
+\begin{DoxyCompactList}\small\item\em Updates the current strategy to match the selected tool \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a15b5b357b0293c3cf75df4c232c26128}{Load\+Drawing}} (string filename)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{namespace_view}{View}} drawing to the one loaded in the model \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_presenter_1_1_presenter}{Presenter}} class -\/ manages the presentation logic of the application 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a0612780f6ed47ed5bac694dfa31c9ef4}\label{class_presenter_1_1_presenter_a0612780f6ed47ed5bac694dfa31c9ef4}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!Presenter@{Presenter}}
+\index{Presenter@{Presenter}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{Presenter()}{Presenter()}}
+{\footnotesize\ttfamily Presenter.\+Presenter.\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_shared_1_1_i_model}{IModel}}}]{model,  }\item[{\mbox{\hyperlink{interface_shared_1_1_i_view}{IView}}}]{view }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \mbox{\hyperlink{class_presenter_1_1_presenter}{Presenter}} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The model of the MVP architecture\\
+\hline
+{\em view} & The view of the MVP architecture\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_presenter_1_1_presenter_af4f785ef37acf80847b41a72d993c3fc}\label{class_presenter_1_1_presenter_af4f785ef37acf80847b41a72d993c3fc}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!ChoosePaintingTool@{ChoosePaintingTool}}
+\index{ChoosePaintingTool@{ChoosePaintingTool}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{ChoosePaintingTool()}{ChoosePaintingTool()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Choose\+Painting\+Tool (\begin{DoxyParamCaption}\item[{Painting\+Tool}]{painting\+Tool,  }\item[{Color}]{selected\+Color }\end{DoxyParamCaption})}
+
+
+
+Updates the current strategy to match the selected tool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painting\+Tool} & The new selected painting tool\\
+\hline
+{\em selected\+Color} & The color of the painting tool\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_abf022c173ad1144f3544f4d806311d95}\label{class_presenter_1_1_presenter_abf022c173ad1144f3544f4d806311d95}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!ColorChanged@{ColorChanged}}
+\index{ColorChanged@{ColorChanged}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{ColorChanged()}{ColorChanged()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Color\+Changed (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Applies the new color to the current drawing strategy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a15b5b357b0293c3cf75df4c232c26128}\label{class_presenter_1_1_presenter_a15b5b357b0293c3cf75df4c232c26128}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!LoadDrawing@{LoadDrawing}}
+\index{LoadDrawing@{LoadDrawing}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{LoadDrawing()}{LoadDrawing()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Load\+Drawing (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{namespace_view}{View}} drawing to the one loaded in the model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the file on the disk\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_abd579921ff2b178b6d5aafa2a59141e5}\label{class_presenter_1_1_presenter_abd579921ff2b178b6d5aafa2a59141e5}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!MouseClicked@{MouseClicked}}
+\index{MouseClicked@{MouseClicked}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{MouseClicked()}{MouseClicked()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Mouse\+Clicked (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Called to notify of a mouse click event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the mouse cursor\\
+\hline
+{\em y} & The y coordinate of the mouse cursor\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}\label{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!MouseMoved@{MouseMoved}}
+\index{MouseMoved@{MouseMoved}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{MouseMoved()}{MouseMoved()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Called to notify of a mouse move event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the mouse cursor\\
+\hline
+{\em y} & The y coordinate of the mouse cursor\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a165c8d74d797c8bab175cb86d16a6d16}\label{class_presenter_1_1_presenter_a165c8d74d797c8bab175cb86d16a6d16}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!Redo@{Redo}}
+\index{Redo@{Redo}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{Redo()}{Redo()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the state of the \mbox{\hyperlink{namespace_view}{View}} drawing to revert the last \char`\"{}\+Undo\char`\"{} operation 
+
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a31df157ae38f6788814b0d9c0f833c7e}\label{class_presenter_1_1_presenter_a31df157ae38f6788814b0d9c0f833c7e}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!SaveDrawing@{SaveDrawing}}
+\index{SaveDrawing@{SaveDrawing}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{SaveDrawing()}{SaveDrawing()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Save\+Drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the current state of the \mbox{\hyperlink{namespace_view}{View}} drawing to the model 
+
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a3cf711621307b1b5a927531b38cb0f09}\label{class_presenter_1_1_presenter_a3cf711621307b1b5a927531b38cb0f09}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!Undo@{Undo}}
+\index{Undo@{Undo}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{Undo()}{Undo()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the state of the \mbox{\hyperlink{namespace_view}{View}} drawing to revert the last recorded change 
+
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+See\+Sharper/\+Presenter/Presenter.\+cs\end{DoxyCompactItemize}

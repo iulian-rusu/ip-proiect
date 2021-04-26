@@ -1,0 +1,780 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#ab18a9a48921e4ab9e6378bf47d4792d4"><param name="Name" value="Add"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a0748c1fbf777498e56c363fce1554136"><param name="Name" value="AddMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a0748c1fbf777498e56c363fce1554136"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ac08d594cd3d06755a191b0125d99f3a2"><param name="Name" value="AddMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ac08d594cd3d06755a191b0125d99f3a2"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a9831a1b5539a17b6727a52892f218c27"><param name="Name" value="CaptureDrawingState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a9831a1b5539a17b6727a52892f218c27"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a18c1803e976f9c3e637d5bea6c1cfda9"><param name="Name" value="CaptureDrawingState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a18c1803e976f9c3e637d5bea6c1cfda9"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a84441f7994f697ab9539d8e3ddaeb41c"><param name="Name" value="ChangeCurrentHandler"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a84441f7994f697ab9539d8e3ddaeb41c"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#afdaea0e4a5b148dec3b9ed2d87bc005a"><param name="Name" value="ChangeCurrentHandler"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#afdaea0e4a5b148dec3b9ed2d87bc005a"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#af4f785ef37acf80847b41a72d993c3fc"><param name="Name" value="ChoosePaintingTool"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#af4f785ef37acf80847b41a72d993c3fc"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a34372ccaedf1e0915db18f5f8ba914e7"><param name="Name" value="ChoosePaintingTool"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a34372ccaedf1e0915db18f5f8ba914e7"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abf022c173ad1144f3544f4d806311d95"><param name="Name" value="ColorChanged"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abf022c173ad1144f3544f4d806311d95"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a830f36b4421d7ed74dba7f8ecb3a343a"><param name="Name" value="ColorChanged"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a830f36b4421d7ed74dba7f8ecb3a343a"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a27d6fe684c5a6a18bfb369e346258896"><param name="Name" value="ColorChanged"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a27d6fe684c5a6a18bfb369e346258896"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html#a73eadcdfe16d749cb4a705bbafa690b9"><param name="Name" value="Description"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a8319bdce71aad819a45b32ce35d7a390"><param name="Name" value="Dispose"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a8fe09be1925a1d519db27c5563f6e6a2"><param name="Name" value="Done"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html#a0c8658441cec29a6b0eef934f8a3de2e"><param name="Name" value="Drawing"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html#a6a698af8f9a11f8efcee98c88169cdd7"><param name="Name" value="DrawingMemento"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a38879dee5f2cbe03527b4aaf71ca8e60"><param name="Name" value="Drop"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#a9dc09feac6dea0247fa47ef0f3f3444a"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#a9dc09feac6dea0247fa47ef0f3f3444a"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a778e3aac8d9a99ddd6c158c3e3813eb6"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a778e3aac8d9a99ddd6c158c3e3813eb6"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#aaa80fded38b71e21ff0df70e057cd750"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#aaa80fded38b71e21ff0df70e057cd750"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#a4bb2a35e8624e4045bf55d0f272aeade"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#a4bb2a35e8624e4045bf55d0f272aeade"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a73e2b31e7493710bcd58b2f05632c1a3"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a73e2b31e7493710bcd58b2f05632c1a3"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#ad8865979015ba9a98cbfd82af39f7c28"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#ad8865979015ba9a98cbfd82af39f7c28"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a4f6b4f17ec2faec2436da89c3d8c25db"><param name="Name" value="GetDraw"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a4f6b4f17ec2faec2436da89c3d8c25db"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a19809720ea9837fe12245c0344689441"><param name="Name" value="GetDrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a19809720ea9837fe12245c0344689441"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a59406635f8dffb71435a1652a7665a84"><param name="Name" value="GetDrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a59406635f8dffb71435a1652a7665a84"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a2d2345c90cfc531b6b6595ea0e09ff54"><param name="Name" value="GetNextRedoDescription"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a2d2345c90cfc531b6b6595ea0e09ff54"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a32ee9a128a4764c4441e727cdca15a6f"><param name="Name" value="GetNextRedoDescription"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a32ee9a128a4764c4441e727cdca15a6f"><param name="Name" value="Model::UndoStack"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a00c8f89a8ccb74c379be5591b9faba22"><param name="Name" value="GetNextRedoDescription"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a00c8f89a8ccb74c379be5591b9faba22"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#ac0fddaf083f8c64630325e573b1291c7"><param name="Name" value="GetNextUndoDescription"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#ac0fddaf083f8c64630325e573b1291c7"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a3b6dba97f3e1f5ebc2c972d2bf7d9713"><param name="Name" value="GetNextUndoDescription"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a3b6dba97f3e1f5ebc2c972d2bf7d9713"><param name="Name" value="Model::UndoStack"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ac64893ddab7f5811a0b8c103a52c57c7"><param name="Name" value="GetNextUndoDescription"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ac64893ddab7f5811a0b8c103a52c57c7"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a356bb9fd8dcb10b7ae23536bb84309b8"><param name="Name" value="GetPaintingStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a356bb9fd8dcb10b7ae23536bb84309b8"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a53d823317a026a4ee3381db9c4bc2a0e"><param name="Name" value="GetPaintingStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a53d823317a026a4ee3381db9c4bc2a0e"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#ae352c2faf755c4a5a44e84b4ccc6ffba"><param name="Name" value="GetSaveFileName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#ae352c2faf755c4a5a44e84b4ccc6ffba"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#abcb463356d1f9aa85574c58d6f49d57b"><param name="Name" value="GetSaveFileName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#abcb463356d1f9aa85574c58d6f49d57b"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#af3bb11a7b2c2e8fbe1fcbd7c25a7a235"><param name="Name" value="HasSaveFileName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#af3bb11a7b2c2e8fbe1fcbd7c25a7a235"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ae6dc01843cff3f8932b63c8584b7e2ad"><param name="Name" value="HasSaveFileName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ae6dc01843cff3f8932b63c8584b7e2ad"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#a1b8a8e66c664b5492b26451e7cdb18dc"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#a1b8a8e66c664b5492b26451e7cdb18dc"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#abcd63303c97cd694b05a7e5d0246d4b3"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#abcd63303c97cd694b05a7e5d0246d4b3"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#a13196f6df6ab20368abbd791ce36e367"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#a13196f6df6ab20368abbd791ce36e367"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#aefcc09841ea95f5b713534e0ff4f7497"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#aefcc09841ea95f5b713534e0ff4f7497"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a8bc96d758b06cd625d2aa22dba26d3a6"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a8bc96d758b06cd625d2aa22dba26d3a6"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#abebc80dd0bbe03d1d45e2af6fdc0971b"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#abebc80dd0bbe03d1d45e2af6fdc0971b"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#aa5b3d8ebb16e6afea7a82fb35efa3988"><param name="Name" value="IsDone"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#aa5b3d8ebb16e6afea7a82fb35efa3988"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#aa865d6bbe7b27b78ef545128c7660858"><param name="Name" value="LoadDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#aa865d6bbe7b27b78ef545128c7660858"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a15b5b357b0293c3cf75df4c232c26128"><param name="Name" value="LoadDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a15b5b357b0293c3cf75df4c232c26128"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a93af4262753396cfb553c18a8b0bb1d4"><param name="Name" value="LoadDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a93af4262753396cfb553c18a8b0bb1d4"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#ab41381a59706917e489a7a481e02a878"><param name="Name" value="LoadDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#ab41381a59706917e489a7a481e02a878"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_memento.html"><param name="Name" value="Memento"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html"><param name="Name" value="Memento::DrawingMemento"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html"><param name="Name" value="Memento::DrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html#a73eadcdfe16d749cb4a705bbafa690b9"><param name="Name" value="Description"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html"><param name="Name" value="Memento::DrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html#a0c8658441cec29a6b0eef934f8a3de2e"><param name="Name" value="Drawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html"><param name="Name" value="Memento::DrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_memento_1_1_drawing_memento.html#a6a698af8f9a11f8efcee98c88169cdd7"><param name="Name" value="DrawingMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_model.html"><param name="Name" value="Model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a0748c1fbf777498e56c363fce1554136"><param name="Name" value="AddMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a2d2345c90cfc531b6b6595ea0e09ff54"><param name="Name" value="GetNextRedoDescription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#ac0fddaf083f8c64630325e573b1291c7"><param name="Name" value="GetNextUndoDescription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a356bb9fd8dcb10b7ae23536bb84309b8"><param name="Name" value="GetPaintingStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#af3bb11a7b2c2e8fbe1fcbd7c25a7a235"><param name="Name" value="HasSaveFileName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#aa865d6bbe7b27b78ef545128c7660858"><param name="Name" value="LoadDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a211cc9a0a667d84dba345915c9bd5804"><param name="Name" value="Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a016211078af75596656174e7567e8130"><param name="Name" value="Redo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a1be9f47bdf029b39eb8f5948f4722094"><param name="Name" value="SaveDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a11f31fe99f608b357025c70040777d12"><param name="Name" value="SetSaveFileName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html"><param name="Name" value="Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a0f952c84648d85145f6ea100855521bf"><param name="Name" value="Undo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#ab18a9a48921e4ab9e6378bf47d4792d4"><param name="Name" value="Add"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a38879dee5f2cbe03527b4aaf71ca8e60"><param name="Name" value="Drop"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a32ee9a128a4764c4441e727cdca15a6f"><param name="Name" value="GetNextRedoDescription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a3b6dba97f3e1f5ebc2c972d2bf7d9713"><param name="Name" value="GetNextUndoDescription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#afc4ca45bc5785a27a6fb09e5d2192366"><param name="Name" value="Redo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a44aff6e32bb23f4fc566010cf392f711"><param name="Name" value="Undo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html"><param name="Name" value="Model::UndoStack"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a2334f39a64b9d747b67cb2982fc3d60f"><param name="Name" value="UndoStack"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a211cc9a0a667d84dba345915c9bd5804"><param name="Name" value="Model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abd579921ff2b178b6d5aafa2a59141e5"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abd579921ff2b178b6d5aafa2a59141e5"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#af748a2707cdf2393f14603bd7eca2c78"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#af748a2707cdf2393f14603bd7eca2c78"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#aa48e8910b496fd09b1b9230dd41b1706"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#aa48e8910b496fd09b1b9230dd41b1706"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a358acb7a02f761ac867ec045d5045b18"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a358acb7a02f761ac867ec045d5045b18"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#ab035d115887929284519501297fc0db8"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#ab035d115887929284519501297fc0db8"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#ae23fa349a1518ea78c56f1256a5d6807"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#ae23fa349a1518ea78c56f1256a5d6807"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#aeff3b0b6c76a9743173450fffd033dc8"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#aeff3b0b6c76a9743173450fffd033dc8"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#ab858ce69eb7ab6a2306588b418aec68a"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#ab858ce69eb7ab6a2306588b418aec68a"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a5e86d789001648b9f67784c98b032ab9"><param name="Name" value="MouseClicked"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a5e86d789001648b9f67784c98b032ab9"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abd746f3e333028d65afea42449d0beb1"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abd746f3e333028d65afea42449d0beb1"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a4af7a60b29b9a7540f474449cb9b006e"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a4af7a60b29b9a7540f474449cb9b006e"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#aa8a4f4569d7e0f381c817cd37e01f4e7"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#aa8a4f4569d7e0f381c817cd37e01f4e7"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a03911d55eb18e846b4cbe7cd7aeba670"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a03911d55eb18e846b4cbe7cd7aeba670"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#a07dba0b75a75886bc096e50c100065f2"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#a07dba0b75a75886bc096e50c100065f2"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#a767a945f49899bd8405ca3466a1d1a7a"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#a767a945f49899bd8405ca3466a1d1a7a"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a60b7dc80891a95dcfcc20a022b83d279"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a60b7dc80891a95dcfcc20a022b83d279"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#a2299a6d2ee10db53150b91f1b97ddfa9"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#a2299a6d2ee10db53150b91f1b97ddfa9"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a1866259f3dc6b8ea5db40479e03c8d10"><param name="Name" value="MouseMoved"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a1866259f3dc6b8ea5db40479e03c8d10"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_presenter.html"><param name="Name" value="Presenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#af4f785ef37acf80847b41a72d993c3fc"><param name="Name" value="ChoosePaintingTool"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abf022c173ad1144f3544f4d806311d95"><param name="Name" value="ColorChanged"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a15b5b357b0293c3cf75df4c232c26128"><param name="Name" value="LoadDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abd579921ff2b178b6d5aafa2a59141e5"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#abd746f3e333028d65afea42449d0beb1"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a0612780f6ed47ed5bac694dfa31c9ef4"><param name="Name" value="Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a165c8d74d797c8bab175cb86d16a6d16"><param name="Name" value="Redo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a31df157ae38f6788814b0d9c0f833c7e"><param name="Name" value="SaveDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a3cf711621307b1b5a927531b38cb0f09"><param name="Name" value="Undo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a0612780f6ed47ed5bac694dfa31c9ef4"><param name="Name" value="Presenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a016211078af75596656174e7567e8130"><param name="Name" value="Redo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a016211078af75596656174e7567e8130"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#afc4ca45bc5785a27a6fb09e5d2192366"><param name="Name" value="Redo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#afc4ca45bc5785a27a6fb09e5d2192366"><param name="Name" value="Model::UndoStack"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a165c8d74d797c8bab175cb86d16a6d16"><param name="Name" value="Redo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a165c8d74d797c8bab175cb86d16a6d16"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ae71c4b38dc3d47586464d1e7477dc68c"><param name="Name" value="Redo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ae71c4b38dc3d47586464d1e7477dc68c"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#adf6683312e284db4e0016acb009ccddb"><param name="Name" value="Redo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#adf6683312e284db4e0016acb009ccddb"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a1be9f47bdf029b39eb8f5948f4722094"><param name="Name" value="SaveDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a1be9f47bdf029b39eb8f5948f4722094"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a31df157ae38f6788814b0d9c0f833c7e"><param name="Name" value="SaveDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a31df157ae38f6788814b0d9c0f833c7e"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a8bc772800d3757685c70daa1ae40f660"><param name="Name" value="SaveDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a8bc772800d3757685c70daa1ae40f660"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a6d1db13ee19b2d13ae7719055e29b3d9"><param name="Name" value="SaveDrawing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a6d1db13ee19b2d13ae7719055e29b3d9"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_see_sharper.html"><param name="Name" value="SeeSharper"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_see_sharper_1_1_properties.html"><param name="Name" value="SeeSharper::Properties"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a6016e59fcd30e3fd4c29ba71421c3e7c"><param name="Name" value="SetDrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a6016e59fcd30e3fd4c29ba71421c3e7c"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a201fbfccbff6e516acd7c54bebe864fa"><param name="Name" value="SetDrawingMemento"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a201fbfccbff6e516acd7c54bebe864fa"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#ade643a4f5676c4851f3680a76409cab9"><param name="Name" value="SetPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#ade643a4f5676c4851f3680a76409cab9"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a903ffdf54c5937e42cf25fde6c293eee"><param name="Name" value="SetPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a903ffdf54c5937e42cf25fde6c293eee"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#aef9a3833262d59783144d92bec477293"><param name="Name" value="SetRedo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#aef9a3833262d59783144d92bec477293"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#ace37d7858ad0203672ba70f49cdda0e6"><param name="Name" value="SetRedo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#ace37d7858ad0203672ba70f49cdda0e6"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a11f31fe99f608b357025c70040777d12"><param name="Name" value="SetSaveFileName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a11f31fe99f608b357025c70040777d12"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a3e92a13a9f515b556a79fa2722d550d7"><param name="Name" value="SetSaveFileName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a3e92a13a9f515b556a79fa2722d550d7"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a2d3489af24b3ae3bcf9e5de2d981ca23"><param name="Name" value="SetUndo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a2d3489af24b3ae3bcf9e5de2d981ca23"><param name="Name" value="Shared::IView"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a2b92eceecd671bd5aa2adc080df0931b"><param name="Name" value="SetUndo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a2b92eceecd671bd5aa2adc080df0931b"><param name="Name" value="View::View"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_shared.html"><param name="Name" value="Shared"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ac08d594cd3d06755a191b0125d99f3a2"><param name="Name" value="AddMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a00c8f89a8ccb74c379be5591b9faba22"><param name="Name" value="GetNextRedoDescription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ac64893ddab7f5811a0b8c103a52c57c7"><param name="Name" value="GetNextUndoDescription"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a53d823317a026a4ee3381db9c4bc2a0e"><param name="Name" value="GetPaintingStrategy"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ae6dc01843cff3f8932b63c8584b7e2ad"><param name="Name" value="HasSaveFileName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a93af4262753396cfb553c18a8b0bb1d4"><param name="Name" value="LoadDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#ae71c4b38dc3d47586464d1e7477dc68c"><param name="Name" value="Redo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a8bc772800d3757685c70daa1ae40f660"><param name="Name" value="SaveDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#a3e92a13a9f515b556a79fa2722d550d7"><param name="Name" value="SetSaveFileName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html"><param name="Name" value="Shared::IModel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#aecd1c032a98107278a8cadcfc82d126f"><param name="Name" value="Undo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a34372ccaedf1e0915db18f5f8ba914e7"><param name="Name" value="ChoosePaintingTool"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a830f36b4421d7ed74dba7f8ecb3a343a"><param name="Name" value="ColorChanged"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#ab41381a59706917e489a7a481e02a878"><param name="Name" value="LoadDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#af748a2707cdf2393f14603bd7eca2c78"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a4af7a60b29b9a7540f474449cb9b006e"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#adf6683312e284db4e0016acb009ccddb"><param name="Name" value="Redo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a6d1db13ee19b2d13ae7719055e29b3d9"><param name="Name" value="SaveDrawing"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a29436d97f00c1af3d5eb512e4feb2e7e"><param name="Name" value="Undo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a9831a1b5539a17b6727a52892f218c27"><param name="Name" value="CaptureDrawingState"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a84441f7994f697ab9539d8e3ddaeb41c"><param name="Name" value="ChangeCurrentHandler"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a19809720ea9837fe12245c0344689441"><param name="Name" value="GetDrawingMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#ae352c2faf755c4a5a44e84b4ccc6ffba"><param name="Name" value="GetSaveFileName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a6016e59fcd30e3fd4c29ba71421c3e7c"><param name="Name" value="SetDrawingMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#ade643a4f5676c4851f3680a76409cab9"><param name="Name" value="SetPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#aef9a3833262d59783144d92bec477293"><param name="Name" value="SetRedo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html"><param name="Name" value="Shared::IView"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_view.html#a2d3489af24b3ae3bcf9e5de2d981ca23"><param name="Name" value="SetUndo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_strategy.html"><param name="Name" value="Strategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#a9dc09feac6dea0247fa47ef0f3f3444a"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#a1b8a8e66c664b5492b26451e7cdb18dc"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#aa48e8910b496fd09b1b9230dd41b1706"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html"><param name="Name" value="Strategy::BrushStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_brush_strategy.html#aa8a4f4569d7e0f381c817cd37e01f4e7"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a778e3aac8d9a99ddd6c158c3e3813eb6"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#abcd63303c97cd694b05a7e5d0246d4b3"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a358acb7a02f761ac867ec045d5045b18"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html"><param name="Name" value="Strategy::CircleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_circle_strategy.html#a03911d55eb18e846b4cbe7cd7aeba670"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#aaa80fded38b71e21ff0df70e057cd750"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#a13196f6df6ab20368abbd791ce36e367"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#ab035d115887929284519501297fc0db8"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html"><param name="Name" value="Strategy::ElipseStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_elipse_strategy.html#a07dba0b75a75886bc096e50c100065f2"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#a4bb2a35e8624e4045bf55d0f272aeade"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#aefcc09841ea95f5b713534e0ff4f7497"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#ae23fa349a1518ea78c56f1256a5d6807"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html"><param name="Name" value="Strategy::LineStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_line_strategy.html#a767a945f49899bd8405ca3466a1d1a7a"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_multiple_point_strategy.html"><param name="Name" value="Strategy::MultiplePointStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a73e2b31e7493710bcd58b2f05632c1a3"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a8bc96d758b06cd625d2aa22dba26d3a6"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#aeff3b0b6c76a9743173450fffd033dc8"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html"><param name="Name" value="Strategy::RectangleStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_rectangle_strategy.html#a60b7dc80891a95dcfcc20a022b83d279"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#ad8865979015ba9a98cbfd82af39f7c28"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#abebc80dd0bbe03d1d45e2af6fdc0971b"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#ab858ce69eb7ab6a2306588b418aec68a"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html"><param name="Name" value="Strategy::SquareStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_square_strategy.html#a2299a6d2ee10db53150b91f1b97ddfa9"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a27d6fe684c5a6a18bfb369e346258896"><param name="Name" value="ColorChanged"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a8fe09be1925a1d519db27c5563f6e6a2"><param name="Name" value="Done"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a4f6b4f17ec2faec2436da89c3d8c25db"><param name="Name" value="GetDraw"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#aa5b3d8ebb16e6afea7a82fb35efa3988"><param name="Name" value="IsDone"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a5e86d789001648b9f67784c98b032ab9"><param name="Name" value="MouseClicked"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#a1866259f3dc6b8ea5db40479e03c8d10"><param name="Name" value="MouseMoved"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#ac1583a7e33e5998b4a8643616e2bf443"><param name="Name" value="_color"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html"><param name="Name" value="Strategy::Strategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#ae444d2c3f630fe30e7d6683183871d7c"><param name="Name" value="_done"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_two_point_strategy.html"><param name="Name" value="Strategy::TwoPointStrategy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_two_point_strategy.html"><param name="Name" value="Strategy::TwoPointStrategy"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_two_point_strategy.html#ad2c682eaa774b740b87124dfacb06c7b"><param name="Name" value="_points"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a0f952c84648d85145f6ea100855521bf"><param name="Name" value="Undo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_model.html#a0f952c84648d85145f6ea100855521bf"><param name="Name" value="Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a44aff6e32bb23f4fc566010cf392f711"><param name="Name" value="Undo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a44aff6e32bb23f4fc566010cf392f711"><param name="Name" value="Model::UndoStack"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a3cf711621307b1b5a927531b38cb0f09"><param name="Name" value="Undo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_presenter_1_1_presenter.html#a3cf711621307b1b5a927531b38cb0f09"><param name="Name" value="Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#aecd1c032a98107278a8cadcfc82d126f"><param name="Name" value="Undo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_model.html#aecd1c032a98107278a8cadcfc82d126f"><param name="Name" value="Shared::IModel"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a29436d97f00c1af3d5eb512e4feb2e7e"><param name="Name" value="Undo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_shared_1_1_i_presenter.html#a29436d97f00c1af3d5eb512e4feb2e7e"><param name="Name" value="Shared::IPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_model_1_1_undo_stack.html#a2334f39a64b9d747b67cb2982fc3d60f"><param name="Name" value="UndoStack"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_view.html"><param name="Name" value="View"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_view_1_1_properties.html"><param name="Name" value="View::Properties"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a18c1803e976f9c3e637d5bea6c1cfda9"><param name="Name" value="CaptureDrawingState"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#afdaea0e4a5b148dec3b9ed2d87bc005a"><param name="Name" value="ChangeCurrentHandler"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a8319bdce71aad819a45b32ce35d7a390"><param name="Name" value="Dispose"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a59406635f8dffb71435a1652a7665a84"><param name="Name" value="GetDrawingMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#abcb463356d1f9aa85574c58d6f49d57b"><param name="Name" value="GetSaveFileName"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a201fbfccbff6e516acd7c54bebe864fa"><param name="Name" value="SetDrawingMemento"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a903ffdf54c5937e42cf25fde6c293eee"><param name="Name" value="SetPresenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#ace37d7858ad0203672ba70f49cdda0e6"><param name="Name" value="SetRedo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html"><param name="Name" value="View::View"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_view_1_1_view.html#a2b92eceecd671bd5aa2adc080df0931b"><param name="Name" value="SetUndo"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#ac1583a7e33e5998b4a8643616e2bf443"><param name="Name" value="_color"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_strategy.html#ae444d2c3f630fe30e7d6683183871d7c"><param name="Name" value="_done"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_strategy_1_1_two_point_strategy.html#ad2c682eaa774b740b87124dfacb06c7b"><param name="Name" value="_points"></OBJECT>
+</UL>
+</BODY>
+</HTML>

@@ -53,6 +53,10 @@ namespace View
         circleButton, ellipseButton
       };
     }
+    /// <summary>
+    /// Set presenter and send it initial tool
+    /// </summary>
+    /// <param name="presenter">Presenter associated with this View</param>
     public void SetPresenter(IPresenter presenter)
     {
       _presenter = presenter;
@@ -85,16 +89,43 @@ namespace View
       // TODO ADD PARAMETER DESCRIPTION 
       return new DrawingMemento(pictureBox.Image, "");
     }
+    /// <summary>
+    /// Removes the old AddedPaintHandler to the pictureBox.Paint event and adds
+    /// the one encapsulated in the strategy.
+    /// </summary>
+    /// <param name="strategy">New strategy encapsulating a PaintHandler</param>
     public void ChangeCurrentHandler(Strategy strategy)
     {
       pictureBox.Paint -= _currentAddedPaintHandler;
       _currentAddedPaintHandler = strategy.GetDraw();
       pictureBox.Paint += _currentAddedPaintHandler;
     }
+    /// <summary>
+    /// Display dialog box and return chosen file
+    /// </summary>
+    /// <returns></returns>
     public string GetSaveFileName()
     {
-      return "img.png";
+      using (var saveFileDialog = new SaveFileDialog())
+      {
+        saveFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
+        saveFileDialog.FilterIndex = 2;
+        saveFileDialog.RestoreDirectory = true;
+
+        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+        {
+          return saveFileDialog.FileName;
+        }
+        else
+        {
+          return "";
+        }
+      }
     }
+    /// <summary>
+    /// Set description in undo text box
+    /// </summary>
+    /// <param name="description">Next undoable action</param>
     public void SetUndo(string description)
     {
       undoTextBox.Text = description;
@@ -107,6 +138,10 @@ namespace View
         undoButton.Enabled = true;
       }
     }
+    /// <summary>
+    /// Set description in redo text box
+    /// </summary>
+    /// <param name="description">Next redoable action</param>
     public void SetRedo(string description)
     {
       redoTextBox.Text = description;
