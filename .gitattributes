@@ -1,2 +1,4 @@
 *.html linguist-detectable=false
 *.tex linguist-detectable=false
+doxygen-output/* linguist-vendored
+./doxygen-output/* linguist-vendored
