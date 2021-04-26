@@ -84,6 +84,7 @@ namespace Presenter
             {
                 _model.SetSaveFileName(_view.GetSaveFileName());
             }
+            _view.CaptureDrawingState();
             var drawingMemento = _view.GetDrawingMemento();
             _model.SaveDrawing(drawingMemento);
             // _currentStrategy.Reset();
