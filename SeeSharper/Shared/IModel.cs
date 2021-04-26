@@ -16,5 +16,6 @@
         void AddMemento(DrawingMemento memento);
         string GetNextUndoDescription();
         string GetNextRedoDescription();
+        void DropMementos();
     }
 }
