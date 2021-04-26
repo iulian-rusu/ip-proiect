@@ -103,6 +103,31 @@ namespace View
     {
       return "img.png";
     }
+    public void SetUndo(string description)
+    {
+      undoTextBox.Text = description;
+      if (description == "")
+      {
+        undoButton.Enabled = false;
+      }
+      else
+      {
+        undoButton.Enabled = true;
+      }
+    }
+    public void SetRedo(string description)
+    {
+      redoTextBox.Text = description;
+      if (description == "")
+      {
+        redoButton.Enabled = false;
+      }
+      else
+      {
+        redoButton.Enabled = true;
+      }
+
+    }
     #endregion
     #region Private Member Functions
     /// <summary>

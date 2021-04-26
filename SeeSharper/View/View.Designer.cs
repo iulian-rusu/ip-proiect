@@ -54,7 +54,6 @@ namespace View
       this.ellipseButton = new System.Windows.Forms.Button();
       this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
       this.loadButton = new System.Windows.Forms.Button();
-      this.saveAsButton = new System.Windows.Forms.Button();
       this.saveButton = new System.Windows.Forms.Button();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -188,6 +187,7 @@ namespace View
       // undoButton
       // 
       this.undoButton.Dock = System.Windows.Forms.DockStyle.Right;
+      this.undoButton.Enabled = false;
       this.undoButton.Location = new System.Drawing.Point(438, 16);
       this.undoButton.Name = "undoButton";
       this.undoButton.Size = new System.Drawing.Size(75, 22);
@@ -220,6 +220,7 @@ namespace View
       // redoButton
       // 
       this.redoButton.Dock = System.Windows.Forms.DockStyle.Right;
+      this.redoButton.Enabled = false;
       this.redoButton.Location = new System.Drawing.Point(438, 16);
       this.redoButton.Name = "redoButton";
       this.redoButton.Size = new System.Drawing.Size(75, 22);
@@ -316,7 +317,6 @@ namespace View
       // saveLoadGroupBox
       // 
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
-      this.saveLoadGroupBox.Controls.Add(this.saveAsButton);
       this.saveLoadGroupBox.Controls.Add(this.saveButton);
       this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
       this.saveLoadGroupBox.Location = new System.Drawing.Point(1375, 3);
@@ -329,24 +329,13 @@ namespace View
       // loadButton
       // 
       this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.loadButton.Location = new System.Drawing.Point(3, 62);
+      this.loadButton.Location = new System.Drawing.Point(3, 39);
       this.loadButton.Name = "loadButton";
       this.loadButton.Size = new System.Drawing.Size(200, 23);
       this.loadButton.TabIndex = 2;
       this.loadButton.Text = "Load";
       this.loadButton.UseVisualStyleBackColor = true;
       this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
-      // 
-      // saveAsButton
-      // 
-      this.saveAsButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.saveAsButton.Location = new System.Drawing.Point(3, 39);
-      this.saveAsButton.Name = "saveAsButton";
-      this.saveAsButton.Size = new System.Drawing.Size(200, 23);
-      this.saveAsButton.TabIndex = 1;
-      this.saveAsButton.Text = "Save As";
-      this.saveAsButton.UseVisualStyleBackColor = true;
-      this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
       // 
       // saveButton
       // 
@@ -430,7 +419,6 @@ namespace View
     private System.Windows.Forms.Label toolsAndShapesLabel;
     private System.Windows.Forms.GroupBox saveLoadGroupBox;
     private System.Windows.Forms.Button loadButton;
-    private System.Windows.Forms.Button saveAsButton;
     private System.Windows.Forms.Button saveButton;
     private System.Windows.Forms.Timer timer;
   }
