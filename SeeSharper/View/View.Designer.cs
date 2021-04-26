@@ -29,6 +29,7 @@ namespace View
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
       this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
       this.colorGroupBox = new System.Windows.Forms.GroupBox();
@@ -51,20 +52,21 @@ namespace View
       this.rectangleButton = new System.Windows.Forms.Button();
       this.circleButton = new System.Windows.Forms.Button();
       this.ellipseButton = new System.Windows.Forms.Button();
+      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
+      this.loadButton = new System.Windows.Forms.Button();
+      this.saveAsButton = new System.Windows.Forms.Button();
+      this.saveButton = new System.Windows.Forms.Button();
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
-      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
-      this.saveButton = new System.Windows.Forms.Button();
-      this.saveAsButton = new System.Windows.Forms.Button();
-      this.loadButton = new System.Windows.Forms.Button();
+      this.timer = new System.Windows.Forms.Timer(this.components);
       this.mainTableLayoutPanel.SuspendLayout();
       this.colorGroupBox.SuspendLayout();
       this.undoRedoTableLayoutPanel1.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
       this.redoGroupBox.SuspendLayout();
       this.flowLayoutPanel.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
       this.saveLoadGroupBox.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
       this.SuspendLayout();
       // 
       // mainTableLayoutPanel
@@ -311,18 +313,6 @@ namespace View
       this.ellipseButton.UseVisualStyleBackColor = true;
       this.ellipseButton.Click += new System.EventHandler(this.ellipseButton_Click);
       // 
-      // pictureBox
-      // 
-      this.pictureBox.BackColor = System.Drawing.Color.White;
-      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.pictureBox.Location = new System.Drawing.Point(0, 100);
-      this.pictureBox.Name = "pictureBox";
-      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
-      this.pictureBox.TabIndex = 1;
-      this.pictureBox.TabStop = false;
-      this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
-      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
-      // 
       // saveLoadGroupBox
       // 
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
@@ -336,16 +326,16 @@ namespace View
       this.saveLoadGroupBox.TabStop = false;
       this.saveLoadGroupBox.Text = "File";
       // 
-      // saveButton
+      // loadButton
       // 
-      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.saveButton.Location = new System.Drawing.Point(3, 16);
-      this.saveButton.Name = "saveButton";
-      this.saveButton.Size = new System.Drawing.Size(200, 23);
-      this.saveButton.TabIndex = 0;
-      this.saveButton.Text = "Save";
-      this.saveButton.UseVisualStyleBackColor = true;
-      this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.loadButton.Location = new System.Drawing.Point(3, 62);
+      this.loadButton.Name = "loadButton";
+      this.loadButton.Size = new System.Drawing.Size(200, 23);
+      this.loadButton.TabIndex = 2;
+      this.loadButton.Text = "Load";
+      this.loadButton.UseVisualStyleBackColor = true;
+      this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
       // 
       // saveAsButton
       // 
@@ -358,16 +348,35 @@ namespace View
       this.saveAsButton.UseVisualStyleBackColor = true;
       this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
       // 
-      // loadButton
+      // saveButton
       // 
-      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.loadButton.Location = new System.Drawing.Point(3, 62);
-      this.loadButton.Name = "loadButton";
-      this.loadButton.Size = new System.Drawing.Size(200, 23);
-      this.loadButton.TabIndex = 2;
-      this.loadButton.Text = "Load";
-      this.loadButton.UseVisualStyleBackColor = true;
-      this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.saveButton.Location = new System.Drawing.Point(3, 16);
+      this.saveButton.Name = "saveButton";
+      this.saveButton.Size = new System.Drawing.Size(200, 23);
+      this.saveButton.TabIndex = 0;
+      this.saveButton.Text = "Save";
+      this.saveButton.UseVisualStyleBackColor = true;
+      this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+      // 
+      // pictureBox
+      // 
+      this.pictureBox.BackColor = System.Drawing.Color.White;
+      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.pictureBox.Image = global::View.Properties.Resources.Background;
+      this.pictureBox.Location = new System.Drawing.Point(0, 100);
+      this.pictureBox.Name = "pictureBox";
+      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
+      this.pictureBox.TabIndex = 1;
+      this.pictureBox.TabStop = false;
+      this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
+      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
+      // 
+      // timer
+      // 
+      this.timer.Enabled = true;
+      this.timer.Interval = 10;
+      this.timer.Tick += new System.EventHandler(this.timer_Tick);
       // 
       // View
       // 
@@ -379,7 +388,6 @@ namespace View
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "View";
       this.Text = "SeeSharper";
-      this.Paint += new System.Windows.Forms.PaintEventHandler(this.View_Paint);
       this.mainTableLayoutPanel.ResumeLayout(false);
       this.colorGroupBox.ResumeLayout(false);
       this.undoRedoTableLayoutPanel1.ResumeLayout(false);
@@ -389,8 +397,8 @@ namespace View
       this.redoGroupBox.PerformLayout();
       this.flowLayoutPanel.ResumeLayout(false);
       this.flowLayoutPanel.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
       this.saveLoadGroupBox.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -424,6 +432,7 @@ namespace View
     private System.Windows.Forms.Button loadButton;
     private System.Windows.Forms.Button saveAsButton;
     private System.Windows.Forms.Button saveButton;
+    private System.Windows.Forms.Timer timer;
   }
 }
 

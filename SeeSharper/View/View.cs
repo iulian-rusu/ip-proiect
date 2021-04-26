@@ -14,7 +14,6 @@ namespace View
   {
     #region Private Members
     private IPresenter _presenter;
-    private Image _drawing;
     /// <summary>
     /// Holds a reference to the <code>PaintEvent</code> that is draw on top of
     /// the <code>Image</code> so that it can be removed from the pictureBox-es Paint Event.
@@ -31,7 +30,6 @@ namespace View
     public View()
     {
       InitializeComponent();
-      _drawing = pictureBox.Image;
       _selectedColorButton = colorButton1;
       toolButtons = new Button[]
       {
@@ -49,15 +47,19 @@ namespace View
     /// </summary>
     public void CaptureDrawingState()
     {
-      _drawing = pictureBox.Image;
+      using (Graphics g = Graphics.FromImage(pictureBox.Image))
+      {
+        
+        _currentAddedPaintHandler((object) this, new PaintEventArgs(g, new Rectangle(new Point(0, 0), pictureBox.Size)));
+      }
     }
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
-      _drawing = drawingMemento.Drawing;
+      pictureBox.Image = drawingMemento.Drawing;
     }
     public DrawingMemento GetDrawingMemento()
     {
-      return new DrawingMemento(_drawing);
+      return new DrawingMemento(pictureBox.Image);
     }
     public void ChangeCurrentHandler(Strategy strategy)
     {
@@ -67,11 +69,11 @@ namespace View
     public void AddHandler(Strategy strategy)
     {
       _currentAddedPaintHandler = strategy.GetDraw();
-      Paint += _currentAddedPaintHandler;
+      pictureBox.Paint += _currentAddedPaintHandler;
     }
     public void RemoveCurrentHandler()
     {
-      Paint -= _currentAddedPaintHandler;
+      pictureBox.Paint -= _currentAddedPaintHandler;
     }
     #endregion
     #region Private Member Functions
@@ -80,12 +82,8 @@ namespace View
     /// </summary>
     private void InitPresenter()
     {
-      _presenter.ChoosePaintingTool(PaintingTool.Brush);
+      _presenter.ChoosePaintingTool(PaintingTool.Line);
       _presenter.ColorChanged(colorButton1.BackColor);
-    }
-    private void View_Paint(object sender, PaintEventArgs e)
-    {
-      pictureBox.Image = _drawing;
     }
     private void colorButton1_Click(object sender, EventArgs e)
     {
@@ -166,35 +164,41 @@ namespace View
     {
       updateToolButtons(brushButton);
       _presenter.ChoosePaintingTool(PaintingTool.Brush);
+      _presenter.ColorChanged(_selectedColorButton.BackColor);
     }
     private void lineButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(lineButton);
       _presenter.ChoosePaintingTool(PaintingTool.Line);
+      _presenter.ColorChanged(_selectedColorButton.BackColor);
     }
 
     private void squareButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(squareButton);
       _presenter.ChoosePaintingTool(PaintingTool.Square);
+      _presenter.ColorChanged(_selectedColorButton.BackColor);
     }
 
     private void rectangleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(rectangleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Rectangle);
+      _presenter.ColorChanged(_selectedColorButton.BackColor);
     }
 
     private void circleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(circleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Circle);
+      _presenter.ColorChanged(_selectedColorButton.BackColor);
     }
 
     private void ellipseButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(ellipseButton);
       _presenter.ChoosePaintingTool(PaintingTool.Ellipse);
+      _presenter.ColorChanged(_selectedColorButton.BackColor);
     }
     private void saveButton_Click(object sender, EventArgs e)
     {
@@ -220,6 +224,10 @@ namespace View
           _presenter.LoadDrawing(filePath);
         }
       }
+    }
+    private void timer_Tick(object sender, EventArgs e)
+    {
+      pictureBox.Refresh();
     }
     #endregion
   }
