@@ -39,6 +39,7 @@ namespace Strategy
 
                 var rect = new Rectangle(startX, startY, 2 * dim, 2 * dim);
                 graphics.DrawEllipse(new Pen(_color), rect);
+                graphics.FillEllipse(new SolidBrush(_fillColor), rect);
             }
         }
     }

@@ -32,6 +32,7 @@ namespace Strategy
                 int startY = Math.Min(_points[1].Y, _points[0].Y);
                 var rect = new Rectangle(startX, startY, width, height);
                 graphics.DrawRectangle(new Pen(_color), rect);
+                graphics.FillRectangle(new SolidBrush(_fillColor), rect);
             }
         }
     }

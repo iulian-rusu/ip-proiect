@@ -21,6 +21,7 @@ namespace Strategy
     public abstract class Strategy
     {
         protected Color _color;
+        protected Color _fillColor;
         protected float _thickness;
         protected bool _done = false;
 
@@ -37,6 +38,11 @@ namespace Strategy
         public void ChangeThickness(float thickness)
         {
             _thickness = thickness;
+        }
+
+        public void ChangeFillColor(Color color)
+        {
+            _fillColor = color;
         }
 
         public PaintEventHandler GetDraw()
