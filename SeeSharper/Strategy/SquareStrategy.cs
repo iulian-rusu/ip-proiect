@@ -38,7 +38,7 @@ namespace Strategy
                 int startY = midY - dim;
 
                 var rect = new Rectangle(startX, startY, 2 * dim, 2 * dim);
-                graphics.DrawRectangle(new Pen(_color), rect);
+                graphics.DrawRectangle(new Pen(_color, _thickness), rect);
                 graphics.FillRectangle(new SolidBrush(_fillColor), rect);
             }
         }
