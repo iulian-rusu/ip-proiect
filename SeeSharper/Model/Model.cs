@@ -23,6 +23,7 @@ namespace Model
     using System.Windows.Forms;
     using System.IO;
     using System.Drawing.Imaging;
+    using System;
 
     /// <summary>
     /// Model class - contains the data, state and logic of the application.
@@ -112,7 +113,12 @@ namespace Model
             {
                 loadedDrawing = new DrawingMemento(Image.FromFile(filename), "Loaded " + filename);
             }
-            catch(FileNotFoundException fileNotFoundException)
+            catch(ArgumentException argumentException)
+            {
+                MessageBox.Show("Error: Invalid path -> " + argumentException.Message);
+
+            }
+            catch (FileNotFoundException fileNotFoundException)
             {
                 MessageBox.Show("Error: File not found to load drawing -> " + fileNotFoundException.Message);
             }
