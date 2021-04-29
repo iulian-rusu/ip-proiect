@@ -86,8 +86,8 @@ namespace View
     /// <returns>Encapsulated image</returns>
     public DrawingMemento GetDrawingMemento()
     {
-      // TODO ADD PARAMETER DESCRIPTION 
-      return new DrawingMemento(pictureBox.Image, "");
+      var description = _presenter.GetCurrentStrategyDescription();
+      return new DrawingMemento(pictureBox.Image, description);
     }
     /// <summary>
     /// Removes the old AddedPaintHandler to the pictureBox.Paint event and adds

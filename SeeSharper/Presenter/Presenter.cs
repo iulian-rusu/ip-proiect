@@ -50,23 +50,6 @@ namespace Presenter
 
         #region Public Member Functions
         /// <summary>
-        /// Called to notify of a mouse click event
-        /// </summary>
-        /// <param name="x">The x coordinate of the mouse cursor</param>
-        /// <param name="y">The y coordinate of the mouse cursor</param>
-        public void MouseClicked(int x, int y)
-        {
-            //if (_currentStrategy.Done)
-            //{
-            //    _view.CaptureDrawingState();
-            //    _model.AddMemento(_view.GetDrawingMemento());
-            //    _currentStrategy.Reset();
-            //}
-            //_currentStrategy.MouseClicked(x, y);
-            //_view.ChangeCurrentHandler(_currentStrategy);
-        }
-
-        /// <summary>
         /// Called to notify of a mouse move event
         /// </summary>
         /// <param name="x">The x coordinate of the mouse cursor</param>
@@ -92,7 +75,8 @@ namespace Presenter
             {
                 _view.CaptureDrawingState();
                 _model.AddMemento(_view.GetDrawingMemento());
-                _currentStrategy.Reset();
+        UpdateUndoRedoInView();
+                        _currentStrategy.Reset();
             }
             _currentStrategy.MouseStateChanged(x, y);
             _view.ChangeCurrentHandler(_currentStrategy);
@@ -116,8 +100,10 @@ namespace Presenter
             }
             _view.CaptureDrawingState();
             var drawingMemento = _view.GetDrawingMemento();
-            _model.SaveDrawing(drawingMemento);
-            _currentStrategy.Reset();
+      _model.DropMementos();
+      _model.SaveDrawing(drawingMemento);
+      UpdateUndoRedoInView();
+      _currentStrategy.Reset();
         }
 
         /// <summary>
@@ -127,7 +113,7 @@ namespace Presenter
         {
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
-            _view.SetRedo(currentMemento.Description);
+      UpdateUndoRedoInView();
             _currentStrategy.Reset();
         }
 
@@ -138,7 +124,7 @@ namespace Presenter
         {
             var currentMemento = _model.Undo();
             _view.SetDrawingMemento(currentMemento);
-            _view.SetRedo(currentMemento.Description);
+      UpdateUndoRedoInView();
             _currentStrategy.Reset();
         }
 
@@ -185,6 +171,7 @@ namespace Presenter
                 _view.CaptureDrawingState();
                 var memento = _view.GetDrawingMemento();
                 _model.AddMemento(memento);
+        UpdateUndoRedoInView();
             }
 
             var newStrategy = _model.GetPaintingStrategy(paintingTool);
@@ -201,6 +188,8 @@ namespace Presenter
         public void LoadDrawing(string filename)
         {
             var loadedMemento = _model.LoadDrawing(filename);
+      _model.AddMemento(loadedMemento);
+      UpdateUndoRedoInView();
             _view.SetDrawingMemento(loadedMemento);
             _currentStrategy.Reset();
         }
@@ -220,6 +209,13 @@ namespace Presenter
             string extension = Path.GetExtension(filename);
             return extension == ".bmp" || extension == ".png";
         }
+    private void UpdateUndoRedoInView()
+    {
+      var newUndoDescription = _model.GetNextUndoDescription();
+      _view.SetUndo(newUndoDescription);
+      var newRedoDescription = _model.GetNextRedoDescription();
+      _view.SetRedo(newRedoDescription);
+    }
         #endregion
     }
 }
