@@ -24,7 +24,7 @@ namespace Strategy
     {
         protected Point[] _points;
 
-        public override void MouseClicked(int x, int y)
+        public override void MouseStateChanged(int x, int y)
         {
             if (_points == null)
             {

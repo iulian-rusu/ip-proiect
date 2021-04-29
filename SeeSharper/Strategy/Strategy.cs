@@ -28,6 +28,7 @@ namespace Strategy
         public bool Done
         {
             get { return _done; }
+            set { _done = value; }
         }
 
         public void ColorChanged(Color color)
@@ -50,7 +51,7 @@ namespace Strategy
             return new PaintEventHandler(Draw);
         }
 
-        public abstract void MouseClicked(int x, int y);
+        public abstract void MouseStateChanged(int x, int y);
         public abstract void MouseMoved(int x, int y);
         public abstract void Reset();
         protected abstract void Draw(object sender, PaintEventArgs e);
