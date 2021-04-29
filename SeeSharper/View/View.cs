@@ -86,8 +86,16 @@ namespace View
     /// <returns>Encapsulated image</returns>
     public DrawingMemento GetDrawingMemento()
     {
-      var description = _presenter.GetCurrentStrategyDescription();
-      return new DrawingMemento((Image)pictureBox.Image.Clone(), description);
+      string description;
+            if (_presenter == null)
+            {
+                description = "Empty canvas";
+            }
+            else
+            {
+                description = _presenter.GetCurrentStrategyDescription();
+            }
+            return new DrawingMemento((Image)pictureBox.Image.Clone(), description);
     }
     /// <summary>
     /// Removes the old AddedPaintHandler to the pictureBox.Paint event and adds
