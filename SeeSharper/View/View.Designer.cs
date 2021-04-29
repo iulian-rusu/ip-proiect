@@ -65,6 +65,8 @@ namespace View
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.pictureBox = new System.Windows.Forms.PictureBox();
       this.timer = new System.Windows.Forms.Timer(this.components);
+      this.polygonButton = new System.Windows.Forms.Button();
+      this.textButton = new System.Windows.Forms.Button();
       this.mainTableLayoutPanel.SuspendLayout();
       this.undoRedoTableLayoutPanel.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
@@ -188,6 +190,8 @@ namespace View
       this.flowLayoutPanel.Controls.Add(this.rectangleButton);
       this.flowLayoutPanel.Controls.Add(this.circleButton);
       this.flowLayoutPanel.Controls.Add(this.ellipseButton);
+      this.flowLayoutPanel.Controls.Add(this.polygonButton);
+      this.flowLayoutPanel.Controls.Add(this.textButton);
       this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
       this.flowLayoutPanel.Location = new System.Drawing.Point(3, 3);
       this.flowLayoutPanel.Name = "flowLayoutPanel";
@@ -464,6 +468,26 @@ namespace View
       this.timer.Interval = 10;
       this.timer.Tick += new System.EventHandler(this.timer_Tick);
       // 
+      // polygonButton
+      // 
+      this.polygonButton.BackgroundImage = global::View.Properties.Resources.EllipseButtonBackground;
+      this.polygonButton.Location = new System.Drawing.Point(330, 3);
+      this.polygonButton.Name = "polygonButton";
+      this.polygonButton.Size = new System.Drawing.Size(32, 32);
+      this.polygonButton.TabIndex = 7;
+      this.polygonButton.UseVisualStyleBackColor = true;
+      this.polygonButton.Click += new System.EventHandler(this.PolygonButton_Click);
+      // 
+      // textButton
+      // 
+      this.textButton.BackgroundImage = global::View.Properties.Resources.EllipseButtonBackground;
+      this.textButton.Location = new System.Drawing.Point(368, 3);
+      this.textButton.Name = "textButton";
+      this.textButton.Size = new System.Drawing.Size(32, 32);
+      this.textButton.TabIndex = 8;
+      this.textButton.UseVisualStyleBackColor = true;
+      this.textButton.Click += new System.EventHandler(this.TextButton_Click);
+      // 
       // View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,6 +554,8 @@ namespace View
     private System.Windows.Forms.CheckBox fillCheckBox;
     private System.Windows.Forms.Label thicknessLabel;
     private System.Windows.Forms.TrackBar thicknessTrackBar;
+    private System.Windows.Forms.Button polygonButton;
+    private System.Windows.Forms.Button textButton;
   }
 }
 

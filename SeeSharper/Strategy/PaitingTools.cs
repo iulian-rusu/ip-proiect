@@ -23,5 +23,7 @@ namespace Strategy
 		Ellipse,
 		Square,
 		Rectangle,
+		Polygon,
+		Text,
 	}
 }

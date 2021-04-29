@@ -227,37 +227,48 @@ namespace View
     }
     private void BrushButton_Click(object sender, EventArgs e)
     {
-      updateToolButtons(brushButton);
+      UpdateToolButtons(brushButton);
       _presenter.ChoosePaintingTool(PaintingTool.Brush, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void LineButton_Click(object sender, EventArgs e)
     {
-      updateToolButtons(lineButton);
+      UpdateToolButtons(lineButton);
       _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void SquareButton_Click(object sender, EventArgs e)
     {
-      updateToolButtons(squareButton);
+      UpdateToolButtons(squareButton);
       _presenter.ChoosePaintingTool(PaintingTool.Square, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void RectangleButton_Click(object sender, EventArgs e)
     {
-      updateToolButtons(rectangleButton);
+      UpdateToolButtons(rectangleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Rectangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void CircleButton_Click(object sender, EventArgs e)
     {
-      updateToolButtons(circleButton);
+      UpdateToolButtons(circleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Circle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void EllipseButton_Click(object sender, EventArgs e)
     {
-      updateToolButtons(ellipseButton);
+      UpdateToolButtons(ellipseButton);
       _presenter.ChoosePaintingTool(PaintingTool.Ellipse, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
+    }
+    private void TextButton_Click(object sender, EventArgs e)
+    {
+      UpdateToolButtons(textButton);
+      _presenter.ChoosePaintingTool(PaintingTool.Text, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
+    }
+
+    private void PolygonButton_Click(object sender, EventArgs e)
+    {
+      UpdateToolButtons(polygonButton);
+      _presenter.ChoosePaintingTool(PaintingTool.Polygon, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void SaveButton_Click(object sender, EventArgs e)
     {
