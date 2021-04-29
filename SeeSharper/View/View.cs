@@ -87,7 +87,7 @@ namespace View
     public DrawingMemento GetDrawingMemento()
     {
       var description = _presenter.GetCurrentStrategyDescription();
-      return new DrawingMemento(pictureBox.Image, description);
+      return new DrawingMemento((Image)pictureBox.Image.Clone(), description);
     }
     /// <summary>
     /// Removes the old AddedPaintHandler to the pictureBox.Paint event and adds
