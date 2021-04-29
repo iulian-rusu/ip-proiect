@@ -199,7 +199,7 @@ namespace Presenter
         /// Returns a description for the last change made by the selected tool
         /// </summary>
         /// <returns>A string that describes the changes made by the tool</returns>
-        string GetCurrentStrategyDescription()
+        public string GetCurrentStrategyDescription()
         {
             return _currentStrategy.GetDescription();
         }
