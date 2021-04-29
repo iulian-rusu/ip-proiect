@@ -162,7 +162,7 @@ namespace Presenter
         /// <param name="paintingTool">The new selected painting tool</param>
         /// <param name="borderColor">The color of the border of the painting tool</param>
         /// <param name="fillColor">The fill color of the painting tool</param>
-        public void ChoosePaintingTool(PaintingTool paintingTool, Color borderColor, Color fillColor)
+        public void ChoosePaintingTool(PaintingTool paintingTool, Color borderColor, Color fillColor, float thickness)
         {
             if (_currentStrategy.Done)
             {
@@ -174,6 +174,7 @@ namespace Presenter
             _currentStrategy = newStrategy;
             ColorChanged(borderColor);
             FillColorChanged(fillColor);
+      ThicknessChanged(thickness);
         }
 
         /// <summary>

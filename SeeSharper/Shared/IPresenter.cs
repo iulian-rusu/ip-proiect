@@ -27,7 +27,7 @@ namespace Shared
     {
         void SaveDrawing();
         void LoadDrawing(string filename);
-        void ChoosePaintingTool(PaintingTool paintingTool, Color borderColor, Color fillColor);
+        void ChoosePaintingTool(PaintingTool paintingTool, Color borderColor, Color fillColor, float thickness);
         void MouseMoved(int x, int y);
         void MouseStateChanged(int x, int y);
         void Undo();

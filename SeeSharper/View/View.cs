@@ -161,7 +161,7 @@ namespace View
     /// </summary>
     private void InitPresenter()
     {
-      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void borderColorButton_Click(object sender, EventArgs e)
@@ -240,36 +240,36 @@ namespace View
     private void brushButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(brushButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Brush, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Brush, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void lineButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(lineButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void squareButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(squareButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Square, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Square, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void rectangleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(rectangleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Rectangle, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Rectangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void circleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(circleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Circle, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Circle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
     private void ellipseButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(ellipseButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Ellipse, borderColorButton.BackColor, GetFillColor());
+      _presenter.ChoosePaintingTool(PaintingTool.Ellipse, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void saveButton_Click(object sender, EventArgs e)
     {
@@ -331,7 +331,7 @@ namespace View
 
     private void thicknessTrackBar_Scroll(object sender, EventArgs e)
     {
-
+      _presenter.ThicknessChanged(thicknessTrackBar.Value);
     }
     #endregion
   }
