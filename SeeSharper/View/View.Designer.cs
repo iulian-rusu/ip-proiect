@@ -144,7 +144,7 @@ namespace View
       this.undoButton.TabIndex = 0;
       this.undoButton.Text = "Undo";
       this.undoButton.UseVisualStyleBackColor = true;
-      this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
+      this.undoButton.Click += new System.EventHandler(this.UndoButton_Click);
       // 
       // redoGroupBox
       // 
@@ -177,7 +177,7 @@ namespace View
       this.redoButton.TabIndex = 0;
       this.redoButton.Text = "Redo";
       this.redoButton.UseVisualStyleBackColor = true;
-      this.redoButton.Click += new System.EventHandler(this.redoButton_Click);
+      this.redoButton.Click += new System.EventHandler(this.RedoButton_Click);
       // 
       // flowLayoutPanel
       // 
@@ -211,7 +211,7 @@ namespace View
       this.brushButton.Size = new System.Drawing.Size(32, 32);
       this.brushButton.TabIndex = 0;
       this.brushButton.UseVisualStyleBackColor = true;
-      this.brushButton.Click += new System.EventHandler(this.brushButton_Click);
+      this.brushButton.Click += new System.EventHandler(this.BrushButton_Click);
       // 
       // lineButton
       // 
@@ -222,7 +222,7 @@ namespace View
       this.lineButton.Size = new System.Drawing.Size(32, 32);
       this.lineButton.TabIndex = 1;
       this.lineButton.UseVisualStyleBackColor = true;
-      this.lineButton.Click += new System.EventHandler(this.lineButton_Click);
+      this.lineButton.Click += new System.EventHandler(this.LineButton_Click);
       // 
       // squareButton
       // 
@@ -232,7 +232,7 @@ namespace View
       this.squareButton.Size = new System.Drawing.Size(32, 32);
       this.squareButton.TabIndex = 2;
       this.squareButton.UseVisualStyleBackColor = true;
-      this.squareButton.Click += new System.EventHandler(this.squareButton_Click);
+      this.squareButton.Click += new System.EventHandler(this.SquareButton_Click);
       // 
       // rectangleButton
       // 
@@ -242,7 +242,7 @@ namespace View
       this.rectangleButton.Size = new System.Drawing.Size(32, 32);
       this.rectangleButton.TabIndex = 3;
       this.rectangleButton.UseVisualStyleBackColor = true;
-      this.rectangleButton.Click += new System.EventHandler(this.rectangleButton_Click);
+      this.rectangleButton.Click += new System.EventHandler(this.RectangleButton_Click);
       // 
       // circleButton
       // 
@@ -252,7 +252,7 @@ namespace View
       this.circleButton.Size = new System.Drawing.Size(32, 32);
       this.circleButton.TabIndex = 4;
       this.circleButton.UseVisualStyleBackColor = true;
-      this.circleButton.Click += new System.EventHandler(this.circleButton_Click);
+      this.circleButton.Click += new System.EventHandler(this.CircleButton_Click);
       // 
       // ellipseButton
       // 
@@ -262,7 +262,7 @@ namespace View
       this.ellipseButton.Size = new System.Drawing.Size(32, 32);
       this.ellipseButton.TabIndex = 5;
       this.ellipseButton.UseVisualStyleBackColor = true;
-      this.ellipseButton.Click += new System.EventHandler(this.ellipseButton_Click);
+      this.ellipseButton.Click += new System.EventHandler(this.EllipseButton_Click);
       // 
       // saveLoadGroupBox
       // 
@@ -286,7 +286,7 @@ namespace View
       this.helpButton.TabIndex = 3;
       this.helpButton.Text = "Help";
       this.helpButton.UseVisualStyleBackColor = true;
-      this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+      this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
       // 
       // loadButton
       // 
@@ -297,7 +297,7 @@ namespace View
       this.loadButton.TabIndex = 2;
       this.loadButton.Text = "Load";
       this.loadButton.UseVisualStyleBackColor = true;
-      this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+      this.loadButton.Click += new System.EventHandler(this.LoadButton_Click);
       // 
       // saveButton
       // 
@@ -308,7 +308,7 @@ namespace View
       this.saveButton.TabIndex = 0;
       this.saveButton.Text = "Save";
       this.saveButton.UseVisualStyleBackColor = true;
-      this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+      this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
       // 
       // tableLayoutPanel1
       // 
@@ -351,7 +351,7 @@ namespace View
       this.borderColorButton.Size = new System.Drawing.Size(74, 72);
       this.borderColorButton.TabIndex = 1;
       this.borderColorButton.UseVisualStyleBackColor = false;
-      this.borderColorButton.Click += new System.EventHandler(this.borderColorButton_Click);
+      this.borderColorButton.Click += new System.EventHandler(this.BorderColorButton_Click);
       // 
       // fillColorButton
       // 
@@ -364,7 +364,7 @@ namespace View
       this.fillColorButton.Size = new System.Drawing.Size(74, 72);
       this.fillColorButton.TabIndex = 0;
       this.fillColorButton.UseVisualStyleBackColor = false;
-      this.fillColorButton.Click += new System.EventHandler(this.fillColorButton_Click);
+      this.fillColorButton.Click += new System.EventHandler(this.FillColorButton_Click);
       // 
       // editColorButton
       // 
@@ -375,7 +375,7 @@ namespace View
       this.editColorButton.Size = new System.Drawing.Size(75, 72);
       this.editColorButton.TabIndex = 3;
       this.editColorButton.UseVisualStyleBackColor = true;
-      this.editColorButton.Click += new System.EventHandler(this.editColorButton_Click);
+      this.editColorButton.Click += new System.EventHandler(this.EditColorButton_Click);
       // 
       // borderColorLabel
       // 
@@ -421,7 +421,7 @@ namespace View
       this.fillCheckBox.TabIndex = 9;
       this.fillCheckBox.Text = "Fill";
       this.fillCheckBox.UseVisualStyleBackColor = true;
-      this.fillCheckBox.CheckedChanged += new System.EventHandler(this.fillCheckBox_CheckedChanged);
+      this.fillCheckBox.CheckedChanged += new System.EventHandler(this.FillCheckBox_CheckedChanged);
       // 
       // thicknessLabel
       // 
@@ -442,7 +442,7 @@ namespace View
       this.thicknessTrackBar.Size = new System.Drawing.Size(158, 45);
       this.thicknessTrackBar.TabIndex = 5;
       this.thicknessTrackBar.Value = 1;
-      this.thicknessTrackBar.Scroll += new System.EventHandler(this.thicknessTrackBar_Scroll);
+      this.thicknessTrackBar.Scroll += new System.EventHandler(this.ThicknessTrackBar_Scroll);
       // 
       // pictureBox
       // 
@@ -454,9 +454,9 @@ namespace View
       this.pictureBox.Size = new System.Drawing.Size(1584, 661);
       this.pictureBox.TabIndex = 1;
       this.pictureBox.TabStop = false;
-      this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseDown);
-      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
-      this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
+      this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
+      this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseUp);
       // 
       // timer
       // 

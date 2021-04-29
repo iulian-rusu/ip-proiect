@@ -164,57 +164,45 @@ namespace View
       _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
-    private void borderColorButton_Click(object sender, EventArgs e)
+    private void BorderColorButton_Click(object sender, EventArgs e)
     {
       fillColorButton.FlatStyle = FlatStyle.Standard;
       borderColorButton.FlatStyle = FlatStyle.Popup;
       _selectedColorButton = borderColorButton;
     }
 
-    private void fillColorButton_Click(object sender, EventArgs e)
+    private void FillColorButton_Click(object sender, EventArgs e)
     {
       fillColorButton.FlatStyle = FlatStyle.Popup;
       borderColorButton.FlatStyle = FlatStyle.Standard;
       _selectedColorButton = fillColorButton;
     }
-    private void editColorButton_Click(object sender, EventArgs e)
+    private void EditColorButton_Click(object sender, EventArgs e)
     {
-      if (colorDialog.ShowDialog() != DialogResult.OK)
-        return;
 
-      Color color = colorDialog.Color;
-      _selectedColorButton.BackColor = color;
-      if (_selectedColorButton == borderColorButton)
-      {
-        _presenter.ColorChanged(color);
-      }
-      else
-      {
-        _presenter.FillColorChanged(color);
-      }
     }
 
-    private void pictureBox_MouseMove(object sender, MouseEventArgs e)
+    private void PictureBox_MouseMove(object sender, MouseEventArgs e)
     {
       _presenter.MouseMoved(e.X, e.Y);
     }
 
-    private void pictureBox_MouseDown(object sender, MouseEventArgs e)
+    private void PictureBox_MouseDown(object sender, MouseEventArgs e)
     {
       _presenter.MouseStateChanged(e.X, e.Y);
     }
 
-    private void pictureBox_MouseUp(object sender, MouseEventArgs e)
+    private void PictureBox_MouseUp(object sender, MouseEventArgs e)
     {
       _presenter.MouseStateChanged(e.X, e.Y);
     }
 
-    private void redoButton_Click(object sender, EventArgs e)
+    private void RedoButton_Click(object sender, EventArgs e)
     {
       _presenter.Redo();
     }
 
-    private void undoButton_Click(object sender, EventArgs e)
+    private void UndoButton_Click(object sender, EventArgs e)
     {
       _presenter.Undo();
     }
@@ -223,7 +211,7 @@ namespace View
     /// flat style from the others.
     /// </summary>
     /// <param name="selected">Button to highlight</param>
-    private void updateToolButtons(Button selected)
+    private void UpdateToolButtons(Button selected)
     {
       foreach (var button in toolButtons)
       {
@@ -237,64 +225,53 @@ namespace View
         }
       }
     }
-    private void brushButton_Click(object sender, EventArgs e)
+    private void BrushButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(brushButton);
       _presenter.ChoosePaintingTool(PaintingTool.Brush, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-    private void lineButton_Click(object sender, EventArgs e)
+    private void LineButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(lineButton);
       _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
-    private void squareButton_Click(object sender, EventArgs e)
+    private void SquareButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(squareButton);
       _presenter.ChoosePaintingTool(PaintingTool.Square, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
-    private void rectangleButton_Click(object sender, EventArgs e)
+    private void RectangleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(rectangleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Rectangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
-    private void circleButton_Click(object sender, EventArgs e)
+    private void CircleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(circleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Circle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
 
-    private void ellipseButton_Click(object sender, EventArgs e)
+    private void EllipseButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(ellipseButton);
       _presenter.ChoosePaintingTool(PaintingTool.Ellipse, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-    private void saveButton_Click(object sender, EventArgs e)
+    private void SaveButton_Click(object sender, EventArgs e)
     {
       _presenter.SaveDrawing();
     }
-    private void loadButton_Click(object sender, EventArgs e)
+    private void LoadButton_Click(object sender, EventArgs e)
     {
-      using (OpenFileDialog openFileDialog = new OpenFileDialog())
-      {
-        openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
-        openFileDialog.FilterIndex = 2;
-        openFileDialog.RestoreDirectory = true;
 
-        if (openFileDialog.ShowDialog() == DialogResult.OK)
-        {
-          string filePath = openFileDialog.FileName;
-          _presenter.LoadDrawing(filePath);
-        }
-      }
     }
-    private void timer_Tick(object sender, EventArgs e)
+    private void Timer_Tick(object sender, EventArgs e)
     {
       pictureBox.Refresh();
     }
-    private void helpButton_Click(object sender, EventArgs e)
+    private void HelpButton_Click(object sender, EventArgs e)
     {
       // TODO LOAD HELP.CHM
       MessageBox.Show("Help", "Help");
@@ -313,7 +290,7 @@ namespace View
         }
       }
     }
-    private void fillCheckBox_CheckedChanged(object sender, EventArgs e)
+    private void FillCheckBox_CheckedChanged(object sender, EventArgs e)
     {
       _presenter.FillColorChanged(GetFillColor());
     }
@@ -329,7 +306,7 @@ namespace View
       }
     }
 
-    private void thicknessTrackBar_Scroll(object sender, EventArgs e)
+    private void ThicknessTrackBar_Scroll(object sender, EventArgs e)
     {
       _presenter.ThicknessChanged(thicknessTrackBar.Value);
     }
