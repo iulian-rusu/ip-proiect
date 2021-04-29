@@ -119,6 +119,7 @@ namespace Presenter
         {
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
+            _view.SetRedo(currentMemento.Description);
             _currentStrategy.Reset();
         }
 
@@ -129,6 +130,7 @@ namespace Presenter
         {
             var currentMemento = _model.Undo();
             _view.SetDrawingMemento(currentMemento);
+            _view.SetUndo(currentMemento.Description);
             _currentStrategy.Reset();
         }
 
