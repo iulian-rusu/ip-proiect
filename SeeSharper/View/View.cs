@@ -87,15 +87,15 @@ namespace View
     public DrawingMemento GetDrawingMemento()
     {
       string description;
-            if (_presenter == null)
-            {
-                description = "Empty canvas";
-            }
-            else
-            {
-                description = _presenter.GetCurrentStrategyDescription();
-            }
-            return new DrawingMemento((Image)pictureBox.Image.Clone(), description);
+      if (_presenter == null)
+      {
+        description = "Empty canvas";
+      }
+      else
+      {
+        description = _presenter.GetCurrentStrategyDescription();
+      }
+      return new DrawingMemento((Image)pictureBox.Image.Clone(), description);
     }
     /// <summary>
     /// Removes the old AddedPaintHandler to the pictureBox.Paint event and adds
