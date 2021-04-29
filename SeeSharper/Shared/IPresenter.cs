@@ -30,6 +30,7 @@ namespace Shared
         void ChoosePaintingTool(PaintingTool paintingTool, Color selecteColor);
         void MouseMoved(int x, int y);
         void MouseClicked(int x, int y);
+        void MouseStateChanged(int x, int y);
         void Undo();
         void Redo();
         void ColorChanged(Color color);
