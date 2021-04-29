@@ -155,6 +155,16 @@ namespace Presenter
         }
 
         /// <summary>
+        /// Changes the thickness of the current tool
+        /// </summary>
+        /// <param name="thickness">The new thickness</param>
+        public void ThicknessChanged(float thickness)
+        {
+            _currentStrategy.ChangeThickness(thickness);
+            _view.ChangeCurrentHandler(_currentStrategy);
+        }
+
+        /// <summary>
         /// Updates the current strategy to match the selected tool
         /// </summary>
         /// <param name="paintingTool">The new selected painting tool</param>
@@ -183,6 +193,15 @@ namespace Presenter
             var loadedMemento = _model.LoadDrawing(filename);
             _view.SetDrawingMemento(loadedMemento);
             _currentStrategy.Reset();
+        }
+
+        /// <summary>
+        /// Returns a description for the last change made by the selected tool
+        /// </summary>
+        /// <returns>A string that describes the changes made by the tool</returns>
+        string GetCurrentStrategyDescription()
+        {
+            return _currentStrategy.GetDescription();
         }
         #endregion
     }
