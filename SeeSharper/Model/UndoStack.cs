@@ -24,10 +24,10 @@ namespace Model
     /// Undo stack - logic for the undo/redo process
     /// </summary>
     public class UndoStack
-	{
+    {
         #region Private Fields
         private LinkedList<DrawingMemento> _stack;
-		private LinkedListNode<DrawingMemento> _current;
+        private LinkedListNode<DrawingMemento> _current;
         #endregion
 
         #region Constructor
@@ -49,8 +49,8 @@ namespace Model
         /// <param name="drawing">The saved drawing</param>
         /// <returns>void</returns>
         public void Add(DrawingMemento drawing)
-		{
-            if (_current != null)
+        {
+            if (_stack.Count != 0 && _current != null)
             {
                 while (_current != _stack.Last)
                 {
@@ -60,23 +60,23 @@ namespace Model
 
             _stack.AddLast(drawing);
             _current = _stack.Last;
-		}
+        }
 
         /// <summary>
         /// Clears the stack of all elements
         /// </summary>
         /// <returns>void</returns>
         public void Drop()
-		{
+        {
             _stack.Clear();
-		}
+        }
 
         /// <summary>
         /// Undoes the last drawing action
         /// </summary>
         /// <returns>The state of the drawing before the last done action</returns>
         public DrawingMemento Undo()
-		{
+        {
             DrawingMemento undoneMemento = null;
 
             if (_current != null)
@@ -98,7 +98,7 @@ namespace Model
         /// </summary>
         /// <returns>The state of the drawing before the last undo action</returns>
         public DrawingMemento Redo()
-		{
+        {
             DrawingMemento redoneMemento = null;
 
             if (_current != null)
@@ -122,7 +122,7 @@ namespace Model
         {
             string description = string.Empty;
 
-            if(_current != null)
+            if (_current != null)
             {
                 description = _current.Value.Description;
             }
