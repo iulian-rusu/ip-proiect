@@ -16,23 +16,23 @@
 
 namespace Model
 {
+    using Memento;
     using Shared;
     using Strategy;
-    using Memento;
-    using System.Drawing;
-    using System.Windows.Forms;
-    using System.IO;
-    using System.Drawing.Imaging;
     using System;
+    using System.Drawing;
+    using System.Drawing.Imaging;
+    using System.IO;
+    using System.Windows.Forms;
 
     /// <summary>
     /// Model class - contains the data, state and logic of the application.
     /// </summary>
     public class Model : IModel
-	{
+    {
         #region Private Fields
         private string _saveFileName;
-		private UndoStack _undoStack;
+        private UndoStack _undoStack;
         #endregion
 
         #region Constructor
@@ -90,9 +90,9 @@ namespace Model
         /// <returns>Boolean value of the stated scenario</returns>
         public bool HasSaveFileName()
         {
-            bool hasSaveFileName = false; 
+            bool hasSaveFileName = false;
 
-            if(_saveFileName != null)
+            if (_saveFileName != null)
             {
                 hasSaveFileName = true;
             }
@@ -113,7 +113,7 @@ namespace Model
             {
                 loadedDrawing = new DrawingMemento(Image.FromFile(filename), "Loaded " + filename);
             }
-            catch(ArgumentException argumentException)
+            catch (ArgumentException argumentException)
             {
                 MessageBox.Show("Error: Invalid path -> " + argumentException.Message);
 
@@ -122,7 +122,7 @@ namespace Model
             {
                 MessageBox.Show("Error: File not found to load drawing -> " + fileNotFoundException.Message);
             }
-            catch(System.OutOfMemoryException outOfMemoryException)
+            catch (System.OutOfMemoryException outOfMemoryException)
             {
                 MessageBox.Show("Error: Out of memory-> " + outOfMemoryException.Message);
             }
@@ -147,7 +147,7 @@ namespace Model
         public void SaveDrawing(DrawingMemento drawingMemento)
         {
 
-            if(HasSaveFileName() == true)
+            if (HasSaveFileName() == true)
             {
                 ImageFormat drawingFormat;
                 string drawingExtension = string.Empty;
@@ -156,7 +156,7 @@ namespace Model
                 {
                     drawingExtension = Path.GetExtension(_saveFileName);
                 }
-                catch(System.ArgumentException argumentException)
+                catch (System.ArgumentException argumentException)
                 {
                     MessageBox.Show("Error! -> " + argumentException.Message);
                 }
@@ -213,7 +213,7 @@ namespace Model
         /// Used to get the description of the next undo that's on the stack
         /// </summary>
         /// <returns>The description of the next undo on the stack</returns>
-         public string GetNextUndoDescription()
+        public string GetNextUndoDescription()
         {
             return _undoStack.GetNextUndoDescription();
         }

@@ -119,6 +119,7 @@ namespace Presenter
         {
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
+            _view.SetRedo(currentMemento.Description);
             _currentStrategy.Reset();
         }
 
@@ -129,6 +130,7 @@ namespace Presenter
         {
             var currentMemento = _model.Undo();
             _view.SetDrawingMemento(currentMemento);
+            _view.SetUndo(currentMemento.Description);
             _currentStrategy.Reset();
         }
 
@@ -149,6 +151,16 @@ namespace Presenter
         public void FillColorChanged(Color color)
         {
             _currentStrategy.ChangeFillColor(color);
+            _view.ChangeCurrentHandler(_currentStrategy);
+        }
+
+        /// <summary>
+        /// Changes the thickness of the current tool
+        /// </summary>
+        /// <param name="thickness">The new thickness</param>
+        public void ThicknessChanged(float thickness)
+        {
+            _currentStrategy.ChangeThickness(thickness);
             _view.ChangeCurrentHandler(_currentStrategy);
         }
 
@@ -181,6 +193,15 @@ namespace Presenter
             var loadedMemento = _model.LoadDrawing(filename);
             _view.SetDrawingMemento(loadedMemento);
             _currentStrategy.Reset();
+        }
+
+        /// <summary>
+        /// Returns a description for the last change made by the selected tool
+        /// </summary>
+        /// <returns>A string that describes the changes made by the tool</returns>
+        public string GetCurrentStrategyDescription()
+        {
+            return _currentStrategy.GetDescription();
         }
         #endregion
     }
