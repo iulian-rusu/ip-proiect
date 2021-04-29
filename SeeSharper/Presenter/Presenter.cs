@@ -31,6 +31,7 @@ namespace Presenter
         private IView _view;
         private IModel _model;
         private Strategy _currentStrategy = new LineStrategy();
+        private bool _isMousePressed = false;
         #endregion
 
         #region Constructor
@@ -48,30 +49,51 @@ namespace Presenter
 
         #region Public Member Functions
         /// <summary>
-        /// Called to notify of a mouse move event
-        /// </summary>
-        /// <param name="x">The x coordinate of the mouse cursor</param>
-        /// <param name="y">The y coordinate of the mouse cursor</param>
-        public void MouseMoved(int x, int y)
-        {
-            _currentStrategy.MouseMoved(x, y);
-            _view.ChangeCurrentHandler(_currentStrategy);
-        }
-
-        /// <summary>
         /// Called to notify of a mouse click event
         /// </summary>
         /// <param name="x">The x coordinate of the mouse cursor</param>
         /// <param name="y">The y coordinate of the mouse cursor</param>
         public void MouseClicked(int x, int y)
         {
+            //if (_currentStrategy.Done)
+            //{
+            //    _view.CaptureDrawingState();
+            //    _model.AddMemento(_view.GetDrawingMemento());
+            //    _currentStrategy.Reset();
+            //}
+            //_currentStrategy.MouseClicked(x, y);
+            //_view.ChangeCurrentHandler(_currentStrategy);
+        }
+
+        /// <summary>
+        /// Called to notify of a mouse move event
+        /// </summary>
+        /// <param name="x">The x coordinate of the mouse cursor</param>
+        /// <param name="y">The y coordinate of the mouse cursor</param>
+        public void MouseMoved(int x, int y)
+        {
+            if(_isMousePressed)
+            {
+                _currentStrategy.MouseMoved(x, y);
+                _view.ChangeCurrentHandler(_currentStrategy);
+            }
+        }
+
+        /// <summary>
+        /// Called when the mouse button changes its state to DOWN or UP
+        /// </summary>
+        /// <param name="x">The x coordinate of the mouse cursor</param>
+        /// <param name="y">The y coordinate of the mouse cursor</param>
+        public void MouseStateChanged(int x, int y)
+        {
+            _isMousePressed = !_isMousePressed;
             if (_currentStrategy.Done)
             {
                 _view.CaptureDrawingState();
                 _model.AddMemento(_view.GetDrawingMemento());
                 _currentStrategy.Reset();
             }
-            _currentStrategy.MouseClicked(x, y);
+            _currentStrategy.MouseStateChanged(x, y);
             _view.ChangeCurrentHandler(_currentStrategy);
         }
 
@@ -117,6 +139,16 @@ namespace Presenter
         public void ColorChanged(Color color)
         {
             _currentStrategy.ColorChanged(color);
+            _view.ChangeCurrentHandler(_currentStrategy);
+        }
+
+        /// <summary>
+        /// Applies the new fill color to the current drawing strategy
+        /// </summary>
+        /// <param name="color">The new color</param>
+        public void FillColorChanged(Color color)
+        {
+            _currentStrategy.ChangeFillColor(color);
             _view.ChangeCurrentHandler(_currentStrategy);
         }
 
