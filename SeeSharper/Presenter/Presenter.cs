@@ -73,12 +73,7 @@ namespace Presenter
             _isMousePressed = !_isMousePressed;
             if (_currentStrategy.Done)
             {
-                if(_currentStrategy.HasDrawn)
-                {
-                    _view.CaptureDrawingState();
-                    _model.AddMemento(_view.GetDrawingMemento());
-                    UpdateUndoRedoInView();
-                }
+                CaptureAndAddMemento();
                 _currentStrategy.Reset();
             }
             _currentStrategy.MouseStateChanged(x, y);
@@ -171,10 +166,7 @@ namespace Presenter
         {
             if (_currentStrategy.Done)
             {
-                _view.CaptureDrawingState();
-                var memento = _view.GetDrawingMemento();
-                _model.AddMemento(memento);
-                UpdateUndoRedoInView();
+                CaptureAndAddMemento();
             }
 
             var newStrategy = _model.GetPaintingStrategy(paintingTool);
@@ -218,6 +210,16 @@ namespace Presenter
             _view.SetUndo(newUndoDescription);
             var newRedoDescription = _model.GetNextRedoDescription();
             _view.SetRedo(newRedoDescription);
+        }
+
+        private void CaptureAndAddMemento()
+        {
+            if(_currentStrategy.HasDrawn)
+            {
+                _view.CaptureDrawingState();
+                _model.AddMemento(_view.GetDrawingMemento());
+                UpdateUndoRedoInView();
+            }
         }
         #endregion
     }
