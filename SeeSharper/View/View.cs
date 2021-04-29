@@ -313,8 +313,6 @@ namespace View
         }
       }
     }
-    #endregion
-
     private void fillCheckBox_CheckedChanged(object sender, EventArgs e)
     {
       _presenter.FillColorChanged(GetFillColor());
@@ -330,5 +328,11 @@ namespace View
         return Color.Transparent;
       }
     }
+
+    private void thicknessTrackBar_Scroll(object sender, EventArgs e)
+    {
+
+    }
+    #endregion
   }
 }

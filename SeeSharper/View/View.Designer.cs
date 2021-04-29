@@ -440,6 +440,7 @@ namespace View
       this.thicknessTrackBar.Name = "thicknessTrackBar";
       this.thicknessTrackBar.Size = new System.Drawing.Size(158, 45);
       this.thicknessTrackBar.TabIndex = 7;
+      this.thicknessTrackBar.Scroll += new System.EventHandler(this.thicknessTrackBar_Scroll);
       // 
       // pictureBox
       // 
