@@ -24,6 +24,7 @@ namespace Strategy
         protected Color _fillColor;
         protected float _thickness;
         protected bool _done = false;
+        protected bool _hasDrawn = false;
 
         public bool Done
         {
@@ -31,17 +32,22 @@ namespace Strategy
             set { _done = value; }
         }
 
+        public bool HasDrawn
+        {
+            get { return _hasDrawn; }
+        }
+
         public void ColorChanged(Color color)
         {
             _color = color;
         }
 
-        public void ChangeThickness(float thickness)
+        public void ThicknessChanged(float thickness)
         {
             _thickness = thickness;
         }
 
-        public void ChangeFillColor(Color color)
+        public void FillColorChanged(Color color)
         {
             _fillColor = color;
         }

@@ -44,6 +44,7 @@ namespace Strategy
             {
                 _points[1].X = x;
                 _points[1].Y = y;
+                _hasDrawn = true;
             }
         }
 
@@ -51,11 +52,17 @@ namespace Strategy
         {
             _done = false;
             _points = null;
+            _hasDrawn = false;
         }
 
         public override string GetDescription()
-        {
-            if (_done == true)
+        {   
+            if(!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_done)
             {
                 return $"Draw line from ({_points[0].X}, {_points[0].Y}) to ({_points[1].X}, {_points[1].Y})";
             }

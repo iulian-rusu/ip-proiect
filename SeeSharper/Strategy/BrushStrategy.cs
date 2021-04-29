@@ -27,6 +27,7 @@ namespace Strategy
             {
                 _points = new List<Point>();
                 _points.Add(new Point(x, y));
+                _hasDrawn = true;
             }
             else
             {
@@ -40,6 +41,7 @@ namespace Strategy
             if (_points != null && !_done)
             {
                 _points.Add(new Point(x, y));
+                _hasDrawn = true;
             }
 
         }

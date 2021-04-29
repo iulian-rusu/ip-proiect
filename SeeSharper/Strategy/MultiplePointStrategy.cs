@@ -23,11 +23,13 @@ namespace Strategy
 		protected List<Point> _points;
         public override void Reset()
         {
-
+            _done = false;
+            _points = null;
+            _hasDrawn = false;
         }
         public override string GetDescription()
         {
-            return "";
+            return $"Brush from {_points[0]} to {_points[_points.Count-1]}";
         }
     }
 }
