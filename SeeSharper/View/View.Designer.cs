@@ -421,6 +421,7 @@ namespace View
       this.fillCheckBox.TabIndex = 9;
       this.fillCheckBox.Text = "Fill";
       this.fillCheckBox.UseVisualStyleBackColor = true;
+      this.fillCheckBox.CheckedChanged += new System.EventHandler(this.fillCheckBox_CheckedChanged);
       // 
       // thicknessLabel
       // 

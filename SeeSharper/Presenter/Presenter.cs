@@ -164,12 +164,13 @@ namespace Presenter
             _view.ChangeCurrentHandler(_currentStrategy);
         }
 
-        /// <summary>
-        /// Updates the current strategy to match the selected tool
-        /// </summary>
-        /// <param name="paintingTool">The new selected painting tool</param>
-        /// <param name="selectedColor">The color of the painting tool</param>
-        public void ChoosePaintingTool(PaintingTool paintingTool, Color selectedColor)
+    /// <summary>
+    /// Updates the current strategy to match the selected tool
+    /// </summary>
+    /// <param name="paintingTool">The new selected painting tool</param>
+    /// <param name="borderColor">The color of the border of the painting tool</param>
+    /// <param name="fillColor">The fill color of the painting tool</param>
+    public void ChoosePaintingTool(PaintingTool paintingTool, Color borderColor, Color fillColor)
         {
             if (_currentStrategy.Done)
             {
@@ -181,7 +182,8 @@ namespace Presenter
             var newStrategy = _model.GetPaintingStrategy(paintingTool);
             _view.ChangeCurrentHandler(newStrategy);
             _currentStrategy = newStrategy;
-            ColorChanged(selectedColor);
+            ColorChanged(borderColor);
+      FillColorChanged(fillColor);
         }
 
         /// <summary>

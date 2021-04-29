@@ -46,7 +46,7 @@ namespace View
     public View()
     {
       InitializeComponent();
-      _selectedColorButton = fillColorButton;
+      _selectedColorButton = borderColorButton;
       toolButtons = new Button[]
       {
         brushButton, lineButton, squareButton, rectangleButton,
@@ -153,7 +153,6 @@ namespace View
       {
         redoButton.Enabled = true;
       }
-
     }
     #endregion
     #region Private Member Functions
@@ -162,7 +161,7 @@ namespace View
     /// </summary>
     private void InitPresenter()
     {
-      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, fillColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor());
     }
 
     private void borderColorButton_Click(object sender, EventArgs e)
@@ -241,36 +240,36 @@ namespace View
     private void brushButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(brushButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Brush, _selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Brush, borderColorButton.BackColor, GetFillColor());
     }
     private void lineButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(lineButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Line, _selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor());
     }
 
     private void squareButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(squareButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Square, _selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Square, borderColorButton.BackColor, GetFillColor());
     }
 
     private void rectangleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(rectangleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Rectangle, _selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Rectangle, borderColorButton.BackColor, GetFillColor());
     }
 
     private void circleButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(circleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Circle, _selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Circle, borderColorButton.BackColor, GetFillColor());
     }
 
     private void ellipseButton_Click(object sender, EventArgs e)
     {
       updateToolButtons(ellipseButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Ellipse, _selectedColorButton.BackColor);
+      _presenter.ChoosePaintingTool(PaintingTool.Ellipse, borderColorButton.BackColor, GetFillColor());
     }
     private void saveButton_Click(object sender, EventArgs e)
     {
@@ -315,5 +314,21 @@ namespace View
       }
     }
     #endregion
+
+    private void fillCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+      _presenter.FillColorChanged(GetFillColor());
+    }
+    private Color GetFillColor()
+    {
+      if (fillCheckBox.Checked)
+      {
+        return fillColorButton.BackColor;
+      }
+      else
+      {
+        return Color.Transparent;
+      }
+    }
   }
 }
