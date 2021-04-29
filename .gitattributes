@@ -1,4 +1,4 @@
+doxygen-output/* linguist-vendored=true
+./doxygen-output/* linguist-vendored=true
 *.html linguist-detectable=false
 *.tex linguist-detectable=false
-doxygen-output/* linguist-vendored
-./doxygen-output/* linguist-vendored
