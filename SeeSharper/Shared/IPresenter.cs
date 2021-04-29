@@ -35,5 +35,7 @@ namespace Shared
         void Redo();
         void ColorChanged(Color color);
         void FillColorChanged(Color color);
+        void ThicknessChanged(float thickness);
+        string GetCurrentStrategyDescription();
     }
 }
