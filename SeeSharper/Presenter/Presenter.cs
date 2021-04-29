@@ -20,6 +20,7 @@ namespace Presenter
     using Shared;
     using Strategy;
     using System.Drawing;
+    using System.IO;
     using System.Windows.Forms;
 
     /// <summary>
@@ -72,7 +73,7 @@ namespace Presenter
         /// <param name="y">The y coordinate of the mouse cursor</param>
         public void MouseMoved(int x, int y)
         {
-            if(_isMousePressed)
+            if (_isMousePressed)
             {
                 _currentStrategy.MouseMoved(x, y);
                 _view.ChangeCurrentHandler(_currentStrategy);
@@ -102,9 +103,16 @@ namespace Presenter
         /// </summary>
         public void SaveDrawing()
         {
-            if(!_model.HasSaveFileName())
+            if (!_model.HasSaveFileName())
             {
-                _model.SetSaveFileName(_view.GetSaveFileName());
+                string filename = _view.GetSaveFileName();
+
+                if (!IsValidFileName(filename))
+                {
+                    return;
+                }
+
+                _model.SetSaveFileName(filename);
             }
             _view.CaptureDrawingState();
             var drawingMemento = _view.GetDrawingMemento();
@@ -202,6 +210,13 @@ namespace Presenter
         public string GetCurrentStrategyDescription()
         {
             return _currentStrategy.GetDescription();
+        }
+        #endregion
+        #region Private Member Functions
+        private bool IsValidFileName(string filename)
+        {
+            string extension = Path.GetExtension(filename);
+            return extension == ".bmp" || extension == ".png";
         }
         #endregion
     }
