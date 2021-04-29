@@ -20,6 +20,7 @@ using System.Drawing;
 using System.IO;
 using System;
 using Strategy;
+using System.Reflection;
 
 namespace Model.Tests
 {
@@ -32,6 +33,12 @@ namespace Model.Tests
         {
             // Runs before each test. (Optional)
             model = new Model();
+        }
+
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            File.Delete(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage2.png");
         }
 
         [TestMethod()]
@@ -51,14 +58,26 @@ namespace Model.Tests
         [ExpectedException(typeof(FileNotFoundException))]
         public void LoadDrawingTestFileNotFound()
         {
-            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile("\\"), "");
+            string description = String.Empty;
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile("\\"), description);
         }
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
         public void LoadDrawingTestInvalidPath()
         {
-            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(""), "");
+            string description = String.Empty;
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(""), description);
+        }
+
+        [TestMethod()]
+        public void LoadDrawingTestFileFound()
+        {
+            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
+            string description = String.Empty;
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
+
+            Assert.IsNotNull(drawingMemento);
         }
 
         [TestMethod()]
@@ -70,12 +89,93 @@ namespace Model.Tests
             Assert.IsInstanceOfType(model.GetPaintingStrategy(PaintingTool.Ellipse), typeof(ElipseStrategy));
             Assert.IsInstanceOfType(model.GetPaintingStrategy(PaintingTool.Square), typeof(SquareStrategy));
             Assert.IsInstanceOfType(model.GetPaintingStrategy(PaintingTool.Rectangle), typeof(RectangleStrategy));
-       } 
+        }
 
-        /*
-         to add tests about: - Loading a valid image
-                             - Saving an image  
-                             - Description Getters
-        */
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SaveDrawingTestInvalidPath()
+        {
+            string fileName = String.Empty;
+            string description = String.Empty;
+
+            model.SetSaveFileName(fileName);
+            model.SaveDrawing(new DrawingMemento(Image.FromFile(fileName), description));
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void SaveDrawingTestInvalidExtension()
+        {
+            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
+            string invalidImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\dummyFile.invalidExtension";
+            string description = String.Empty;
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
+
+            model.SetSaveFileName(invalidImagePath);
+            model.SaveDrawing(drawingMemento);
+
+            DrawingMemento nonExistentDrawingMemento = new DrawingMemento(Image.FromFile(invalidImagePath), description);
+        }
+
+        [TestMethod()]
+        public void SaveDrawingTestOK()
+        {
+            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
+            string otherValidImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage2.png";
+            string description = String.Empty;
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
+            DrawingMemento existentDrawingMemento = null;
+
+            model.SetSaveFileName(otherValidImagePath);
+            model.SaveDrawing(drawingMemento);
+
+            existentDrawingMemento = new DrawingMemento(Image.FromFile(otherValidImagePath), description);
+
+            Assert.IsNotNull(existentDrawingMemento);
+        }
+
+        [TestMethod()]
+        public void GetNextUndoDescriptionTest()
+        {
+            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
+            string description = "DummyDescription";
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
+
+            model.AddMemento(drawingMemento);
+
+            Assert.AreEqual(description, model.GetNextUndoDescription());
+        }
+
+        [TestMethod()]
+        public void GetNextRedoDescriptionTest()
+        {
+            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
+            string description = "DummyDescription";
+            string anotherDescription = "AnotherDummyDescription";
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
+            DrawingMemento anotherDrawingMemento = new DrawingMemento(Image.FromFile(validImagePath), anotherDescription);
+
+            model.AddMemento(drawingMemento);
+            model.AddMemento(anotherDrawingMemento);
+            model.Undo();
+
+            Assert.AreEqual(anotherDescription, model.GetNextRedoDescription());
+        }
+
+        [TestMethod()]
+        public void DropMementosTest()
+        {
+            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
+            string description = "DummyDescription";
+            string anotherDescription = "AnotherDummyDescription";
+            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
+            DrawingMemento anotherDrawingMemento = new DrawingMemento(Image.FromFile(validImagePath), anotherDescription);
+
+            model.AddMemento(drawingMemento);
+            model.AddMemento(anotherDrawingMemento);
+            model.DropMementos();
+
+            Assert.AreEqual(String.Empty, model.GetNextRedoDescription());
+        }
     }
 }
