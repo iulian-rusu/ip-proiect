@@ -81,15 +81,15 @@ namespace Model
 
             if (_current != null)
             {
-                undoneMemento = _current.Value;
 
                 if (_current.Previous != null)
                 {
                     _current = _current.Previous;
                 }
+                undoneMemento = _current.Value;
+
 
             }
-
             return undoneMemento;
         }
 
@@ -103,12 +103,13 @@ namespace Model
 
             if (_current != null)
             {
-                redoneMemento = _current.Value;
-
+       
                 if (_current.Next != null)
                 {
                     _current = _current.Next;
                 }
+
+                redoneMemento = _current.Value;
             }
 
             return redoneMemento;
