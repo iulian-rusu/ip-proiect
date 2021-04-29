@@ -123,6 +123,16 @@ namespace View.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PolygonButtonBackground {
+            get {
+                object obj = ResourceManager.GetObject("PolygonButtonBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RectangleButtonBackground {
             get {
                 object obj = ResourceManager.GetObject("RectangleButtonBackground", resourceCulture);
@@ -136,6 +146,16 @@ namespace View.Properties {
         internal static System.Drawing.Bitmap SquareButtonBackground {
             get {
                 object obj = ResourceManager.GetObject("SquareButtonBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextButtonBackground {
+            get {
+                object obj = ResourceManager.GetObject("TextButtonBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
