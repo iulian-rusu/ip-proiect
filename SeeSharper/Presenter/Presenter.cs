@@ -143,6 +143,16 @@ namespace Presenter
         }
 
         /// <summary>
+        /// Applies the new fill color to the current drawing strategy
+        /// </summary>
+        /// <param name="color">The new color</param>
+        public void FillColorChanged(Color color)
+        {
+            _currentStrategy.ChangeFillColor(color);
+            _view.ChangeCurrentHandler(_currentStrategy);
+        }
+
+        /// <summary>
         /// Updates the current strategy to match the selected tool
         /// </summary>
         /// <param name="paintingTool">The new selected painting tool</param>

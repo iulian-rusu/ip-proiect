@@ -34,5 +34,6 @@ namespace Shared
         void Undo();
         void Redo();
         void ColorChanged(Color color);
+        void FillColorChanged(Color color);
     }
 }
