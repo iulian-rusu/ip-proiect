@@ -45,6 +45,8 @@ namespace Presenter
         {
             _model = model;
             _view = view;
+            _model.AddMemento(_view.GetDrawingMemento());
+            UpdateUndoRedoInView();
         }
         #endregion
 
@@ -71,12 +73,12 @@ namespace Presenter
         public void MouseStateChanged(int x, int y)
         {
             _isMousePressed = !_isMousePressed;
+            _currentStrategy.MouseStateChanged(x, y);
             if (_currentStrategy.Done)
             {
                 CaptureAndAddMemento();
                 _currentStrategy.Reset();
             }
-            _currentStrategy.MouseStateChanged(x, y);
             _view.ChangeCurrentHandler(_currentStrategy);
         }
 
@@ -196,7 +198,11 @@ namespace Presenter
         /// <returns>A string that describes the changes made by the tool</returns>
         public string GetCurrentStrategyDescription()
         {
-            return _currentStrategy.GetDescription();
+            if (_currentStrategy != null)
+            {
+                return _currentStrategy.GetDescription();
+            }
+            return "Blank canvas";
         }
         #endregion
         #region Private Member Functions
