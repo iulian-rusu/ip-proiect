@@ -108,7 +108,11 @@ namespace Model
 
             try
             {
-                loadedDrawing = new DrawingMemento(Image.FromFile(filename), "Loaded " + filename);
+                using (var temporaryBmp = new Bitmap(filename))
+                {
+                    Image loadedImageCopy = new Bitmap(temporaryBmp);
+                    loadedDrawing = new DrawingMemento(loadedImageCopy, "Loaded " + filename);
+                }
             }
             catch (ArgumentException argumentException)
             {
