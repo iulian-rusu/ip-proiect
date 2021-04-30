@@ -437,8 +437,12 @@ namespace View
     {
       if (e.CloseReason == CloseReason.UserClosing)
       {
-        DialogResult res = MessageBox.Show("Exit application?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-        if (res != DialogResult.OK)
+        DialogResult res = MessageBox.Show("Save before exiting?", "Application Exit", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+        if (res == DialogResult.Yes)
+        {
+          SaveDrawing();
+        }
+        else if (res != DialogResult.No)
         {
           e.Cancel = true;
         }
