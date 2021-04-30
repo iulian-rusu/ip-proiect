@@ -41,14 +41,6 @@ namespace View
       this.redoButton = new System.Windows.Forms.Button();
       this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
       this.toolsAndShapesLabel = new System.Windows.Forms.Label();
-      this.brushButton = new System.Windows.Forms.Button();
-      this.lineButton = new System.Windows.Forms.Button();
-      this.squareButton = new System.Windows.Forms.Button();
-      this.rectangleButton = new System.Windows.Forms.Button();
-      this.circleButton = new System.Windows.Forms.Button();
-      this.ellipseButton = new System.Windows.Forms.Button();
-      this.polygonButton = new System.Windows.Forms.Button();
-      this.textButton = new System.Windows.Forms.Button();
       this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
       this.helpButton = new System.Windows.Forms.Button();
       this.loadButton = new System.Windows.Forms.Button();
@@ -57,7 +49,6 @@ namespace View
       this.editColorLabel = new System.Windows.Forms.Label();
       this.borderColorButton = new System.Windows.Forms.Button();
       this.fillColorButton = new System.Windows.Forms.Button();
-      this.editColorButton = new System.Windows.Forms.Button();
       this.borderColorLabel = new System.Windows.Forms.Label();
       this.fillColorLabel = new System.Windows.Forms.Label();
       this.propertiesGroupBox = new System.Windows.Forms.GroupBox();
@@ -67,6 +58,25 @@ namespace View
       this.colorDialog = new System.Windows.Forms.ColorDialog();
       this.timer = new System.Windows.Forms.Timer(this.components);
       this.pictureBox = new System.Windows.Forms.PictureBox();
+      this.eraserButton = new System.Windows.Forms.Button();
+      this.brushButton = new System.Windows.Forms.Button();
+      this.lineButton = new System.Windows.Forms.Button();
+      this.circleButton = new System.Windows.Forms.Button();
+      this.ellipseButton = new System.Windows.Forms.Button();
+      this.triangleButton = new System.Windows.Forms.Button();
+      this.squareButton = new System.Windows.Forms.Button();
+      this.rectangleButton = new System.Windows.Forms.Button();
+      this.rhombButton = new System.Windows.Forms.Button();
+      this.pentagonButton = new System.Windows.Forms.Button();
+      this.hexagonButton = new System.Windows.Forms.Button();
+      this.starButton = new System.Windows.Forms.Button();
+      this.heartButton = new System.Windows.Forms.Button();
+      this.arrowLeftButton = new System.Windows.Forms.Button();
+      this.arrowRightButton = new System.Windows.Forms.Button();
+      this.arrowUpButton = new System.Windows.Forms.Button();
+      this.arrowDownButton = new System.Windows.Forms.Button();
+      this.textButton = new System.Windows.Forms.Button();
+      this.editColorButton = new System.Windows.Forms.Button();
       this.mainTableLayoutPanel.SuspendLayout();
       this.undoRedoTableLayoutPanel.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
@@ -82,11 +92,11 @@ namespace View
       // mainTableLayoutPanel
       // 
       this.mainTableLayoutPanel.ColumnCount = 5;
-      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.4F));
-      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.6F));
-      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.02839F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.07953F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.68961F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.15575F));
+      this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.046725F));
       this.mainTableLayoutPanel.Controls.Add(this.undoRedoTableLayoutPanel, 3, 0);
       this.mainTableLayoutPanel.Controls.Add(this.flowLayoutPanel, 0, 0);
       this.mainTableLayoutPanel.Controls.Add(this.saveLoadGroupBox, 4, 0);
@@ -107,12 +117,12 @@ namespace View
       this.undoRedoTableLayoutPanel.Controls.Add(this.undoGroupBox, 0, 0);
       this.undoRedoTableLayoutPanel.Controls.Add(this.redoGroupBox, 0, 1);
       this.undoRedoTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.undoRedoTableLayoutPanel.Location = new System.Drawing.Point(1047, 3);
+      this.undoRedoTableLayoutPanel.Location = new System.Drawing.Point(965, 3);
       this.undoRedoTableLayoutPanel.Name = "undoRedoTableLayoutPanel";
       this.undoRedoTableLayoutPanel.RowCount = 2;
       this.undoRedoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
       this.undoRedoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.undoRedoTableLayoutPanel.Size = new System.Drawing.Size(469, 94);
+      this.undoRedoTableLayoutPanel.Size = new System.Drawing.Size(471, 94);
       this.undoRedoTableLayoutPanel.TabIndex = 2;
       // 
       // undoGroupBox
@@ -122,7 +132,7 @@ namespace View
       this.undoGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
       this.undoGroupBox.Location = new System.Drawing.Point(3, 3);
       this.undoGroupBox.Name = "undoGroupBox";
-      this.undoGroupBox.Size = new System.Drawing.Size(463, 41);
+      this.undoGroupBox.Size = new System.Drawing.Size(465, 41);
       this.undoGroupBox.TabIndex = 0;
       this.undoGroupBox.TabStop = false;
       this.undoGroupBox.Text = "Undo";
@@ -133,14 +143,14 @@ namespace View
       this.undoTextBox.Location = new System.Drawing.Point(3, 16);
       this.undoTextBox.Name = "undoTextBox";
       this.undoTextBox.ReadOnly = true;
-      this.undoTextBox.Size = new System.Drawing.Size(382, 20);
+      this.undoTextBox.Size = new System.Drawing.Size(384, 20);
       this.undoTextBox.TabIndex = 0;
       // 
       // undoButton
       // 
       this.undoButton.Dock = System.Windows.Forms.DockStyle.Right;
       this.undoButton.Enabled = false;
-      this.undoButton.Location = new System.Drawing.Point(385, 16);
+      this.undoButton.Location = new System.Drawing.Point(387, 16);
       this.undoButton.Name = "undoButton";
       this.undoButton.Size = new System.Drawing.Size(75, 22);
       this.undoButton.TabIndex = 0;
@@ -155,7 +165,7 @@ namespace View
       this.redoGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
       this.redoGroupBox.Location = new System.Drawing.Point(3, 50);
       this.redoGroupBox.Name = "redoGroupBox";
-      this.redoGroupBox.Size = new System.Drawing.Size(463, 41);
+      this.redoGroupBox.Size = new System.Drawing.Size(465, 41);
       this.redoGroupBox.TabIndex = 1;
       this.redoGroupBox.TabStop = false;
       this.redoGroupBox.Text = "Redo";
@@ -166,14 +176,14 @@ namespace View
       this.redoTextBox.Location = new System.Drawing.Point(3, 16);
       this.redoTextBox.Name = "redoTextBox";
       this.redoTextBox.ReadOnly = true;
-      this.redoTextBox.Size = new System.Drawing.Size(382, 20);
+      this.redoTextBox.Size = new System.Drawing.Size(384, 20);
       this.redoTextBox.TabIndex = 1;
       // 
       // redoButton
       // 
       this.redoButton.Dock = System.Windows.Forms.DockStyle.Right;
       this.redoButton.Enabled = false;
-      this.redoButton.Location = new System.Drawing.Point(385, 16);
+      this.redoButton.Location = new System.Drawing.Point(387, 16);
       this.redoButton.Name = "redoButton";
       this.redoButton.Size = new System.Drawing.Size(75, 22);
       this.redoButton.TabIndex = 0;
@@ -184,18 +194,28 @@ namespace View
       // flowLayoutPanel
       // 
       this.flowLayoutPanel.Controls.Add(this.toolsAndShapesLabel);
+      this.flowLayoutPanel.Controls.Add(this.eraserButton);
       this.flowLayoutPanel.Controls.Add(this.brushButton);
       this.flowLayoutPanel.Controls.Add(this.lineButton);
-      this.flowLayoutPanel.Controls.Add(this.squareButton);
-      this.flowLayoutPanel.Controls.Add(this.rectangleButton);
       this.flowLayoutPanel.Controls.Add(this.circleButton);
       this.flowLayoutPanel.Controls.Add(this.ellipseButton);
-      this.flowLayoutPanel.Controls.Add(this.polygonButton);
+      this.flowLayoutPanel.Controls.Add(this.triangleButton);
+      this.flowLayoutPanel.Controls.Add(this.squareButton);
+      this.flowLayoutPanel.Controls.Add(this.rectangleButton);
+      this.flowLayoutPanel.Controls.Add(this.rhombButton);
+      this.flowLayoutPanel.Controls.Add(this.pentagonButton);
+      this.flowLayoutPanel.Controls.Add(this.hexagonButton);
+      this.flowLayoutPanel.Controls.Add(this.starButton);
+      this.flowLayoutPanel.Controls.Add(this.heartButton);
+      this.flowLayoutPanel.Controls.Add(this.arrowLeftButton);
+      this.flowLayoutPanel.Controls.Add(this.arrowRightButton);
+      this.flowLayoutPanel.Controls.Add(this.arrowUpButton);
+      this.flowLayoutPanel.Controls.Add(this.arrowDownButton);
       this.flowLayoutPanel.Controls.Add(this.textButton);
       this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
       this.flowLayoutPanel.Location = new System.Drawing.Point(3, 3);
       this.flowLayoutPanel.Name = "flowLayoutPanel";
-      this.flowLayoutPanel.Size = new System.Drawing.Size(627, 94);
+      this.flowLayoutPanel.Size = new System.Drawing.Size(406, 94);
       this.flowLayoutPanel.TabIndex = 0;
       // 
       // toolsAndShapesLabel
@@ -207,96 +227,15 @@ namespace View
       this.toolsAndShapesLabel.TabIndex = 6;
       this.toolsAndShapesLabel.Text = "Tools and Shapes";
       // 
-      // brushButton
-      // 
-      this.brushButton.BackgroundImage = global::View.Properties.Resources.BrushButtonBackground;
-      this.brushButton.Location = new System.Drawing.Point(102, 3);
-      this.brushButton.Name = "brushButton";
-      this.brushButton.Size = new System.Drawing.Size(32, 32);
-      this.brushButton.TabIndex = 0;
-      this.brushButton.UseVisualStyleBackColor = true;
-      this.brushButton.Click += new System.EventHandler(this.BrushButton_Click);
-      // 
-      // lineButton
-      // 
-      this.lineButton.BackgroundImage = global::View.Properties.Resources.LineButtonBackground;
-      this.lineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-      this.lineButton.Location = new System.Drawing.Point(140, 3);
-      this.lineButton.Name = "lineButton";
-      this.lineButton.Size = new System.Drawing.Size(32, 32);
-      this.lineButton.TabIndex = 1;
-      this.lineButton.UseVisualStyleBackColor = true;
-      this.lineButton.Click += new System.EventHandler(this.LineButton_Click);
-      // 
-      // squareButton
-      // 
-      this.squareButton.BackgroundImage = global::View.Properties.Resources.SquareButtonBackground;
-      this.squareButton.Location = new System.Drawing.Point(178, 3);
-      this.squareButton.Name = "squareButton";
-      this.squareButton.Size = new System.Drawing.Size(32, 32);
-      this.squareButton.TabIndex = 2;
-      this.squareButton.UseVisualStyleBackColor = true;
-      this.squareButton.Click += new System.EventHandler(this.SquareButton_Click);
-      // 
-      // rectangleButton
-      // 
-      this.rectangleButton.BackgroundImage = global::View.Properties.Resources.RectangleButtonBackground;
-      this.rectangleButton.Location = new System.Drawing.Point(216, 3);
-      this.rectangleButton.Name = "rectangleButton";
-      this.rectangleButton.Size = new System.Drawing.Size(32, 32);
-      this.rectangleButton.TabIndex = 3;
-      this.rectangleButton.UseVisualStyleBackColor = true;
-      this.rectangleButton.Click += new System.EventHandler(this.RectangleButton_Click);
-      // 
-      // circleButton
-      // 
-      this.circleButton.BackgroundImage = global::View.Properties.Resources.CircleButtonBackground;
-      this.circleButton.Location = new System.Drawing.Point(254, 3);
-      this.circleButton.Name = "circleButton";
-      this.circleButton.Size = new System.Drawing.Size(32, 32);
-      this.circleButton.TabIndex = 4;
-      this.circleButton.UseVisualStyleBackColor = true;
-      this.circleButton.Click += new System.EventHandler(this.CircleButton_Click);
-      // 
-      // ellipseButton
-      // 
-      this.ellipseButton.BackgroundImage = global::View.Properties.Resources.EllipseButtonBackground;
-      this.ellipseButton.Location = new System.Drawing.Point(292, 3);
-      this.ellipseButton.Name = "ellipseButton";
-      this.ellipseButton.Size = new System.Drawing.Size(32, 32);
-      this.ellipseButton.TabIndex = 5;
-      this.ellipseButton.UseVisualStyleBackColor = true;
-      this.ellipseButton.Click += new System.EventHandler(this.EllipseButton_Click);
-      // 
-      // polygonButton
-      // 
-      this.polygonButton.BackgroundImage = global::View.Properties.Resources.PolygonButtonBackground;
-      this.polygonButton.Location = new System.Drawing.Point(330, 3);
-      this.polygonButton.Name = "polygonButton";
-      this.polygonButton.Size = new System.Drawing.Size(32, 32);
-      this.polygonButton.TabIndex = 7;
-      this.polygonButton.UseVisualStyleBackColor = true;
-      this.polygonButton.Click += new System.EventHandler(this.PolygonButton_Click);
-      // 
-      // textButton
-      // 
-      this.textButton.BackgroundImage = global::View.Properties.Resources.TextButtonBackground;
-      this.textButton.Location = new System.Drawing.Point(368, 3);
-      this.textButton.Name = "textButton";
-      this.textButton.Size = new System.Drawing.Size(32, 32);
-      this.textButton.TabIndex = 8;
-      this.textButton.UseVisualStyleBackColor = true;
-      this.textButton.Click += new System.EventHandler(this.TextButton_Click);
-      // 
       // saveLoadGroupBox
       // 
       this.saveLoadGroupBox.Controls.Add(this.helpButton);
       this.saveLoadGroupBox.Controls.Add(this.loadButton);
       this.saveLoadGroupBox.Controls.Add(this.saveButton);
-      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
-      this.saveLoadGroupBox.Location = new System.Drawing.Point(1522, 3);
+      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.saveLoadGroupBox.Location = new System.Drawing.Point(1442, 3);
       this.saveLoadGroupBox.Name = "saveLoadGroupBox";
-      this.saveLoadGroupBox.Size = new System.Drawing.Size(59, 94);
+      this.saveLoadGroupBox.Size = new System.Drawing.Size(139, 94);
       this.saveLoadGroupBox.TabIndex = 3;
       this.saveLoadGroupBox.TabStop = false;
       this.saveLoadGroupBox.Text = "File";
@@ -306,7 +245,7 @@ namespace View
       this.helpButton.Dock = System.Windows.Forms.DockStyle.Top;
       this.helpButton.Location = new System.Drawing.Point(3, 62);
       this.helpButton.Name = "helpButton";
-      this.helpButton.Size = new System.Drawing.Size(53, 23);
+      this.helpButton.Size = new System.Drawing.Size(133, 23);
       this.helpButton.TabIndex = 3;
       this.helpButton.Text = "Help";
       this.helpButton.UseVisualStyleBackColor = true;
@@ -317,7 +256,7 @@ namespace View
       this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
       this.loadButton.Location = new System.Drawing.Point(3, 39);
       this.loadButton.Name = "loadButton";
-      this.loadButton.Size = new System.Drawing.Size(53, 23);
+      this.loadButton.Size = new System.Drawing.Size(133, 23);
       this.loadButton.TabIndex = 2;
       this.loadButton.Text = "Load";
       this.loadButton.UseVisualStyleBackColor = true;
@@ -328,7 +267,7 @@ namespace View
       this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
       this.saveButton.Location = new System.Drawing.Point(3, 16);
       this.saveButton.Name = "saveButton";
-      this.saveButton.Size = new System.Drawing.Size(53, 23);
+      this.saveButton.Size = new System.Drawing.Size(133, 23);
       this.saveButton.TabIndex = 0;
       this.saveButton.Text = "Save";
       this.saveButton.UseVisualStyleBackColor = true;
@@ -347,7 +286,7 @@ namespace View
       this.tableLayoutPanel1.Controls.Add(this.borderColorLabel, 0, 0);
       this.tableLayoutPanel1.Controls.Add(this.fillColorLabel, 1, 0);
       this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-      this.tableLayoutPanel1.Location = new System.Drawing.Point(800, 3);
+      this.tableLayoutPanel1.Location = new System.Drawing.Point(718, 3);
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
       this.tableLayoutPanel1.RowCount = 2;
       this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.02128F));
@@ -390,17 +329,6 @@ namespace View
       this.fillColorButton.UseVisualStyleBackColor = false;
       this.fillColorButton.Click += new System.EventHandler(this.FillColorButton_Click);
       // 
-      // editColorButton
-      // 
-      this.editColorButton.BackgroundImage = global::View.Properties.Resources.EditButtonBackground;
-      this.editColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.editColorButton.Location = new System.Drawing.Point(163, 19);
-      this.editColorButton.Name = "editColorButton";
-      this.editColorButton.Size = new System.Drawing.Size(75, 72);
-      this.editColorButton.TabIndex = 3;
-      this.editColorButton.UseVisualStyleBackColor = true;
-      this.editColorButton.Click += new System.EventHandler(this.EditColorButton_Click);
-      // 
       // borderColorLabel
       // 
       this.borderColorLabel.AutoSize = true;
@@ -429,9 +357,9 @@ namespace View
       this.propertiesGroupBox.Controls.Add(this.thicknessLabel);
       this.propertiesGroupBox.Controls.Add(this.thicknessTrackBar);
       this.propertiesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.propertiesGroupBox.Location = new System.Drawing.Point(636, 3);
+      this.propertiesGroupBox.Location = new System.Drawing.Point(415, 3);
       this.propertiesGroupBox.Name = "propertiesGroupBox";
-      this.propertiesGroupBox.Size = new System.Drawing.Size(158, 94);
+      this.propertiesGroupBox.Size = new System.Drawing.Size(296, 94);
       this.propertiesGroupBox.TabIndex = 5;
       this.propertiesGroupBox.TabStop = false;
       // 
@@ -441,7 +369,7 @@ namespace View
       this.fillCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
       this.fillCheckBox.Location = new System.Drawing.Point(3, 74);
       this.fillCheckBox.Name = "fillCheckBox";
-      this.fillCheckBox.Size = new System.Drawing.Size(152, 17);
+      this.fillCheckBox.Size = new System.Drawing.Size(290, 17);
       this.fillCheckBox.TabIndex = 9;
       this.fillCheckBox.Text = "Fill";
       this.fillCheckBox.UseVisualStyleBackColor = true;
@@ -461,9 +389,10 @@ namespace View
       // thicknessTrackBar
       // 
       this.thicknessTrackBar.Location = new System.Drawing.Point(0, 32);
+      this.thicknessTrackBar.Maximum = 20;
       this.thicknessTrackBar.Minimum = 1;
       this.thicknessTrackBar.Name = "thicknessTrackBar";
-      this.thicknessTrackBar.Size = new System.Drawing.Size(158, 45);
+      this.thicknessTrackBar.Size = new System.Drawing.Size(290, 45);
       this.thicknessTrackBar.TabIndex = 5;
       this.thicknessTrackBar.Value = 1;
       this.thicknessTrackBar.Scroll += new System.EventHandler(this.ThicknessTrackBar_Scroll);
@@ -487,6 +416,198 @@ namespace View
       this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
       this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
       this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseUp);
+      // 
+      // eraserButton
+      // 
+      this.eraserButton.BackgroundImage = global::View.Properties.Resources.EraserButtonBackground;
+      this.eraserButton.Location = new System.Drawing.Point(102, 3);
+      this.eraserButton.Name = "eraserButton";
+      this.eraserButton.Size = new System.Drawing.Size(32, 32);
+      this.eraserButton.TabIndex = 15;
+      this.eraserButton.UseVisualStyleBackColor = true;
+      this.eraserButton.Click += new System.EventHandler(this.EraserButton_Click);
+      // 
+      // brushButton
+      // 
+      this.brushButton.BackgroundImage = global::View.Properties.Resources.BrushButtonBackground;
+      this.brushButton.Location = new System.Drawing.Point(140, 3);
+      this.brushButton.Name = "brushButton";
+      this.brushButton.Size = new System.Drawing.Size(32, 32);
+      this.brushButton.TabIndex = 0;
+      this.brushButton.UseVisualStyleBackColor = true;
+      this.brushButton.Click += new System.EventHandler(this.BrushButton_Click);
+      // 
+      // lineButton
+      // 
+      this.lineButton.BackgroundImage = global::View.Properties.Resources.LineButtonBackground;
+      this.lineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+      this.lineButton.Location = new System.Drawing.Point(178, 3);
+      this.lineButton.Name = "lineButton";
+      this.lineButton.Size = new System.Drawing.Size(32, 32);
+      this.lineButton.TabIndex = 1;
+      this.lineButton.UseVisualStyleBackColor = true;
+      this.lineButton.Click += new System.EventHandler(this.LineButton_Click);
+      // 
+      // circleButton
+      // 
+      this.circleButton.BackgroundImage = global::View.Properties.Resources.CircleButtonBackground;
+      this.circleButton.Location = new System.Drawing.Point(216, 3);
+      this.circleButton.Name = "circleButton";
+      this.circleButton.Size = new System.Drawing.Size(32, 32);
+      this.circleButton.TabIndex = 4;
+      this.circleButton.UseVisualStyleBackColor = true;
+      this.circleButton.Click += new System.EventHandler(this.CircleButton_Click);
+      // 
+      // ellipseButton
+      // 
+      this.ellipseButton.BackgroundImage = global::View.Properties.Resources.EllipseButtonBackground;
+      this.ellipseButton.Location = new System.Drawing.Point(254, 3);
+      this.ellipseButton.Name = "ellipseButton";
+      this.ellipseButton.Size = new System.Drawing.Size(32, 32);
+      this.ellipseButton.TabIndex = 5;
+      this.ellipseButton.UseVisualStyleBackColor = true;
+      this.ellipseButton.Click += new System.EventHandler(this.EllipseButton_Click);
+      // 
+      // triangleButton
+      // 
+      this.triangleButton.BackgroundImage = global::View.Properties.Resources.TriangleButtonBackground;
+      this.triangleButton.Location = new System.Drawing.Point(292, 3);
+      this.triangleButton.Name = "triangleButton";
+      this.triangleButton.Size = new System.Drawing.Size(32, 32);
+      this.triangleButton.TabIndex = 14;
+      this.triangleButton.UseVisualStyleBackColor = true;
+      this.triangleButton.Click += new System.EventHandler(this.TriangleButton_Click);
+      // 
+      // squareButton
+      // 
+      this.squareButton.BackgroundImage = global::View.Properties.Resources.SquareButtonBackground;
+      this.squareButton.Location = new System.Drawing.Point(330, 3);
+      this.squareButton.Name = "squareButton";
+      this.squareButton.Size = new System.Drawing.Size(32, 32);
+      this.squareButton.TabIndex = 2;
+      this.squareButton.UseVisualStyleBackColor = true;
+      this.squareButton.Click += new System.EventHandler(this.SquareButton_Click);
+      // 
+      // rectangleButton
+      // 
+      this.rectangleButton.BackgroundImage = global::View.Properties.Resources.RectangleButtonBackground;
+      this.rectangleButton.Location = new System.Drawing.Point(368, 3);
+      this.rectangleButton.Name = "rectangleButton";
+      this.rectangleButton.Size = new System.Drawing.Size(32, 32);
+      this.rectangleButton.TabIndex = 3;
+      this.rectangleButton.UseVisualStyleBackColor = true;
+      this.rectangleButton.Click += new System.EventHandler(this.RectangleButton_Click);
+      // 
+      // rhombButton
+      // 
+      this.rhombButton.BackgroundImage = global::View.Properties.Resources.RhombButtonBackground;
+      this.rhombButton.Location = new System.Drawing.Point(3, 41);
+      this.rhombButton.Name = "rhombButton";
+      this.rhombButton.Size = new System.Drawing.Size(32, 32);
+      this.rhombButton.TabIndex = 13;
+      this.rhombButton.UseVisualStyleBackColor = true;
+      this.rhombButton.Click += new System.EventHandler(this.RhombButton_Click);
+      // 
+      // pentagonButton
+      // 
+      this.pentagonButton.BackgroundImage = global::View.Properties.Resources.PentagonButtonBackground;
+      this.pentagonButton.Location = new System.Drawing.Point(41, 41);
+      this.pentagonButton.Name = "pentagonButton";
+      this.pentagonButton.Size = new System.Drawing.Size(32, 32);
+      this.pentagonButton.TabIndex = 11;
+      this.pentagonButton.UseVisualStyleBackColor = true;
+      this.pentagonButton.Click += new System.EventHandler(this.PentagonButton_Click);
+      // 
+      // hexagonButton
+      // 
+      this.hexagonButton.BackgroundImage = global::View.Properties.Resources.HexagonButtonBackground;
+      this.hexagonButton.Location = new System.Drawing.Point(79, 41);
+      this.hexagonButton.Name = "hexagonButton";
+      this.hexagonButton.Size = new System.Drawing.Size(32, 32);
+      this.hexagonButton.TabIndex = 12;
+      this.hexagonButton.UseVisualStyleBackColor = true;
+      this.hexagonButton.Click += new System.EventHandler(this.HexagonButton_Click);
+      // 
+      // starButton
+      // 
+      this.starButton.BackgroundImage = global::View.Properties.Resources.StarButtonBackground;
+      this.starButton.Location = new System.Drawing.Point(117, 41);
+      this.starButton.Name = "starButton";
+      this.starButton.Size = new System.Drawing.Size(32, 32);
+      this.starButton.TabIndex = 7;
+      this.starButton.UseVisualStyleBackColor = true;
+      this.starButton.Click += new System.EventHandler(this.StarButton_Click);
+      // 
+      // heartButton
+      // 
+      this.heartButton.BackgroundImage = global::View.Properties.Resources.HeartButtonBackground;
+      this.heartButton.Location = new System.Drawing.Point(155, 41);
+      this.heartButton.Name = "heartButton";
+      this.heartButton.Size = new System.Drawing.Size(32, 32);
+      this.heartButton.TabIndex = 9;
+      this.heartButton.UseVisualStyleBackColor = true;
+      this.heartButton.Click += new System.EventHandler(this.HeartButton_Click);
+      // 
+      // arrowLeftButton
+      // 
+      this.arrowLeftButton.BackgroundImage = global::View.Properties.Resources.ArrowLeftButtonBackground;
+      this.arrowLeftButton.Location = new System.Drawing.Point(193, 41);
+      this.arrowLeftButton.Name = "arrowLeftButton";
+      this.arrowLeftButton.Size = new System.Drawing.Size(32, 32);
+      this.arrowLeftButton.TabIndex = 10;
+      this.arrowLeftButton.UseVisualStyleBackColor = true;
+      this.arrowLeftButton.Click += new System.EventHandler(this.ArrowLeftButton_Click);
+      // 
+      // arrowRightButton
+      // 
+      this.arrowRightButton.BackgroundImage = global::View.Properties.Resources.ArrowRightButtonBackground;
+      this.arrowRightButton.Location = new System.Drawing.Point(231, 41);
+      this.arrowRightButton.Name = "arrowRightButton";
+      this.arrowRightButton.Size = new System.Drawing.Size(32, 32);
+      this.arrowRightButton.TabIndex = 16;
+      this.arrowRightButton.UseVisualStyleBackColor = true;
+      this.arrowRightButton.Click += new System.EventHandler(this.ArrowRightButton_Click);
+      // 
+      // arrowUpButton
+      // 
+      this.arrowUpButton.BackgroundImage = global::View.Properties.Resources.ArrowUpButtonBackground;
+      this.arrowUpButton.Location = new System.Drawing.Point(269, 41);
+      this.arrowUpButton.Name = "arrowUpButton";
+      this.arrowUpButton.Size = new System.Drawing.Size(32, 32);
+      this.arrowUpButton.TabIndex = 17;
+      this.arrowUpButton.UseVisualStyleBackColor = true;
+      this.arrowUpButton.Click += new System.EventHandler(this.ArrowUpButton_Click);
+      // 
+      // arrowDownButton
+      // 
+      this.arrowDownButton.BackgroundImage = global::View.Properties.Resources.ArrowDownButtonBackground;
+      this.arrowDownButton.Location = new System.Drawing.Point(307, 41);
+      this.arrowDownButton.Name = "arrowDownButton";
+      this.arrowDownButton.Size = new System.Drawing.Size(32, 32);
+      this.arrowDownButton.TabIndex = 18;
+      this.arrowDownButton.UseVisualStyleBackColor = true;
+      this.arrowDownButton.Click += new System.EventHandler(this.ArrowDownButton_Click);
+      // 
+      // textButton
+      // 
+      this.textButton.BackgroundImage = global::View.Properties.Resources.TextButtonBackground;
+      this.textButton.Location = new System.Drawing.Point(345, 41);
+      this.textButton.Name = "textButton";
+      this.textButton.Size = new System.Drawing.Size(32, 32);
+      this.textButton.TabIndex = 8;
+      this.textButton.UseVisualStyleBackColor = true;
+      this.textButton.Click += new System.EventHandler(this.TextButton_Click);
+      // 
+      // editColorButton
+      // 
+      this.editColorButton.BackgroundImage = global::View.Properties.Resources.EditButtonBackground;
+      this.editColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.editColorButton.Location = new System.Drawing.Point(163, 19);
+      this.editColorButton.Name = "editColorButton";
+      this.editColorButton.Size = new System.Drawing.Size(75, 72);
+      this.editColorButton.TabIndex = 3;
+      this.editColorButton.UseVisualStyleBackColor = true;
+      this.editColorButton.Click += new System.EventHandler(this.EditColorButton_Click);
       // 
       // View
       // 
@@ -554,8 +675,18 @@ namespace View
     private System.Windows.Forms.CheckBox fillCheckBox;
     private System.Windows.Forms.Label thicknessLabel;
     private System.Windows.Forms.TrackBar thicknessTrackBar;
-    private System.Windows.Forms.Button polygonButton;
+    private System.Windows.Forms.Button starButton;
     private System.Windows.Forms.Button textButton;
+    private System.Windows.Forms.Button eraserButton;
+    private System.Windows.Forms.Button heartButton;
+    private System.Windows.Forms.Button arrowLeftButton;
+    private System.Windows.Forms.Button pentagonButton;
+    private System.Windows.Forms.Button hexagonButton;
+    private System.Windows.Forms.Button rhombButton;
+    private System.Windows.Forms.Button triangleButton;
+    private System.Windows.Forms.Button arrowRightButton;
+    private System.Windows.Forms.Button arrowUpButton;
+    private System.Windows.Forms.Button arrowDownButton;
   }
 }
 

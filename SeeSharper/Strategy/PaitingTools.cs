@@ -23,7 +23,17 @@ namespace Strategy
 		Ellipse,
 		Square,
 		Rectangle,
-		Polygon,
+		Star,
 		Text,
-	}
+    Triangle,
+    Rhomb,
+		Pentagon,
+		Hexagon,
+    ArrowLeft,
+		ArrowRight,
+		ArrowUp,
+		ArrowDown,
+		Heart,
+    Eraser,
+  }
 }

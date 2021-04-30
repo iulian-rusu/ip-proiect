@@ -105,5 +105,38 @@
   <ItemGroup>
     <None Include="Resources\Background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EraserButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriangleButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RhombButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PentagonButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HexagonButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StarButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeartButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowLeftButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowRightButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowUpButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowDownButtonBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
