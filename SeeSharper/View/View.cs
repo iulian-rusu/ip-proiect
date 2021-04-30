@@ -78,7 +78,7 @@ namespace View
     /// <param name="drawingMemento">New encapsulated image</param>
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
-      pictureBox.Image = drawingMemento.Drawing;
+      pictureBox.Image = (Image)drawingMemento.Drawing.Clone();
     }
     /// <summary>
     /// Encapsulates and returns the current image state of the picturebox
@@ -86,12 +86,8 @@ namespace View
     /// <returns>Encapsulated image</returns>
     public DrawingMemento GetDrawingMemento()
     {
-      string description;
-      if (_presenter == null)
-      {
-        description = "Empty canvas";
-      }
-      else
+      string description = "";
+      if (_presenter != null)
       {
         description = _presenter.GetCurrentStrategyDescription();
       }
@@ -187,7 +183,18 @@ namespace View
     }
     private void EditColorButton_Click(object sender, EventArgs e)
     {
-
+      if (colorDialog.ShowDialog() != DialogResult.OK)
+        return;
+      Color color = colorDialog.Color;
+      _selectedColorButton.BackColor = color;
+      if (_selectedColorButton == borderColorButton)
+      {
+        _presenter.ColorChanged(color);
+      }
+      else
+      {
+        _presenter.FillColorChanged(color);
+      }
     }
 
     private void PictureBox_MouseMove(object sender, MouseEventArgs e)
@@ -284,7 +291,18 @@ namespace View
     }
     private void LoadButton_Click(object sender, EventArgs e)
     {
+      using (OpenFileDialog openFileDialog = new OpenFileDialog())
+      {
+        openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
+        openFileDialog.FilterIndex = 2;
+        openFileDialog.RestoreDirectory = true;
 
+        if (openFileDialog.ShowDialog() == DialogResult.OK)
+        {
+          string filePath = openFileDialog.FileName;
+          _presenter.LoadDrawing(filePath);
+        }
+      }
     }
     private void Timer_Tick(object sender, EventArgs e)
     {

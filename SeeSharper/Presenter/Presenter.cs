@@ -73,13 +73,13 @@ namespace Presenter
         public void MouseStateChanged(int x, int y)
         {
             _isMousePressed = !_isMousePressed;
-            _currentStrategy.MouseStateChanged(x, y);
             if (_currentStrategy.Done)
             {
                 CaptureAndAddMemento();
                 _currentStrategy.Reset();
-            }
-            _view.ChangeCurrentHandler(_currentStrategy);
+      }
+      _currentStrategy.MouseStateChanged(x, y);
+      _view.ChangeCurrentHandler(_currentStrategy);
         }
 
         /// <summary>
@@ -93,6 +93,7 @@ namespace Presenter
 
                 if (!IsValidFileName(filename))
                 {
+          MessageBox.Show("Invalid format!");
                     return;
                 }
 
@@ -100,8 +101,8 @@ namespace Presenter
             }
             _view.CaptureDrawingState();
             var drawingMemento = _view.GetDrawingMemento();
-            _model.DropMementos();
-            _model.SaveDrawing(drawingMemento);
+      drawingMemento.Description = "";
+      _model.SaveDrawing(drawingMemento);
             UpdateUndoRedoInView();
             _currentStrategy.Reset();
         }
@@ -202,7 +203,7 @@ namespace Presenter
             {
                 return _currentStrategy.GetDescription();
             }
-            return "Blank canvas";
+            return "";
         }
         #endregion
         #region Private Member Functions
