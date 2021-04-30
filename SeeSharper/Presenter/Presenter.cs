@@ -19,8 +19,8 @@ namespace Presenter
 {
     using Shared;
     using Strategy;
-  using System;
-  using System.Drawing;
+    using System;
+    using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
 
@@ -78,9 +78,9 @@ namespace Presenter
             {
                 CaptureAndAddMemento();
                 _currentStrategy.Reset();
-      }
-      _currentStrategy.MouseStateChanged(x, y);
-      _view.ChangeCurrentHandler(_currentStrategy);
+            }
+            _currentStrategy.MouseStateChanged(x, y);
+            _view.ChangeCurrentHandler(_currentStrategy);
         }
 
         /// <summary>
@@ -101,8 +101,8 @@ namespace Presenter
             }
             _view.CaptureDrawingState();
             var drawingMemento = _view.GetDrawingMemento();
-      drawingMemento.Description = "";
-      _model.SaveDrawing(drawingMemento);
+            drawingMemento.Description = "";
+            _model.SaveDrawing(drawingMemento);
             UpdateUndoRedoInView();
             _currentStrategy.Reset();
         }
@@ -112,7 +112,6 @@ namespace Presenter
         /// </summary>
         public void Redo()
         {
-            CaptureAndAddMemento();
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
             UpdateUndoRedoInView();
@@ -179,7 +178,7 @@ namespace Presenter
             _currentStrategy = newStrategy;
             ColorChanged(borderColor);
             FillColorChanged(fillColor);
-      ThicknessChanged(thickness);
+            ThicknessChanged(thickness);
         }
 
         /// <summary>
@@ -224,7 +223,7 @@ namespace Presenter
 
         private void CaptureAndAddMemento()
         {
-            if(_currentStrategy.HasDrawn)
+            if (_currentStrategy.HasDrawn)
             {
                 _view.CaptureDrawingState();
                 _model.AddMemento(_view.GetDrawingMemento());
