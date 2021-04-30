@@ -112,6 +112,7 @@ namespace Presenter
         /// </summary>
         public void Redo()
         {
+            CaptureAndAddMemento();
             var currentMemento = _model.Redo();
             _view.SetDrawingMemento(currentMemento);
             UpdateUndoRedoInView();
@@ -123,6 +124,7 @@ namespace Presenter
         /// </summary>
         public void Undo()
         {
+            CaptureAndAddMemento();
             var currentMemento = _model.Undo();
             _view.SetDrawingMemento(currentMemento);
             UpdateUndoRedoInView();
