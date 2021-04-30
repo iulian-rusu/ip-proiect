@@ -598,7 +598,6 @@ namespace View
       // pictureBox
       // 
       this.pictureBox.BackColor = System.Drawing.Color.White;
-      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
       this.pictureBox.Image = global::View.Properties.Resources.Background;
       this.pictureBox.Location = new System.Drawing.Point(0, 100);
       this.pictureBox.Name = "pictureBox";
@@ -613,11 +612,14 @@ namespace View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.AutoSize = true;
       this.ClientSize = new System.Drawing.Size(1584, 761);
       this.Controls.Add(this.pictureBox);
       this.Controls.Add(this.mainTableLayoutPanel);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.KeyPreview = true;
+      this.MaximumSize = new System.Drawing.Size(1600, 800);
+      this.MinimumSize = new System.Drawing.Size(1600, 800);
       this.Name = "View";
       this.Text = "SeeSharper";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.View_FormClosing);

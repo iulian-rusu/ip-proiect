@@ -30,6 +30,8 @@ namespace View
   {
     #region Private Members
     private IPresenter _presenter;
+    private readonly int _maxWidth;
+    private readonly int _maxHeight;
     /// <summary>
     /// Holds a reference to the <code>PaintEvent</code> that is draw on top of
     /// the <code>Image</code> so that it can be removed from the pictureBox-es Paint Event.
@@ -40,14 +42,16 @@ namespace View
     /// Holds references to toolButtons to make selected highlighting
     /// algorithm easier to implement
     /// </summary>
-    private readonly Button[] toolButtons;
+    private readonly Button[] _toolButtons;
     #endregion
     #region Public Member Functions
     public View()
     {
       InitializeComponent();
+      _maxWidth = pictureBox.Width;
+      _maxHeight = pictureBox.Height;
       _selectedColorButton = borderColorButton;
-      toolButtons = new Button[]
+      _toolButtons = new Button[]
       {
         eraserButton, brushButton, lineButton, circleButton, ellipseButton,
         triangleButton, squareButton, rectangleButton, rhombButton,
@@ -81,7 +85,23 @@ namespace View
     /// <param name="drawingMemento">New encapsulated image</param>
     public void SetDrawingMemento(DrawingMemento drawingMemento)
     {
-      pictureBox.Image = (Image)drawingMemento.Drawing.Clone();
+      var newImage = (Image)drawingMemento.Drawing.Clone();
+      var width = newImage.Width;
+      if (width > _maxWidth)
+      {
+        width = _maxWidth;
+      }
+      var height = newImage.Height;
+      if (height > _maxHeight)
+      {
+        height = _maxHeight;
+      }
+      pictureBox.Image = new Bitmap(width, height);
+      using (Graphics g = Graphics.FromImage(pictureBox.Image))
+      {
+        g.DrawImage(newImage, new Rectangle(0, 0, width, height), new Rectangle(0, 0, width, height), GraphicsUnit.Pixel);
+      }
+      pictureBox.SetBounds(pictureBox.Bounds.X, pictureBox.Bounds.Y, width, height);
     }
     /// <summary>
     /// Encapsulates and returns the current image state of the picturebox
@@ -239,7 +259,7 @@ namespace View
     /// <param name="selected">Button to highlight</param>
     private void UpdateToolButtons(Button selected)
     {
-      foreach (var button in toolButtons)
+      foreach (var button in _toolButtons)
       {
         if (button == selected)
         {
