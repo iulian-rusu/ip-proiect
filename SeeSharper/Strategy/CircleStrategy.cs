@@ -38,8 +38,8 @@ namespace Strategy
                 int startY = midY - dim;
 
                 var rect = new Rectangle(startX, startY, 2 * dim, 2 * dim);
-                graphics.DrawEllipse(new Pen(_color, _thickness), rect);
                 graphics.FillEllipse(new SolidBrush(_fillColor), rect);
+                graphics.DrawEllipse(new Pen(_color, _thickness), rect);
             }
         }
         public override string GetDescription()
