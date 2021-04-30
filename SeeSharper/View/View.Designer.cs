@@ -598,7 +598,7 @@ namespace View
       this.thicknessTrackBar.Name = "thicknessTrackBar";
       this.thicknessTrackBar.Size = new System.Drawing.Size(290, 45);
       this.thicknessTrackBar.TabIndex = 5;
-      this.thicknessTrackBar.Value = 1;
+      this.thicknessTrackBar.Value = 3;
       this.thicknessTrackBar.Scroll += new System.EventHandler(this.ThicknessTrackBar_Scroll);
       // 
       // timer
