@@ -55,7 +55,6 @@
     <Compile Include="MultiplePointStrategy.cs" />
     <Compile Include="SquareStrategy.cs" />
     <Compile Include="Strategy.cs" />
-    <Compile Include="RightAngleTriangleStrategy.cs" />
     <Compile Include="TwoPointStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
