@@ -32,6 +32,7 @@ namespace View
     private IPresenter _presenter;
     private readonly int _maxWidth;
     private readonly int _maxHeight;
+    private bool _displayingDialog = false;
     /// <summary>
     /// Holds a reference to the <code>PaintEvent</code> that is draw on top of
     /// the <code>Image</code> so that it can be removed from the pictureBox-es Paint Event.
@@ -133,6 +134,7 @@ namespace View
     /// <returns></returns>
     public string GetSaveFileName()
     {
+      _displayingDialog = true;
       using (var saveFileDialog = new SaveFileDialog())
       {
         saveFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
@@ -222,16 +224,24 @@ namespace View
 
     private void PictureBox_MouseMove(object sender, MouseEventArgs e)
     {
+      if (_displayingDialog)
+        return;
       _presenter.MouseMoved(e.X, e.Y);
     }
 
     private void PictureBox_MouseDown(object sender, MouseEventArgs e)
     {
+      if (_displayingDialog)
+      {
+        _displayingDialog = false;
+      }
       _presenter.MouseStateChanged(e.X, e.Y);
     }
 
     private void PictureBox_MouseUp(object sender, MouseEventArgs e)
     {
+      if (_displayingDialog)
+        return;
       _presenter.MouseStateChanged(e.X, e.Y);
     }
 
@@ -399,6 +409,7 @@ namespace View
     {
       try
       {
+        _displayingDialog = true;
         using (OpenFileDialog openFileDialog = new OpenFileDialog())
         {
           openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
