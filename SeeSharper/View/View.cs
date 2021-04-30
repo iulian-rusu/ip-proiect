@@ -287,21 +287,35 @@ namespace View
     }
     private void SaveButton_Click(object sender, EventArgs e)
     {
-      _presenter.SaveDrawing();
+      try
+      {
+        _presenter.SaveDrawing();
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message);
+      }
     }
     private void LoadButton_Click(object sender, EventArgs e)
     {
-      using (OpenFileDialog openFileDialog = new OpenFileDialog())
+      try
       {
-        openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
-        openFileDialog.FilterIndex = 2;
-        openFileDialog.RestoreDirectory = true;
-
-        if (openFileDialog.ShowDialog() == DialogResult.OK)
+        using (OpenFileDialog openFileDialog = new OpenFileDialog())
         {
-          string filePath = openFileDialog.FileName;
-          _presenter.LoadDrawing(filePath);
+          openFileDialog.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*";
+          openFileDialog.FilterIndex = 2;
+          openFileDialog.RestoreDirectory = true;
+
+          if (openFileDialog.ShowDialog() == DialogResult.OK)
+          {
+            string filePath = openFileDialog.FileName;
+            _presenter.LoadDrawing(filePath);
+          }
         }
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message);
       }
     }
     private void Timer_Tick(object sender, EventArgs e)

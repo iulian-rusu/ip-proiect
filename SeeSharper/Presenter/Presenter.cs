@@ -19,7 +19,8 @@ namespace Presenter
 {
     using Shared;
     using Strategy;
-    using System.Drawing;
+  using System;
+  using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
 
@@ -93,8 +94,7 @@ namespace Presenter
 
                 if (!IsValidFileName(filename))
                 {
-          MessageBox.Show("Invalid format!");
-                    return;
+                    throw new Exception();
                 }
 
                 _model.SetSaveFileName(filename);
