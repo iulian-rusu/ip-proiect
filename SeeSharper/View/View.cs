@@ -54,10 +54,10 @@ namespace View
       _toolButtons = new Button[]
       {
         eraserButton, brushButton, lineButton, circleButton, ellipseButton,
-        triangleButton, squareButton, rectangleButton, rhombButton,
-        pentagonButton, hexagonButton, starButton, heartButton, 
-        arrowLeftButton, arrowRightButton, arrowUpButton, arrowDownButton,
-        textButton
+        rightTriangleButton, isoscelesTriangleButton, squareButton, 
+        rectangleButton, rhombButton, pentagonButton, hexagonButton, 
+        starButton, heartButton, arrowLeftButton, arrowRightButton, 
+        arrowUpButton, arrowDownButton, textButton
       };
     }
     /// <summary>
@@ -351,29 +351,30 @@ namespace View
       UpdateToolButtons(arrowDownButton);
       _presenter.ChoosePaintingTool(PaintingTool.ArrowDown, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void PentagonButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(pentagonButton);
       _presenter.ChoosePaintingTool(PaintingTool.Pentagon, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void HexagonButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(hexagonButton);
       _presenter.ChoosePaintingTool(PaintingTool.Hexagon, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void RhombButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(rhombButton);
       _presenter.ChoosePaintingTool(PaintingTool.Rhomb, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
-    private void TriangleButton_Click(object sender, EventArgs e)
+    private void RightTriangleButton_Click(object sender, EventArgs e)
     {
-      UpdateToolButtons(triangleButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Triangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
+      UpdateToolButtons(rightTriangleButton);
+      _presenter.ChoosePaintingTool(PaintingTool.RightTriangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
+    }
+    private void IsoscelesTriangleButton_Click(object sender, EventArgs e)
+    {
+      UpdateToolButtons(isoscelesTriangleButton);
+      _presenter.ChoosePaintingTool(PaintingTool.IsoscelesTriangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void SaveButton_Click(object sender, EventArgs e)
     {
