@@ -1,4 +1,9 @@
 doxygen-output/* linguist-vendored=true
 ./doxygen-output/* linguist-vendored=true
-*.html linguist-detectable=false
-*.tex linguist-detectable=false
+*.js linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
+*.tex linguist-vendored
+*.eps linguist-vendored
+*.bat linguist-vendored
+Makefile linguist-vendored

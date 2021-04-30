@@ -16,227 +16,222 @@
 
 namespace Model
 {
-  using Memento;
-  using Shared;
-  using Strategy;
-  using System;
-  using System.Drawing;
-  using System.Drawing.Imaging;
-  using System.IO;
-  using System.Windows.Forms;
-
-  /// <summary>
-  /// Model class - contains the data, state and logic of the application.
-  /// </summary>
-  public class Model : IModel
-  {
-    #region Private Fields
-    private string _saveFileName;
-    private UndoStack _undoStack;
-    #endregion
-
-    #region Constructor
-    /// <summary>
-    /// Constructor for the model - initializes the undo stack
-    /// </summary>
-    public Model()
-    {
-      _undoStack = new UndoStack();
-    }
-    #endregion
-
-    #region Public Methods
+    using Memento;
+    using Shared;
+    using Strategy;
+    using System;
+    using System.Drawing;
+    using System.Drawing.Imaging;
+    using System.IO;
 
     /// <summary>
-    /// Returns the strategy for a painting tool
+    /// Model class - contains the data, state and logic of the application.
     /// </summary>
-    /// <param name="paintingTool">The given painting tool</param>
-    /// <returns>The strategy corresponding to the painting tool</returns>
-    public Strategy GetPaintingStrategy(PaintingTool paintingTool)
+    public class Model : IModel
     {
-      Strategy strategy = null;
+        #region Private Fields
+        private string _saveFileName;
+        private UndoStack _undoStack;
+        #endregion
 
-      switch (paintingTool)
-      {
-        case PaintingTool.Brush:
-          strategy = new BrushStrategy();
-          break;
-        case PaintingTool.Line:
-          strategy = new LineStrategy();
-          break;
-        case PaintingTool.Circle:
-          strategy = new CircleStrategy();
-          break;
-        case PaintingTool.Ellipse:
-          strategy = new ElipseStrategy();
-          break;
-        case PaintingTool.Square:
-          strategy = new SquareStrategy();
-          break;
-        case PaintingTool.Rectangle:
-          strategy = new RectangleStrategy();
-          break;
-        default:
-          MessageBox.Show("Error: Invalid painting tool.");
-          break;
-      }
-
-      return strategy;
-    }
-
-    /// <summary>
-    /// Checks if a file name has been given when saving the drawing.
-    /// </summary>
-    /// <returns>Boolean value of the stated scenario</returns>
-    public bool HasSaveFileName()
-    {
-      bool hasSaveFileName = false;
-
-      if (_saveFileName != null)
-      {
-        hasSaveFileName = true;
-      }
-
-      return hasSaveFileName;
-    }
-
-    /// <summary>
-    /// Loads a drawing from the given path
-    /// </summary>
-    /// <param name="filename">Drawing path on disk</param>
-    /// <returns>The drawing at the given path</returns>
-    public DrawingMemento LoadDrawing(string filename)
-    {
-      DrawingMemento loadedDrawing = null;
-
-      try
-      {
-        loadedDrawing = new DrawingMemento(Image.FromFile(filename), "Loaded " + filename);
-      }
-      catch (ArgumentException argumentException)
-      {
-        throw new Exception("Error: Invalid path -> " + argumentException.Message);
-
-      }
-      catch (FileNotFoundException fileNotFoundException)
-      {
-        throw new Exception("Error: File not found to load drawing -> " + fileNotFoundException.Message);
-      }
-      catch (System.OutOfMemoryException outOfMemoryException)
-      {
-        throw new Exception("Error: Out of memory-> " + outOfMemoryException.Message);
-      }
-
-      return loadedDrawing;
-    }
-
-    /// <summary>
-    /// Redoes the last undone action
-    /// </summary>
-    /// <returns>The drawing with the corresponding content</returns>
-    public DrawingMemento Redo()
-    {
-      return _undoStack.Redo();
-    }
-
-    /// <summary>
-    /// Saves a drawing at the path mentioned in _saveFileName
-    /// </summary>
-    /// <param name="drawingMemento">The drawing</param>
-    /// <returns>void</returns>
-    public void SaveDrawing(DrawingMemento drawingMemento)
-    {
-
-      if (HasSaveFileName() == true)
-      {
-        ImageFormat drawingFormat;
-        string drawingExtension = string.Empty;
-
-        try
+        #region Constructor
+        /// <summary>
+        /// Constructor for the model - initializes the undo stack
+        /// </summary>
+        public Model()
         {
-          drawingExtension = Path.GetExtension(_saveFileName);
+            _undoStack = new UndoStack();
         }
-        catch (System.ArgumentException argumentException)
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Returns the strategy for a painting tool
+        /// </summary>
+        /// <param name="paintingTool">The given painting tool</param>
+        /// <returns>The strategy corresponding to the painting tool</returns>
+        public Strategy GetPaintingStrategy(PaintingTool paintingTool)
         {
-          MessageBox.Show("Error! -> " + argumentException.Message);
+            Strategy paintingStrategy = null;
+
+            switch (paintingTool)
+            {
+                case PaintingTool.Brush:
+                    paintingStrategy = new BrushStrategy();
+                    break;
+                case PaintingTool.Line:
+                    paintingStrategy = new LineStrategy();
+                    break;
+                case PaintingTool.Circle:
+                    paintingStrategy = new CircleStrategy();
+                    break;
+                case PaintingTool.Ellipse:
+                    paintingStrategy = new ElipseStrategy();
+                    break;
+                case PaintingTool.Square:
+                    paintingStrategy = new SquareStrategy();
+                    break;
+                case PaintingTool.Rectangle:
+                    paintingStrategy = new RectangleStrategy();
+                    break;
+                    // no default case is required as possible values are found in an enum and cannot be given incorrectly
+            }
+
+            return paintingStrategy;
         }
 
-        switch (drawingExtension)
+        /// <summary>
+        /// Checks if a file name has been given when saving the drawing.
+        /// </summary>
+        /// <returns>Boolean value of the stated scenario</returns>
+        public bool HasSaveFileName()
         {
-          case ".png":
-            drawingFormat = ImageFormat.Png;
-            break;
-          case ".bmp":
-            drawingFormat = ImageFormat.Bmp;
-            break;
-          default:
-            MessageBox.Show("Error: invalid format.");
-            return;
+            bool hasSaveFileName = false;
+
+            if (_saveFileName != null)
+            {
+                hasSaveFileName = true;
+            }
+
+            return hasSaveFileName;
         }
 
-        drawingMemento.Drawing.Save(_saveFileName, drawingFormat);
-        _undoStack.Drop();
-        _undoStack.Add(drawingMemento);
-      }
-    }
+        /// <summary>
+        /// Loads a drawing from the given path
+        /// </summary>
+        /// <param name="filename">Drawing path on disk</param>
+        /// <returns>The drawing at the given path</returns>
+        public DrawingMemento LoadDrawing(string filename)
+        {
+            DrawingMemento loadedDrawing = null;
 
-    /// <summary>
-    /// Setter for the drawing file save path
-    /// </summary>
-    /// <param name="saveFileName">The wished path</param>
-    /// <returns>void</returns>
-    public void SetSaveFileName(string saveFileName)
-    {
-      _saveFileName = saveFileName;
-    }
+            try
+            {
+                loadedDrawing = new DrawingMemento(Image.FromFile(filename), "Loaded " + filename);
+            }
+            catch (ArgumentException argumentException)
+            {
+                throw new Exception("Error: Invalid path -> " + argumentException.Message);
+            }
+            catch (FileNotFoundException fileNotFoundException)
+            {
+                throw new Exception("Error: File not found to load drawing -> " + fileNotFoundException.Message);
+            }
+            catch (OutOfMemoryException outOfMemoryException)
+            {
+                throw new Exception("Error: Out of memory-> " + outOfMemoryException.Message);
+            }
 
-    /// <summary>
-    /// Undoes the last done action
-    /// </summary>
-    /// <returns>The drawing with the corresponding content</returns>
-    public DrawingMemento Undo()
-    {
-      return _undoStack.Undo();
-    }
+            return loadedDrawing;
+        }
+
+        /// <summary>
+        /// Redoes the last undone action
+        /// </summary>
+        /// <returns>The drawing with the corresponding content</returns>
+        public DrawingMemento Redo()
+        {
+            return _undoStack.Redo();
+        }
+
+        /// <summary>
+        /// Saves a drawing at the path mentioned in _saveFileName
+        /// </summary>
+        /// <param name="drawingMemento">The drawing</param>
+        /// <returns>void</returns>
+        public void SaveDrawing(DrawingMemento drawingMemento)
+        {
+
+            if (HasSaveFileName() == true)
+            {
+                ImageFormat drawingFormat;
+                string drawingExtension = string.Empty;
+
+                try
+                {
+                    drawingExtension = Path.GetExtension(_saveFileName);
+                }
+                catch (ArgumentException argumentException)
+                {
+                    throw new Exception("Error: Invalid path -> " + argumentException.Message);
+                }
+
+                switch (drawingExtension)
+                {
+                    case ".png":
+                        drawingFormat = ImageFormat.Png;
+                        break;
+                    case ".bmp":
+                        drawingFormat = ImageFormat.Bmp;
+                        break;
+                    default:
+                        throw new Exception("Error: Unsupported extension");
+                }
+
+                drawingMemento.Drawing.Save(_saveFileName, drawingFormat);
+                DropMementos();
+                AddMemento(drawingMemento);
+            }
+        }
+
+        /// <summary>
+        /// Setter for the drawing file save path
+        /// </summary>
+        /// <param name="saveFileName">The wished path</param>
+        /// <returns>void</returns>
+        public void SetSaveFileName(string saveFileName)
+        {
+            _saveFileName = saveFileName;
+        }
+
+        /// <summary>
+        /// Undoes the last done action
+        /// </summary>
+        /// <returns>The drawing with the corresponding content</returns>
+        public DrawingMemento Undo()
+        {
+            return _undoStack.Undo();
+        }
 
 
-    /// <summary>
-    /// Function used to add a drawing memento to the event stack
-    /// </summary>
-    /// <param name="memento">The memento to be added on the stack</param>
-    /// <returns>void</returns>
-    public void AddMemento(DrawingMemento memento)
-    {
-      _undoStack.Add(memento);
-    }
+        /// <summary>
+        /// Function used to add a drawing memento to the event stack
+        /// </summary>
+        /// <param name="memento">The memento to be added on the stack</param>
+        /// <returns>void</returns>
+        public void AddMemento(DrawingMemento memento)
+        {
+            _undoStack.Add(memento);
+        }
 
-    /// <summary>
-    /// Used to get the description of the next undo that's on the stack
-    /// </summary>
-    /// <returns>The description of the next undo on the stack</returns>
-    public string GetNextUndoDescription()
-    {
-      return _undoStack.GetNextUndoDescription();
-    }
+        /// <summary>
+        /// Used to get the description of the next undo that's on the stack
+        /// </summary>
+        /// <returns>The description of the next undo on the stack</returns>
+        public string GetNextUndoDescription()
+        {
+            return _undoStack.GetNextUndoDescription();
+        }
 
-    /// <summary>
-    /// Used to get the description of the next redo that's on the stack
-    /// </summary>
-    /// <returns>The description of the next redo on the stack</returns>
-    public string GetNextRedoDescription()
-    {
-      return _undoStack.GetNextRedoDescription();
-    }
+        /// <summary>
+        /// Used to get the description of the next redo that's on the stack
+        /// </summary>
+        /// <returns>The description of the next redo on the stack</returns>
+        public string GetNextRedoDescription()
+        {
+            return _undoStack.GetNextRedoDescription();
+        }
 
-    /// <summary>
-    /// Wrapper for the undo stack drop(clear) function
-    /// </summary>
-    /// <returns>void</returns>
-    public void DropMementos()
-    {
-      _undoStack.Drop();
+        /// <summary>
+        /// Wrapper for the undo stack drop(clear) function
+        /// </summary>
+        /// <returns>void</returns>
+        public void DropMementos()
+        {
+            _undoStack.Drop();
+        }
+        #endregion
     }
-    #endregion
-  }
 
 }

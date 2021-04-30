@@ -20,136 +20,138 @@ using System.Collections.Generic;
 
 namespace Model
 {
-  /// <summary>
-  /// Undo stack - logic for the undo/redo process
-  /// </summary>
-  public class UndoStack
-  {
-    #region Private Fields
-    private LinkedList<DrawingMemento> _stack;
-    private LinkedListNode<DrawingMemento> _current;
-    #endregion
-
-    #region Constructor
     /// <summary>
-    /// Constructor for the undo stack - initializes the double linked list used
-    /// to store different states of the image
+    /// Undo stack - logic for the undo/redo process
     /// </summary>
-    public UndoStack()
+    public class UndoStack
     {
-      _stack = new LinkedList<DrawingMemento>();
-    }
-    #endregion
+        #region Private Fields
+        private LinkedList<DrawingMemento> _stack;
+        private LinkedListNode<DrawingMemento> _current;
+        #endregion
 
-    #region Public Methods
-
-    /// <summary>
-    /// Adds a drawing to the state stack
-    /// </summary>
-    /// <param name="drawing">The saved drawing</param>
-    /// <returns>void</returns>
-    public void Add(DrawingMemento drawing)
-    {
-      if (_stack.Count != 0 && _current != null)
-      {
-        while (_current != _stack.Last)
+        #region Constructor
+        /// <summary>
+        /// Constructor for the undo stack - initializes the double linked list used
+        /// to store different states of the image
+        /// </summary>
+        public UndoStack()
         {
-          _stack.RemoveLast();
+            _stack = new LinkedList<DrawingMemento>();
         }
-      }
+        #endregion
 
-      _stack.AddLast(drawing);
-      _current = _stack.Last;
-    }
+        #region Public Methods
 
-    /// <summary>
-    /// Clears the stack of all elements
-    /// </summary>
-    /// <returns>void</returns>
-    public void Drop()
-    {
-      _stack.Clear();
-    }
-
-    /// <summary>
-    /// Undoes the last drawing action
-    /// </summary>
-    /// <returns>The state of the drawing before the last done action</returns>
-    public DrawingMemento Undo()
-    {
-      DrawingMemento undoneMemento = null;
-
-      if (_current != null)
-      {
-
-        if (_current.Previous != null)
+        /// <summary>
+        /// Adds a drawing to the state stack
+        /// </summary>
+        /// <param name="drawing">The saved drawing</param>
+        /// <returns>void</returns>
+        public void Add(DrawingMemento drawing)
         {
-          _current = _current.Previous;
-        }
-        undoneMemento = _current.Value;
-      }
+            if (_stack.Count != 0 && _current != null)
+            {
+                while (_current != _stack.Last)
+                {
+                    _stack.RemoveLast();
+                }
+            }
 
-      return undoneMemento;
-    }
-
-    /// <summary>
-    /// Redoes the last undone drawing action
-    /// </summary>
-    /// <returns>The state of the drawing before the last undo action</returns>
-    public DrawingMemento Redo()
-    {
-      DrawingMemento redoneMemento = null;
-
-      if (_current != null)
-      {
-
-        if (_current.Next != null)
-        {
-          _current = _current.Next;
+            _stack.AddLast(drawing);
+            _current = _stack.Last;
         }
 
-        redoneMemento = _current.Value;
-      }
-
-      return redoneMemento;
-    }
-
-    /// <summary>
-    /// Used to get the description of the next undo
-    /// </summary>
-    /// <returns>The description of the next undo</returns>
-    public string GetNextUndoDescription()
-    {
-      string description = string.Empty;
-
-      if (_current != null)
-      {
-        description = _current.Value.Description;
-      }
-
-      return description;
-    }
-
-    /// <summary>
-    /// Used to get the description of the next redo
-    /// </summary>
-    /// <returns>The description of the next redo</returns>
-    public string GetNextRedoDescription()
-    {
-      string description = string.Empty;
-
-      if (_current != null)
-      {
-
-        if (_current.Next != null)
+        /// <summary>
+        /// Clears the stack of all elements
+        /// </summary>
+        /// <returns>void</returns>
+        public void Drop()
         {
-          description = _current.Next.Value.Description;
+            _stack.Clear();
         }
 
-      }
+        /// <summary>
+        /// Undoes the last drawing action
+        /// </summary>
+        /// <returns>The state of the drawing before the last done action</returns>
+        public DrawingMemento Undo()
+        {
+            DrawingMemento undoneMemento = null;
 
-      return description;
+            if (_current != null)
+            {
+
+                if (_current.Previous != null)
+                {
+                    _current = _current.Previous;
+                }
+
+                undoneMemento = _current.Value;
+
+            }
+
+            return undoneMemento;
+        }
+
+        /// <summary>
+        /// Redoes the last undone drawing action
+        /// </summary>
+        /// <returns>The state of the drawing before the last undo action</returns>
+        public DrawingMemento Redo()
+        {
+            DrawingMemento redoneMemento = null;
+
+            if (_current != null)
+            {
+
+                if (_current.Next != null)
+                {
+                    _current = _current.Next;
+                }
+
+                redoneMemento = _current.Value;
+            }
+
+            return redoneMemento;
+        }
+
+        /// <summary>
+        /// Used to get the description of the next undo
+        /// </summary>
+        /// <returns>The description of the next undo</returns>
+        public string GetNextUndoDescription()
+        {
+            string description = string.Empty;
+
+            if (_current != null)
+            {
+                description = _current.Value.Description;
+            }
+
+            return description;
+        }
+
+        /// <summary>
+        /// Used to get the description of the next redo
+        /// </summary>
+        /// <returns>The description of the next redo</returns>
+        public string GetNextRedoDescription()
+        {
+            string description = string.Empty;
+
+            if (_current != null)
+            {
+
+                if (_current.Next != null)
+                {
+                    description = _current.Next.Value.Description;
+                }
+
+            }
+
+            return description;
+        }
+        #endregion
     }
-    #endregion
-  }
 }

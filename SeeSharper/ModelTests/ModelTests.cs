@@ -1,6 +1,6 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        ModelTests                                               *
+ *  File:        ModelTests.cs                                            *
  *  Copyright:   (c) 2021, Baltariu Ionut-Alexandru                       *
  *  E-mail:      ionut-alexandru.baltariu@student.tuiasi.ro               *
  *  Description: Used to unit test the Model class                        *
@@ -64,12 +64,14 @@ namespace Model.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(Exception))]
         public void LoadDrawingTestFileNotFound()
         {
             Assert.IsNull(_model.LoadDrawing("\\"));
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(Exception))]
         public void LoadDrawingTestInvalidPath()
         {
             Assert.IsNull(_model.LoadDrawing(""));
@@ -84,13 +86,38 @@ namespace Model.Tests
         }
 
         [TestMethod()]
-        public void GetPaintingStrategyTests()
+        public void GetPaintingStrategyTestsBrushStrategy()
         {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Brush), typeof(BrushStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsLineStrategy()
+        {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Line), typeof(LineStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsCircleStrategy()
+        {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Circle), typeof(CircleStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsElipseStrategy()
+        {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Ellipse), typeof(ElipseStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsSquareStrategy()
+        {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Square), typeof(SquareStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsRectangleStrategy()
+        {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Rectangle), typeof(RectangleStrategy));
         }
 
@@ -106,7 +133,7 @@ namespace Model.Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(FileNotFoundException))]
+        [ExpectedException(typeof(Exception))]
         public void SaveDrawingTestInvalidExtension()
         {
             string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
@@ -198,13 +225,18 @@ namespace Model.Tests
             Assert.AreEqual(description, _model.GetNextUndoDescription());
         }
 
-        public void UndoRedoWithEmptyStack()
+        // the purpose of these tests is to assure that there are no problems when calling undo and redo related methods
+        // when the event stack (undo stack) is empty
+        [TestMethod()]
+        public void UndoWithEmptyStack()
         {
-            // the purpose of these tests is to assure that there are no problems when calling undo and redo related methods
-            // when the event stack (undo stack) is empty
             _model.Undo();
             Assert.AreEqual(String.Empty, _model.GetNextRedoDescription());
+        }
 
+        [TestMethod()]
+        public void RedoWithEmptyStack()
+        {
             _model.Redo();
             Assert.AreEqual(String.Empty, _model.GetNextUndoDescription());
         }
