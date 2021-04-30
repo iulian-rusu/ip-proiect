@@ -217,10 +217,18 @@ namespace View
 
     private void RedoButton_Click(object sender, EventArgs e)
     {
+      Redo();
+    }
+    private void Redo()
+    {
       _presenter.Redo();
     }
 
     private void UndoButton_Click(object sender, EventArgs e)
+    {
+      Undo();
+    }
+    private void Undo()
     {
       _presenter.Undo();
     }
@@ -349,6 +357,10 @@ namespace View
     }
     private void SaveButton_Click(object sender, EventArgs e)
     {
+      SaveDrawing();
+    }
+    private void SaveDrawing()
+    {
       try
       {
         _presenter.SaveDrawing();
@@ -359,6 +371,10 @@ namespace View
       }
     }
     private void LoadButton_Click(object sender, EventArgs e)
+    {
+      LoadDrawing();
+    }
+    private void LoadDrawing()
     {
       try
       {
@@ -377,7 +393,7 @@ namespace View
       }
       catch (Exception ex)
       {
-        MessageBox.Show(ex.Message);
+        MessageBox.Show("Invalid save file name. More information:\n" + ex.Message);
       }
     }
     private void Timer_Tick(object sender, EventArgs e)
@@ -385,6 +401,10 @@ namespace View
       pictureBox.Refresh();
     }
     private void HelpButton_Click(object sender, EventArgs e)
+    {
+      ShowHelp();
+    }
+    private void ShowHelp()
     {
       // TODO LOAD HELP.CHM
       MessageBox.Show("Help", "Help");
@@ -422,6 +442,29 @@ namespace View
     private void ThicknessTrackBar_Scroll(object sender, EventArgs e)
     {
       _presenter.ThicknessChanged(thicknessTrackBar.Value);
+    }
+    private void View_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.H && e.Control)
+      {
+        ShowHelp();
+      }
+      else if (e.KeyCode == Keys.S && e.Control)
+      {
+        SaveDrawing();
+      }
+      else if (e.KeyCode == Keys.L && e.Control)
+      {
+        LoadDrawing();
+      }
+      else if (e.KeyCode == Keys.Z && e.Control)
+      {
+        Undo();
+      }
+      else if (e.KeyCode == Keys.Y && e.Control)
+      {
+        Redo();
+      }
     }
     #endregion
   }

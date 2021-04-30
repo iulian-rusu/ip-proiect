@@ -41,23 +41,6 @@ namespace View
       this.redoButton = new System.Windows.Forms.Button();
       this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
       this.toolsAndShapesLabel = new System.Windows.Forms.Label();
-      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
-      this.helpButton = new System.Windows.Forms.Button();
-      this.loadButton = new System.Windows.Forms.Button();
-      this.saveButton = new System.Windows.Forms.Button();
-      this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-      this.editColorLabel = new System.Windows.Forms.Label();
-      this.borderColorButton = new System.Windows.Forms.Button();
-      this.fillColorButton = new System.Windows.Forms.Button();
-      this.borderColorLabel = new System.Windows.Forms.Label();
-      this.fillColorLabel = new System.Windows.Forms.Label();
-      this.propertiesGroupBox = new System.Windows.Forms.GroupBox();
-      this.fillCheckBox = new System.Windows.Forms.CheckBox();
-      this.thicknessLabel = new System.Windows.Forms.Label();
-      this.thicknessTrackBar = new System.Windows.Forms.TrackBar();
-      this.colorDialog = new System.Windows.Forms.ColorDialog();
-      this.timer = new System.Windows.Forms.Timer(this.components);
-      this.pictureBox = new System.Windows.Forms.PictureBox();
       this.eraserButton = new System.Windows.Forms.Button();
       this.brushButton = new System.Windows.Forms.Button();
       this.lineButton = new System.Windows.Forms.Button();
@@ -76,7 +59,24 @@ namespace View
       this.arrowUpButton = new System.Windows.Forms.Button();
       this.arrowDownButton = new System.Windows.Forms.Button();
       this.textButton = new System.Windows.Forms.Button();
+      this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
+      this.helpButton = new System.Windows.Forms.Button();
+      this.loadButton = new System.Windows.Forms.Button();
+      this.saveButton = new System.Windows.Forms.Button();
+      this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+      this.editColorLabel = new System.Windows.Forms.Label();
+      this.borderColorButton = new System.Windows.Forms.Button();
+      this.fillColorButton = new System.Windows.Forms.Button();
       this.editColorButton = new System.Windows.Forms.Button();
+      this.borderColorLabel = new System.Windows.Forms.Label();
+      this.fillColorLabel = new System.Windows.Forms.Label();
+      this.propertiesGroupBox = new System.Windows.Forms.GroupBox();
+      this.fillCheckBox = new System.Windows.Forms.CheckBox();
+      this.thicknessLabel = new System.Windows.Forms.Label();
+      this.thicknessTrackBar = new System.Windows.Forms.TrackBar();
+      this.colorDialog = new System.Windows.Forms.ColorDialog();
+      this.timer = new System.Windows.Forms.Timer(this.components);
+      this.pictureBox = new System.Windows.Forms.PictureBox();
       this.mainTableLayoutPanel.SuspendLayout();
       this.undoRedoTableLayoutPanel.SuspendLayout();
       this.undoGroupBox.SuspendLayout();
@@ -226,196 +226,6 @@ namespace View
       this.toolsAndShapesLabel.Size = new System.Drawing.Size(93, 13);
       this.toolsAndShapesLabel.TabIndex = 6;
       this.toolsAndShapesLabel.Text = "Tools and Shapes";
-      // 
-      // saveLoadGroupBox
-      // 
-      this.saveLoadGroupBox.Controls.Add(this.helpButton);
-      this.saveLoadGroupBox.Controls.Add(this.loadButton);
-      this.saveLoadGroupBox.Controls.Add(this.saveButton);
-      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.saveLoadGroupBox.Location = new System.Drawing.Point(1442, 3);
-      this.saveLoadGroupBox.Name = "saveLoadGroupBox";
-      this.saveLoadGroupBox.Size = new System.Drawing.Size(139, 94);
-      this.saveLoadGroupBox.TabIndex = 3;
-      this.saveLoadGroupBox.TabStop = false;
-      this.saveLoadGroupBox.Text = "File";
-      // 
-      // helpButton
-      // 
-      this.helpButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.helpButton.Location = new System.Drawing.Point(3, 62);
-      this.helpButton.Name = "helpButton";
-      this.helpButton.Size = new System.Drawing.Size(133, 23);
-      this.helpButton.TabIndex = 3;
-      this.helpButton.Text = "Help";
-      this.helpButton.UseVisualStyleBackColor = true;
-      this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
-      // 
-      // loadButton
-      // 
-      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.loadButton.Location = new System.Drawing.Point(3, 39);
-      this.loadButton.Name = "loadButton";
-      this.loadButton.Size = new System.Drawing.Size(133, 23);
-      this.loadButton.TabIndex = 2;
-      this.loadButton.Text = "Load";
-      this.loadButton.UseVisualStyleBackColor = true;
-      this.loadButton.Click += new System.EventHandler(this.LoadButton_Click);
-      // 
-      // saveButton
-      // 
-      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
-      this.saveButton.Location = new System.Drawing.Point(3, 16);
-      this.saveButton.Name = "saveButton";
-      this.saveButton.Size = new System.Drawing.Size(133, 23);
-      this.saveButton.TabIndex = 0;
-      this.saveButton.Text = "Save";
-      this.saveButton.UseVisualStyleBackColor = true;
-      this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
-      // 
-      // tableLayoutPanel1
-      // 
-      this.tableLayoutPanel1.ColumnCount = 3;
-      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-      this.tableLayoutPanel1.Controls.Add(this.editColorLabel, 2, 0);
-      this.tableLayoutPanel1.Controls.Add(this.borderColorButton, 0, 1);
-      this.tableLayoutPanel1.Controls.Add(this.fillColorButton, 1, 1);
-      this.tableLayoutPanel1.Controls.Add(this.editColorButton, 2, 1);
-      this.tableLayoutPanel1.Controls.Add(this.borderColorLabel, 0, 0);
-      this.tableLayoutPanel1.Controls.Add(this.fillColorLabel, 1, 0);
-      this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-      this.tableLayoutPanel1.Location = new System.Drawing.Point(718, 3);
-      this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-      this.tableLayoutPanel1.RowCount = 2;
-      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.02128F));
-      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.97872F));
-      this.tableLayoutPanel1.Size = new System.Drawing.Size(241, 94);
-      this.tableLayoutPanel1.TabIndex = 4;
-      // 
-      // editColorLabel
-      // 
-      this.editColorLabel.AutoSize = true;
-      this.editColorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.editColorLabel.Location = new System.Drawing.Point(163, 0);
-      this.editColorLabel.Name = "editColorLabel";
-      this.editColorLabel.Size = new System.Drawing.Size(75, 16);
-      this.editColorLabel.TabIndex = 6;
-      this.editColorLabel.Text = "Edit Color";
-      this.editColorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      // 
-      // borderColorButton
-      // 
-      this.borderColorButton.BackColor = System.Drawing.Color.Lime;
-      this.borderColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.borderColorButton.Location = new System.Drawing.Point(3, 19);
-      this.borderColorButton.Name = "borderColorButton";
-      this.borderColorButton.Size = new System.Drawing.Size(74, 72);
-      this.borderColorButton.TabIndex = 1;
-      this.borderColorButton.UseVisualStyleBackColor = false;
-      this.borderColorButton.Click += new System.EventHandler(this.BorderColorButton_Click);
-      // 
-      // fillColorButton
-      // 
-      this.fillColorButton.BackColor = System.Drawing.Color.Red;
-      this.fillColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.fillColorButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-      this.fillColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-      this.fillColorButton.Location = new System.Drawing.Point(83, 19);
-      this.fillColorButton.Name = "fillColorButton";
-      this.fillColorButton.Size = new System.Drawing.Size(74, 72);
-      this.fillColorButton.TabIndex = 0;
-      this.fillColorButton.UseVisualStyleBackColor = false;
-      this.fillColorButton.Click += new System.EventHandler(this.FillColorButton_Click);
-      // 
-      // borderColorLabel
-      // 
-      this.borderColorLabel.AutoSize = true;
-      this.borderColorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.borderColorLabel.Location = new System.Drawing.Point(3, 0);
-      this.borderColorLabel.Name = "borderColorLabel";
-      this.borderColorLabel.Size = new System.Drawing.Size(74, 16);
-      this.borderColorLabel.TabIndex = 4;
-      this.borderColorLabel.Text = "Border Color";
-      this.borderColorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      // 
-      // fillColorLabel
-      // 
-      this.fillColorLabel.AutoSize = true;
-      this.fillColorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.fillColorLabel.Location = new System.Drawing.Point(83, 0);
-      this.fillColorLabel.Name = "fillColorLabel";
-      this.fillColorLabel.Size = new System.Drawing.Size(74, 16);
-      this.fillColorLabel.TabIndex = 5;
-      this.fillColorLabel.Text = "Fill Color";
-      this.fillColorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      // 
-      // propertiesGroupBox
-      // 
-      this.propertiesGroupBox.Controls.Add(this.fillCheckBox);
-      this.propertiesGroupBox.Controls.Add(this.thicknessLabel);
-      this.propertiesGroupBox.Controls.Add(this.thicknessTrackBar);
-      this.propertiesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.propertiesGroupBox.Location = new System.Drawing.Point(415, 3);
-      this.propertiesGroupBox.Name = "propertiesGroupBox";
-      this.propertiesGroupBox.Size = new System.Drawing.Size(296, 94);
-      this.propertiesGroupBox.TabIndex = 5;
-      this.propertiesGroupBox.TabStop = false;
-      // 
-      // fillCheckBox
-      // 
-      this.fillCheckBox.AutoSize = true;
-      this.fillCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-      this.fillCheckBox.Location = new System.Drawing.Point(3, 74);
-      this.fillCheckBox.Name = "fillCheckBox";
-      this.fillCheckBox.Size = new System.Drawing.Size(290, 17);
-      this.fillCheckBox.TabIndex = 9;
-      this.fillCheckBox.Text = "Fill";
-      this.fillCheckBox.UseVisualStyleBackColor = true;
-      this.fillCheckBox.CheckedChanged += new System.EventHandler(this.FillCheckBox_CheckedChanged);
-      // 
-      // thicknessLabel
-      // 
-      this.thicknessLabel.AutoSize = true;
-      this.thicknessLabel.Dock = System.Windows.Forms.DockStyle.Top;
-      this.thicknessLabel.Location = new System.Drawing.Point(3, 16);
-      this.thicknessLabel.Name = "thicknessLabel";
-      this.thicknessLabel.Size = new System.Drawing.Size(56, 13);
-      this.thicknessLabel.TabIndex = 8;
-      this.thicknessLabel.Text = "Thickness";
-      this.thicknessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-      // 
-      // thicknessTrackBar
-      // 
-      this.thicknessTrackBar.Location = new System.Drawing.Point(0, 32);
-      this.thicknessTrackBar.Maximum = 20;
-      this.thicknessTrackBar.Minimum = 1;
-      this.thicknessTrackBar.Name = "thicknessTrackBar";
-      this.thicknessTrackBar.Size = new System.Drawing.Size(290, 45);
-      this.thicknessTrackBar.TabIndex = 5;
-      this.thicknessTrackBar.Value = 1;
-      this.thicknessTrackBar.Scroll += new System.EventHandler(this.ThicknessTrackBar_Scroll);
-      // 
-      // timer
-      // 
-      this.timer.Enabled = true;
-      this.timer.Interval = 10;
-      this.timer.Tick += new System.EventHandler(this.Timer_Tick);
-      // 
-      // pictureBox
-      // 
-      this.pictureBox.BackColor = System.Drawing.Color.White;
-      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.pictureBox.Image = global::View.Properties.Resources.Background;
-      this.pictureBox.Location = new System.Drawing.Point(0, 100);
-      this.pictureBox.Name = "pictureBox";
-      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
-      this.pictureBox.TabIndex = 1;
-      this.pictureBox.TabStop = false;
-      this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
-      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
-      this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseUp);
       // 
       // eraserButton
       // 
@@ -598,6 +408,108 @@ namespace View
       this.textButton.UseVisualStyleBackColor = true;
       this.textButton.Click += new System.EventHandler(this.TextButton_Click);
       // 
+      // saveLoadGroupBox
+      // 
+      this.saveLoadGroupBox.Controls.Add(this.helpButton);
+      this.saveLoadGroupBox.Controls.Add(this.loadButton);
+      this.saveLoadGroupBox.Controls.Add(this.saveButton);
+      this.saveLoadGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.saveLoadGroupBox.Location = new System.Drawing.Point(1442, 3);
+      this.saveLoadGroupBox.Name = "saveLoadGroupBox";
+      this.saveLoadGroupBox.Size = new System.Drawing.Size(139, 94);
+      this.saveLoadGroupBox.TabIndex = 3;
+      this.saveLoadGroupBox.TabStop = false;
+      this.saveLoadGroupBox.Text = "File";
+      // 
+      // helpButton
+      // 
+      this.helpButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.helpButton.Location = new System.Drawing.Point(3, 62);
+      this.helpButton.Name = "helpButton";
+      this.helpButton.Size = new System.Drawing.Size(133, 23);
+      this.helpButton.TabIndex = 3;
+      this.helpButton.Text = "Help";
+      this.helpButton.UseVisualStyleBackColor = true;
+      this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
+      // 
+      // loadButton
+      // 
+      this.loadButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.loadButton.Location = new System.Drawing.Point(3, 39);
+      this.loadButton.Name = "loadButton";
+      this.loadButton.Size = new System.Drawing.Size(133, 23);
+      this.loadButton.TabIndex = 2;
+      this.loadButton.Text = "Load";
+      this.loadButton.UseVisualStyleBackColor = true;
+      this.loadButton.Click += new System.EventHandler(this.LoadButton_Click);
+      // 
+      // saveButton
+      // 
+      this.saveButton.Dock = System.Windows.Forms.DockStyle.Top;
+      this.saveButton.Location = new System.Drawing.Point(3, 16);
+      this.saveButton.Name = "saveButton";
+      this.saveButton.Size = new System.Drawing.Size(133, 23);
+      this.saveButton.TabIndex = 0;
+      this.saveButton.Text = "Save";
+      this.saveButton.UseVisualStyleBackColor = true;
+      this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
+      // 
+      // tableLayoutPanel1
+      // 
+      this.tableLayoutPanel1.ColumnCount = 3;
+      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+      this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+      this.tableLayoutPanel1.Controls.Add(this.editColorLabel, 2, 0);
+      this.tableLayoutPanel1.Controls.Add(this.borderColorButton, 0, 1);
+      this.tableLayoutPanel1.Controls.Add(this.fillColorButton, 1, 1);
+      this.tableLayoutPanel1.Controls.Add(this.editColorButton, 2, 1);
+      this.tableLayoutPanel1.Controls.Add(this.borderColorLabel, 0, 0);
+      this.tableLayoutPanel1.Controls.Add(this.fillColorLabel, 1, 0);
+      this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+      this.tableLayoutPanel1.Location = new System.Drawing.Point(718, 3);
+      this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+      this.tableLayoutPanel1.RowCount = 2;
+      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.02128F));
+      this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.97872F));
+      this.tableLayoutPanel1.Size = new System.Drawing.Size(241, 94);
+      this.tableLayoutPanel1.TabIndex = 4;
+      // 
+      // editColorLabel
+      // 
+      this.editColorLabel.AutoSize = true;
+      this.editColorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.editColorLabel.Location = new System.Drawing.Point(163, 0);
+      this.editColorLabel.Name = "editColorLabel";
+      this.editColorLabel.Size = new System.Drawing.Size(75, 16);
+      this.editColorLabel.TabIndex = 6;
+      this.editColorLabel.Text = "Edit Color";
+      this.editColorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
+      // borderColorButton
+      // 
+      this.borderColorButton.BackColor = System.Drawing.Color.Lime;
+      this.borderColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.borderColorButton.Location = new System.Drawing.Point(3, 19);
+      this.borderColorButton.Name = "borderColorButton";
+      this.borderColorButton.Size = new System.Drawing.Size(74, 72);
+      this.borderColorButton.TabIndex = 1;
+      this.borderColorButton.UseVisualStyleBackColor = false;
+      this.borderColorButton.Click += new System.EventHandler(this.BorderColorButton_Click);
+      // 
+      // fillColorButton
+      // 
+      this.fillColorButton.BackColor = System.Drawing.Color.Red;
+      this.fillColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.fillColorButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+      this.fillColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+      this.fillColorButton.Location = new System.Drawing.Point(83, 19);
+      this.fillColorButton.Name = "fillColorButton";
+      this.fillColorButton.Size = new System.Drawing.Size(74, 72);
+      this.fillColorButton.TabIndex = 0;
+      this.fillColorButton.UseVisualStyleBackColor = false;
+      this.fillColorButton.Click += new System.EventHandler(this.FillColorButton_Click);
+      // 
       // editColorButton
       // 
       this.editColorButton.BackgroundImage = global::View.Properties.Resources.EditButtonBackground;
@@ -609,6 +521,94 @@ namespace View
       this.editColorButton.UseVisualStyleBackColor = true;
       this.editColorButton.Click += new System.EventHandler(this.EditColorButton_Click);
       // 
+      // borderColorLabel
+      // 
+      this.borderColorLabel.AutoSize = true;
+      this.borderColorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.borderColorLabel.Location = new System.Drawing.Point(3, 0);
+      this.borderColorLabel.Name = "borderColorLabel";
+      this.borderColorLabel.Size = new System.Drawing.Size(74, 16);
+      this.borderColorLabel.TabIndex = 4;
+      this.borderColorLabel.Text = "Border Color";
+      this.borderColorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
+      // fillColorLabel
+      // 
+      this.fillColorLabel.AutoSize = true;
+      this.fillColorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.fillColorLabel.Location = new System.Drawing.Point(83, 0);
+      this.fillColorLabel.Name = "fillColorLabel";
+      this.fillColorLabel.Size = new System.Drawing.Size(74, 16);
+      this.fillColorLabel.TabIndex = 5;
+      this.fillColorLabel.Text = "Fill Color";
+      this.fillColorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
+      // propertiesGroupBox
+      // 
+      this.propertiesGroupBox.Controls.Add(this.fillCheckBox);
+      this.propertiesGroupBox.Controls.Add(this.thicknessLabel);
+      this.propertiesGroupBox.Controls.Add(this.thicknessTrackBar);
+      this.propertiesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.propertiesGroupBox.Location = new System.Drawing.Point(415, 3);
+      this.propertiesGroupBox.Name = "propertiesGroupBox";
+      this.propertiesGroupBox.Size = new System.Drawing.Size(296, 94);
+      this.propertiesGroupBox.TabIndex = 5;
+      this.propertiesGroupBox.TabStop = false;
+      // 
+      // fillCheckBox
+      // 
+      this.fillCheckBox.AutoSize = true;
+      this.fillCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+      this.fillCheckBox.Location = new System.Drawing.Point(3, 74);
+      this.fillCheckBox.Name = "fillCheckBox";
+      this.fillCheckBox.Size = new System.Drawing.Size(290, 17);
+      this.fillCheckBox.TabIndex = 9;
+      this.fillCheckBox.Text = "Fill";
+      this.fillCheckBox.UseVisualStyleBackColor = true;
+      this.fillCheckBox.CheckedChanged += new System.EventHandler(this.FillCheckBox_CheckedChanged);
+      // 
+      // thicknessLabel
+      // 
+      this.thicknessLabel.AutoSize = true;
+      this.thicknessLabel.Dock = System.Windows.Forms.DockStyle.Top;
+      this.thicknessLabel.Location = new System.Drawing.Point(3, 16);
+      this.thicknessLabel.Name = "thicknessLabel";
+      this.thicknessLabel.Size = new System.Drawing.Size(56, 13);
+      this.thicknessLabel.TabIndex = 8;
+      this.thicknessLabel.Text = "Thickness";
+      this.thicknessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
+      // thicknessTrackBar
+      // 
+      this.thicknessTrackBar.Location = new System.Drawing.Point(0, 32);
+      this.thicknessTrackBar.Maximum = 20;
+      this.thicknessTrackBar.Minimum = 1;
+      this.thicknessTrackBar.Name = "thicknessTrackBar";
+      this.thicknessTrackBar.Size = new System.Drawing.Size(290, 45);
+      this.thicknessTrackBar.TabIndex = 5;
+      this.thicknessTrackBar.Value = 1;
+      this.thicknessTrackBar.Scroll += new System.EventHandler(this.ThicknessTrackBar_Scroll);
+      // 
+      // timer
+      // 
+      this.timer.Enabled = true;
+      this.timer.Interval = 10;
+      this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+      // 
+      // pictureBox
+      // 
+      this.pictureBox.BackColor = System.Drawing.Color.White;
+      this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.pictureBox.Image = global::View.Properties.Resources.Background;
+      this.pictureBox.Location = new System.Drawing.Point(0, 100);
+      this.pictureBox.Name = "pictureBox";
+      this.pictureBox.Size = new System.Drawing.Size(1584, 661);
+      this.pictureBox.TabIndex = 1;
+      this.pictureBox.TabStop = false;
+      this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+      this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
+      this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseUp);
+      // 
       // View
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,9 +617,11 @@ namespace View
       this.Controls.Add(this.pictureBox);
       this.Controls.Add(this.mainTableLayoutPanel);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.KeyPreview = true;
       this.Name = "View";
       this.Text = "SeeSharper";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.View_FormClosing);
+      this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.View_KeyDown);
       this.mainTableLayoutPanel.ResumeLayout(false);
       this.undoRedoTableLayoutPanel.ResumeLayout(false);
       this.undoGroupBox.ResumeLayout(false);
