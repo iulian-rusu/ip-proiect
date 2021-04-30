@@ -502,6 +502,7 @@ namespace View
       // 
       this.borderColorButton.BackColor = System.Drawing.Color.Blue;
       this.borderColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.borderColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.borderColorButton.Location = new System.Drawing.Point(3, 19);
       this.borderColorButton.Name = "borderColorButton";
       this.borderColorButton.Size = new System.Drawing.Size(74, 72);
@@ -514,7 +515,6 @@ namespace View
       this.fillColorButton.BackColor = System.Drawing.Color.Red;
       this.fillColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
       this.fillColorButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-      this.fillColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.fillColorButton.Location = new System.Drawing.Point(83, 19);
       this.fillColorButton.Name = "fillColorButton";
       this.fillColorButton.Size = new System.Drawing.Size(74, 72);
