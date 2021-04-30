@@ -35,5 +35,19 @@ namespace Strategy
                 graphics.DrawRectangle(new Pen(_color, _thickness), rect);
             }
         }
+
+        public override string GetDescription()
+        {
+            if (!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_points != null)
+            {
+                return $"Draw rectangle with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Something wrong";
+        }
     }
 }

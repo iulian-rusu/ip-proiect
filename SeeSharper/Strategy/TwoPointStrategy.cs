@@ -54,19 +54,5 @@ namespace Strategy
             _points = null;
             _hasDrawn = false;
         }
-
-        public override string GetDescription()
-        {   
-            if(!_hasDrawn)
-            {
-                return "Nothing drawn";
-            }
-
-            if (_points != null)
-            {
-                return $"Draw line from ({_points[0].X}, {_points[0].Y}) to ({_points[1].X}, {_points[1].Y})";
-            }
-            return "Something wrong";
-        }
     }
 }
