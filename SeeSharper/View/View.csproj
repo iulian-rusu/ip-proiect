@@ -138,5 +138,11 @@
   <ItemGroup>
     <None Include="Resources\ArrowDownButtonBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightTriangleButtonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IsoscelesTriangleButtonBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
