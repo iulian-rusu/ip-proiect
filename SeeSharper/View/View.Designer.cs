@@ -242,6 +242,7 @@ namespace View
       // brushButton
       // 
       this.brushButton.BackgroundImage = global::View.Properties.Resources.BrushButtonBackground;
+      this.brushButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.brushButton.Location = new System.Drawing.Point(140, 3);
       this.brushButton.Name = "brushButton";
       this.brushButton.Size = new System.Drawing.Size(32, 32);
@@ -252,7 +253,6 @@ namespace View
       // lineButton
       // 
       this.lineButton.BackgroundImage = global::View.Properties.Resources.LineButtonBackground;
-      this.lineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.lineButton.Location = new System.Drawing.Point(178, 3);
       this.lineButton.Name = "lineButton";
       this.lineButton.Size = new System.Drawing.Size(32, 32);
