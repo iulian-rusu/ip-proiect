@@ -50,12 +50,12 @@ namespace Strategy
             if (_points != null)
             {
                 var graphics = e.Graphics;
-                foreach (var point in _points)
+                for (int i = 0; i < _points.Count - 1; i++)
                 {
-                    var p = new Point(point.X + 10, point.Y + 10);
-                    graphics.DrawLine(new Pen(_color, _thickness), point, p);
+                    var p = new Point((int)(_points[i].X + _thickness), (int)(_points[i].Y + _thickness));
+                    graphics.DrawLine(new Pen(_color, _thickness), _points[i], p);
+                    graphics.DrawLine(new Pen(_color, _thickness), _points[i], _points[i + 1]);
                 }
-
             }
         }
     }
