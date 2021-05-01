@@ -91,12 +91,7 @@ namespace Presenter
             if (!_model.HasSaveFileName())
             {
                 string filename = _view.GetSaveFileName();
-
-                if (!IsValidFileName(filename))
-                {
-                    throw new Exception();
-                }
-
+                AssertExtensionIsValid(filename);
                 _model.SetSaveFileName(filename);
             }
             _view.CaptureDrawingState();
@@ -207,12 +202,20 @@ namespace Presenter
             return "";
         }
         #endregion
+
         #region Private Member Functions
-        private bool IsValidFileName(string filename)
+        private void AssertExtensionIsValid(string filename)
         {
             string extension = Path.GetExtension(filename);
+            if (!IsValidExtension(extension))
+                throw new InvalidExtensionException(extension);
+        }
+
+        private bool IsValidExtension(string extension)
+        {
             return extension == ".bmp" || extension == ".png";
         }
+
         private void UpdateUndoRedoInView()
         {
             var newUndoDescription = _model.GetNextUndoDescription();
