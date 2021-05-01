@@ -30,14 +30,29 @@ namespace View
   {
     #region Private Members
     private IPresenter _presenter;
+    /// <summary>
+    /// Maximum width of the <code>pictureBox</code> and the contained image.
+    /// </summary>
     private readonly int _maxWidth;
+    /// <summary>
+    /// Maximum height of the <code>pictureBox</code> and the contained image.
+    /// </summary>
     private readonly int _maxHeight;
+    /// <summary>
+    /// Is true if this is currently displaying a dialog.
+    /// 
+    /// This fixes a Windows/C# in which a mouse event is sent to the form on
+    /// dialog double click.
+    /// </summary>
     private bool _displayingDialog = false;
     /// <summary>
     /// Holds a reference to the <code>PaintEvent</code> that is draw on top of
     /// the <code>Image</code> so that it can be removed from the pictureBox-es Paint Event.
     /// </summary>
     private PaintEventHandler _currentAddedPaintHandler = null;
+    /// <summary>
+    /// Holds a reference to the color button currently affected by color editing.
+    /// </summary>
     private Button _selectedColorButton;
     /// <summary>
     /// Holds references to toolButtons to make selected highlighting
@@ -98,6 +113,7 @@ namespace View
         height = _maxHeight;
       }
       pictureBox.Image = new Bitmap(width, height);
+      // Copy the new image and crop if excedes _maxWidth or _maxHeight
       using (Graphics g = Graphics.FromImage(pictureBox.Image))
       {
         g.DrawImage(newImage, new Rectangle(0, 0, width, height), new Rectangle(0, 0, width, height), GraphicsUnit.Pixel);
@@ -192,14 +208,12 @@ namespace View
     {
       _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void BorderColorButton_Click(object sender, EventArgs e)
     {
       fillColorButton.FlatStyle = FlatStyle.Standard;
       borderColorButton.FlatStyle = FlatStyle.Popup;
       _selectedColorButton = borderColorButton;
     }
-
     private void FillColorButton_Click(object sender, EventArgs e)
     {
       fillColorButton.FlatStyle = FlatStyle.Popup;
@@ -221,14 +235,12 @@ namespace View
         _presenter.FillColorChanged(color);
       }
     }
-
     private void PictureBox_MouseMove(object sender, MouseEventArgs e)
     {
       if (_displayingDialog)
         return;
       _presenter.MouseMoved(e.X, e.Y);
     }
-
     private void PictureBox_MouseDown(object sender, MouseEventArgs e)
     {
       if (_displayingDialog)
@@ -237,14 +249,12 @@ namespace View
       }
       _presenter.MouseStateChanged(e.X, e.Y);
     }
-
     private void PictureBox_MouseUp(object sender, MouseEventArgs e)
     {
       if (_displayingDialog)
         return;
       _presenter.MouseStateChanged(e.X, e.Y);
     }
-
     private void RedoButton_Click(object sender, EventArgs e)
     {
       Redo();
@@ -253,7 +263,6 @@ namespace View
     {
       _presenter.Redo();
     }
-
     private void UndoButton_Click(object sender, EventArgs e)
     {
       Undo();
@@ -291,25 +300,21 @@ namespace View
       UpdateToolButtons(lineButton);
       _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void SquareButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(squareButton);
       _presenter.ChoosePaintingTool(PaintingTool.Square, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void RectangleButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(rectangleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Rectangle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void CircleButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(circleButton);
       _presenter.ChoosePaintingTool(PaintingTool.Circle, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void EllipseButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(ellipseButton);
@@ -320,25 +325,21 @@ namespace View
       UpdateToolButtons(textButton);
       _presenter.ChoosePaintingTool(PaintingTool.Text, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void StarButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(starButton);
       _presenter.ChoosePaintingTool(PaintingTool.Star, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void EraserButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(eraserButton);
       _presenter.ChoosePaintingTool(PaintingTool.Eraser, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void HeartButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(heartButton);
       _presenter.ChoosePaintingTool(PaintingTool.Heart, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void ArrowLeftButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(arrowLeftButton);
@@ -349,13 +350,11 @@ namespace View
       UpdateToolButtons(arrowRightButton);
       _presenter.ChoosePaintingTool(PaintingTool.ArrowRight, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void ArrowUpButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(arrowUpButton);
       _presenter.ChoosePaintingTool(PaintingTool.ArrowUp, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
-
     private void ArrowDownButton_Click(object sender, EventArgs e)
     {
       UpdateToolButtons(arrowDownButton);
@@ -474,7 +473,6 @@ namespace View
         return Color.Transparent;
       }
     }
-
     private void ThicknessTrackBar_Scroll(object sender, EventArgs e)
     {
       _presenter.ThicknessChanged(thicknessTrackBar.Value);
