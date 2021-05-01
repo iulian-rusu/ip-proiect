@@ -92,6 +92,9 @@ namespace Model
                 case PaintingTool.Pentagon:
                     paintingStrategy = new PentagonStrategy();
                     break;
+                case PaintingTool.Hexagon:
+                    paintingStrategy = new HexagonStrategy();
+                    break;
                 case PaintingTool.ArrowLeft:
                     paintingStrategy = new ArrowLeftStrategy();
                     break;

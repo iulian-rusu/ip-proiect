@@ -152,6 +152,12 @@ namespace Model.Tests
         }
 
         [TestMethod()]
+        public void GetPaintingStrategyTestsHexagonStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Hexagon), typeof(HexagonStrategy));
+        }
+
+        [TestMethod()]
         public void GetPaintingStrategyTestsHeartStrategy()
         {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Heart), typeof(HeartStrategy));
