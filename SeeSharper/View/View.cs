@@ -206,7 +206,7 @@ namespace View
     /// </summary>
     private void InitPresenter()
     {
-      _presenter.ChoosePaintingTool(PaintingTool.Line, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
+      _presenter.ChoosePaintingTool(PaintingTool.Brush, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void BorderColorButton_Click(object sender, EventArgs e)
     {
