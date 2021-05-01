@@ -1,6 +1,6 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        RightAngleTriangleStrategy.cs                            *
+ *  File:        HexagonStrategy.cs                                       *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
  *  Description:                                                          *
@@ -13,12 +13,13 @@
  *                                                                        *
  **************************************************************************/
 
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace Strategy
 {
-    public class RightTriangleStrategy : TwoPointStrategy
+     public class HexagonStrategy : TwoPointStrategy
     {
         public override string GetDescription()
         {
@@ -29,7 +30,7 @@ namespace Strategy
 
             if (_points != null)
             {
-                return $"Draw triangle with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+                return $"Draw hexagon with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
             }
             return "Something wrong";
         }
@@ -39,15 +40,20 @@ namespace Strategy
             if (_points != null)
             {
                 var graphics = e.Graphics;
-                Point[] trianglePoints = new Point[3];
-                int diff = _points[1].X - _points[0].X;
+                Point[] hexagonPoints = new Point[6];
+                
+                int sideLength = (_points[1].Y - _points[0].Y) / 2;
+                int width = _points[1].X - _points[0].X;
 
-                trianglePoints[0] = _points[0];
-                trianglePoints[1] = _points[1];
-                trianglePoints[2] = new Point(_points[1].X - diff, _points[1].Y);
+                hexagonPoints[0] = _points[0];
+                hexagonPoints[1] = new Point(_points[1].X, _points[1].Y - sideLength);
+                hexagonPoints[2] = _points[1];
+                hexagonPoints[3] = new Point(_points[0].X, _points[1].Y + sideLength);
+                hexagonPoints[4] = new Point(_points[0].X - width, _points[1].Y);
+                hexagonPoints[5] = new Point(_points[0].X - width, _points[1].Y - sideLength);
 
-                graphics.FillPolygon(new SolidBrush(_fillColor), trianglePoints);
-                graphics.DrawPolygon(new Pen(_color, _thickness), trianglePoints);
+                graphics.FillPolygon(new SolidBrush(_fillColor), hexagonPoints);
+                graphics.DrawPolygon(new Pen(_color, _thickness), hexagonPoints);
             }
         }
     }

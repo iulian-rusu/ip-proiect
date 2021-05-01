@@ -1,6 +1,6 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        RightAngleTriangleStrategy.cs                            *
+ *  File:        PentagonStrategy.cs                                      *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
  *  Description:                                                          *
@@ -13,42 +13,26 @@
  *                                                                        *
  **************************************************************************/
 
-using System.Drawing;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Strategy
 {
-    public class RightTriangleStrategy : TwoPointStrategy
+    public class PentagonStrategy : TwoPointStrategy
     {
         public override string GetDescription()
         {
-            if (!_hasDrawn)
-            {
-                return "Nothing drawn";
-            }
-
-            if (_points != null)
-            {
-                return $"Draw triangle with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
-            }
-            return "Something wrong";
+            throw new NotImplementedException();
         }
 
         protected override void Draw(object sender, PaintEventArgs e)
         {
-            if (_points != null)
-            {
-                var graphics = e.Graphics;
-                Point[] trianglePoints = new Point[3];
-                int diff = _points[1].X - _points[0].X;
-
-                trianglePoints[0] = _points[0];
-                trianglePoints[1] = _points[1];
-                trianglePoints[2] = new Point(_points[1].X - diff, _points[1].Y);
-
-                graphics.FillPolygon(new SolidBrush(_fillColor), trianglePoints);
-                graphics.DrawPolygon(new Pen(_color, _thickness), trianglePoints);
-            }
+            throw new NotImplementedException();
         }
     }
 }

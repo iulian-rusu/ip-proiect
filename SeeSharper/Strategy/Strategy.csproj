@@ -46,14 +46,18 @@
   <ItemGroup>
     <Compile Include="CircleStrategy.cs" />
     <Compile Include="BrushStrategy.cs" />
+    <Compile Include="DiamondStrategy.cs" />
     <Compile Include="ElipseStrategy.cs" />
+    <Compile Include="HeartStrategy.cs" />
+    <Compile Include="HexagonStrategy.cs" />
     <Compile Include="IsoscelesTriangleStrategy.cs" />
     <Compile Include="LineStrategy.cs" />
-    <Compile Include="PaintingTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleStrategy.cs" />
     <Compile Include="MultiplePointStrategy.cs" />
+    <Compile Include="RightTriangleStrategy.cs" />
     <Compile Include="SquareStrategy.cs" />
+    <Compile Include="StarStrategy.cs" />
     <Compile Include="Strategy.cs" />
     <Compile Include="TwoPointStrategy.cs" />
   </ItemGroup>

@@ -52,9 +52,10 @@ namespace Strategy
                 var graphics = e.Graphics;
                 for (int i = 0; i < _points.Count - 1; i++)
                 {
-                    var p = new Point((int)(_points[i].X + _thickness), (int)(_points[i].Y + _thickness));
-                    graphics.DrawLine(new Pen(_color, _thickness), _points[i], p);
-                    graphics.DrawLine(new Pen(_color, _thickness), _points[i], _points[i + 1]);
+                    var p1 = new Point((int)(_points[i].X + _thickness / 4), _points[i].Y );
+                    var p2 = new Point((int)(_points[i].X - _thickness / 4), _points[i].Y);
+                    graphics.DrawLine(new Pen(_color, _thickness), p1, p2);
+                    graphics.DrawLine(new Pen(_color, _thickness), _points[i], _points[i+1]);
                 }
             }
         }
