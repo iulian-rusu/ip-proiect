@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
-    class IsoscelesTriangleStrategy : TwoPointStrategy
+    public class IsoscelesTriangleStrategy : TwoPointStrategy
     {
         public override string GetDescription()
         {

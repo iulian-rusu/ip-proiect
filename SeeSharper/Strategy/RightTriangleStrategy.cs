@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
-    class RightTriangleStrategy : TwoPointStrategy
+    public class RightTriangleStrategy : TwoPointStrategy
     {
         public override string GetDescription()
         {
