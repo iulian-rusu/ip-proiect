@@ -122,6 +122,12 @@ namespace Model.Tests
         }
 
         [TestMethod()]
+        public void GetPaintingStrategyTestsIsoscelesTriangleStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.IsoscelesTriangle), typeof(IsoscelesTriangleStrategy));
+        }
+
+        [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
         public void SaveDrawingTestInvalidPath()
         {
@@ -130,21 +136,6 @@ namespace Model.Tests
 
             _model.SetSaveFileName(fileName);
             _model.SaveDrawing(new DrawingMemento(Image.FromFile(fileName), description));
-        }
-
-        [TestMethod()]
-        [ExpectedException(typeof(Exception))]
-        public void SaveDrawingTestInvalidExtension()
-        {
-            string validImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\testImage.jpg";
-            string invalidImagePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\dummyFile.invalidExtension";
-            string description = String.Empty;
-            DrawingMemento drawingMemento = new DrawingMemento(Image.FromFile(validImagePath), description);
-
-            _model.SetSaveFileName(invalidImagePath);
-            _model.SaveDrawing(drawingMemento);
-
-            DrawingMemento nonExistentDrawingMemento = new DrawingMemento(Image.FromFile(invalidImagePath), description);
         }
 
         [TestMethod()]

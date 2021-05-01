@@ -75,6 +75,31 @@ namespace Model
                 case PaintingTool.Rectangle:
                     paintingStrategy = new RectangleStrategy();
                     break;
+                case PaintingTool.Star:
+                    break;
+                case PaintingTool.Text:
+                    break;
+                case PaintingTool.RightTriangle:
+                    break;
+                case PaintingTool.IsoscelesTriangle:
+                    paintingStrategy = new IsoscelesTriangleStrategy();
+                    break;
+                case PaintingTool.Rhomb:
+                    break;
+                case PaintingTool.Pentagon:
+                    break;
+                case PaintingTool.ArrowLeft:
+                    break;
+                case PaintingTool.ArrowRight:
+                    break;
+                case PaintingTool.ArrowUp:
+                    break;
+                case PaintingTool.ArrowDown:
+                    break;
+                case PaintingTool.Heart:
+                    break;
+                case PaintingTool.Eraser:
+                    break;
                     // no default case is required as possible values are found in an enum and cannot be given incorrectly
             }
 
@@ -149,7 +174,7 @@ namespace Model
 
             if (HasSaveFileName() == true)
             {
-                ImageFormat drawingFormat;
+                ImageFormat drawingFormat = ImageFormat.Png;
                 string drawingExtension = string.Empty;
 
                 try
@@ -169,8 +194,6 @@ namespace Model
                     case ".bmp":
                         drawingFormat = ImageFormat.Bmp;
                         break;
-                    default:
-                        throw new Exception("Error: Unsupported extension");
                 }
 
                 drawingMemento.Drawing.Save(_saveFileName, drawingFormat);
