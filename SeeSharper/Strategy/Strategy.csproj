@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrowDownStrategy.cs" />
+    <Compile Include="ArrowLeftStrategy.cs" />
+    <Compile Include="ArrowRightStrategy.cs" />
+    <Compile Include="ArrowUpStrategy.cs" />
     <Compile Include="CircleStrategy.cs" />
     <Compile Include="BrushStrategy.cs" />
     <Compile Include="DiamondStrategy.cs" />
