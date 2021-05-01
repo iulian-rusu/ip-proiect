@@ -76,29 +76,39 @@ namespace Model
                     paintingStrategy = new RectangleStrategy();
                     break;
                 case PaintingTool.Star:
+                    paintingStrategy = new StarStrategy();
                     break;
                 case PaintingTool.Text:
                     break;
                 case PaintingTool.RightTriangle:
+                    paintingStrategy = new RightTriangleStrategy();
                     break;
                 case PaintingTool.IsoscelesTriangle:
                     paintingStrategy = new IsoscelesTriangleStrategy();
                     break;
                 case PaintingTool.Rhomb:
+                    paintingStrategy = new RhombStrategy();
                     break;
                 case PaintingTool.Pentagon:
+                    paintingStrategy = new PentagonStrategy();
                     break;
                 case PaintingTool.ArrowLeft:
+                    paintingStrategy = new ArrowLeftStrategy();
                     break;
                 case PaintingTool.ArrowRight:
+                    paintingStrategy = new ArrowRightStrategy();
                     break;
                 case PaintingTool.ArrowUp:
+                    paintingStrategy = new ArrowUpStrategy();
                     break;
                 case PaintingTool.ArrowDown:
+                    paintingStrategy = new ArrowDownStrategy();
                     break;
                 case PaintingTool.Heart:
+                    paintingStrategy = new HeartStrategy();
                     break;
                 case PaintingTool.Eraser:
+                    paintingStrategy = new EraserStrategy();
                     break;
                     // no default case is required as possible values are found in an enum and cannot be given incorrectly
             }

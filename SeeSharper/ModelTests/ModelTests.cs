@@ -122,9 +122,69 @@ namespace Model.Tests
         }
 
         [TestMethod()]
+        public void GetPaintingStrategyTestsStarStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Star), typeof(StarStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsRightTriangleStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.RightTriangle), typeof(RightTriangleStrategy));
+        }
+
+        [TestMethod()]
         public void GetPaintingStrategyTestsIsoscelesTriangleStrategy()
         {
             Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.IsoscelesTriangle), typeof(IsoscelesTriangleStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsRhombStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Rhomb), typeof(RhombStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsPentagonStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Pentagon), typeof(PentagonStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsHeartStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Heart), typeof(HeartStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsEraserStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.Eraser), typeof(EraserStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsArrowDownStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.ArrowDown), typeof(ArrowDownStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsArrowUpStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.ArrowUp), typeof(ArrowUpStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsArrowLeftStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.ArrowLeft), typeof(ArrowLeftStrategy));
+        }
+
+        [TestMethod()]
+        public void GetPaintingStrategyTestsArrowRightStrategy()
+        {
+            Assert.IsInstanceOfType(_model.GetPaintingStrategy(PaintingTool.ArrowRight), typeof(ArrowRightStrategy));
         }
 
         [TestMethod()]
