@@ -48,6 +48,7 @@
     <Compile Include="BrushStrategy.cs" />
     <Compile Include="DiamondStrategy.cs" />
     <Compile Include="ElipseStrategy.cs" />
+    <Compile Include="EraserStrategy.cs" />
     <Compile Include="HeartStrategy.cs" />
     <Compile Include="HexagonStrategy.cs" />
     <Compile Include="IsoscelesTriangleStrategy.cs" />
