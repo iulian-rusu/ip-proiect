@@ -81,11 +81,11 @@ The main limiting constraints in this development cycle will be time as well as 
 This section describes the graphical user interface (GUI) features and constraints.
 \begin{enumerate}
 \item The main window of the application should have a large canvas, initially with a white background.
-\item A menu with options will be located in the top left corner (Load, Save, About, etc.).
-\item A menu that allows the user to change tools.
-\item Upon clicking the color menu, the user will see a submenu where they will be able to select the desired RGB color. Optionally, other color spaces may be selectable.
+\item A menu with options will be located in the top left corner (Load, Save, Help, etc.).
+\item A menu that allows the user to select drawing tools.
+\item When clicking the color menu, the user will see a new window where they will be able to select the desired RGB color. Optionally, other color spaces may be selectable.
 \item Clicking on the Load/Save buttons will open a separate dialog window where the user will be able to open or save their drawing.
-\item Clicking on the About button will open a separate window with a description of the application.
+\item Clicking on the Help button will open a separate window with some documentation and/or tutorial.
 \end{enumerate}
 
 \subsubsection{Software Interfaces}
@@ -144,13 +144,13 @@ This section covers the requirements that concern the performance of the applica
 The graphical interface must provide a menu that must be easily accessed at the top of the main application window in one click.
 \item \textbf{Usage of drawing tools}
 \\
-All drawing tools must be easily selectable from a unified menu of drawing tools. The user should have the option to change the color, size and other parameters of a selected tool easily.
+All drawing tools must be easily selectable from a unified menu of drawing tools. The user should have the option to change the color, size and any other parameters of a selected tool easily.
 \item \textbf{The drawing process}
 \\
-Drawing must feel smooth and be responsive to user input. The application may provide a way to undo/redo changes from history, without noticeably slowing down performance.
+Drawing must feel smooth and be responsive to user input. The application should provide a way to undo/redo changes from history, without noticeably slowing down performance.
 \item \textbf{File system interaction}
 \\
-All drawings must have the ability to be saved on the disk in a specific image format (\texttt{png, jpeg, bmp}). The application may provide a way to load images into the canvas and draw on them. The process of saving and loading should not take longer than doing so in other applications that interact with the file system.
+All drawings must have the ability to be saved on the disk in a specific image format (\texttt{png, jpeg, bmp}). The application should provide a way to load images into the canvas and draw on them. The process of saving and loading should not take longer than doing so in other applications that interact with the file system.
 \item \textbf{General timing constraints}
 \\
 Any user input should be processed without a noticeable delay. In the event that a more complex computation is required, the user must be notified and the graphical interface must remain responsive for the whole duration. Additionally, the interface may provide status messages to notify the user.
@@ -161,12 +161,12 @@ This section describes the limitations imposed on the application by software or
 \begin{enumerate}
 \item \textbf{Disk space usage}
 \\
-The whole application must not occupy more than 50 MB of disk storage.
-Ideally, the application should fit into 25 MB.
+The whole application must not occupy more than 20 MB of disk storage.
+Ideally, the application should fit into 10 MB.
 \item \textbf{Memory usage}
 \\
-The application's RAM usage must not exceed 50 MB.
-Ideally, the application should not use more than 25 MB of RAM.
+The application's RAM usage must not exceed 15 MB.
+Ideally, the application should not use more than 8 MB of RAM.
 \end{enumerate}
 
 \subsection{Attributes}
