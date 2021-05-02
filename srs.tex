@@ -122,7 +122,19 @@ The application must offer the possibility of saving the current drawing to an i
 
 Similarly to the previously mentioned functionality, the application must offer the possibility of loading an already existing image that the user wishes to be modified.
 
-It is to be mentioned that when loading an image, the user cannot use functionalities like \textbf{undo}.
+\subsubsection{Undo/Redo}
+
+In order to provide a rollback feature when making mistakes, the application must offer the possibility of undoing an action at any given point. It is also wished that any undone action can be redone.
+
+These actions might be done either by pressing the corresponding buttons in the graphical user interface or by using the well known shortcuts: \textbf{CTRL+Z} for undo, and \textbf{CTRL+Y} for redo.
+
+The user might even undo a previously loaded image, as it is permitted by the application.
+
+If multiple undo actions are commited, and then the user draws something on the canvas, he might not redo any action that existed before the additional drawing element has been added to the canvas.
+
+\subsubsection{Help window}
+
+When clicking the 'Help' button, a window with all of the application's features will be provided to the user in the form of a .chm document. In this way, the typical user might research all of the tools and features that \textit{SeeSharper} is providing.
 
 \subsection{Performance Requirements}
 This section covers the requirements that concern the performance of the application in response to user interaction. It is aimed to describe general use case scenarios, as well as time performance constraints.
