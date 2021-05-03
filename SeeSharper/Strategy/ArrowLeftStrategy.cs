@@ -47,7 +47,7 @@ namespace Strategy
                 Point[] arrowPoints = new Point[7];
 
                 int bodyWidth = Math.Abs((int)((_points[1].X - _points[0].X) / 2.0));
-                int bodyHeight = (int)((2.0 / 3.0) * (_points[1].Y - _points[0].Y));
+                int bodyHeight = (int)((_points[1].Y - _points[0].Y) / 2.0);
                 int arrowheadMargin = (int)(bodyHeight / 2.0);
 
                 Point startPoint; // lower right corner
@@ -58,7 +58,7 @@ namespace Strategy
                 }
                 else
                 {
-                    startPoint = new Point(_points[0].X, _points[0].Y + bodyHeight);
+                    startPoint = new Point(_points[0].X, _points[0].Y + bodyHeight + arrowheadMargin);
                 }
 
                 arrowPoints[0] = startPoint;

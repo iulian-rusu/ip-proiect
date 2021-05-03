@@ -47,7 +47,7 @@ namespace Strategy
                 var graphics = e.Graphics;
                 Point[] arrowPoints = new Point[7];
 
-                int bodyWidth = (int)((2.0 / 3.0) * (_points[1].X - _points[0].X));
+                int bodyWidth = (int)((_points[1].X - _points[0].X) / 2.0);
                 int bodyHeight = Math.Abs((int)((_points[1].Y - _points[0].Y) / 2.0 ));
                 int arrowheadMargin = (int)(bodyWidth / 2.0);
 
@@ -55,11 +55,11 @@ namespace Strategy
 
                 if (_points[1].Y - _points[0].Y > 0)
                 {
-                    startPoint = new Point(_points[0].X, _points[0].Y + 2 * bodyHeight);
+                    startPoint = new Point(_points[0].X + arrowheadMargin, _points[0].Y + 2 * bodyHeight);
                 }
                 else
                 {
-                    startPoint = _points[0];
+                    startPoint = new Point(_points[0].X + arrowheadMargin, _points[0].Y);
                 }
 
                 arrowPoints[0] = startPoint;
