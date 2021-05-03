@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +28,51 @@ namespace Strategy
     {
         public override string GetDescription()
         {
-            throw new NotImplementedException();
+            if (!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_points != null)
+            {
+                return $"Draw arrow up with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Something wrong";
         }
 
         protected override void Draw(object sender, PaintEventArgs e)
         {
-            throw new NotImplementedException();
+            if (_points != null)
+            {
+                var graphics = e.Graphics;
+                Point[] arrowPoints = new Point[7];
+
+                int bodyWidth = (int)((2.0 / 3.0) * (_points[1].X - _points[0].X));
+                int bodyHeight = Math.Abs((int)((_points[1].Y - _points[0].Y) / 2.0 ));
+                int arrowheadMargin = (int)(bodyWidth / 2.0);
+
+                Point startPoint; // lower left corner
+
+                if (_points[1].Y - _points[0].Y > 0)
+                {
+                    startPoint = new Point(_points[0].X, _points[0].Y + 2 * bodyHeight);
+                }
+                else
+                {
+                    startPoint = _points[0];
+                }
+
+                arrowPoints[0] = startPoint;
+                arrowPoints[1] = new Point(startPoint.X + bodyWidth, startPoint.Y);
+                arrowPoints[2] = new Point(startPoint.X + bodyWidth, startPoint.Y - bodyHeight);
+                arrowPoints[3] = new Point(startPoint.X + bodyWidth + arrowheadMargin, startPoint.Y - bodyHeight);
+                arrowPoints[4] = new Point(startPoint.X + bodyWidth / 2, startPoint.Y - 2 * bodyHeight);
+                arrowPoints[5] = new Point(startPoint.X - arrowheadMargin, startPoint.Y - bodyHeight);
+                arrowPoints[6] = new Point(startPoint.X, startPoint.Y - bodyHeight);
+
+                graphics.FillPolygon(new SolidBrush(_fillColor), arrowPoints);
+                graphics.DrawPolygon(new Pen(_color, _thickness), arrowPoints);
+            }
         }
     }
 }
