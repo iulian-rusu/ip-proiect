@@ -15,6 +15,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,12 +27,35 @@ namespace Strategy
     {
         public override string GetDescription()
         {
-            throw new NotImplementedException();
+            if (!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_points != null)
+            {
+                return $"Draw rhomb with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Something wrong";
         }
 
         protected override void Draw(object sender, PaintEventArgs e)
         {
-            throw new NotImplementedException();
+            if (_points != null)
+            {
+                var graphics = e.Graphics;
+                Point[] rhombPoints = new Point[4];
+                int width = _points[1].X - _points[0].X;
+                int height = _points[1].Y - _points[0].Y;
+
+                rhombPoints[0] = new Point(_points[0].X + width / 2, _points[0].Y);
+                rhombPoints[1] = new Point(_points[0].X + width, _points[0].Y + height / 2);
+                rhombPoints[2] = new Point(_points[0].X + width / 2, _points[0].Y + height);
+                rhombPoints[3] = new Point(_points[0].X, _points[0].Y + height / 2);
+
+                graphics.FillPolygon(new SolidBrush(_fillColor), rhombPoints);
+                graphics.DrawPolygon(new Pen(_color, _thickness), rhombPoints);
+            }
         }
     }
 }
