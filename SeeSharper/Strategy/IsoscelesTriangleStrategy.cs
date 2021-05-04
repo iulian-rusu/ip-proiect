@@ -13,6 +13,7 @@
  *                                                                        *
  **************************************************************************/
 
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -40,11 +41,23 @@ namespace Strategy
             {
                 var graphics = e.Graphics;
                 Point[] trianglePoints = new Point[3];
-                int diff = _points[1].X - _points[0].X;
+                int height = Math.Abs(_points[1].Y - _points[0].Y);
+                int width = _points[1].X - _points[0].X;
 
-                trianglePoints[0] = _points[0];
-                trianglePoints[1] = _points[1];
-                trianglePoints[2] = new Point(_points[1].X - 2 * diff, _points[1].Y);
+                Point startPoint; // left corner
+                
+                if (_points[1].Y - _points[0].Y > 0)
+                {
+                    startPoint = new Point(_points[0].X, _points[0].Y + height);
+                }
+                else
+                {
+                    startPoint = _points[0];
+                }
+
+                trianglePoints[0] = startPoint;
+                trianglePoints[1] = new Point(startPoint.X + width, startPoint.Y);
+                trianglePoints[2] = new Point(startPoint.X + width / 2, startPoint.Y - height);
 
                 graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), trianglePoints);
