@@ -21,19 +21,21 @@ namespace Strategy
 {
     public class BrushStrategy : MultiplePointStrategy
     {
+        List<Rectangle> _rectangles;
         public override void MouseStateChanged(int x, int y)
         {
             if (_points == null)
             {
                 _points = new List<Point>();
+                _rectangles = new List<Rectangle>();
                 _points.Add(new Point(x, y));
+                _rectangles.Add(new Rectangle(x - (int)_thickness / 2 , y - (int)_thickness / 2, (int)_thickness, (int)_thickness));
                 _hasDrawn = true;
             }
             else
             {
                 _done = true;
             }
-
         }
 
         public override void MouseMoved(int x, int y)
@@ -41,10 +43,11 @@ namespace Strategy
             if (_points != null && !_done)
             {
                 _points.Add(new Point(x, y));
+                _rectangles.Add(new Rectangle(x - (int)_thickness / 2, y - (int)_thickness / 2, (int)_thickness, (int)_thickness));
                 _hasDrawn = true;
             }
-
         }
+
         protected override void Draw(object sender, PaintEventArgs e)
         {
             if (_points != null)
@@ -52,10 +55,29 @@ namespace Strategy
                 var graphics = e.Graphics;
                 for (int i = 0; i < _points.Count - 1; i++)
                 {
-                    var p1 = new Point((int)(_points[i].X + _thickness / 4), _points[i].Y );
-                    var p2 = new Point((int)(_points[i].X - _thickness / 4), _points[i].Y);
-                    graphics.DrawLine(new Pen(_color, _thickness), p1, p2);
-                    graphics.DrawLine(new Pen(_color, _thickness), _points[i], _points[i+1]);
+                    Point[] polygonPoints = new Point[4];
+                    int width = _points[i + 1].X - _points[i].X;
+                    int height = _points[i + 1].Y - _points[i].Y;
+                    int size = _rectangles[0].Width;
+
+                    if (width * height <= 0)
+                    {
+                        polygonPoints[0] = new Point(_rectangles[i].X, _rectangles[i].Y);
+                        polygonPoints[1] = new Point(_rectangles[i].X + size, _rectangles[i].Y + size);
+                        polygonPoints[3] = new Point(_rectangles[i + 1].X, _rectangles[i + 1].Y);
+                        polygonPoints[2] = new Point(_rectangles[i + 1].X + size, _rectangles[i + 1].Y + size);
+                    }
+                    else
+                    {
+                        polygonPoints[0] = new Point(_rectangles[i].X + size, _rectangles[i].Y);
+                        polygonPoints[1] = new Point(_rectangles[i].X, _rectangles[i].Y + size);
+                        polygonPoints[2] = new Point(_rectangles[i + 1].X, _rectangles[i + 1].Y + size);
+                        polygonPoints[3] = new Point(_rectangles[i + 1].X + size, _rectangles[i + 1].Y);
+                    }
+
+                    graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    graphics.FillRectangle(new SolidBrush(_color), _rectangles[i]);
+                    graphics.FillPolygon(new SolidBrush(_color), polygonPoints);
                 }
             }
         }
