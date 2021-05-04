@@ -47,13 +47,18 @@ namespace Strategy
                 int width = Math.Abs(_points[1].X - _points[0].X);
                 int height = Math.Abs(_points[1].Y - _points[0].Y);
 
-                var rect1 = new Rectangle(_points[0].X, _points[0].Y, width / 2 + 1, height / 2 + 1);
-                var rect2 = new Rectangle((_points[0].X + width / 2), _points[0].Y, width / 2 + 1, height / 2 + 1);
+                int startX = Math.Min(_points[0].X, _points[1].X);
+                int startY = Math.Min(_points[0].Y, _points[1].Y);
+
+                var rect1 = new Rectangle(startX, startY, width / 2 + 1, height / 2 + 1);
+                var rect2 = new Rectangle((startX + width / 2), startY, width / 2 + 1, height / 2 + 1);
 
                 float startAngle = -180F;
                 float sweepAngle = 180F;
 
-                Point[] trianglePoints = { _points[0], _points[0], _points[0] };
+                Point p = new Point(startX, startY);
+
+                Point[] trianglePoints = { p, p, p };
                 trianglePoints[0].Y += height / 4;
                 trianglePoints[1].X += width;
                 trianglePoints[1].Y += height / 4;
@@ -65,8 +70,8 @@ namespace Strategy
                 graphicsPath.AddArc(rect1, startAngle, sweepAngle);
                 graphicsPath.AddArc(rect2, startAngle, sweepAngle);
                 graphicsPath.StartFigure();
-                graphicsPath.AddLine(new Point(_points[0].X, _points[0].Y + height / 4), new Point(width / 2 + _points[0].X, _points[0].Y + height));
-                graphicsPath.AddLine(new Point(_points[0].X + width, _points[0].Y + height / 4), new Point(width / 2 + _points[0].X, _points[0].Y + height));
+                graphicsPath.AddLine(new Point(startX, startY + height / 4), new Point(width / 2 + startX, startY + height));
+                graphicsPath.AddLine(new Point(startX + width, startY + height / 4), new Point(width / 2 + startX, startY + height));
                 graphicsPath.CloseFigure();
 
                 graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
