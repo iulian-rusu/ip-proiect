@@ -15,26 +15,26 @@
 
 namespace Strategy
 {
-	public enum PaintingTool
-	{
-		Brush,
-		Line,
-		Circle,
-		Ellipse,
-		Square,
-		Rectangle,
-		Star,
-		Text,
-    RightTriangle,
-		IsoscelesTriangle,
-    Rhomb,
-		Pentagon,
-		Hexagon,
-    ArrowLeft,
-		ArrowRight,
-		ArrowUp,
-		ArrowDown,
-		Heart,
-    Eraser,
-  }
+    public enum PaintingTool
+    {
+        Brush,
+        Line,
+        Circle,
+        Ellipse,
+        Square,
+        Rectangle,
+        Star,
+        Text,
+        RightTriangle,
+        IsoscelesTriangle,
+        Rhomb,
+        Pentagon,
+        Hexagon,
+        ArrowLeft,
+        ArrowRight,
+        ArrowUp,
+        ArrowDown,
+        Heart,
+        Eraser,
+    }
 }

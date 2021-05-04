@@ -3,7 +3,7 @@
  *  File:        HexagonStrategy.cs                                       *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for hexagon shape                         *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -19,22 +19,12 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Implements the hexagon drawing strategy
+    /// </summary>
     public class HexagonStrategy : TwoPointStrategy
     {
-        public override string GetDescription()
-        {
-            if (!_hasDrawn)
-            {
-                return "Nothing drawn";
-            }
-
-            if (_points != null)
-            {
-                return $"Draw hexagon with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
-            }
-            return "Something wrong";
-        }
-
+        #region Protected Methods
         protected override void Draw(object sender, PaintEventArgs e)
         {
             if (_points != null)
@@ -57,5 +47,22 @@ namespace Strategy
                 graphics.DrawPolygon(new Pen(_color, _thickness), hexagonPoints);
             }
         }
+        #endregion
+
+        #region Public Methods
+        public override string GetDescription()
+        {
+            if (!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_points != null)
+            {
+                return $"Draw hexagon with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Something wrong";
+        }
+        #endregion
     }
 }

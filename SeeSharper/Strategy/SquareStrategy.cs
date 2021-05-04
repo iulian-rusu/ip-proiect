@@ -3,7 +3,7 @@
  *  File:        SquareStrategy.cs                                        *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for square shape                          *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -19,8 +19,12 @@ using System.Drawing;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Implements the square drawing strategy
+    /// </summary>
     public class SquareStrategy : TwoPointStrategy
     {
+        #region Protected Methods
         protected override void Draw(object sender, PaintEventArgs e)
         {
             if (_points != null)
@@ -43,6 +47,9 @@ namespace Strategy
                 graphics.DrawRectangle(new Pen(_color, _thickness), rect);
             }
         }
+        #endregion
+
+        #region Public Methods
         public override string GetDescription()
         {
             if (!_hasDrawn)
@@ -56,5 +63,6 @@ namespace Strategy
             }
             return "Something wrong";
         }
+        #endregion
     }
 }

@@ -3,7 +3,8 @@
  *  File:        TwoPointStrategy.cs                                      *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for drawing shapes that requires          *
+ *               2 points to be drawn                                     *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -20,10 +21,16 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Base class for all shapes that requires 2 points to be drawn
+    /// </summary>
     public abstract class TwoPointStrategy : Strategy
     {
+        #region Protected Fields
         protected Point[] _points;
+        #endregion
 
+        #region Public Methods
         public override void MouseStateChanged(int x, int y)
         {
             if (_points == null)
@@ -54,5 +61,6 @@ namespace Strategy
             _points = null;
             _hasDrawn = false;
         }
+        #endregion
     }
 }

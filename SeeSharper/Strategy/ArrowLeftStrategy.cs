@@ -3,7 +3,7 @@
  *  File:        ArrowLeftStrategy.cs                                     *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for arrow left shape                      *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -23,21 +23,12 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Implements the arrow left drawing strategy
+    /// </summary>
     public class ArrowLeftStrategy : TwoPointStrategy
     {
-        public override string GetDescription()
-        {
-            if (!_hasDrawn)
-            {
-                return "Nothing drawn";
-            }
-
-            if (_points != null)
-            {
-                return $"Draw arrow left with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
-            }
-            return "Something wrong";
-        }
+        #region Protected Methods
 
         protected override void Draw(object sender, PaintEventArgs e)
         {
@@ -74,5 +65,22 @@ namespace Strategy
                 graphics.DrawPolygon(new Pen(_color, _thickness), arrowPoints);
             }
         }
+        #endregion
+
+        #region Public Methods
+        public override string GetDescription()
+        {
+            if (!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_points != null)
+            {
+                return $"Draw arrow left with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Something wrong";
+        }
+        #endregion
     }
 }

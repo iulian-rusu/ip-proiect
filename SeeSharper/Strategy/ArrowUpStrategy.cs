@@ -3,7 +3,7 @@
  *  File:        ArrowUpStrategy.cs                                       *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for arrow up shape                        *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -24,22 +24,12 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Implements the arrow up drawing strategy
+    /// </summary>
     public class ArrowUpStrategy : TwoPointStrategy
     {
-        public override string GetDescription()
-        {
-            if (!_hasDrawn)
-            {
-                return "Nothing drawn";
-            }
-
-            if (_points != null)
-            {
-                return $"Draw arrow up with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
-            }
-            return "Something wrong";
-        }
-
+        #region Protected Methods
         protected override void Draw(object sender, PaintEventArgs e)
         {
             if (_points != null)
@@ -48,7 +38,7 @@ namespace Strategy
                 Point[] arrowPoints = new Point[7];
 
                 int bodyWidth = (int)((_points[1].X - _points[0].X) / 2.0);
-                int bodyHeight = Math.Abs((int)((_points[1].Y - _points[0].Y) / 2.0 ));
+                int bodyHeight = Math.Abs((int)((_points[1].Y - _points[0].Y) / 2.0));
                 int arrowheadMargin = (int)(bodyWidth / 2.0);
 
                 Point startPoint; // lower left corner
@@ -75,5 +65,23 @@ namespace Strategy
                 graphics.DrawPolygon(new Pen(_color, _thickness), arrowPoints);
             }
         }
+        #endregion
+
+        #region Public Methods
+        public override string GetDescription()
+        {
+            if (!_hasDrawn)
+            {
+                return "Nothing drawn";
+            }
+
+            if (_points != null)
+            {
+                return $"Draw arrow up with corner ({_points[0].X}, {_points[0].Y}) and ({_points[1].X}, {_points[1].Y})";
+            }
+            return "Something wrong";
+        }
+
+        #endregion
     }
 }

@@ -3,7 +3,7 @@
  *  File:        MultiplePointStrategy.cs                                 *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for brushes                               *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -18,9 +18,16 @@ using System.Drawing;
 
 namespace Strategy
 {
+    /// <summary>
+    ///  Base class for brushes
+    /// </summary>
 	public abstract class MultiplePointStrategy : Strategy
 	{
-		protected List<Point> _points;
+        #region Protected Fields
+        protected List<Point> _points;
+        #endregion
+
+        #region Public Methods
         public override void Reset()
         {
             _done = false;
@@ -31,5 +38,6 @@ namespace Strategy
         {
             return $"Brush from {_points[0]} to {_points[_points.Count-1]}";
         }
+        #endregion
     }
 }

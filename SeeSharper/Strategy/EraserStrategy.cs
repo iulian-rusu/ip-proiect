@@ -3,7 +3,7 @@
  *  File:        EraserStrategy.cs                                        *
  *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
  *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
- *  Description:                                                          *
+ *  Description: Strategy class for eraser                                *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
  *  any kind, either expressed or implied, including but not limited      *
@@ -23,35 +23,16 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Implements eraser strategy
+    /// </summary>
     public class EraserStrategy : MultiplePointStrategy
     {
-        List<Rectangle> _rectangles;
-        public override void MouseStateChanged(int x, int y)
-        {
-            if (_points == null)
-            {
-                _points = new List<Point>();
-                _rectangles = new List<Rectangle>();
-                _points.Add(new Point(x, y));
-                _rectangles.Add(new Rectangle(x - 3 * (int)_thickness / 2, y - 3 * (int)_thickness / 2, 3 * (int)_thickness, 3 * (int)_thickness));
-                _hasDrawn = true;
-            }
-            else
-            {
-                _done = true;
-            }
-        }
+        #region Private Fields
+        private List<Rectangle> _rectangles;
+        #endregion
 
-        public override void MouseMoved(int x, int y)
-        {
-            if (_points != null && !_done)
-            {
-                _points.Add(new Point(x, y));
-                _rectangles.Add(new Rectangle(x - 3 * (int)_thickness / 2, y - 3 * (int)_thickness / 2, 3 * (int)_thickness, 3 * (int)_thickness));
-                _hasDrawn = true;
-            }
-        }
-
+        #region Protected Methods
         protected override void Draw(object sender, PaintEventArgs e)
         {
             if (_points != null)
@@ -85,5 +66,34 @@ namespace Strategy
                 }
             }
         }
+        #endregion
+
+        #region Public Methods
+        public override void MouseStateChanged(int x, int y)
+        {
+            if (_points == null)
+            {
+                _points = new List<Point>();
+                _rectangles = new List<Rectangle>();
+                _points.Add(new Point(x, y));
+                _rectangles.Add(new Rectangle(x - 3 * (int)_thickness / 2, y - 3 * (int)_thickness / 2, 3 * (int)_thickness, 3 * (int)_thickness));
+                _hasDrawn = true;
+            }
+            else
+            {
+                _done = true;
+            }
+        }
+
+        public override void MouseMoved(int x, int y)
+        {
+            if (_points != null && !_done)
+            {
+                _points.Add(new Point(x, y));
+                _rectangles.Add(new Rectangle(x - 3 * (int)_thickness / 2, y - 3 * (int)_thickness / 2, 3 * (int)_thickness, 3 * (int)_thickness));
+                _hasDrawn = true;
+            }
+        }
+        #endregion
     }
 }
