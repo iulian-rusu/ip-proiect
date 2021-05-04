@@ -53,17 +53,25 @@ namespace Strategy
                 float startAngle = -180F;
                 float sweepAngle = 180F;
 
-                GraphicsPath graphicsPath = new GraphicsPath();
+                Point[] trianglePoints = { _points[0], _points[0], _points[0] };
+                trianglePoints[0].Y += height / 4;
+                trianglePoints[1].X += width;
+                trianglePoints[1].Y += height / 4;
+                trianglePoints[2].X += width / 2;
+                trianglePoints[2].Y += height;
+
+                GraphicsPath graphicsPath = new GraphicsPath(FillMode.Winding);
+                graphicsPath.StartFigure();
                 graphicsPath.AddArc(rect1, startAngle, sweepAngle);
                 graphicsPath.AddArc(rect2, startAngle, sweepAngle);
+                graphicsPath.StartFigure();
                 graphicsPath.AddLine(new Point(_points[0].X, _points[0].Y + height / 4), new Point(width / 2 + _points[0].X, _points[0].Y + height));
                 graphicsPath.AddLine(new Point(_points[0].X + width, _points[0].Y + height / 4), new Point(width / 2 + _points[0].X, _points[0].Y + height));
                 graphicsPath.CloseFigure();
-                // graphicsPath.AddBezier(new Point(_points[0].X, _points[0].Y + height / 4), new Point(_points[0].X + width / 10, _points[0].Y + height / 4 * 3), new Point(_points[0].X + width / 10 * 4, _points[0].Y + height), new Point(width / 2 + _points[0].X, _points[0].Y + height));
-                // graphicsPath.AddBezier(new Point(_points[0].X + width, _points[0].Y + height / 4), new Point(_points[0].X + width - width / 10, _points[0].Y + height / 4 * 3), new Point(_points[0].X + width - width / 10 * 4, _points[0].Y + height), new Point(width / 2 + _points[0].X, _points[0].Y + height));
-                
+
                 graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPath(new SolidBrush(_fillColor), graphicsPath);
+                graphics.FillPolygon(new SolidBrush(_fillColor), trianglePoints);
                 graphics.DrawPath(pen, graphicsPath);
             }
         }
