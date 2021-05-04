@@ -19,7 +19,7 @@ using System.Windows.Forms;
 
 namespace Strategy
 {
-     public class HexagonStrategy : TwoPointStrategy
+    public class HexagonStrategy : TwoPointStrategy
     {
         public override string GetDescription()
         {
@@ -41,16 +41,16 @@ namespace Strategy
             {
                 var graphics = e.Graphics;
                 Point[] hexagonPoints = new Point[6];
-                
-                int sideLength = (_points[1].Y - _points[0].Y) / 2;
-                int width = _points[1].X - _points[0].X;
 
-                hexagonPoints[0] = _points[0];
-                hexagonPoints[1] = new Point(_points[1].X, _points[1].Y - sideLength);
-                hexagonPoints[2] = _points[1];
-                hexagonPoints[3] = new Point(_points[0].X, _points[1].Y + sideLength);
-                hexagonPoints[4] = new Point(_points[0].X - width, _points[1].Y);
-                hexagonPoints[5] = new Point(_points[0].X - width, _points[1].Y - sideLength);
+                int width = _points[1].X - _points[0].X;
+                int height = _points[1].Y - _points[0].Y;
+
+                hexagonPoints[0] = new Point(_points[0].X + width / 2, _points[0].Y);
+                hexagonPoints[1] = new Point(_points[0].X + width, _points[0].Y + height / 3);
+                hexagonPoints[2] = new Point(_points[0].X + width, _points[0].Y + 2 * height / 3);
+                hexagonPoints[3] = new Point(_points[0].X + width / 2, _points[0].Y + height);
+                hexagonPoints[4] = new Point(_points[0].X, _points[0].Y + 2 * height / 3);
+                hexagonPoints[5] = new Point(_points[0].X, _points[0].Y + height / 3);
 
                 graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), hexagonPoints);
