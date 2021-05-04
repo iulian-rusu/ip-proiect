@@ -36,8 +36,9 @@ namespace Strategy
 
                 int startX = midX - dim;
                 int startY = midY - dim;
-
                 var rect = new Rectangle(startX, startY, 2 * dim, 2 * dim);
+
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillEllipse(new SolidBrush(_fillColor), rect);
                 graphics.DrawEllipse(new Pen(_color, _thickness), rect);
             }

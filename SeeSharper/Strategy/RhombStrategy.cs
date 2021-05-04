@@ -53,6 +53,7 @@ namespace Strategy
                 rhombPoints[2] = new Point(_points[0].X + width / 2, _points[0].Y + height);
                 rhombPoints[3] = new Point(_points[0].X, _points[0].Y + height / 2);
 
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), rhombPoints);
                 graphics.DrawPolygon(new Pen(_color, _thickness), rhombPoints);
             }

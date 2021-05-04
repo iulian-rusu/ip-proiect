@@ -46,6 +46,7 @@ namespace Strategy
                 trianglePoints[1] = _points[1];
                 trianglePoints[2] = new Point(_points[1].X - diff, _points[1].Y);
 
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), trianglePoints);
                 graphics.DrawPolygon(new Pen(_color, _thickness), trianglePoints);
             }

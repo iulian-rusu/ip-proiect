@@ -26,6 +26,7 @@ namespace Strategy
             if (_points != null)
             {
                 var graphics = e.Graphics;
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.DrawLine(new Pen(_color, _thickness), _points[0], _points[1]);
             }
         }

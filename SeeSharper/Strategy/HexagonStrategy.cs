@@ -52,6 +52,7 @@ namespace Strategy
                 hexagonPoints[4] = new Point(_points[0].X - width, _points[1].Y);
                 hexagonPoints[5] = new Point(_points[0].X - width, _points[1].Y - sideLength);
 
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), hexagonPoints);
                 graphics.DrawPolygon(new Pen(_color, _thickness), hexagonPoints);
             }

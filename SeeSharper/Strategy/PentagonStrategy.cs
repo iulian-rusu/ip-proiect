@@ -71,6 +71,7 @@ namespace Strategy
                     pentagonPoints[4] = new Point(startPoint.X - width / 5, (int)(startPoint.Y - 2.0 / 3.0 * height));
                 }
 
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), pentagonPoints);
                 graphics.DrawPolygon(new Pen(_color, _thickness), pentagonPoints);
             }

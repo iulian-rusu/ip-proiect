@@ -69,6 +69,7 @@ namespace Strategy
                 arrowPoints[5] = new Point(startPoint.X - arrowheadMargin, startPoint.Y + bodyHeight);
                 arrowPoints[6] = new Point(startPoint.X, startPoint.Y + bodyHeight);
 
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPolygon(new SolidBrush(_fillColor), arrowPoints);
                 graphics.DrawPolygon(new Pen(_color, _thickness), arrowPoints);
             }

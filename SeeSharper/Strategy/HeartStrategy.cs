@@ -61,6 +61,8 @@ namespace Strategy
                 graphicsPath.CloseFigure();
                 // graphicsPath.AddBezier(new Point(_points[0].X, _points[0].Y + height / 4), new Point(_points[0].X + width / 10, _points[0].Y + height / 4 * 3), new Point(_points[0].X + width / 10 * 4, _points[0].Y + height), new Point(width / 2 + _points[0].X, _points[0].Y + height));
                 // graphicsPath.AddBezier(new Point(_points[0].X + width, _points[0].Y + height / 4), new Point(_points[0].X + width - width / 10, _points[0].Y + height / 4 * 3), new Point(_points[0].X + width - width / 10 * 4, _points[0].Y + height), new Point(width / 2 + _points[0].X, _points[0].Y + height));
+                
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 graphics.FillPath(new SolidBrush(_fillColor), graphicsPath);
                 graphics.DrawPath(pen, graphicsPath);
             }
