@@ -36,7 +36,9 @@ namespace Strategy
         }
         public override string GetDescription()
         {
-            return $"Brush from {_points[0]} to {_points[_points.Count-1]}";
+            if (_points != null)
+                return $"Brush from {_points[0]} to {_points[_points.Count - 1]}";
+            else return "";
         }
         #endregion
     }
