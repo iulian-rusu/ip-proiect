@@ -24,7 +24,6 @@ namespace Strategy
         Square,
         Rectangle,
         Star,
-        Text,
         RightTriangle,
         IsoscelesTriangle,
         Rhomb,

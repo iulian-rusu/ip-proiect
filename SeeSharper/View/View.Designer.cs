@@ -59,7 +59,6 @@ namespace View
       this.arrowRightButton = new System.Windows.Forms.Button();
       this.arrowUpButton = new System.Windows.Forms.Button();
       this.arrowDownButton = new System.Windows.Forms.Button();
-      this.textButton = new System.Windows.Forms.Button();
       this.saveLoadGroupBox = new System.Windows.Forms.GroupBox();
       this.helpButton = new System.Windows.Forms.Button();
       this.loadButton = new System.Windows.Forms.Button();
@@ -213,7 +212,6 @@ namespace View
       this.flowLayoutPanel.Controls.Add(this.arrowRightButton);
       this.flowLayoutPanel.Controls.Add(this.arrowUpButton);
       this.flowLayoutPanel.Controls.Add(this.arrowDownButton);
-      this.flowLayoutPanel.Controls.Add(this.textButton);
       this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
       this.flowLayoutPanel.Location = new System.Drawing.Point(3, 3);
       this.flowLayoutPanel.Name = "flowLayoutPanel";
@@ -410,16 +408,6 @@ namespace View
       this.arrowDownButton.UseVisualStyleBackColor = true;
       this.arrowDownButton.Click += new System.EventHandler(this.ArrowDownButton_Click);
       // 
-      // textButton
-      // 
-      this.textButton.BackgroundImage = global::View.Properties.Resources.TextButtonBackground;
-      this.textButton.Location = new System.Drawing.Point(383, 41);
-      this.textButton.Name = "textButton";
-      this.textButton.Size = new System.Drawing.Size(32, 32);
-      this.textButton.TabIndex = 8;
-      this.textButton.UseVisualStyleBackColor = true;
-      this.textButton.Click += new System.EventHandler(this.TextButton_Click);
-      // 
       // saveLoadGroupBox
       // 
       this.saveLoadGroupBox.Controls.Add(this.helpButton);
@@ -592,11 +580,11 @@ namespace View
       // 
       // thicknessTrackBar
       // 
-      this.thicknessTrackBar.Location = new System.Drawing.Point(0, 32);
+      this.thicknessTrackBar.Location = new System.Drawing.Point(3, 32);
       this.thicknessTrackBar.Maximum = 20;
       this.thicknessTrackBar.Minimum = 1;
       this.thicknessTrackBar.Name = "thicknessTrackBar";
-      this.thicknessTrackBar.Size = new System.Drawing.Size(290, 45);
+      this.thicknessTrackBar.Size = new System.Drawing.Size(274, 45);
       this.thicknessTrackBar.TabIndex = 5;
       this.thicknessTrackBar.Value = 3;
       this.thicknessTrackBar.Scroll += new System.EventHandler(this.ThicknessTrackBar_Scroll);
@@ -692,7 +680,6 @@ namespace View
     private System.Windows.Forms.Label thicknessLabel;
     private System.Windows.Forms.TrackBar thicknessTrackBar;
     private System.Windows.Forms.Button starButton;
-    private System.Windows.Forms.Button textButton;
     private System.Windows.Forms.Button eraserButton;
     private System.Windows.Forms.Button heartButton;
     private System.Windows.Forms.Button arrowLeftButton;

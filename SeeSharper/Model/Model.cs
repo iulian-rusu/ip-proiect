@@ -78,8 +78,6 @@ namespace Model
                 case PaintingTool.Star:
                     paintingStrategy = new StarStrategy();
                     break;
-                case PaintingTool.Text:
-                    break;
                 case PaintingTool.RightTriangle:
                     paintingStrategy = new RightTriangleStrategy();
                     break;

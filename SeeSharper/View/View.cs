@@ -73,7 +73,7 @@ namespace View
         rightTriangleButton, isoscelesTriangleButton, squareButton, 
         rectangleButton, rhombButton, pentagonButton, hexagonButton, 
         starButton, heartButton, arrowLeftButton, arrowRightButton, 
-        arrowUpButton, arrowDownButton, textButton
+        arrowUpButton, arrowDownButton
       };
     }
     /// <summary>
@@ -319,11 +319,6 @@ namespace View
     {
       UpdateToolButtons(ellipseButton);
       _presenter.ChoosePaintingTool(PaintingTool.Ellipse, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
-    }
-    private void TextButton_Click(object sender, EventArgs e)
-    {
-      UpdateToolButtons(textButton);
-      _presenter.ChoosePaintingTool(PaintingTool.Text, borderColorButton.BackColor, GetFillColor(), thicknessTrackBar.Value);
     }
     private void StarButton_Click(object sender, EventArgs e)
     {
