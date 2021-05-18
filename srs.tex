@@ -94,8 +94,6 @@ The application must provide a way to communicate with the underlying Operating 
 This section exemplifies the actual functionalities of the application, with in-depth information about every client observable feature.
 \subsubsection{Color picking}
 The user must be able to select the color in which to draw or represent a preselected geometrical form. Colors from all the RGB spectrum must be present in the application.
-\subsubsection{Text over drawing}
-As every other common drawing software, the application must allow the writing of text over the drawing in any orientation, text font and text size (within reasonable limits).
 \subsubsection{Eraser tool}
 The user must be able to use an eraser tool in order to delete previously done work in the drawing canvas. The size of the eraser should be user modifiable (within predefined bounds), improving performance when trying to remove large portions of a drawing.
 \subsubsection{Brush tool(s)}
@@ -106,13 +104,13 @@ The application has to contain various types of brushes, of different dimensions
 \subsubsection{Other advanced drawing tools}
 \begin{enumerate}
 
-\item \textbf{Flood filler tool}
-
-It has to allow the filling of an enclosed area with a previously selected color.
-
 \item  \textbf{Geometrical shape creator}
 
 The user should be able to select a developer-defined geometrical shape and generate it on the canvas within wished bounds. Shapes must be defined by a number of points, usually two. Ideally, a preview of the shape being drawn should be displayed and modified in real time as the user drags the mouse on the canvas. After clicking to pick the final point on the canvas, the user should have the option to change the color of the shape by selecting a different color in the menu. At this point, the shape should also allow dragging with the mouse to translate its position on the canvas. Upon clicking again, the shape will be finalized and not modifiable anymore. Should the Undo option be available, it will completely remove the shape.
+
+\item \textbf{Shape filling at drawing time}
+
+The user might indicate if the shape that is to be drawn has to be filled with a color. If so, the fill color is a distinct one from the drawing color(border color) and can be selected from within the application.
 
 \end{enumerate}
 

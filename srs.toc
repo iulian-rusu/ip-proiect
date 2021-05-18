@@ -13,13 +13,12 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Software Interfaces}{5}{}%
 \contentsline {subsection}{\numberline {3.2}Functional Requirements}{5}{}%
 \contentsline {subsubsection}{\numberline {3.2.1}Color picking}{5}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}Text over drawing}{5}{}%
-\contentsline {subsubsection}{\numberline {3.2.3}Eraser tool}{5}{}%
-\contentsline {subsubsection}{\numberline {3.2.4}Brush tool(s)}{6}{}%
-\contentsline {subsubsection}{\numberline {3.2.5}Other advanced drawing tools}{6}{}%
-\contentsline {subsubsection}{\numberline {3.2.6}Drawing saving/loading}{6}{}%
-\contentsline {subsubsection}{\numberline {3.2.7}Undo/Redo}{6}{}%
-\contentsline {subsubsection}{\numberline {3.2.8}Help window}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Eraser tool}{5}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Brush tool(s)}{5}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Other advanced drawing tools}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.5}Drawing saving/loading}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.6}Undo/Redo}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.7}Help window}{7}{}%
 \contentsline {subsection}{\numberline {3.3}Performance Requirements}{7}{}%
-\contentsline {subsection}{\numberline {3.4}Design Constraints}{8}{}%
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{7}{}%
 \contentsline {subsection}{\numberline {3.5}Attributes}{8}{}%
