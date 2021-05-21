@@ -432,8 +432,7 @@ namespace View
     }
     private void ShowHelp()
     {
-      // TODO LOAD HELP.CHM
-      MessageBox.Show("Help", "Help");
+      Help.ShowHelp(this, "SeeSharper.chm");
     }
     /// <summary>
     /// Called to show a dialog box for exit confirmation
