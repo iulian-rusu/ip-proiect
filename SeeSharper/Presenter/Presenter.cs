@@ -91,6 +91,10 @@ namespace Presenter
             if (!_model.HasSaveFileName())
             {
                 string filename = _view.GetSaveFileName();
+                if (Path.GetExtension(filename) == string.Empty)
+                {
+                    filename += ".png";
+                }
                 AssertExtensionIsValid(filename);
                 _model.SetSaveFileName(filename);
             }
