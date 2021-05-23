@@ -22,11 +22,11 @@ namespace Shared
     /// <summary>
     /// Exception subclass that is used for invalid file extension.
     /// </summary>
-    public class InvalidExtensionException: Exception
+    public class InvalidExtensionException : Exception
     {
         public InvalidExtensionException(string extension) : base($"Invalid extension: {extension}")
         {
-           
+
         }
     }
 }

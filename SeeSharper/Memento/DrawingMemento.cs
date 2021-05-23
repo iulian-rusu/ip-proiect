@@ -23,7 +23,7 @@ namespace Memento
     /// Drawing memento - wrapper for an Image object
     /// </summary>
     public class DrawingMemento
-	{
+    {
         #region Fields
         private Image _drawing;
         private string _description;
@@ -36,10 +36,10 @@ namespace Memento
         /// <param name="drawing">Image/drawing to be wrapped</param>
         /// <param name="drawing">The description of that image</param>
         public DrawingMemento(Image drawing, string description)
-		{
+        {
             _drawing = drawing;
             _description = description;
-		}
+        }
         #endregion
 
         #region Properties
@@ -47,9 +47,9 @@ namespace Memento
         /// Property used to access the Image
         /// </summary>
         public Image Drawing
-		{
-			get { return _drawing; }
-		}
+        {
+            get { return _drawing; }
+        }
 
         public string Description
         {

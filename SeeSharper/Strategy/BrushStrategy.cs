@@ -72,7 +72,7 @@ namespace Strategy
                 _points = new List<Point>();
                 _rectangles = new List<Rectangle>();
                 _points.Add(new Point(x, y));
-                _rectangles.Add(new Rectangle(x - (int)_thickness / 2 , y - (int)_thickness / 2, (int)_thickness, (int)_thickness));
+                _rectangles.Add(new Rectangle(x - (int)_thickness / 2, y - (int)_thickness / 2, (int)_thickness, (int)_thickness));
                 _hasDrawn = true;
             }
             else
