@@ -47,6 +47,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_strategy_1_1_strategy-members.html">List of all members</a>  </div>
@@ -54,6 +55,9 @@ $(function() {
 <div class="title">Strategy.Strategy Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base class for each shape strategy.  
+ <a href="class_strategy_1_1_strategy.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Strategy.Strategy:</div>
 <div class="dyncontent">
@@ -62,37 +66,414 @@ Inheritance diagram for Strategy.Strategy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a27d6fe684c5a6a18bfb369e346258896"><td class="memItemLeft" align="right" valign="top"><a id="a27d6fe684c5a6a18bfb369e346258896"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ColorChanged</b> (Color color)</td></tr>
+<tr class="memitem:a27d6fe684c5a6a18bfb369e346258896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#a27d6fe684c5a6a18bfb369e346258896">ColorChanged</a> (Color color)</td></tr>
+<tr class="memdesc:a27d6fe684c5a6a18bfb369e346258896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change shape border color  <a href="class_strategy_1_1_strategy.html#a27d6fe684c5a6a18bfb369e346258896">More...</a><br /></td></tr>
 <tr class="separator:a27d6fe684c5a6a18bfb369e346258896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6b4f17ec2faec2436da89c3d8c25db"><td class="memItemLeft" align="right" valign="top"><a id="a4f6b4f17ec2faec2436da89c3d8c25db"></a>
-abstract PaintEventHandler&#160;</td><td class="memItemRight" valign="bottom"><b>GetDraw</b> ()</td></tr>
-<tr class="separator:a4f6b4f17ec2faec2436da89c3d8c25db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e86d789001648b9f67784c98b032ab9"><td class="memItemLeft" align="right" valign="top"><a id="a5e86d789001648b9f67784c98b032ab9"></a>
-abstract void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseClicked</b> (int x, int y)</td></tr>
-<tr class="separator:a5e86d789001648b9f67784c98b032ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b3d8ebb16e6afea7a82fb35efa3988"><td class="memItemLeft" align="right" valign="top"><a id="aa5b3d8ebb16e6afea7a82fb35efa3988"></a>
-abstract void&#160;</td><td class="memItemRight" valign="bottom"><b>IsDone</b> ()</td></tr>
-<tr class="separator:aa5b3d8ebb16e6afea7a82fb35efa3988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1866259f3dc6b8ea5db40479e03c8d10"><td class="memItemLeft" align="right" valign="top"><a id="a1866259f3dc6b8ea5db40479e03c8d10"></a>
-abstract void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseMoved</b> (int x, int y)</td></tr>
+<tr class="memitem:ad1ed55bda0a3978896e0037f4674de6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#ad1ed55bda0a3978896e0037f4674de6e">ThicknessChanged</a> (float thickness)</td></tr>
+<tr class="memdesc:ad1ed55bda0a3978896e0037f4674de6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change shape border thickness  <a href="class_strategy_1_1_strategy.html#ad1ed55bda0a3978896e0037f4674de6e">More...</a><br /></td></tr>
+<tr class="separator:ad1ed55bda0a3978896e0037f4674de6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5bc244db5c85d57ea23b411bf6d370b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#ac5bc244db5c85d57ea23b411bf6d370b">FillColorChanged</a> (Color color)</td></tr>
+<tr class="memdesc:ac5bc244db5c85d57ea23b411bf6d370b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change shape fill color  <a href="class_strategy_1_1_strategy.html#ac5bc244db5c85d57ea23b411bf6d370b">More...</a><br /></td></tr>
+<tr class="separator:ac5bc244db5c85d57ea23b411bf6d370b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234e2dc90ebd448a15e03df3eec37a36"><td class="memItemLeft" align="right" valign="top">PaintEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#a234e2dc90ebd448a15e03df3eec37a36">GetDraw</a> ()</td></tr>
+<tr class="memdesc:a234e2dc90ebd448a15e03df3eec37a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that returns the event handler for draw method  <a href="class_strategy_1_1_strategy.html#a234e2dc90ebd448a15e03df3eec37a36">More...</a><br /></td></tr>
+<tr class="separator:a234e2dc90ebd448a15e03df3eec37a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed886a76785602ddfdd27ece4b6138f5"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#aed886a76785602ddfdd27ece4b6138f5">MouseStateChanged</a> (int x, int y)</td></tr>
+<tr class="memdesc:aed886a76785602ddfdd27ece4b6138f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change coordinates on mouse state changed  <a href="class_strategy_1_1_strategy.html#aed886a76785602ddfdd27ece4b6138f5">More...</a><br /></td></tr>
+<tr class="separator:aed886a76785602ddfdd27ece4b6138f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1866259f3dc6b8ea5db40479e03c8d10"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#a1866259f3dc6b8ea5db40479e03c8d10">MouseMoved</a> (int x, int y)</td></tr>
+<tr class="memdesc:a1866259f3dc6b8ea5db40479e03c8d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change coordinates on mouse moved  <a href="class_strategy_1_1_strategy.html#a1866259f3dc6b8ea5db40479e03c8d10">More...</a><br /></td></tr>
 <tr class="separator:a1866259f3dc6b8ea5db40479e03c8d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a835cc2847d2829f868c2ffcf06a61"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#a81a835cc2847d2829f868c2ffcf06a61">Reset</a> ()</td></tr>
+<tr class="memdesc:a81a835cc2847d2829f868c2ffcf06a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset attributes to default values  <a href="class_strategy_1_1_strategy.html#a81a835cc2847d2829f868c2ffcf06a61">More...</a><br /></td></tr>
+<tr class="separator:a81a835cc2847d2829f868c2ffcf06a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac731fce0a345445594f48dc0559f164"><td class="memItemLeft" align="right" valign="top">abstract string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#aac731fce0a345445594f48dc0559f164">GetDescription</a> ()</td></tr>
+<tr class="memdesc:aac731fce0a345445594f48dc0559f164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to find out what object was drawn and what its position was  <a href="class_strategy_1_1_strategy.html#aac731fce0a345445594f48dc0559f164">More...</a><br /></td></tr>
+<tr class="separator:aac731fce0a345445594f48dc0559f164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac44fec119eeba8d3e558f224a8857bda"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#ac44fec119eeba8d3e558f224a8857bda">Draw</a> (object sender, PaintEventArgs e)</td></tr>
+<tr class="memdesc:ac44fec119eeba8d3e558f224a8857bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that draws the figure on screen  <a href="class_strategy_1_1_strategy.html#ac44fec119eeba8d3e558f224a8857bda">More...</a><br /></td></tr>
+<tr class="separator:ac44fec119eeba8d3e558f224a8857bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac1583a7e33e5998b4a8643616e2bf443"><td class="memItemLeft" align="right" valign="top"><a id="ac1583a7e33e5998b4a8643616e2bf443"></a>
 Color&#160;</td><td class="memItemRight" valign="bottom"><b>_color</b></td></tr>
 <tr class="separator:ac1583a7e33e5998b4a8643616e2bf443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5315065a038b7823c3289289d6a600f4"><td class="memItemLeft" align="right" valign="top"><a id="a5315065a038b7823c3289289d6a600f4"></a>
+Color&#160;</td><td class="memItemRight" valign="bottom"><b>_fillColor</b></td></tr>
+<tr class="separator:a5315065a038b7823c3289289d6a600f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869a47d4a3cb6af8c1c73636e77956f7"><td class="memItemLeft" align="right" valign="top"><a id="a869a47d4a3cb6af8c1c73636e77956f7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>_thickness</b></td></tr>
+<tr class="separator:a869a47d4a3cb6af8c1c73636e77956f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae444d2c3f630fe30e7d6683183871d7c"><td class="memItemLeft" align="right" valign="top"><a id="ae444d2c3f630fe30e7d6683183871d7c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_done</b> = false</td></tr>
 <tr class="separator:ae444d2c3f630fe30e7d6683183871d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb0774d796e14f31a85eaff070351a7"><td class="memItemLeft" align="right" valign="top"><a id="a4bb0774d796e14f31a85eaff070351a7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_hasDrawn</b> = false</td></tr>
+<tr class="separator:a4bb0774d796e14f31a85eaff070351a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a8fe09be1925a1d519db27c5563f6e6a2"><td class="memItemLeft" align="right" valign="top"><a id="a8fe09be1925a1d519db27c5563f6e6a2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Done</b><code> [get]</code></td></tr>
+<tr class="memitem:a8fe09be1925a1d519db27c5563f6e6a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#a8fe09be1925a1d519db27c5563f6e6a2">Done</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8fe09be1925a1d519db27c5563f6e6a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Property that access done flag  <a href="class_strategy_1_1_strategy.html#a8fe09be1925a1d519db27c5563f6e6a2">More...</a><br /></td></tr>
 <tr class="separator:a8fe09be1925a1d519db27c5563f6e6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51a8a8e407de184605acc4fa55054cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_strategy_1_1_strategy.html#ac51a8a8e407de184605acc4fa55054cf">HasDrawn</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac51a8a8e407de184605acc4fa55054cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Property that check if the shape was drawn  <a href="class_strategy_1_1_strategy.html#ac51a8a8e407de184605acc4fa55054cf">More...</a><br /></td></tr>
+<tr class="separator:ac51a8a8e407de184605acc4fa55054cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for each shape strategy. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a27d6fe684c5a6a18bfb369e346258896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d6fe684c5a6a18bfb369e346258896">&#9670;&nbsp;</a></span>ColorChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Strategy.Strategy.ColorChanged </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change shape border color </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>New color</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac44fec119eeba8d3e558f224a8857bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44fec119eeba8d3e558f224a8857bda">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Strategy.Strategy.Draw </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PaintEventArgs&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method that draws the figure on screen </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>Sender object</td></tr>
+    <tr><td class="paramname">e</td><td>Paint event arguments</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_strategy_1_1_star_strategy.html#aa6b3a043fdd12dcf0567fcec11fb8463">Strategy.StarStrategy</a>, <a class="el" href="class_strategy_1_1_square_strategy.html#a3c7810d7fed29f197556ced58beeec16">Strategy.SquareStrategy</a>, <a class="el" href="class_strategy_1_1_right_triangle_strategy.html#a13b18cf5aeb310095ec3931fd0ff5d28">Strategy.RightTriangleStrategy</a>, <a class="el" href="class_strategy_1_1_rhomb_strategy.html#a5cafa9babdf3d32ab1773a138f3e20b0">Strategy.RhombStrategy</a>, <a class="el" href="class_strategy_1_1_rectangle_strategy.html#a673d6f4482dced141d0f61df96fa6e13">Strategy.RectangleStrategy</a>, <a class="el" href="class_strategy_1_1_pentagon_strategy.html#ace081f4692f96e321f7d57508f977c8f">Strategy.PentagonStrategy</a>, <a class="el" href="class_strategy_1_1_line_strategy.html#a72d60ce6e576a64a43ddedd85f500971">Strategy.LineStrategy</a>, <a class="el" href="class_strategy_1_1_isosceles_triangle_strategy.html#a90f18e91c422b5380a13be60a746d9b9">Strategy.IsoscelesTriangleStrategy</a>, <a class="el" href="class_strategy_1_1_hexagon_strategy.html#a741a33153ae6542a42c09eb6f6074661">Strategy.HexagonStrategy</a>, <a class="el" href="class_strategy_1_1_heart_strategy.html#a52207e5b9e42ac038e3261ba11237290">Strategy.HeartStrategy</a>, <a class="el" href="class_strategy_1_1_eraser_strategy.html#aac0bd1434d558e98610d37483fc5a3d5">Strategy.EraserStrategy</a>, <a class="el" href="class_strategy_1_1_elipse_strategy.html#a5cd5d2d29de74fd4243026a4e2141fbf">Strategy.ElipseStrategy</a>, <a class="el" href="class_strategy_1_1_circle_strategy.html#a1a1fd66ecdf6a19b0ece010290bfdb6e">Strategy.CircleStrategy</a>, <a class="el" href="class_strategy_1_1_brush_strategy.html#aad9aea5772d93b4189a67c353ec3ad51">Strategy.BrushStrategy</a>, <a class="el" href="class_strategy_1_1_arrow_up_strategy.html#ae57e104401183f4563525e7f137c647a">Strategy.ArrowUpStrategy</a>, <a class="el" href="class_strategy_1_1_arrow_right_strategy.html#a6bd53ded038fff0b88fe7bf5a971b0d6">Strategy.ArrowRightStrategy</a>, <a class="el" href="class_strategy_1_1_arrow_left_strategy.html#a5b4b5b189f787e618de13a9127bd11c2">Strategy.ArrowLeftStrategy</a>, and <a class="el" href="class_strategy_1_1_arrow_down_strategy.html#ab7e703e5276b473ccf259f9660372767">Strategy.ArrowDownStrategy</a>.</p>
+
+</div>
+</div>
+<a id="ac5bc244db5c85d57ea23b411bf6d370b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5bc244db5c85d57ea23b411bf6d370b">&#9670;&nbsp;</a></span>FillColorChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Strategy.Strategy.FillColorChanged </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change shape fill color </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>New fill color</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac731fce0a345445594f48dc0559f164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac731fce0a345445594f48dc0559f164">&#9670;&nbsp;</a></span>GetDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract string Strategy.Strategy.GetDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to find out what object was drawn and what its position was </p>
+<dl class="section return"><dt>Returns</dt><dd>A string with information about the position of the shape</dd></dl>
+
+<p>Implemented in <a class="el" href="class_strategy_1_1_star_strategy.html#a1a0e47ab9aac5ae0201080ee06b79f60">Strategy.StarStrategy</a>, <a class="el" href="class_strategy_1_1_square_strategy.html#a686a26d4e4102246c86e15c5f5f8fede">Strategy.SquareStrategy</a>, <a class="el" href="class_strategy_1_1_right_triangle_strategy.html#a7a0d519ccca8822ea1997979a222d9d1">Strategy.RightTriangleStrategy</a>, <a class="el" href="class_strategy_1_1_rhomb_strategy.html#a8a73f401ab4a2021845c7203352579ad">Strategy.RhombStrategy</a>, <a class="el" href="class_strategy_1_1_rectangle_strategy.html#aa8eba88be21bcbbe36d504302c124627">Strategy.RectangleStrategy</a>, <a class="el" href="class_strategy_1_1_pentagon_strategy.html#a44c13c6e466017b1e09befe76de0cb73">Strategy.PentagonStrategy</a>, <a class="el" href="class_strategy_1_1_multiple_point_strategy.html#a2b311be8c5121124cdfd8d01bc95f491">Strategy.MultiplePointStrategy</a>, <a class="el" href="class_strategy_1_1_line_strategy.html#ac2adee72fca8911b455434b937c2f8de">Strategy.LineStrategy</a>, <a class="el" href="class_strategy_1_1_isosceles_triangle_strategy.html#ad9300e2a2dcd2b9c975ab9335f21005d">Strategy.IsoscelesTriangleStrategy</a>, <a class="el" href="class_strategy_1_1_hexagon_strategy.html#a02d109052f910c8a2c8cad5bb4d3b01f">Strategy.HexagonStrategy</a>, <a class="el" href="class_strategy_1_1_heart_strategy.html#a1ca02da60a6666e93691508421b8c56f">Strategy.HeartStrategy</a>, <a class="el" href="class_strategy_1_1_elipse_strategy.html#a338a6cc292a926c848056d43773628e4">Strategy.ElipseStrategy</a>, <a class="el" href="class_strategy_1_1_circle_strategy.html#a12067c982f2cf3799129eae662b0b170">Strategy.CircleStrategy</a>, <a class="el" href="class_strategy_1_1_arrow_up_strategy.html#ac564d9ccd5d71896d6c34f9cd174c79a">Strategy.ArrowUpStrategy</a>, <a class="el" href="class_strategy_1_1_arrow_right_strategy.html#afce62e01c4c54a063b894add2f417f71">Strategy.ArrowRightStrategy</a>, <a class="el" href="class_strategy_1_1_arrow_left_strategy.html#a4f12514ea49c6052f8db7e91bbd21410">Strategy.ArrowLeftStrategy</a>, and <a class="el" href="class_strategy_1_1_arrow_down_strategy.html#a33308843c817c75b86a5ec51f82248e2">Strategy.ArrowDownStrategy</a>.</p>
+
+</div>
+</div>
+<a id="a234e2dc90ebd448a15e03df3eec37a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234e2dc90ebd448a15e03df3eec37a36">&#9670;&nbsp;</a></span>GetDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PaintEventHandler Strategy.Strategy.GetDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method that returns the event handler for draw method </p>
+<dl class="section return"><dt>Returns</dt><dd>Draw method paint event handler</dd></dl>
+
+</div>
+</div>
+<a id="a1866259f3dc6b8ea5db40479e03c8d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1866259f3dc6b8ea5db40479e03c8d10">&#9670;&nbsp;</a></span>MouseMoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Strategy.Strategy.MouseMoved </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change coordinates on mouse moved </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X coordinate</td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_strategy_1_1_two_point_strategy.html#a54ed6273fb01bdd16101bc602b8769a9">Strategy.TwoPointStrategy</a>, <a class="el" href="class_strategy_1_1_eraser_strategy.html#a87f1045a446c245d0ce30722fb359e79">Strategy.EraserStrategy</a>, and <a class="el" href="class_strategy_1_1_brush_strategy.html#aa8a4f4569d7e0f381c817cd37e01f4e7">Strategy.BrushStrategy</a>.</p>
+
+</div>
+</div>
+<a id="aed886a76785602ddfdd27ece4b6138f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed886a76785602ddfdd27ece4b6138f5">&#9670;&nbsp;</a></span>MouseStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Strategy.Strategy.MouseStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change coordinates on mouse state changed </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X coordinate</td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_strategy_1_1_two_point_strategy.html#a5c99bb046189012eda394ef97dc484f9">Strategy.TwoPointStrategy</a>, <a class="el" href="class_strategy_1_1_eraser_strategy.html#a96cce28e13a75e3e4acc12fd66de64e7">Strategy.EraserStrategy</a>, and <a class="el" href="class_strategy_1_1_brush_strategy.html#a6699a370d912daea2580b141ad748c00">Strategy.BrushStrategy</a>.</p>
+
+</div>
+</div>
+<a id="a81a835cc2847d2829f868c2ffcf06a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a835cc2847d2829f868c2ffcf06a61">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Strategy.Strategy.Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset attributes to default values </p>
+
+<p>Implemented in <a class="el" href="class_strategy_1_1_two_point_strategy.html#a0795593bfebc0ec67a4a200d0c9b2a70">Strategy.TwoPointStrategy</a>, and <a class="el" href="class_strategy_1_1_multiple_point_strategy.html#a1c8325c5e80ee6ab19dde1a18803ed50">Strategy.MultiplePointStrategy</a>.</p>
+
+</div>
+</div>
+<a id="ad1ed55bda0a3978896e0037f4674de6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ed55bda0a3978896e0037f4674de6e">&#9670;&nbsp;</a></span>ThicknessChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Strategy.Strategy.ThicknessChanged </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thickness</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change shape border thickness </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thickness</td><td>New thickness</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a8fe09be1925a1d519db27c5563f6e6a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe09be1925a1d519db27c5563f6e6a2">&#9670;&nbsp;</a></span>Done</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Strategy.Strategy.Done</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Property that access done flag </p>
+
+</div>
+</div>
+<a id="ac51a8a8e407de184605acc4fa55054cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51a8a8e407de184605acc4fa55054cf">&#9670;&nbsp;</a></span>HasDrawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Strategy.Strategy.HasDrawn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Property that check if the shape was drawn </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>SeeSharper/Strategy/Strategy.cs</li>
 </ul>

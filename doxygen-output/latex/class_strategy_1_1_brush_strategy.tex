@@ -2,6 +2,11 @@
 \label{class_strategy_1_1_brush_strategy}\index{Strategy.BrushStrategy@{Strategy.BrushStrategy}}
 
 
+Implements brush strategy  
+
+
+
+
 Inheritance diagram for Strategy.\+Brush\+Strategy\+:
 % FIG 0
 
@@ -11,19 +16,87 @@ Collaboration diagram for Strategy.\+Brush\+Strategy\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_a9dc09feac6dea0247fa47ef0f3f3444a}\label{class_strategy_1_1_brush_strategy_a9dc09feac6dea0247fa47ef0f3f3444a}} 
-override Paint\+Event\+Handler {\bfseries Get\+Draw} ()
+override void \mbox{\hyperlink{class_strategy_1_1_brush_strategy_a6699a370d912daea2580b141ad748c00}{Mouse\+State\+Changed}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Change coordinates on mouse state changed \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_strategy_1_1_brush_strategy_aa8a4f4569d7e0f381c817cd37e01f4e7}{Mouse\+Moved}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Change coordinates on mouse moved \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_a1b8a8e66c664b5492b26451e7cdb18dc}\label{class_strategy_1_1_brush_strategy_a1b8a8e66c664b5492b26451e7cdb18dc}} 
-override void {\bfseries Is\+Done} ()
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_aa48e8910b496fd09b1b9230dd41b1706}\label{class_strategy_1_1_brush_strategy_aa48e8910b496fd09b1b9230dd41b1706}} 
-override void {\bfseries Mouse\+Clicked} (int x, int y)
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_aa8a4f4569d7e0f381c817cd37e01f4e7}\label{class_strategy_1_1_brush_strategy_aa8a4f4569d7e0f381c817cd37e01f4e7}} 
-override void {\bfseries Mouse\+Moved} (int x, int y)
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_strategy_1_1_brush_strategy_aad9aea5772d93b4189a67c353ec3ad51}{Draw}} (object sender, Paint\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Method that draws the figure on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implements brush strategy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_aad9aea5772d93b4189a67c353ec3ad51}\label{class_strategy_1_1_brush_strategy_aad9aea5772d93b4189a67c353ec3ad51}} 
+\index{Strategy.BrushStrategy@{Strategy.BrushStrategy}!Draw@{Draw}}
+\index{Draw@{Draw}!Strategy.BrushStrategy@{Strategy.BrushStrategy}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Strategy.\+Brush\+Strategy.\+Draw (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Paint\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method that draws the figure on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender object\\
+\hline
+{\em e} & Paint event arguments\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_aa8a4f4569d7e0f381c817cd37e01f4e7}\label{class_strategy_1_1_brush_strategy_aa8a4f4569d7e0f381c817cd37e01f4e7}} 
+\index{Strategy.BrushStrategy@{Strategy.BrushStrategy}!MouseMoved@{MouseMoved}}
+\index{MouseMoved@{MouseMoved}!Strategy.BrushStrategy@{Strategy.BrushStrategy}}
+\doxysubsubsection{\texorpdfstring{MouseMoved()}{MouseMoved()}}
+{\footnotesize\ttfamily override void Strategy.\+Brush\+Strategy.\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change coordinates on mouse moved 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate\\
+\hline
+{\em y} & Y coordinate\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_brush_strategy_a6699a370d912daea2580b141ad748c00}\label{class_strategy_1_1_brush_strategy_a6699a370d912daea2580b141ad748c00}} 
+\index{Strategy.BrushStrategy@{Strategy.BrushStrategy}!MouseStateChanged@{MouseStateChanged}}
+\index{MouseStateChanged@{MouseStateChanged}!Strategy.BrushStrategy@{Strategy.BrushStrategy}}
+\doxysubsubsection{\texorpdfstring{MouseStateChanged()}{MouseStateChanged()}}
+{\footnotesize\ttfamily override void Strategy.\+Brush\+Strategy.\+Mouse\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change coordinates on mouse state changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate\\
+\hline
+{\em y} & Y coordinate\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_aed886a76785602ddfdd27ece4b6138f5}{Strategy.\+Strategy}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

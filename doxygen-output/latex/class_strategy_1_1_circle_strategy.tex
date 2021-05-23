@@ -2,6 +2,11 @@
 \label{class_strategy_1_1_circle_strategy}\index{Strategy.CircleStrategy@{Strategy.CircleStrategy}}
 
 
+Implements the circle drawing strategy  
+
+
+
+
 Inheritance diagram for Strategy.\+Circle\+Strategy\+:
 % FIG 0
 
@@ -11,19 +16,60 @@ Collaboration diagram for Strategy.\+Circle\+Strategy\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_circle_strategy_a778e3aac8d9a99ddd6c158c3e3813eb6}\label{class_strategy_1_1_circle_strategy_a778e3aac8d9a99ddd6c158c3e3813eb6}} 
-override Paint\+Event\+Handler {\bfseries Get\+Draw} ()
+override string \mbox{\hyperlink{class_strategy_1_1_circle_strategy_a12067c982f2cf3799129eae662b0b170}{Get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Method to find out what object was drawn and what its position was \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_circle_strategy_abcd63303c97cd694b05a7e5d0246d4b3}\label{class_strategy_1_1_circle_strategy_abcd63303c97cd694b05a7e5d0246d4b3}} 
-override void {\bfseries Is\+Done} ()
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_circle_strategy_a358acb7a02f761ac867ec045d5045b18}\label{class_strategy_1_1_circle_strategy_a358acb7a02f761ac867ec045d5045b18}} 
-override void {\bfseries Mouse\+Clicked} (int x, int y)
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_circle_strategy_a03911d55eb18e846b4cbe7cd7aeba670}\label{class_strategy_1_1_circle_strategy_a03911d55eb18e846b4cbe7cd7aeba670}} 
-override void {\bfseries Mouse\+Moved} (int x, int y)
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_strategy_1_1_circle_strategy_a1a1fd66ecdf6a19b0ece010290bfdb6e}{Draw}} (object sender, Paint\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Method that draws the figure on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implements the circle drawing strategy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_strategy_1_1_circle_strategy_a1a1fd66ecdf6a19b0ece010290bfdb6e}\label{class_strategy_1_1_circle_strategy_a1a1fd66ecdf6a19b0ece010290bfdb6e}} 
+\index{Strategy.CircleStrategy@{Strategy.CircleStrategy}!Draw@{Draw}}
+\index{Draw@{Draw}!Strategy.CircleStrategy@{Strategy.CircleStrategy}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Strategy.\+Circle\+Strategy.\+Draw (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Paint\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method that draws the figure on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender object\\
+\hline
+{\em e} & Paint event arguments\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_circle_strategy_a12067c982f2cf3799129eae662b0b170}\label{class_strategy_1_1_circle_strategy_a12067c982f2cf3799129eae662b0b170}} 
+\index{Strategy.CircleStrategy@{Strategy.CircleStrategy}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!Strategy.CircleStrategy@{Strategy.CircleStrategy}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily override string Strategy.\+Circle\+Strategy.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to find out what object was drawn and what its position was 
+
+\begin{DoxyReturn}{Returns}
+A string with information about the position of the shape
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_aac731fce0a345445594f48dc0559f164}{Strategy.\+Strategy}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

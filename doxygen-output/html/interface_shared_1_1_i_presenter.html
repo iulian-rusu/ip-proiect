@@ -52,6 +52,9 @@ $(function() {
 <div class="title">Shared.IPresenter Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="interface_shared_1_1_i_presenter.html" title="IPresenter - defines an interface for interacting with any presenter implementation">IPresenter</a> - defines an interface for interacting with any presenter implementation  
+ <a href="interface_shared_1_1_i_presenter.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Shared.IPresenter:</div>
 <div class="dyncontent">
@@ -66,15 +69,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveDrawing</b> ()</t
 <tr class="memitem:ab41381a59706917e489a7a481e02a878"><td class="memItemLeft" align="right" valign="top"><a id="ab41381a59706917e489a7a481e02a878"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadDrawing</b> (string filename)</td></tr>
 <tr class="separator:ab41381a59706917e489a7a481e02a878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34372ccaedf1e0915db18f5f8ba914e7"><td class="memItemLeft" align="right" valign="top"><a id="a34372ccaedf1e0915db18f5f8ba914e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ChoosePaintingTool</b> (PaintingTool paintingTool, Color selecteColor)</td></tr>
-<tr class="separator:a34372ccaedf1e0915db18f5f8ba914e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382bbfd57257b17a897a25a9db7105ab"><td class="memItemLeft" align="right" valign="top"><a id="a382bbfd57257b17a897a25a9db7105ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ChoosePaintingTool</b> (PaintingTool paintingTool, Color borderColor, Color fillColor, float thickness)</td></tr>
+<tr class="separator:a382bbfd57257b17a897a25a9db7105ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af7a60b29b9a7540f474449cb9b006e"><td class="memItemLeft" align="right" valign="top"><a id="a4af7a60b29b9a7540f474449cb9b006e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseMoved</b> (int x, int y)</td></tr>
 <tr class="separator:a4af7a60b29b9a7540f474449cb9b006e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af748a2707cdf2393f14603bd7eca2c78"><td class="memItemLeft" align="right" valign="top"><a id="af748a2707cdf2393f14603bd7eca2c78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseClicked</b> (int x, int y)</td></tr>
-<tr class="separator:af748a2707cdf2393f14603bd7eca2c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf43bf38c4d5b8057bc5ad460b4b830"><td class="memItemLeft" align="right" valign="top"><a id="abcf43bf38c4d5b8057bc5ad460b4b830"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MouseStateChanged</b> (int x, int y)</td></tr>
+<tr class="separator:abcf43bf38c4d5b8057bc5ad460b4b830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29436d97f00c1af3d5eb512e4feb2e7e"><td class="memItemLeft" align="right" valign="top"><a id="a29436d97f00c1af3d5eb512e4feb2e7e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Undo</b> ()</td></tr>
 <tr class="separator:a29436d97f00c1af3d5eb512e4feb2e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -84,8 +87,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Redo</b> ()</td></tr>
 <tr class="memitem:a830f36b4421d7ed74dba7f8ecb3a343a"><td class="memItemLeft" align="right" valign="top"><a id="a830f36b4421d7ed74dba7f8ecb3a343a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ColorChanged</b> (Color color)</td></tr>
 <tr class="separator:a830f36b4421d7ed74dba7f8ecb3a343a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2359fe93f387e1eedbd46b5ba5843ebd"><td class="memItemLeft" align="right" valign="top"><a id="a2359fe93f387e1eedbd46b5ba5843ebd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>FillColorChanged</b> (Color color)</td></tr>
+<tr class="separator:a2359fe93f387e1eedbd46b5ba5843ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c342637b92cc21c56104a8022b6ab98"><td class="memItemLeft" align="right" valign="top"><a id="a6c342637b92cc21c56104a8022b6ab98"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ThicknessChanged</b> (float thickness)</td></tr>
+<tr class="separator:a6c342637b92cc21c56104a8022b6ab98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09229e4d7c7b64e5f59a447b0638a722"><td class="memItemLeft" align="right" valign="top"><a id="a09229e4d7c7b64e5f59a447b0638a722"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentStrategyDescription</b> ()</td></tr>
+<tr class="separator:a09229e4d7c7b64e5f59a447b0638a722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this interface was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="interface_shared_1_1_i_presenter.html" title="IPresenter - defines an interface for interacting with any presenter implementation">IPresenter</a> - defines an interface for interacting with any presenter implementation </p>
+</div><hr/>The documentation for this interface was generated from the following file:<ul>
 <li>SeeSharper/Shared/IPresenter.cs</li>
 </ul>
 </div><!-- contents -->

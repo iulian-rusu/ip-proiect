@@ -20,8 +20,8 @@ Collaboration diagram for Presenter.\+Presenter\+:
 \begin{DoxyCompactList}\small\item\em Constructor of the \mbox{\hyperlink{class_presenter_1_1_presenter}{Presenter}} class \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}{Mouse\+Moved}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Called to notify of a mouse move event \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_presenter_1_1_presenter_abd579921ff2b178b6d5aafa2a59141e5}{Mouse\+Clicked}} (int x, int y)
-\begin{DoxyCompactList}\small\item\em Called to notify of a mouse click event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a0f299df9f2bd052b927fc2af46ab63ce}{Mouse\+State\+Changed}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Called when the mouse button changes its state to DOWN or UP \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_presenter_1_1_presenter_a31df157ae38f6788814b0d9c0f833c7e}{Save\+Drawing}} ()
 \begin{DoxyCompactList}\small\item\em Saves the current state of the \mbox{\hyperlink{namespace_view}{View}} drawing to the model \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_presenter_1_1_presenter_a165c8d74d797c8bab175cb86d16a6d16}{Redo}} ()
@@ -30,10 +30,16 @@ void \mbox{\hyperlink{class_presenter_1_1_presenter_a3cf711621307b1b5a927531b38c
 \begin{DoxyCompactList}\small\item\em Sets the state of the \mbox{\hyperlink{namespace_view}{View}} drawing to revert the last recorded change \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_presenter_1_1_presenter_abf022c173ad1144f3544f4d806311d95}{Color\+Changed}} (Color color)
 \begin{DoxyCompactList}\small\item\em Applies the new color to the current drawing strategy \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_presenter_1_1_presenter_af4f785ef37acf80847b41a72d993c3fc}{Choose\+Painting\+Tool}} (Painting\+Tool painting\+Tool, Color selected\+Color)
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a9082e57bf2f80e7c1b73fde30b7f7aeb}{Fill\+Color\+Changed}} (Color color)
+\begin{DoxyCompactList}\small\item\em Applies the new fill color to the current drawing strategy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a32e64085278eed38b926091548e2bcbd}{Thickness\+Changed}} (float thickness)
+\begin{DoxyCompactList}\small\item\em Changes the thickness of the current tool \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presenter_1_1_presenter_a8fc91af86e2a552f40a8074356ee1883}{Choose\+Painting\+Tool}} (Painting\+Tool painting\+Tool, Color border\+Color, Color fill\+Color, float thickness)
 \begin{DoxyCompactList}\small\item\em Updates the current strategy to match the selected tool \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_presenter_1_1_presenter_a15b5b357b0293c3cf75df4c232c26128}{Load\+Drawing}} (string filename)
-\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{namespace_view}{View}} drawing to the one loaded in the model \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{namespace_view}{View}} drawing to the one loaded in the model \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_presenter_1_1_presenter_a7bff80e73d586b94bb16ee187339a9f4}{Get\+Current\+Strategy\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Returns a description for the last change made by the selected tool \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -62,11 +68,11 @@ Constructor of the \mbox{\hyperlink{class_presenter_1_1_presenter}{Presenter}} c
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_presenter_1_1_presenter_af4f785ef37acf80847b41a72d993c3fc}\label{class_presenter_1_1_presenter_af4f785ef37acf80847b41a72d993c3fc}} 
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a8fc91af86e2a552f40a8074356ee1883}\label{class_presenter_1_1_presenter_a8fc91af86e2a552f40a8074356ee1883}} 
 \index{Presenter.Presenter@{Presenter.Presenter}!ChoosePaintingTool@{ChoosePaintingTool}}
 \index{ChoosePaintingTool@{ChoosePaintingTool}!Presenter.Presenter@{Presenter.Presenter}}
 \doxysubsubsection{\texorpdfstring{ChoosePaintingTool()}{ChoosePaintingTool()}}
-{\footnotesize\ttfamily void Presenter.\+Presenter.\+Choose\+Painting\+Tool (\begin{DoxyParamCaption}\item[{Painting\+Tool}]{painting\+Tool,  }\item[{Color}]{selected\+Color }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Choose\+Painting\+Tool (\begin{DoxyParamCaption}\item[{Painting\+Tool}]{painting\+Tool,  }\item[{Color}]{border\+Color,  }\item[{Color}]{fill\+Color,  }\item[{float}]{thickness }\end{DoxyParamCaption})}
 
 
 
@@ -76,7 +82,9 @@ Updates the current strategy to match the selected tool
 \begin{DoxyParams}{Parameters}
 {\em painting\+Tool} & The new selected painting tool\\
 \hline
-{\em selected\+Color} & The color of the painting tool\\
+{\em border\+Color} & The color of the border of the painting tool\\
+\hline
+{\em fill\+Color} & The fill color of the painting tool\\
 \hline
 \end{DoxyParams}
 
@@ -102,6 +110,42 @@ Applies the new color to the current drawing strategy
 
 Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
 
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a9082e57bf2f80e7c1b73fde30b7f7aeb}\label{class_presenter_1_1_presenter_a9082e57bf2f80e7c1b73fde30b7f7aeb}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!FillColorChanged@{FillColorChanged}}
+\index{FillColorChanged@{FillColorChanged}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{FillColorChanged()}{FillColorChanged()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Fill\+Color\+Changed (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Applies the new fill color to the current drawing strategy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a7bff80e73d586b94bb16ee187339a9f4}\label{class_presenter_1_1_presenter_a7bff80e73d586b94bb16ee187339a9f4}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!GetCurrentStrategyDescription@{GetCurrentStrategyDescription}}
+\index{GetCurrentStrategyDescription@{GetCurrentStrategyDescription}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetCurrentStrategyDescription()}{GetCurrentStrategyDescription()}}
+{\footnotesize\ttfamily string Presenter.\+Presenter.\+Get\+Current\+Strategy\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a description for the last change made by the selected tool 
+
+\begin{DoxyReturn}{Returns}
+A string that describes the changes made by the tool
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
 \mbox{\Hypertarget{class_presenter_1_1_presenter_a15b5b357b0293c3cf75df4c232c26128}\label{class_presenter_1_1_presenter_a15b5b357b0293c3cf75df4c232c26128}} 
 \index{Presenter.Presenter@{Presenter.Presenter}!LoadDrawing@{LoadDrawing}}
 \index{LoadDrawing@{LoadDrawing}!Presenter.Presenter@{Presenter.Presenter}}
@@ -121,15 +165,15 @@ Sets the \mbox{\hyperlink{namespace_view}{View}} drawing to the one loaded in th
 
 Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
 
-\mbox{\Hypertarget{class_presenter_1_1_presenter_abd579921ff2b178b6d5aafa2a59141e5}\label{class_presenter_1_1_presenter_abd579921ff2b178b6d5aafa2a59141e5}} 
-\index{Presenter.Presenter@{Presenter.Presenter}!MouseClicked@{MouseClicked}}
-\index{MouseClicked@{MouseClicked}!Presenter.Presenter@{Presenter.Presenter}}
-\doxysubsubsection{\texorpdfstring{MouseClicked()}{MouseClicked()}}
-{\footnotesize\ttfamily void Presenter.\+Presenter.\+Mouse\+Clicked (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}\label{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!MouseMoved@{MouseMoved}}
+\index{MouseMoved@{MouseMoved}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{MouseMoved()}{MouseMoved()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
 
 
-Called to notify of a mouse click event 
+Called to notify of a mouse move event 
 
 
 \begin{DoxyParams}{Parameters}
@@ -142,15 +186,15 @@ Called to notify of a mouse click event
 
 Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
 
-\mbox{\Hypertarget{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}\label{class_presenter_1_1_presenter_abd746f3e333028d65afea42449d0beb1}} 
-\index{Presenter.Presenter@{Presenter.Presenter}!MouseMoved@{MouseMoved}}
-\index{MouseMoved@{MouseMoved}!Presenter.Presenter@{Presenter.Presenter}}
-\doxysubsubsection{\texorpdfstring{MouseMoved()}{MouseMoved()}}
-{\footnotesize\ttfamily void Presenter.\+Presenter.\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a0f299df9f2bd052b927fc2af46ab63ce}\label{class_presenter_1_1_presenter_a0f299df9f2bd052b927fc2af46ab63ce}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!MouseStateChanged@{MouseStateChanged}}
+\index{MouseStateChanged@{MouseStateChanged}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{MouseStateChanged()}{MouseStateChanged()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Mouse\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
 
 
-Called to notify of a mouse move event 
+Called when the mouse button changes its state to DOWN or UP 
 
 
 \begin{DoxyParams}{Parameters}
@@ -187,6 +231,25 @@ Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresente
 
 Saves the current state of the \mbox{\hyperlink{namespace_view}{View}} drawing to the model 
 
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.
+
+\mbox{\Hypertarget{class_presenter_1_1_presenter_a32e64085278eed38b926091548e2bcbd}\label{class_presenter_1_1_presenter_a32e64085278eed38b926091548e2bcbd}} 
+\index{Presenter.Presenter@{Presenter.Presenter}!ThicknessChanged@{ThicknessChanged}}
+\index{ThicknessChanged@{ThicknessChanged}!Presenter.Presenter@{Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{ThicknessChanged()}{ThicknessChanged()}}
+{\footnotesize\ttfamily void Presenter.\+Presenter.\+Thickness\+Changed (\begin{DoxyParamCaption}\item[{float}]{thickness }\end{DoxyParamCaption})}
+
+
+
+Changes the thickness of the current tool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thickness} & The new thickness\\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{interface_shared_1_1_i_presenter}{Shared.\+IPresenter}}.

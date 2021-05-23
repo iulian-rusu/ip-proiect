@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Model.UndoStack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_undo_stack.html",tooltip="Undo stack - logic for the undo/redo process"];
+  Node0 [label="Model.Tests.ModelTests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_tests_1_1_model_tests.html",tooltip="Model unit test class - contains the unit test methods and the initialization and cleanup methods for..."];
 }

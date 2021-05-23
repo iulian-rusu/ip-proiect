@@ -2,12 +2,26 @@
 \label{class_strategy_1_1_two_point_strategy}\index{Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}}
 
 
+Base class for all shapes that requires 2 points to be drawn  
+
+
+
+
 Inheritance diagram for Strategy.\+Two\+Point\+Strategy\+:
 % FIG 0
 
 
 Collaboration diagram for Strategy.\+Two\+Point\+Strategy\+:
 % FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_strategy_1_1_two_point_strategy_a5c99bb046189012eda394ef97dc484f9}{Mouse\+State\+Changed}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Change coordinates on mouse state changed \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_strategy_1_1_two_point_strategy_a54ed6273fb01bdd16101bc602b8769a9}{Mouse\+Moved}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Change coordinates on mouse moved \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_strategy_1_1_two_point_strategy_a0795593bfebc0ec67a4a200d0c9b2a70}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset attributes to default values \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,6 +29,70 @@ Collaboration diagram for Strategy.\+Two\+Point\+Strategy\+:
 Point\mbox{[}$\,$\mbox{]} {\bfseries \+\_\+points}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for all shapes that requires 2 points to be drawn 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_strategy_1_1_two_point_strategy_a54ed6273fb01bdd16101bc602b8769a9}\label{class_strategy_1_1_two_point_strategy_a54ed6273fb01bdd16101bc602b8769a9}} 
+\index{Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}!MouseMoved@{MouseMoved}}
+\index{MouseMoved@{MouseMoved}!Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}}
+\doxysubsubsection{\texorpdfstring{MouseMoved()}{MouseMoved()}}
+{\footnotesize\ttfamily override void Strategy.\+Two\+Point\+Strategy.\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change coordinates on mouse moved 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate\\
+\hline
+{\em y} & Y coordinate\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_two_point_strategy_a5c99bb046189012eda394ef97dc484f9}\label{class_strategy_1_1_two_point_strategy_a5c99bb046189012eda394ef97dc484f9}} 
+\index{Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}!MouseStateChanged@{MouseStateChanged}}
+\index{MouseStateChanged@{MouseStateChanged}!Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}}
+\doxysubsubsection{\texorpdfstring{MouseStateChanged()}{MouseStateChanged()}}
+{\footnotesize\ttfamily override void Strategy.\+Two\+Point\+Strategy.\+Mouse\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change coordinates on mouse state changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate\\
+\hline
+{\em y} & Y coordinate\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_aed886a76785602ddfdd27ece4b6138f5}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_two_point_strategy_a0795593bfebc0ec67a4a200d0c9b2a70}\label{class_strategy_1_1_two_point_strategy_a0795593bfebc0ec67a4a200d0c9b2a70}} 
+\index{Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}!Reset@{Reset}}
+\index{Reset@{Reset}!Strategy.TwoPointStrategy@{Strategy.TwoPointStrategy}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily override void Strategy.\+Two\+Point\+Strategy.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reset attributes to default values 
+
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_a81a835cc2847d2829f868c2ffcf06a61}{Strategy.\+Strategy}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

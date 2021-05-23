@@ -2,41 +2,245 @@
 \label{class_strategy_1_1_strategy}\index{Strategy.Strategy@{Strategy.Strategy}}
 
 
+Base class for each shape strategy.  
+
+
+
+
 Inheritance diagram for Strategy.\+Strategy\+:
 % FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_strategy_a27d6fe684c5a6a18bfb369e346258896}\label{class_strategy_1_1_strategy_a27d6fe684c5a6a18bfb369e346258896}} 
-void {\bfseries Color\+Changed} (Color color)
+void \mbox{\hyperlink{class_strategy_1_1_strategy_a27d6fe684c5a6a18bfb369e346258896}{Color\+Changed}} (Color color)
+\begin{DoxyCompactList}\small\item\em Change shape border color \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_strategy_1_1_strategy_ad1ed55bda0a3978896e0037f4674de6e}{Thickness\+Changed}} (float thickness)
+\begin{DoxyCompactList}\small\item\em Change shape border thickness \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_strategy_1_1_strategy_ac5bc244db5c85d57ea23b411bf6d370b}{Fill\+Color\+Changed}} (Color color)
+\begin{DoxyCompactList}\small\item\em Change shape fill color \end{DoxyCompactList}\item 
+Paint\+Event\+Handler \mbox{\hyperlink{class_strategy_1_1_strategy_a234e2dc90ebd448a15e03df3eec37a36}{Get\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Method that returns the event handler for draw method \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_strategy_1_1_strategy_aed886a76785602ddfdd27ece4b6138f5}{Mouse\+State\+Changed}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Change coordinates on mouse state changed \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}{Mouse\+Moved}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Change coordinates on mouse moved \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_strategy_1_1_strategy_a81a835cc2847d2829f868c2ffcf06a61}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset attributes to default values \end{DoxyCompactList}\item 
+abstract string \mbox{\hyperlink{class_strategy_1_1_strategy_aac731fce0a345445594f48dc0559f164}{Get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Method to find out what object was drawn and what its position was \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_strategy_a4f6b4f17ec2faec2436da89c3d8c25db}\label{class_strategy_1_1_strategy_a4f6b4f17ec2faec2436da89c3d8c25db}} 
-abstract Paint\+Event\+Handler {\bfseries Get\+Draw} ()
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_strategy_a5e86d789001648b9f67784c98b032ab9}\label{class_strategy_1_1_strategy_a5e86d789001648b9f67784c98b032ab9}} 
-abstract void {\bfseries Mouse\+Clicked} (int x, int y)
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_strategy_aa5b3d8ebb16e6afea7a82fb35efa3988}\label{class_strategy_1_1_strategy_aa5b3d8ebb16e6afea7a82fb35efa3988}} 
-abstract void {\bfseries Is\+Done} ()
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}\label{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}} 
-abstract void {\bfseries Mouse\+Moved} (int x, int y)
-\end{DoxyCompactItemize}
+abstract void \mbox{\hyperlink{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}{Draw}} (object sender, Paint\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Method that draws the figure on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_strategy_1_1_strategy_ac1583a7e33e5998b4a8643616e2bf443}\label{class_strategy_1_1_strategy_ac1583a7e33e5998b4a8643616e2bf443}} 
 Color {\bfseries \+\_\+color}
 \item 
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a5315065a038b7823c3289289d6a600f4}\label{class_strategy_1_1_strategy_a5315065a038b7823c3289289d6a600f4}} 
+Color {\bfseries \+\_\+fill\+Color}
+\item 
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a869a47d4a3cb6af8c1c73636e77956f7}\label{class_strategy_1_1_strategy_a869a47d4a3cb6af8c1c73636e77956f7}} 
+float {\bfseries \+\_\+thickness}
+\item 
 \mbox{\Hypertarget{class_strategy_1_1_strategy_ae444d2c3f630fe30e7d6683183871d7c}\label{class_strategy_1_1_strategy_ae444d2c3f630fe30e7d6683183871d7c}} 
 bool {\bfseries \+\_\+done} = false
+\item 
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a4bb0774d796e14f31a85eaff070351a7}\label{class_strategy_1_1_strategy_a4bb0774d796e14f31a85eaff070351a7}} 
+bool {\bfseries \+\_\+has\+Drawn} = false
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+bool \mbox{\hyperlink{class_strategy_1_1_strategy_a8fe09be1925a1d519db27c5563f6e6a2}{Done}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property that access done flag \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_strategy_1_1_strategy_ac51a8a8e407de184605acc4fa55054cf}{Has\+Drawn}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property that check if the shape was drawn \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for each shape strategy. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a27d6fe684c5a6a18bfb369e346258896}\label{class_strategy_1_1_strategy_a27d6fe684c5a6a18bfb369e346258896}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!ColorChanged@{ColorChanged}}
+\index{ColorChanged@{ColorChanged}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{ColorChanged()}{ColorChanged()}}
+{\footnotesize\ttfamily void Strategy.\+Strategy.\+Color\+Changed (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Change shape border color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & New color\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}\label{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!Draw@{Draw}}
+\index{Draw@{Draw}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily abstract void Strategy.\+Strategy.\+Draw (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Paint\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method that draws the figure on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender object\\
+\hline
+{\em e} & Paint event arguments\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_strategy_1_1_star_strategy_aa6b3a043fdd12dcf0567fcec11fb8463}{Strategy.\+Star\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_square_strategy_a3c7810d7fed29f197556ced58beeec16}{Strategy.\+Square\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_right_triangle_strategy_a13b18cf5aeb310095ec3931fd0ff5d28}{Strategy.\+Right\+Triangle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_rhomb_strategy_a5cafa9babdf3d32ab1773a138f3e20b0}{Strategy.\+Rhomb\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_rectangle_strategy_a673d6f4482dced141d0f61df96fa6e13}{Strategy.\+Rectangle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_pentagon_strategy_ace081f4692f96e321f7d57508f977c8f}{Strategy.\+Pentagon\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_line_strategy_a72d60ce6e576a64a43ddedd85f500971}{Strategy.\+Line\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_isosceles_triangle_strategy_a90f18e91c422b5380a13be60a746d9b9}{Strategy.\+Isosceles\+Triangle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_hexagon_strategy_a741a33153ae6542a42c09eb6f6074661}{Strategy.\+Hexagon\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_heart_strategy_a52207e5b9e42ac038e3261ba11237290}{Strategy.\+Heart\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_eraser_strategy_aac0bd1434d558e98610d37483fc5a3d5}{Strategy.\+Eraser\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_elipse_strategy_a5cd5d2d29de74fd4243026a4e2141fbf}{Strategy.\+Elipse\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_circle_strategy_a1a1fd66ecdf6a19b0ece010290bfdb6e}{Strategy.\+Circle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_brush_strategy_aad9aea5772d93b4189a67c353ec3ad51}{Strategy.\+Brush\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_arrow_up_strategy_ae57e104401183f4563525e7f137c647a}{Strategy.\+Arrow\+Up\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_arrow_right_strategy_a6bd53ded038fff0b88fe7bf5a971b0d6}{Strategy.\+Arrow\+Right\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_arrow_left_strategy_a5b4b5b189f787e618de13a9127bd11c2}{Strategy.\+Arrow\+Left\+Strategy}}, and \mbox{\hyperlink{class_strategy_1_1_arrow_down_strategy_ab7e703e5276b473ccf259f9660372767}{Strategy.\+Arrow\+Down\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_strategy_ac5bc244db5c85d57ea23b411bf6d370b}\label{class_strategy_1_1_strategy_ac5bc244db5c85d57ea23b411bf6d370b}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!FillColorChanged@{FillColorChanged}}
+\index{FillColorChanged@{FillColorChanged}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{FillColorChanged()}{FillColorChanged()}}
+{\footnotesize\ttfamily void Strategy.\+Strategy.\+Fill\+Color\+Changed (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Change shape fill color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & New fill color\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_strategy_1_1_strategy_aac731fce0a345445594f48dc0559f164}\label{class_strategy_1_1_strategy_aac731fce0a345445594f48dc0559f164}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily abstract string Strategy.\+Strategy.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to find out what object was drawn and what its position was 
+
+\begin{DoxyReturn}{Returns}
+A string with information about the position of the shape
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_strategy_1_1_star_strategy_a1a0e47ab9aac5ae0201080ee06b79f60}{Strategy.\+Star\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_square_strategy_a686a26d4e4102246c86e15c5f5f8fede}{Strategy.\+Square\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_right_triangle_strategy_a7a0d519ccca8822ea1997979a222d9d1}{Strategy.\+Right\+Triangle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_rhomb_strategy_a8a73f401ab4a2021845c7203352579ad}{Strategy.\+Rhomb\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_rectangle_strategy_aa8eba88be21bcbbe36d504302c124627}{Strategy.\+Rectangle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_pentagon_strategy_a44c13c6e466017b1e09befe76de0cb73}{Strategy.\+Pentagon\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_multiple_point_strategy_a2b311be8c5121124cdfd8d01bc95f491}{Strategy.\+Multiple\+Point\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_line_strategy_ac2adee72fca8911b455434b937c2f8de}{Strategy.\+Line\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_isosceles_triangle_strategy_ad9300e2a2dcd2b9c975ab9335f21005d}{Strategy.\+Isosceles\+Triangle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_hexagon_strategy_a02d109052f910c8a2c8cad5bb4d3b01f}{Strategy.\+Hexagon\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_heart_strategy_a1ca02da60a6666e93691508421b8c56f}{Strategy.\+Heart\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_elipse_strategy_a338a6cc292a926c848056d43773628e4}{Strategy.\+Elipse\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_circle_strategy_a12067c982f2cf3799129eae662b0b170}{Strategy.\+Circle\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_arrow_up_strategy_ac564d9ccd5d71896d6c34f9cd174c79a}{Strategy.\+Arrow\+Up\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_arrow_right_strategy_afce62e01c4c54a063b894add2f417f71}{Strategy.\+Arrow\+Right\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_arrow_left_strategy_a4f12514ea49c6052f8db7e91bbd21410}{Strategy.\+Arrow\+Left\+Strategy}}, and \mbox{\hyperlink{class_strategy_1_1_arrow_down_strategy_a33308843c817c75b86a5ec51f82248e2}{Strategy.\+Arrow\+Down\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a234e2dc90ebd448a15e03df3eec37a36}\label{class_strategy_1_1_strategy_a234e2dc90ebd448a15e03df3eec37a36}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!GetDraw@{GetDraw}}
+\index{GetDraw@{GetDraw}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{GetDraw()}{GetDraw()}}
+{\footnotesize\ttfamily Paint\+Event\+Handler Strategy.\+Strategy.\+Get\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that returns the event handler for draw method 
+
+\begin{DoxyReturn}{Returns}
+Draw method paint event handler
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}\label{class_strategy_1_1_strategy_a1866259f3dc6b8ea5db40479e03c8d10}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!MouseMoved@{MouseMoved}}
+\index{MouseMoved@{MouseMoved}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{MouseMoved()}{MouseMoved()}}
+{\footnotesize\ttfamily abstract void Strategy.\+Strategy.\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Change coordinates on mouse moved 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate\\
+\hline
+{\em y} & Y coordinate\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_strategy_1_1_two_point_strategy_a54ed6273fb01bdd16101bc602b8769a9}{Strategy.\+Two\+Point\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_eraser_strategy_a87f1045a446c245d0ce30722fb359e79}{Strategy.\+Eraser\+Strategy}}, and \mbox{\hyperlink{class_strategy_1_1_brush_strategy_aa8a4f4569d7e0f381c817cd37e01f4e7}{Strategy.\+Brush\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_strategy_aed886a76785602ddfdd27ece4b6138f5}\label{class_strategy_1_1_strategy_aed886a76785602ddfdd27ece4b6138f5}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!MouseStateChanged@{MouseStateChanged}}
+\index{MouseStateChanged@{MouseStateChanged}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{MouseStateChanged()}{MouseStateChanged()}}
+{\footnotesize\ttfamily abstract void Strategy.\+Strategy.\+Mouse\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Change coordinates on mouse state changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate\\
+\hline
+{\em y} & Y coordinate\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_strategy_1_1_two_point_strategy_a5c99bb046189012eda394ef97dc484f9}{Strategy.\+Two\+Point\+Strategy}}, \mbox{\hyperlink{class_strategy_1_1_eraser_strategy_a96cce28e13a75e3e4acc12fd66de64e7}{Strategy.\+Eraser\+Strategy}}, and \mbox{\hyperlink{class_strategy_1_1_brush_strategy_a6699a370d912daea2580b141ad748c00}{Strategy.\+Brush\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_strategy_a81a835cc2847d2829f868c2ffcf06a61}\label{class_strategy_1_1_strategy_a81a835cc2847d2829f868c2ffcf06a61}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!Reset@{Reset}}
+\index{Reset@{Reset}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily abstract void Strategy.\+Strategy.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reset attributes to default values 
+
+
+
+Implemented in \mbox{\hyperlink{class_strategy_1_1_two_point_strategy_a0795593bfebc0ec67a4a200d0c9b2a70}{Strategy.\+Two\+Point\+Strategy}}, and \mbox{\hyperlink{class_strategy_1_1_multiple_point_strategy_a1c8325c5e80ee6ab19dde1a18803ed50}{Strategy.\+Multiple\+Point\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_strategy_ad1ed55bda0a3978896e0037f4674de6e}\label{class_strategy_1_1_strategy_ad1ed55bda0a3978896e0037f4674de6e}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!ThicknessChanged@{ThicknessChanged}}
+\index{ThicknessChanged@{ThicknessChanged}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{ThicknessChanged()}{ThicknessChanged()}}
+{\footnotesize\ttfamily void Strategy.\+Strategy.\+Thickness\+Changed (\begin{DoxyParamCaption}\item[{float}]{thickness }\end{DoxyParamCaption})}
+
+
+
+Change shape border thickness 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thickness} & New thickness\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
 \mbox{\Hypertarget{class_strategy_1_1_strategy_a8fe09be1925a1d519db27c5563f6e6a2}\label{class_strategy_1_1_strategy_a8fe09be1925a1d519db27c5563f6e6a2}} 
-bool {\bfseries Done}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\index{Strategy.Strategy@{Strategy.Strategy}!Done@{Done}}
+\index{Done@{Done}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{Done}{Done}}
+{\footnotesize\ttfamily bool Strategy.\+Strategy.\+Done\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Property that access done flag 
+
+\mbox{\Hypertarget{class_strategy_1_1_strategy_ac51a8a8e407de184605acc4fa55054cf}\label{class_strategy_1_1_strategy_ac51a8a8e407de184605acc4fa55054cf}} 
+\index{Strategy.Strategy@{Strategy.Strategy}!HasDrawn@{HasDrawn}}
+\index{HasDrawn@{HasDrawn}!Strategy.Strategy@{Strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{HasDrawn}{HasDrawn}}
+{\footnotesize\ttfamily bool Strategy.\+Strategy.\+Has\+Drawn\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Property that check if the shape was drawn 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -2,6 +2,11 @@
 \label{class_strategy_1_1_line_strategy}\index{Strategy.LineStrategy@{Strategy.LineStrategy}}
 
 
+Implements the line drawing strategy  
+
+
+
+
 Inheritance diagram for Strategy.\+Line\+Strategy\+:
 % FIG 0
 
@@ -11,19 +16,60 @@ Collaboration diagram for Strategy.\+Line\+Strategy\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_line_strategy_a4bb2a35e8624e4045bf55d0f272aeade}\label{class_strategy_1_1_line_strategy_a4bb2a35e8624e4045bf55d0f272aeade}} 
-override Paint\+Event\+Handler {\bfseries Get\+Draw} ()
+override string \mbox{\hyperlink{class_strategy_1_1_line_strategy_ac2adee72fca8911b455434b937c2f8de}{Get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Method to find out what object was drawn and what its position was \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_line_strategy_aefcc09841ea95f5b713534e0ff4f7497}\label{class_strategy_1_1_line_strategy_aefcc09841ea95f5b713534e0ff4f7497}} 
-override void {\bfseries Is\+Done} ()
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_line_strategy_ae23fa349a1518ea78c56f1256a5d6807}\label{class_strategy_1_1_line_strategy_ae23fa349a1518ea78c56f1256a5d6807}} 
-override void {\bfseries Mouse\+Clicked} (int x, int y)
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_line_strategy_a767a945f49899bd8405ca3466a1d1a7a}\label{class_strategy_1_1_line_strategy_a767a945f49899bd8405ca3466a1d1a7a}} 
-override void {\bfseries Mouse\+Moved} (int x, int y)
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_strategy_1_1_line_strategy_a72d60ce6e576a64a43ddedd85f500971}{Draw}} (object sender, Paint\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Method that draws the figure on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implements the line drawing strategy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_strategy_1_1_line_strategy_a72d60ce6e576a64a43ddedd85f500971}\label{class_strategy_1_1_line_strategy_a72d60ce6e576a64a43ddedd85f500971}} 
+\index{Strategy.LineStrategy@{Strategy.LineStrategy}!Draw@{Draw}}
+\index{Draw@{Draw}!Strategy.LineStrategy@{Strategy.LineStrategy}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Strategy.\+Line\+Strategy.\+Draw (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Paint\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method that draws the figure on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender object\\
+\hline
+{\em e} & Paint event arguments\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_line_strategy_ac2adee72fca8911b455434b937c2f8de}\label{class_strategy_1_1_line_strategy_ac2adee72fca8911b455434b937c2f8de}} 
+\index{Strategy.LineStrategy@{Strategy.LineStrategy}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!Strategy.LineStrategy@{Strategy.LineStrategy}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily override string Strategy.\+Line\+Strategy.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to find out what object was drawn and what its position was 
+
+\begin{DoxyReturn}{Returns}
+A string with information about the position of the shape
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_aac731fce0a345445594f48dc0559f164}{Strategy.\+Strategy}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

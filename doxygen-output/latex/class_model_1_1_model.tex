@@ -8,3 +8,273 @@
 
 
 Inheritance diagram for Model.\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Model.\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_1_1_model_a211cc9a0a667d84dba345915c9bd5804}{Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the model -\/ initializes the undo stack \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_strategy_1_1_strategy}{Strategy}} \mbox{\hyperlink{class_model_1_1_model_a356bb9fd8dcb10b7ae23536bb84309b8}{Get\+Painting\+Strategy}} (Painting\+Tool painting\+Tool)
+\begin{DoxyCompactList}\small\item\em Returns the strategy for a painting tool \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_model_1_1_model_af3bb11a7b2c2e8fbe1fcbd7c25a7a235}{Has\+Save\+File\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Checks if a file name has been given when saving the drawing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} \mbox{\hyperlink{class_model_1_1_model_aa865d6bbe7b27b78ef545128c7660858}{Load\+Drawing}} (string filename)
+\begin{DoxyCompactList}\small\item\em Loads a drawing from the given path \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} \mbox{\hyperlink{class_model_1_1_model_a016211078af75596656174e7567e8130}{Redo}} ()
+\begin{DoxyCompactList}\small\item\em Redoes the last undone action \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_model_a1be9f47bdf029b39eb8f5948f4722094}{Save\+Drawing}} (\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} drawing\+Memento)
+\begin{DoxyCompactList}\small\item\em Saves a drawing at the path mentioned in \+\_\+save\+File\+Name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_model_a11f31fe99f608b357025c70040777d12}{Set\+Save\+File\+Name}} (string save\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Setter for the drawing file save path \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} \mbox{\hyperlink{class_model_1_1_model_a0f952c84648d85145f6ea100855521bf}{Undo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the last done action \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_model_a0748c1fbf777498e56c363fce1554136}{Add\+Memento}} (\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} memento)
+\begin{DoxyCompactList}\small\item\em Function used to add a drawing memento to the event stack \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_model_1_1_model_ac0fddaf083f8c64630325e573b1291c7}{Get\+Next\+Undo\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Used to get the description of the next undo that\textquotesingle{}s on the stack \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_model_1_1_model_a2d2345c90cfc531b6b6595ea0e09ff54}{Get\+Next\+Redo\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Used to get the description of the next redo that\textquotesingle{}s on the stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_model_a6b7333b6aee52a8525fd049162c15413}{Drop\+Mementos}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper for the undo stack drop(clear) function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_model_1_1_model}{Model}} class -\/ contains the data, state and logic of the application. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_1_1_model_a211cc9a0a667d84dba345915c9bd5804}\label{class_model_1_1_model_a211cc9a0a667d84dba345915c9bd5804}} 
+\index{Model.Model@{Model.Model}!Model@{Model}}
+\index{Model@{Model}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily Model.\+Model.\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the model -\/ initializes the undo stack 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_1_1_model_a0748c1fbf777498e56c363fce1554136}\label{class_model_1_1_model_a0748c1fbf777498e56c363fce1554136}} 
+\index{Model.Model@{Model.Model}!AddMemento@{AddMemento}}
+\index{AddMemento@{AddMemento}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{AddMemento()}{AddMemento()}}
+{\footnotesize\ttfamily void Model.\+Model.\+Add\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}}}]{memento }\end{DoxyParamCaption})}
+
+
+
+Function used to add a drawing memento to the event stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & The memento to be added on the stack\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a6b7333b6aee52a8525fd049162c15413}\label{class_model_1_1_model_a6b7333b6aee52a8525fd049162c15413}} 
+\index{Model.Model@{Model.Model}!DropMementos@{DropMementos}}
+\index{DropMementos@{DropMementos}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{DropMementos()}{DropMementos()}}
+{\footnotesize\ttfamily void Model.\+Model.\+Drop\+Mementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper for the undo stack drop(clear) function 
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a2d2345c90cfc531b6b6595ea0e09ff54}\label{class_model_1_1_model_a2d2345c90cfc531b6b6595ea0e09ff54}} 
+\index{Model.Model@{Model.Model}!GetNextRedoDescription@{GetNextRedoDescription}}
+\index{GetNextRedoDescription@{GetNextRedoDescription}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{GetNextRedoDescription()}{GetNextRedoDescription()}}
+{\footnotesize\ttfamily string Model.\+Model.\+Get\+Next\+Redo\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used to get the description of the next redo that\textquotesingle{}s on the stack 
+
+\begin{DoxyReturn}{Returns}
+The description of the next redo on the stack
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_ac0fddaf083f8c64630325e573b1291c7}\label{class_model_1_1_model_ac0fddaf083f8c64630325e573b1291c7}} 
+\index{Model.Model@{Model.Model}!GetNextUndoDescription@{GetNextUndoDescription}}
+\index{GetNextUndoDescription@{GetNextUndoDescription}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{GetNextUndoDescription()}{GetNextUndoDescription()}}
+{\footnotesize\ttfamily string Model.\+Model.\+Get\+Next\+Undo\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used to get the description of the next undo that\textquotesingle{}s on the stack 
+
+\begin{DoxyReturn}{Returns}
+The description of the next undo on the stack
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a356bb9fd8dcb10b7ae23536bb84309b8}\label{class_model_1_1_model_a356bb9fd8dcb10b7ae23536bb84309b8}} 
+\index{Model.Model@{Model.Model}!GetPaintingStrategy@{GetPaintingStrategy}}
+\index{GetPaintingStrategy@{GetPaintingStrategy}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{GetPaintingStrategy()}{GetPaintingStrategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_strategy_1_1_strategy}{Strategy}} Model.\+Model.\+Get\+Painting\+Strategy (\begin{DoxyParamCaption}\item[{Painting\+Tool}]{painting\+Tool }\end{DoxyParamCaption})}
+
+
+
+Returns the strategy for a painting tool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painting\+Tool} & The given painting tool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The strategy corresponding to the painting tool
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_af3bb11a7b2c2e8fbe1fcbd7c25a7a235}\label{class_model_1_1_model_af3bb11a7b2c2e8fbe1fcbd7c25a7a235}} 
+\index{Model.Model@{Model.Model}!HasSaveFileName@{HasSaveFileName}}
+\index{HasSaveFileName@{HasSaveFileName}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{HasSaveFileName()}{HasSaveFileName()}}
+{\footnotesize\ttfamily bool Model.\+Model.\+Has\+Save\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if a file name has been given when saving the drawing. 
+
+\begin{DoxyReturn}{Returns}
+Boolean value of the stated scenario
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_aa865d6bbe7b27b78ef545128c7660858}\label{class_model_1_1_model_aa865d6bbe7b27b78ef545128c7660858}} 
+\index{Model.Model@{Model.Model}!LoadDrawing@{LoadDrawing}}
+\index{LoadDrawing@{LoadDrawing}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{LoadDrawing()}{LoadDrawing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} Model.\+Model.\+Load\+Drawing (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads a drawing from the given path 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Drawing path on disk\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The drawing at the given path
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a016211078af75596656174e7567e8130}\label{class_model_1_1_model_a016211078af75596656174e7567e8130}} 
+\index{Model.Model@{Model.Model}!Redo@{Redo}}
+\index{Redo@{Redo}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{Redo()}{Redo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} Model.\+Model.\+Redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Redoes the last undone action 
+
+\begin{DoxyReturn}{Returns}
+The drawing with the corresponding content
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a1be9f47bdf029b39eb8f5948f4722094}\label{class_model_1_1_model_a1be9f47bdf029b39eb8f5948f4722094}} 
+\index{Model.Model@{Model.Model}!SaveDrawing@{SaveDrawing}}
+\index{SaveDrawing@{SaveDrawing}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{SaveDrawing()}{SaveDrawing()}}
+{\footnotesize\ttfamily void Model.\+Model.\+Save\+Drawing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}}}]{drawing\+Memento }\end{DoxyParamCaption})}
+
+
+
+Saves a drawing at the path mentioned in \+\_\+save\+File\+Name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawing\+Memento} & The drawing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a11f31fe99f608b357025c70040777d12}\label{class_model_1_1_model_a11f31fe99f608b357025c70040777d12}} 
+\index{Model.Model@{Model.Model}!SetSaveFileName@{SetSaveFileName}}
+\index{SetSaveFileName@{SetSaveFileName}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{SetSaveFileName()}{SetSaveFileName()}}
+{\footnotesize\ttfamily void Model.\+Model.\+Set\+Save\+File\+Name (\begin{DoxyParamCaption}\item[{string}]{save\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Setter for the drawing file save path 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save\+File\+Name} & The wished path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+\mbox{\Hypertarget{class_model_1_1_model_a0f952c84648d85145f6ea100855521bf}\label{class_model_1_1_model_a0f952c84648d85145f6ea100855521bf}} 
+\index{Model.Model@{Model.Model}!Undo@{Undo}}
+\index{Undo@{Undo}!Model.Model@{Model.Model}}
+\doxysubsubsection{\texorpdfstring{Undo()}{Undo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memento_1_1_drawing_memento}{Drawing\+Memento}} Model.\+Model.\+Undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Undoes the last done action 
+
+\begin{DoxyReturn}{Returns}
+The drawing with the corresponding content
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_shared_1_1_i_model}{Shared.\+IModel}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+See\+Sharper/\+Model/Model.\+cs\end{DoxyCompactItemize}

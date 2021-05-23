@@ -2,6 +2,11 @@
 \label{interface_shared_1_1_i_presenter}\index{Shared.IPresenter@{Shared.IPresenter}}
 
 
+\mbox{\hyperlink{interface_shared_1_1_i_presenter}{IPresenter}} -\/ defines an interface for interacting with any presenter implementation  
+
+
+
+
 Inheritance diagram for Shared.\+IPresenter\+:
 % FIG 0
 \doxysubsection*{Public Member Functions}
@@ -13,14 +18,14 @@ void {\bfseries Save\+Drawing} ()
 \mbox{\Hypertarget{interface_shared_1_1_i_presenter_ab41381a59706917e489a7a481e02a878}\label{interface_shared_1_1_i_presenter_ab41381a59706917e489a7a481e02a878}} 
 void {\bfseries Load\+Drawing} (string filename)
 \item 
-\mbox{\Hypertarget{interface_shared_1_1_i_presenter_a34372ccaedf1e0915db18f5f8ba914e7}\label{interface_shared_1_1_i_presenter_a34372ccaedf1e0915db18f5f8ba914e7}} 
-void {\bfseries Choose\+Painting\+Tool} (Painting\+Tool painting\+Tool, Color selecte\+Color)
+\mbox{\Hypertarget{interface_shared_1_1_i_presenter_a382bbfd57257b17a897a25a9db7105ab}\label{interface_shared_1_1_i_presenter_a382bbfd57257b17a897a25a9db7105ab}} 
+void {\bfseries Choose\+Painting\+Tool} (Painting\+Tool painting\+Tool, Color border\+Color, Color fill\+Color, float thickness)
 \item 
 \mbox{\Hypertarget{interface_shared_1_1_i_presenter_a4af7a60b29b9a7540f474449cb9b006e}\label{interface_shared_1_1_i_presenter_a4af7a60b29b9a7540f474449cb9b006e}} 
 void {\bfseries Mouse\+Moved} (int x, int y)
 \item 
-\mbox{\Hypertarget{interface_shared_1_1_i_presenter_af748a2707cdf2393f14603bd7eca2c78}\label{interface_shared_1_1_i_presenter_af748a2707cdf2393f14603bd7eca2c78}} 
-void {\bfseries Mouse\+Clicked} (int x, int y)
+\mbox{\Hypertarget{interface_shared_1_1_i_presenter_abcf43bf38c4d5b8057bc5ad460b4b830}\label{interface_shared_1_1_i_presenter_abcf43bf38c4d5b8057bc5ad460b4b830}} 
+void {\bfseries Mouse\+State\+Changed} (int x, int y)
 \item 
 \mbox{\Hypertarget{interface_shared_1_1_i_presenter_a29436d97f00c1af3d5eb512e4feb2e7e}\label{interface_shared_1_1_i_presenter_a29436d97f00c1af3d5eb512e4feb2e7e}} 
 void {\bfseries Undo} ()
@@ -30,7 +35,21 @@ void {\bfseries Redo} ()
 \item 
 \mbox{\Hypertarget{interface_shared_1_1_i_presenter_a830f36b4421d7ed74dba7f8ecb3a343a}\label{interface_shared_1_1_i_presenter_a830f36b4421d7ed74dba7f8ecb3a343a}} 
 void {\bfseries Color\+Changed} (Color color)
+\item 
+\mbox{\Hypertarget{interface_shared_1_1_i_presenter_a2359fe93f387e1eedbd46b5ba5843ebd}\label{interface_shared_1_1_i_presenter_a2359fe93f387e1eedbd46b5ba5843ebd}} 
+void {\bfseries Fill\+Color\+Changed} (Color color)
+\item 
+\mbox{\Hypertarget{interface_shared_1_1_i_presenter_a6c342637b92cc21c56104a8022b6ab98}\label{interface_shared_1_1_i_presenter_a6c342637b92cc21c56104a8022b6ab98}} 
+void {\bfseries Thickness\+Changed} (float thickness)
+\item 
+\mbox{\Hypertarget{interface_shared_1_1_i_presenter_a09229e4d7c7b64e5f59a447b0638a722}\label{interface_shared_1_1_i_presenter_a09229e4d7c7b64e5f59a447b0638a722}} 
+string {\bfseries Get\+Current\+Strategy\+Description} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{interface_shared_1_1_i_presenter}{IPresenter}} -\/ defines an interface for interacting with any presenter implementation 
+
 
 
 The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}

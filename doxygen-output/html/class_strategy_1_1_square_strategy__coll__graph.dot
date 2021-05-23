@@ -3,9 +3,9 @@ digraph "Strategy.SquareStrategy"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="Strategy.SquareStrategy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="Strategy.SquareStrategy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Implements the square drawing strategy"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TwoPointStrategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_strategy_1_1_two_point_strategy.html",tooltip=" "];
+  Node2 [label="TwoPointStrategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_strategy_1_1_two_point_strategy.html",tooltip="Base class for all shapes that requires 2 points to be drawn"];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Strategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_strategy_1_1_strategy.html",tooltip=" "];
+  Node3 [label="Strategy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_strategy_1_1_strategy.html",tooltip="Base class for each shape strategy."];
 }

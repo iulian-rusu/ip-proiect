@@ -2,6 +2,11 @@
 \label{class_strategy_1_1_elipse_strategy}\index{Strategy.ElipseStrategy@{Strategy.ElipseStrategy}}
 
 
+Implements the ellipse drawing strategy  
+
+
+
+
 Inheritance diagram for Strategy.\+Elipse\+Strategy\+:
 % FIG 0
 
@@ -11,19 +16,60 @@ Collaboration diagram for Strategy.\+Elipse\+Strategy\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_elipse_strategy_aaa80fded38b71e21ff0df70e057cd750}\label{class_strategy_1_1_elipse_strategy_aaa80fded38b71e21ff0df70e057cd750}} 
-override Paint\+Event\+Handler {\bfseries Get\+Draw} ()
+override string \mbox{\hyperlink{class_strategy_1_1_elipse_strategy_a338a6cc292a926c848056d43773628e4}{Get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Method to find out what object was drawn and what its position was \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_strategy_1_1_elipse_strategy_a13196f6df6ab20368abbd791ce36e367}\label{class_strategy_1_1_elipse_strategy_a13196f6df6ab20368abbd791ce36e367}} 
-override void {\bfseries Is\+Done} ()
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_elipse_strategy_ab035d115887929284519501297fc0db8}\label{class_strategy_1_1_elipse_strategy_ab035d115887929284519501297fc0db8}} 
-override void {\bfseries Mouse\+Clicked} (int x, int y)
-\item 
-\mbox{\Hypertarget{class_strategy_1_1_elipse_strategy_a07dba0b75a75886bc096e50c100065f2}\label{class_strategy_1_1_elipse_strategy_a07dba0b75a75886bc096e50c100065f2}} 
-override void {\bfseries Mouse\+Moved} (int x, int y)
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_strategy_1_1_elipse_strategy_a5cd5d2d29de74fd4243026a4e2141fbf}{Draw}} (object sender, Paint\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Method that draws the figure on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implements the ellipse drawing strategy 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_strategy_1_1_elipse_strategy_a5cd5d2d29de74fd4243026a4e2141fbf}\label{class_strategy_1_1_elipse_strategy_a5cd5d2d29de74fd4243026a4e2141fbf}} 
+\index{Strategy.ElipseStrategy@{Strategy.ElipseStrategy}!Draw@{Draw}}
+\index{Draw@{Draw}!Strategy.ElipseStrategy@{Strategy.ElipseStrategy}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Strategy.\+Elipse\+Strategy.\+Draw (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Paint\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method that draws the figure on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender object\\
+\hline
+{\em e} & Paint event arguments\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_ac44fec119eeba8d3e558f224a8857bda}{Strategy.\+Strategy}}.
+
+\mbox{\Hypertarget{class_strategy_1_1_elipse_strategy_a338a6cc292a926c848056d43773628e4}\label{class_strategy_1_1_elipse_strategy_a338a6cc292a926c848056d43773628e4}} 
+\index{Strategy.ElipseStrategy@{Strategy.ElipseStrategy}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!Strategy.ElipseStrategy@{Strategy.ElipseStrategy}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily override string Strategy.\+Elipse\+Strategy.\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to find out what object was drawn and what its position was 
+
+\begin{DoxyReturn}{Returns}
+A string with information about the position of the shape
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_strategy_1_1_strategy_aac731fce0a345445594f48dc0559f164}{Strategy.\+Strategy}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

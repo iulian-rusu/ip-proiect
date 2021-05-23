@@ -74,9 +74,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abd746f3e333028d65afea42449d0beb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#abd746f3e333028d65afea42449d0beb1">MouseMoved</a> (int x, int y)</td></tr>
 <tr class="memdesc:abd746f3e333028d65afea42449d0beb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to notify of a mouse move event  <a href="class_presenter_1_1_presenter.html#abd746f3e333028d65afea42449d0beb1">More...</a><br /></td></tr>
 <tr class="separator:abd746f3e333028d65afea42449d0beb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd579921ff2b178b6d5aafa2a59141e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#abd579921ff2b178b6d5aafa2a59141e5">MouseClicked</a> (int x, int y)</td></tr>
-<tr class="memdesc:abd579921ff2b178b6d5aafa2a59141e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to notify of a mouse click event  <a href="class_presenter_1_1_presenter.html#abd579921ff2b178b6d5aafa2a59141e5">More...</a><br /></td></tr>
-<tr class="separator:abd579921ff2b178b6d5aafa2a59141e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f299df9f2bd052b927fc2af46ab63ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a0f299df9f2bd052b927fc2af46ab63ce">MouseStateChanged</a> (int x, int y)</td></tr>
+<tr class="memdesc:a0f299df9f2bd052b927fc2af46ab63ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the mouse button changes its state to DOWN or UP  <a href="class_presenter_1_1_presenter.html#a0f299df9f2bd052b927fc2af46ab63ce">More...</a><br /></td></tr>
+<tr class="separator:a0f299df9f2bd052b927fc2af46ab63ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31df157ae38f6788814b0d9c0f833c7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a31df157ae38f6788814b0d9c0f833c7e">SaveDrawing</a> ()</td></tr>
 <tr class="memdesc:a31df157ae38f6788814b0d9c0f833c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current state of the <a class="el" href="namespace_view.html">View</a> drawing to the model  <a href="class_presenter_1_1_presenter.html#a31df157ae38f6788814b0d9c0f833c7e">More...</a><br /></td></tr>
 <tr class="separator:a31df157ae38f6788814b0d9c0f833c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,12 +89,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf022c173ad1144f3544f4d806311d95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#abf022c173ad1144f3544f4d806311d95">ColorChanged</a> (Color color)</td></tr>
 <tr class="memdesc:abf022c173ad1144f3544f4d806311d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the new color to the current drawing strategy  <a href="class_presenter_1_1_presenter.html#abf022c173ad1144f3544f4d806311d95">More...</a><br /></td></tr>
 <tr class="separator:abf022c173ad1144f3544f4d806311d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4f785ef37acf80847b41a72d993c3fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#af4f785ef37acf80847b41a72d993c3fc">ChoosePaintingTool</a> (PaintingTool paintingTool, Color selectedColor)</td></tr>
-<tr class="memdesc:af4f785ef37acf80847b41a72d993c3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current strategy to match the selected tool  <a href="class_presenter_1_1_presenter.html#af4f785ef37acf80847b41a72d993c3fc">More...</a><br /></td></tr>
-<tr class="separator:af4f785ef37acf80847b41a72d993c3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9082e57bf2f80e7c1b73fde30b7f7aeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a9082e57bf2f80e7c1b73fde30b7f7aeb">FillColorChanged</a> (Color color)</td></tr>
+<tr class="memdesc:a9082e57bf2f80e7c1b73fde30b7f7aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the new fill color to the current drawing strategy  <a href="class_presenter_1_1_presenter.html#a9082e57bf2f80e7c1b73fde30b7f7aeb">More...</a><br /></td></tr>
+<tr class="separator:a9082e57bf2f80e7c1b73fde30b7f7aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e64085278eed38b926091548e2bcbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a32e64085278eed38b926091548e2bcbd">ThicknessChanged</a> (float thickness)</td></tr>
+<tr class="memdesc:a32e64085278eed38b926091548e2bcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the thickness of the current tool  <a href="class_presenter_1_1_presenter.html#a32e64085278eed38b926091548e2bcbd">More...</a><br /></td></tr>
+<tr class="separator:a32e64085278eed38b926091548e2bcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc91af86e2a552f40a8074356ee1883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a8fc91af86e2a552f40a8074356ee1883">ChoosePaintingTool</a> (PaintingTool paintingTool, Color borderColor, Color fillColor, float thickness)</td></tr>
+<tr class="memdesc:a8fc91af86e2a552f40a8074356ee1883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current strategy to match the selected tool  <a href="class_presenter_1_1_presenter.html#a8fc91af86e2a552f40a8074356ee1883">More...</a><br /></td></tr>
+<tr class="separator:a8fc91af86e2a552f40a8074356ee1883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b5b357b0293c3cf75df4c232c26128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a15b5b357b0293c3cf75df4c232c26128">LoadDrawing</a> (string filename)</td></tr>
 <tr class="memdesc:a15b5b357b0293c3cf75df4c232c26128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="namespace_view.html">View</a> drawing to the one loaded in the model  <a href="class_presenter_1_1_presenter.html#a15b5b357b0293c3cf75df4c232c26128">More...</a><br /></td></tr>
 <tr class="separator:a15b5b357b0293c3cf75df4c232c26128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bff80e73d586b94bb16ee187339a9f4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_presenter_1_1_presenter.html#a7bff80e73d586b94bb16ee187339a9f4">GetCurrentStrategyDescription</a> ()</td></tr>
+<tr class="memdesc:a7bff80e73d586b94bb16ee187339a9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a description for the last change made by the selected tool  <a href="class_presenter_1_1_presenter.html#a7bff80e73d586b94bb16ee187339a9f4">More...</a><br /></td></tr>
+<tr class="separator:a7bff80e73d586b94bb16ee187339a9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_presenter_1_1_presenter.html" title="Presenter class - manages the presentation logic of the application">Presenter</a> class - manages the presentation logic of the application </p>
@@ -137,8 +146,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af4f785ef37acf80847b41a72d993c3fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f785ef37acf80847b41a72d993c3fc">&#9670;&nbsp;</a></span>ChoosePaintingTool()</h2>
+<a id="a8fc91af86e2a552f40a8074356ee1883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc91af86e2a552f40a8074356ee1883">&#9670;&nbsp;</a></span>ChoosePaintingTool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +162,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Color&#160;</td>
-          <td class="paramname"><em>selectedColor</em>&#160;</td>
+          <td class="paramname"><em>borderColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>fillColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thickness</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -167,7 +188,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">paintingTool</td><td>The new selected painting tool</td></tr>
-    <tr><td class="paramname">selectedColor</td><td>The color of the painting tool</td></tr>
+    <tr><td class="paramname">borderColor</td><td>The color of the border of the painting tool</td></tr>
+    <tr><td class="paramname">fillColor</td><td>The fill color of the painting tool</td></tr>
   </table>
   </dd>
 </dl>
@@ -204,6 +226,56 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9082e57bf2f80e7c1b73fde30b7f7aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9082e57bf2f80e7c1b73fde30b7f7aeb">&#9670;&nbsp;</a></span>FillColorChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Presenter.Presenter.FillColorChanged </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the new fill color to the current drawing strategy </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The new color</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_shared_1_1_i_presenter.html">Shared.IPresenter</a>.</p>
+
+</div>
+</div>
+<a id="a7bff80e73d586b94bb16ee187339a9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bff80e73d586b94bb16ee187339a9f4">&#9670;&nbsp;</a></span>GetCurrentStrategyDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Presenter.Presenter.GetCurrentStrategyDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a description for the last change made by the selected tool </p>
+<dl class="section return"><dt>Returns</dt><dd>A string that describes the changes made by the tool</dd></dl>
+
+<p>Implements <a class="el" href="interface_shared_1_1_i_presenter.html">Shared.IPresenter</a>.</p>
+
+</div>
+</div>
 <a id="a15b5b357b0293c3cf75df4c232c26128"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15b5b357b0293c3cf75df4c232c26128">&#9670;&nbsp;</a></span>LoadDrawing()</h2>
 
@@ -224,45 +296,6 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The path to the file on the disk</td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="interface_shared_1_1_i_presenter.html">Shared.IPresenter</a>.</p>
-
-</div>
-</div>
-<a id="abd579921ff2b178b6d5aafa2a59141e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd579921ff2b178b6d5aafa2a59141e5">&#9670;&nbsp;</a></span>MouseClicked()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Presenter.Presenter.MouseClicked </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Called to notify of a mouse click event </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The x coordinate of the mouse cursor</td></tr>
-    <tr><td class="paramname">y</td><td>The y coordinate of the mouse cursor</td></tr>
   </table>
   </dd>
 </dl>
@@ -298,6 +331,45 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Called to notify of a mouse move event </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x coordinate of the mouse cursor</td></tr>
+    <tr><td class="paramname">y</td><td>The y coordinate of the mouse cursor</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_shared_1_1_i_presenter.html">Shared.IPresenter</a>.</p>
+
+</div>
+</div>
+<a id="a0f299df9f2bd052b927fc2af46ab63ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f299df9f2bd052b927fc2af46ab63ce">&#9670;&nbsp;</a></span>MouseStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Presenter.Presenter.MouseStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when the mouse button changes its state to DOWN or UP </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x coordinate of the mouse cursor</td></tr>
@@ -347,6 +419,34 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Saves the current state of the <a class="el" href="namespace_view.html">View</a> drawing to the model </p>
+
+<p>Implements <a class="el" href="interface_shared_1_1_i_presenter.html">Shared.IPresenter</a>.</p>
+
+</div>
+</div>
+<a id="a32e64085278eed38b926091548e2bcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e64085278eed38b926091548e2bcbd">&#9670;&nbsp;</a></span>ThicknessChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Presenter.Presenter.ThicknessChanged </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thickness</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the thickness of the current tool </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thickness</td><td>The new thickness</td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="interface_shared_1_1_i_presenter.html">Shared.IPresenter</a>.</p>
 
