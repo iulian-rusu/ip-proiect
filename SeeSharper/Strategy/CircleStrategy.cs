@@ -1,8 +1,8 @@
 ﻿/**************************************************************************
  *                                                                        *
  *  File:        CircleStrategy.cs                                        *
- *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
- *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
+ *  Copyright:   (c) 2021, Rusu Iulian                                    *
+ *  E-mail:      iulian.rusu2@student.tuiasi.ro                           *
  *  Description: Strategy class for circle shape                          *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
