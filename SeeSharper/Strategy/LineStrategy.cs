@@ -1,8 +1,8 @@
 ﻿/**************************************************************************
  *                                                                        *
  *  File:        LineStrategy.cs                                          *
- *  Copyright:   (c) 2021, Nistor Paula-Alina                             *
- *  E-mail:      paula-alina.nistor@student.tuiasi.ro                     *
+ *  Copyright:   (c) 2021, Beldiman Vladislav                             *
+ *  E-mail:      vladislav.beldiman@student.tuiasi.ro                     *
  *  Description: Strategy class for line shape                            *
  *                                                                        *
  *  This code and information is provided "as is" without warranty of     *
@@ -24,19 +24,7 @@ namespace Strategy
     /// </summary>
     public class LineStrategy : TwoPointStrategy
     {
-        #region Protected Methods
-        protected override void Draw(object sender, PaintEventArgs e)
-        {
-            if (_points != null)
-            {
-                var graphics = e.Graphics;
-                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                graphics.DrawLine(new Pen(_color, _thickness), _points[0], _points[1]);
-            }
-        }
-        #endregion
-
-        #region Public Methods
+        #region Public Member Functions
         public override string GetDescription()
         {
             if (!_hasDrawn)
@@ -51,5 +39,16 @@ namespace Strategy
             return "Something wrong";
         }
         #endregion
-    }
+        #region Protected Member Functions
+        protected override void Draw(object sender, PaintEventArgs e)
+        {
+            if (_points != null)
+            {
+                var graphics = e.Graphics;
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                graphics.DrawLine(new Pen(_color, _thickness), _points[0], _points[1]);
+            }
+        }
+        #endregion
+  }
 }
