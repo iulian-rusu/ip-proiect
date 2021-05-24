@@ -4,6 +4,8 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage[singlespacing]{setspace}
 \usepackage{fontspec}
+\usepackage{graphicx}
+
 \setmainfont{Times New Roman}
 
 \title
@@ -12,19 +14,21 @@
 	{
 		SeeSharper
 		\\
-		Software Requirements Specification
+		Intuitive Drawing Application
+		\\
+		Documentation
 	}
 }
 
 \author
 {
-	Baltariu Ionuț-Alexandru
+	Baltariu Ionuț-Alexandru - 1305A
 	\\
-	Beldiman Vladislav
+	Beldiman Vladislav - 1350A
 	\\
-	Nistor Paula-Alina 
+	Nistor Paula-Alina - 1305B
 	\\
-	Rusu Iulian
+	Rusu Iulian - 1305A
 	\\
 	\\
 	\textit{"Gheorghe Asachi" Technical University of Iași}
@@ -37,6 +41,16 @@
 \begin{document}
 
 \maketitle 
+
+\newpage
+
+\clearpage
+\vspace*{\fill}
+\begin{center}
+{\huge \textbf{Software Requirements Specification}}
+\end{center}
+\vfill 
+\clearpage
 
 \newpage
 \tableofcontents
@@ -179,5 +193,155 @@ The application must correctly load, save and draw images 100\% of the time.
 The application should be easily maintainable and extendable.
 The code should allow easy testing and should be open for future extensions and new features. 
 \end{enumerate}
+
+\clearpage
+\vspace*{\fill}
+\begin{center}
+{\huge \textbf{UML Diagrams}}
+\end{center}
+\vfill 
+\clearpage
+
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\setcounter{page}{15}
+{\huge \textbf{How to use the application}}
+\end{center}
+\vfill 
+\clearpage
+
+\section*{Drawing lines or various geometric shapes}
+
+In order to draw lines (straight or curved) or other shapes, the user has to select the shape before actually drawing on the canvas.
+
+Keep in mind that in order to draw geometric shapes, the \textbf{click} mouse button has to be hold, then drag the figure to respect wished dimensions.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10.5cm]{graphics/tools_and_shapes.png}
+\caption{Tools and shapes menu}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10.5cm]{graphics/thickness_fill_colors.png}
+\caption{Tools and shapes menu}
+\end{figure}
+
+The user can also select whether the shape that is to be drawn will be filled by checking the "Fill" box in \textbf{Figure 2} and might also change the border line thickness by dragging slider bar.
+
+\section*{Changing drawing colors}
+
+As seen in \textbf{Figure 2}, the user can changed both the \textit{fill} and \textit{border} colors.  
+
+Firstly, the user has to select whether he wants to change the fill or the border colors, then, the \textbf{Edit Color} button has to be pressed. The following window will appear:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5cm]{graphics/colors.png}
+\end{figure}
+
+Here, any given color can be selected. However, if the user wants to select a custom color, the \textbf{Define Custom Colors >>} button has to be pressed.
+
+After that, one can give custom wanted colors by either entering RGB color codes or by selecting one from the window on the right.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4.5cm]{graphics/custom_colors.png}
+\caption{Custom color selection}
+\end{figure}
+
+\section*{Erasing}
+
+From \textbf{Figure 1} select the \textit{Eraser tool} (the first square in line), change the thickness depending on the size of the area that is to be erased and, finally, erase by holding the click button on the canvas.
+
+\section*{Using undo/redo functionality}
+
+After drawing a shape, if the user considers that a mistake has been made, he might undo the latest actions by clicking the \textbf{Undo} button \textbf{(Figure 4)}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9.5cm]{graphics/undo_redo.png}
+\caption{Undo/Redo buttons}
+\end{figure}
+
+If mistakes have been done while undoing, there is also the possibility to redo previously undone actions by pressing the \textbf{Redo} button. \textbf{(Figure 4)}
+
+
+\section*{Saving/loading drawings/images}
+
+The application allows both loading and saving an image or a drawing to the file system as a PNG file. \textbf{(Figure 5)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5.5cm]{graphics/save_load_help.png}
+\caption{Menu for saving/loading}
+\end{figure}
+
+After clicking the \textbf{Save} button, the user has to navigate to the wished saving location and then give a valid name to the file, ending by clicking again the \textbf{Save} button in the new window.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=11.5cm]{graphics/save.png}
+\caption{Save window}
+\end{figure}
+
+Same principles apply to the \textbf{Load} functionality.
+
+\section*{Accesing help from within de application}
+
+Navigate to the menu at \textbf{Figure 5}, then click the \textbf{Help} button.
+
+After that, use the menu found on the left side of the window to access information about wanted subjects.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=13.5cm]{graphics/help.png}
+\caption{Help window}
+\end{figure}
+
+\section*{Shortcuts}
+
+\begin{center}
+\begin{tabular}{ |c|c|} 
+ \hline
+ \textbf{Shortcut} & \textbf{Action} \\ 
+  \hline
+ CTRL+S & Save \\ 
+  \hline
+ CTRL+L & Load \\ 
+ \hline
+ CTRL+H & Open Help  \\ 
+  \hline
+ CTRL+Z & Undo \\
+  \hline
+ CTRL+Y & Redo \\
+  \hline
+\end{tabular}
+\end{center}
+
+\clearpage
+\vspace*{\fill}
+\begin{center}
+{\huge \textbf{Screenshots of the application}}
+\end{center}
+\vfill 
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=11.5cm]{graphics/seesharper_empty.png}
+\caption{Application at start}
+
+\includegraphics[width=11.5cm]{graphics/seesharper_drawing.png}
+\caption{Application after drawing}
+
+\includegraphics[width=11.5cm]{graphics/loaded_img.png}
+\caption{Application after loading an image}
+
+\textit{More screenshots can be seen at the previous section.}
+\end{figure}
+
 
 \end{document}
