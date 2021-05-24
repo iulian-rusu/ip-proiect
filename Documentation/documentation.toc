@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Purpose}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Scope}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Overview}{4}{}%
+\contentsline {section}{\numberline {2}Overall Description}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Product Perspective}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Product Functions}{5}{}%
+\contentsline {subsection}{\numberline {2.3}User Classes and Characteristics}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Design and Implementation Constraints}{5}{}%
+\contentsline {section}{\numberline {3}Specific Requirements}{5}{}%
+\contentsline {subsection}{\numberline {3.1}External Interface Requirements}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}User Interfaces}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Software Interfaces}{6}{}%
+\contentsline {subsection}{\numberline {3.2}Functional Requirements}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Color picking}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Eraser tool}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Brush tool(s)}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Other advanced drawing tools}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.5}Drawing saving/loading}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.6}Undo/Redo}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.7}Help window}{8}{}%
+\contentsline {subsection}{\numberline {3.3}Performance Requirements}{8}{}%
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{8}{}%
+\contentsline {subsection}{\numberline {3.5}Attributes}{9}{}%
